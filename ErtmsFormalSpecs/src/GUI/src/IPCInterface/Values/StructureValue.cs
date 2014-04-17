@@ -81,17 +81,10 @@ namespace GUI.IPCInterface.Values
                     DataDictionary.Types.StructureElement element = structureType.findStructureElement(pair.Key);
                     if (element != null)
                     {
-                        try
-                        {
-                            DataDictionary.Variables.Variable variable = (DataDictionary.Variables.Variable)DataDictionary.Generated.acceptor.getFactory().createVariable();
-                            variable.Name = element.Name;
-                            variable.Value = pair.Value.convertBack(element.Type);
-                            retVal.set(variable);
-                        }
-                        catch (FaultException<EFSServiceFault> exception)
-                        {
-                            throw new FaultException<EFSServiceFault>(new EFSServiceFault("Cannot convert element named " + element.Name, exception.Detail));
-                        }
+                        DataDictionary.Variables.Variable variable = (DataDictionary.Variables.Variable)DataDictionary.Generated.acceptor.getFactory().createVariable();
+                        variable.Name = element.Name;
+                        variable.Value = pair.Value.convertBack(element.Type);
+                        retVal.set(variable);
                     }
                     else
                     {

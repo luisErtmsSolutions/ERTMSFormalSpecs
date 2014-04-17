@@ -79,15 +79,8 @@ namespace GUI.IPCInterface.Values
                 int i = 0;
                 foreach (Value item in Value)
                 {
-                    try
-                    {
-                        i += 1;
-                        values.Add(item.convertBack(collectionType.Type));
-                    }
-                    catch (FaultException<EFSServiceFault> exception)
-                    {
-                        throw new FaultException<EFSServiceFault>(new EFSServiceFault("Cannot convert element " + i, exception.Detail));
-                    }
+                    i += 1;
+                    values.Add(item.convertBack(collectionType.Type));
                 }
 
                 retVal = new DataDictionary.Values.ListValue(collectionType, values);

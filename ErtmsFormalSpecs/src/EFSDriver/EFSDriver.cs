@@ -62,8 +62,11 @@ namespace EFSDriver
         /// </summary>
         private void UpdateVariableValue()
         {
-            Value value = EFS.GetVariableValue(variableNameTextBox.Text);
-            DisplayVariableValue(value);
+            if (!string.IsNullOrEmpty(variableNameTextBox.Text))
+            {
+                Value value = EFS.GetVariableValue(variableNameTextBox.Text);
+                DisplayVariableValue(value);
+            }
         }
 
         /// <summary>
