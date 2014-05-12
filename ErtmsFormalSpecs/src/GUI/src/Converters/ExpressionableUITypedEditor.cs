@@ -24,6 +24,7 @@ namespace GUI.Converters
     using System.Windows.Forms.Design;
     using DataDictionary;
     using System.Windows.Forms;
+    using GUI.EditorView;
 
     /// <summary>
     /// TODO: Update summary.
@@ -35,53 +36,6 @@ namespace GUI.Converters
             return UITypeEditorEditStyle.Modal;
         }
 
-        /// <summary>
-        /// Sets the string value into the right property
-        /// </summary>
-        /// <param name="instance"></param>
-        /// <param name="value"></param>
-        private class TextChangeHandler : EditorForm.HandleTextChange
-        {
-            /// <summary>
-            /// Constructor
-            /// </summary>
-            /// <param name="instance"></param>
-            public TextChangeHandler(ModelElement instance)
-                : base(instance)
-            {
-            }
-
-            /// <summary>
-            /// The way text is retrieved from the instance
-            /// </summary>
-            /// <returns></returns>
-            public override string GetText()
-            {
-                string retVal = "";
-                IExpressionable expressionable = Instance as IExpressionable;
-
-                if (expressionable != null)
-                {
-                    retVal = expressionable.ExpressionText;
-                }
-                return retVal;
-            }
-
-            /// <summary>
-            /// The way text is set back in the instance
-            /// </summary>
-            /// <returns></returns>
-            public override void SetText(string text)
-            {
-                IExpressionable expressionable = Instance as IExpressionable;
-
-                if (expressionable != null)
-                {
-                    expressionable.ExpressionText = text;
-                }
-            }
-        }
-
         public override object EditValue(ITypeDescriptorContext context, System.IServiceProvider provider, object value)
         {
             IWindowsFormsEditorService svc = provider.GetService(typeof(IWindowsFormsEditorService)) as IWindowsFormsEditorService;
@@ -90,8 +44,8 @@ namespace GUI.Converters
                 IExpressionable expressionable = value as IExpressionable;
                 if (expressionable != null)
                 {
-                    EditorForm form = new EditorForm();
-                    TextChangeHandler handler = new TextChangeHandler(expressionable as ModelElement);
+                    EditorView.Window form = new EditorView.Window();                   
+                    ExpressionableTextChangeHandler handler = new ExpressionableTextChangeHandler(expressionable as ModelElement);
                     form.setChangeHandler(handler);
                     GUIUtils.MDIWindow.AddChildWindow(form, WeifenLuo.WinFormsUI.Docking.DockAreas.Float);
                 }

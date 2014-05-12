@@ -407,7 +407,7 @@ namespace GUI
                 Selected.SelectionChanged(true);
                 if (KeepTrackOfSelection)
                 {
-                    GUIUtils.MDIWindow.HandleSelection(Selected.Model);
+                    GUIUtils.MDIWindow.HandleSelection(Selected);
                 }
             }
         }

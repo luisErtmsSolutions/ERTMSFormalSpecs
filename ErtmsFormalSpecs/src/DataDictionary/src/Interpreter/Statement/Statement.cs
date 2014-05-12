@@ -114,5 +114,75 @@ namespace DataDictionary.Interpreter.Statement
         /// <param name="apply">Indicates that the changes should be applied immediately</param>
         /// <param name="runner"></param>
         public abstract void GetChanges(Interpreter.InterpretationContext context, ChangeList changes, Interpreter.ExplanationPart explanation, bool apply, Tests.Runner.Runner runner);
+
+        /// <summary>
+        /// Provides a real short description of this statement
+        /// </summary>
+        /// <returns></returns>
+        public abstract string ShortShortDescription();
+
+        /// <summary>
+        /// What is affected by this statement
+        /// </summary>
+        public enum ModeEnum { Unknown, In, Out, InOut, Internal, Call };
+
+        /// <summary>
+        /// Converts a VariableModeEnumType into a ModeEnum
+        /// </summary>
+        /// <param name="mode"></param>
+        /// <returns></returns>
+        protected static ModeEnum ConvertMode(DataDictionary.Generated.acceptor.VariableModeEnumType mode)
+        {
+            ModeEnum retVal = ModeEnum.Unknown;
+
+            switch (mode)
+            {
+                case Generated.acceptor.VariableModeEnumType.aIncoming:
+                    retVal = ModeEnum.In;
+                    break;
+                case Generated.acceptor.VariableModeEnumType.aInOut:
+                    retVal = ModeEnum.InOut;
+                    break;
+                case Generated.acceptor.VariableModeEnumType.aInternal:
+                    retVal = ModeEnum.Internal;
+                    break;
+                case Generated.acceptor.VariableModeEnumType.aOutgoing:
+                    retVal = ModeEnum.Out;
+                    break;
+            }
+
+            return retVal;
+        }
+
+        /// <summary>
+        /// Provides the usage description done by this statement
+        /// </summary>
+        /// <returns></returns>
+        public virtual ModeEnum UsageDescription()
+        {
+            ModeEnum retVal = ModeEnum.Unknown;
+
+            ModelElement target = AffectedElement();
+            Variables.IVariable variable = target as Variables.IVariable;
+            if (variable != null)
+            {
+                retVal = ConvertMode(variable.Mode);
+            }
+
+            Types.StructureElement element = target as Types.StructureElement;
+            if (element != null)
+            {
+                retVal = ConvertMode(element.Mode);
+            }
+
+            return retVal;
+        }
+
+        /// <summary>
+        /// Provides the main model elemnt affected by this statement
+        /// </summary>
+        /// <returns></returns>
+        public abstract ModelElement AffectedElement();
+
     }
 }

@@ -67,6 +67,7 @@
 <Functions>
 <Function
  Type="Messages.PACKET.TRAIN_TO_TRACK.VALIDATED_TRAIN_DATA.Message"
+ Default=""
  Implemented="TRUE"
  Name="CreateTrainData"
  Guid="948446f4-d228-4931-983c-325e7d1bf913"
@@ -102,6 +103,7 @@
 </Case></Cases>
 </Function><Function
  Type="Messages.M_AIRTIGHT"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="FillAirtightSystem"
@@ -126,6 +128,7 @@
 </Case></Cases>
 </Function><Function
  Type="Messages.M_LOADINGGAUGE"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="FillLaudingGauge"
@@ -136,6 +139,7 @@
 </Cases>
 </Function><Function
  Type="Messages.PACKET.TRAIN_TO_TRACK.VALIDATED_TRAIN_DATA.SubStructure1"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CreateTractionSystem"
@@ -162,6 +166,7 @@
 </Case></Cases>
 </Function><Function
  Type="Messages.NC_TRAIN"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="FillOtherInternationalTrainCategories"
@@ -291,6 +296,7 @@
 </Case></Cases>
 </Function><Function
  Type="Messages.PACKET.TRAIN_TO_TRACK.VALIDATED_TRAIN_DATA.SubStructure2"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CreateNationalSystem"

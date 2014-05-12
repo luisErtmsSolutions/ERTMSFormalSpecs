@@ -1,8 +1,9 @@
 <NameSpace
- X="160"
- Y="540"
- Width="200"
+ X="50"
+ Y="600"
+ Width="100"
  Height="50"
+ Pinned="TRUE"
  Name="HandlingOfAcceptedAndStoredInformation"
  Guid="33f9324a-9885-4bc3-b540-f310bd40807a"
 >
@@ -11,6 +12,11 @@
 <Functions>
 <Function
  Type="Boolean"
+ Default=""
+ X="50"
+ Y="230"
+ Width="100"
+ Height="50"
  Name="SituationA"
  Guid="1f3852ca-e3cf-49bb-9019-cbaadf53f105"
 >
@@ -23,6 +29,11 @@
 </Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="80"
+ Y="130"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SituationB"
  Guid="66cb994b-0133-419f-9147-8327154810dc"
@@ -41,6 +52,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="170"
+ Y="90"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SituationC"
  Guid="41b554f7-9a81-47b3-b081-5bb0cd45c016"
@@ -60,6 +76,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="270"
+ Y="60"
+ Width="100"
+ Height="50"
  Name="SituationD"
  Guid="4e8d4bf8-721f-4fab-b115-d5bf0d8308ec"
 >
@@ -72,6 +93,11 @@
 </Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="380"
+ Y="110"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SituationE"
  Guid="754d4b24-bef8-4020-86fd-a4041d1c391e"
@@ -96,6 +122,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="310"
+ Y="210"
+ Width="100"
+ Height="50"
  Name="SituationF"
  Guid="9f4e8423-766c-4a78-9d9c-9ce71d753a2d"
 >
@@ -108,6 +139,11 @@
 </Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="220"
+ Y="310"
+ Width="100"
+ Height="50"
  Name="SituationG"
  Guid="a7556fe6-a375-45b0-98f6-e12d98125464"
 >
@@ -120,6 +156,11 @@
 </Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="430"
+ Y="330"
+ Width="100"
+ Height="50"
  Name="SituationH"
  Guid="be2f9e80-7a7a-4aa9-aad6-bf10f43935d6"
 >
@@ -132,6 +173,11 @@
 </Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="450"
+ Y="220"
+ Width="100"
+ Height="50"
  Name="SituationI"
  Guid="b3c53938-7c62-4f6d-a4df-c6d381151985"
 >
@@ -144,6 +190,11 @@
 </Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="50"
+ Y="320"
+ Width="100"
+ Height="50"
  Name="SituationJ"
  Guid="e753b09d-f578-45c2-9945-926c3b630b96"
 >
@@ -156,6 +207,11 @@
 </Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="100"
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SituationK"
  Guid="977e3ae1-421f-4906-8a2d-4ea0d6ef6278"
@@ -174,6 +230,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="190"
+ Y="470"
+ Width="100"
+ Height="50"
  Name="SituationL"
  Guid="ba50aaa0-e01a-4061-bd44-1260cc611cb5"
 >
@@ -186,6 +247,11 @@
 </Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="290"
+ Y="470"
+ Width="100"
+ Height="50"
  Name="SituationM"
  Guid="0b9cd9e1-60a4-4323-824a-81683d441a3a"
 >
@@ -198,6 +264,11 @@
 </Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="380"
+ Y="420"
+ Width="100"
+ Height="50"
  Name="SituationN"
  Guid="436ae695-a3a8-49b6-904e-17721f4eb4cd"
 >
@@ -214,6 +285,10 @@
  Type="Boolean"
  DefaultValue="Boolean.False"
  VariableMode="Internal"
+ X="590"
+ Y="600"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="DeskClosedDuringSoM"
  Guid="0a4b88ce-77ae-4e11-a799-4b60b6c891be"
@@ -228,6 +303,10 @@
  Type="Boolean"
  DefaultValue="Boolean.False"
  VariableMode="Internal"
+ X="630"
+ Y="470"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="ShortenedMaReceived"
  Guid="289a4265-fe1f-45e0-943a-7b0150a75c17"
@@ -242,6 +321,10 @@
  Type="Boolean"
  DefaultValue="Boolean.False"
  VariableMode="Internal"
+ X="760"
+ Y="460"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="ShortenedMaReceivedRegardlessOfSvL"
  Guid="d121bf54-ab99-453a-9265-d46dc861eea6"
@@ -256,6 +339,10 @@
  Type="Boolean"
  DefaultValue="False"
  VariableMode="Internal"
+ X="700"
+ Y="670"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="EndSectionTimeOutShortensMA"
  Guid="94e1aa3f-5366-4ad3-95b2-6b0fec3c107e"
@@ -280,6 +367,10 @@
  Type="Boolean"
  DefaultValue="False"
  VariableMode="Internal"
+ X="810"
+ Y="590"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SectionTimeOutShortensMA"
  Guid="8a8cbd8d-9a03-4943-8bbf-b0cd7d7dbb53"
@@ -299,6 +390,10 @@
 <Rules>
 <Rule
  Priority="Processing"
+ X="600"
+ Y="20"
+ Width="100"
+ Height="50"
  NeedsRequirement="FALSE"
  Name="HandleInformation"
  Guid="c1d3fd0d-19ba-4ebc-8d3e-c1fdf4fbfa59"
@@ -465,6 +560,10 @@
 </RuleCondition></Conditions>
 </Rule><Rule
  Priority="CleanUp"
+ X="700"
+ Y="20"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="Cleanup"

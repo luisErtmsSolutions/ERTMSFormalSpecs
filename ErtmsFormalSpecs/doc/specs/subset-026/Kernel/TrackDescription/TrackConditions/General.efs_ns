@@ -6,6 +6,7 @@
 </NameSpaces>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  Name="TrackCondition"
  Guid="9551ddbd-7e41-4f3e-9604-48e640b42f6f"
@@ -171,6 +172,7 @@
 >
 </ReqRef><Comment>The eddy current brake should be disabled for the emergency brake</Comment>
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  Name="TrackConditionInformation"
  Guid="b131c7c4-48fb-4898-b13b-188aab27e08c"
@@ -239,6 +241,7 @@
 <Functions>
 <Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  Name="EndSectionDistance"
  Guid="ab2ac694-c9e0-4902-892f-50aa0730adfe"
@@ -302,6 +305,7 @@
 </Case></Cases>
 </Function><Function
  Type="TrackConditionInformation"
+ Default=""
  Implemented="TRUE"
  Name="HandleTCPwhenEnteringGivenMode1"
  Guid="35f10299-f5ff-4c0d-b4f8-f78b962452bf"
@@ -347,6 +351,7 @@
 </Case></Cases>
 </Function><Function
  Type="TrackConditionInformation"
+ Default=""
  Implemented="TRUE"
  Name="HandleTCPwhenEnteringGivenMode2"
  Guid="0483f942-5889-47b6-9389-754a7f066adf"
@@ -392,6 +397,7 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  Name="IsInsideRadioHole"
  Guid="0c0fb865-3ccc-4d90-b7ca-cbd61d842b50"
@@ -417,6 +423,7 @@
 </Case></Cases>
 </Function><Function
  Type="TrackCondition"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CombineConditions"
@@ -459,6 +466,7 @@
 </Case></Cases>
 </Function><Function
  Type="TrackCondition"
+ Default=""
  Implemented="TRUE"
  Name="CurrentConditions"
  Guid="fb96e527-60c0-4a0c-a1a9-051dc1c5cc85"
@@ -526,6 +534,7 @@ When the train passes over a profile point, it doesn&apos;t know if that point m
 </Case></Cases>
 </Function><Function
  Type="TrackCondition"
+ Default=""
  Implemented="TRUE"
  Name="ProfileAtDistance"
  Guid="439dae37-429f-4e83-b249-e8a4f50717b5"
@@ -565,6 +574,7 @@ When the train passes over a profile point, it doesn&apos;t know if that point m
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ProfileStartLocation"
@@ -592,6 +602,7 @@ When the train passes over a profile point, it doesn&apos;t know if that point m
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  Name="NewInfoStartLocation"
  Guid="32f17759-b4e6-455a-8cde-2ee070d684c2"
@@ -633,6 +644,7 @@ When the train passes over a profile point, it doesn&apos;t know if that point m
 </Case></Cases>
 </Function><Function
  Type="TrackConditionInformation"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="MakeTCProfilePoint"
@@ -839,6 +851,7 @@ The use of profile points and the functions in this namespace can be found in Er
 </Case></Cases>
 </Function><Function
  Type="TrackConditionInformation"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="UpdatedTCProfile"

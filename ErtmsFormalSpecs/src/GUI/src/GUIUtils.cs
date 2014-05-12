@@ -38,7 +38,7 @@ namespace GUI
         {
             MDIWindow.Invoke((MethodInvoker)delegate
             {
-                foreach (EditorForm editor in MDIWindow.Editors)
+                foreach (EditorView.Window editor in MDIWindow.Editors)
                 {
                     if (editor.Instance == model)
                     {
@@ -119,6 +119,36 @@ namespace GUI
                 BindingFlags.InvokeMethod |
                 BindingFlags.Instance);
             mtf.Invoke(gv, new object[] { (int)width });
+        }
+
+        /// <summary>
+        /// Adjust the text size according to the display size
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="width"></param>
+        /// <param name="font"></param>
+        public static string AdjustForDisplay(Graphics graphics, string text, int width, Font font)
+        {
+            string retVal = text;
+
+            if (graphics.MeasureString(text, font).Width > width)
+            {
+                width = (int)(width - graphics.MeasureString("...", font).Width);
+                int i = text.Length;
+                int step = i / 2;
+                while (graphics.MeasureString(text.Substring(0, i), font).Width > width)
+                {
+                    i = i - step;
+                    step = step / 2;
+                    while (graphics.MeasureString(text.Substring(0, i), font).Width < width && step > 0)
+                    {
+                        i = i + step;
+                    }
+                }
+                retVal = text.Substring(0, i) + "...";
+            }
+
+            return retVal;
         }
     }
 }

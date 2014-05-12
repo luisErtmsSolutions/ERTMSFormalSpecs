@@ -1,4 +1,8 @@
 <NameSpace
+ X="320"
+ Y="1240"
+ Width="100"
+ Height="50"
  Name="ConversionModel"
  Guid="785a0e41-5ce3-4f0e-9075-e9d56cee7e2a"
 >
@@ -7,6 +11,7 @@
 <Functions>
 <Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  Name="ConversionModelIsUsed"
  Guid="8dbae3f6-8684-4588-8f53-af5848c87bba"
@@ -57,6 +62,7 @@ Kernel.TrainData.TrainData.Value.TrainLength &lt;= Lmax()</PreCondition></PreCon
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
  Implemented="TRUE"
  Name="BasicDecelerationNextAcceleration"
  Guid="8fb8a45b-581a-4a5c-a8c7-f94f2555f476"
@@ -145,6 +151,7 @@ Kernel.TrainData.TrainData.Value.TrainLength &lt;= Lmax()</PreCondition></PreCon
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="BasicDecelerationNextSpeedStep"
  Guid="b43be340-3269-4533-8763-5ae56b8f1bfb"
@@ -207,6 +214,7 @@ Kernel.TrainData.TrainData.Value.TrainLength &lt;= Lmax()</PreCondition></PreCon
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Time"
+ Default=""
  Implemented="TRUE"
  Name="T_brake_basic_sb"
  Guid="575cb3a6-9a12-48ad-a150-4f6fedda0eef"
@@ -254,6 +262,7 @@ Kernel.TrainData.TrainData.Value.TrainLength &lt;= Lmax()</PreCondition></PreCon
 </Case></Cases>
 </Function><Function
  Type="CorrectionFactor"
+ Default=""
  Implemented="TRUE"
  Name="kto"
  Guid="cf85717e-8026-41e3-85f9-f393a22cd6bc"
@@ -301,6 +310,7 @@ Kernel.TrainData.TrainData.Value.TrainLength &lt;= Lmax()</PreCondition></PreCon
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Time"
+ Default=""
  Implemented="TRUE"
  Name="T_brake_basic_eb"
  Guid="d6d51542-5956-44d8-a7e7-3ade74cf43a5"
@@ -348,6 +358,7 @@ Kernel.TrainData.TrainData.Value.TrainLength &lt;= Lmax()</PreCondition></PreCon
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
  Implemented="TRUE"
  Name="A_brake_emergency"
  Guid="89ff54a0-aa12-4c90-ba07-06870c8c8a73"
@@ -374,6 +385,7 @@ Kernel.TrainData.TrainData.Value.TrainLength &lt;= Lmax()</PreCondition></PreCon
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Time"
+ Default=""
  Implemented="TRUE"
  Name="T_brake_service"
  Guid="a30297cd-7504-4ec9-b818-f4cb2d37a02c"
@@ -407,6 +419,7 @@ Kernel.TrainData.TrainData.Value.TrainLength &lt;= Lmax()</PreCondition></PreCon
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Time"
+ Default=""
  Implemented="TRUE"
  Name="T_brake_emergency"
  Guid="0a44f6f0-a607-4eca-97da-d923a095e040"
@@ -440,6 +453,7 @@ Kernel.TrainData.TrainData.Value.TrainLength &lt;= Lmax()</PreCondition></PreCon
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
  Implemented="TRUE"
  Name="A_brake_service"
  Guid="240cd24f-7291-4ca4-a93a-c7bd063198fe"
@@ -466,6 +480,7 @@ Kernel.TrainData.TrainData.Value.TrainLength &lt;= Lmax()</PreCondition></PreCon
 </Case></Cases>
 </Function><Function
  Type="BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="Lmax"
  Guid="2b069dd2-6b71-4016-855d-bafc9711d98b"
@@ -494,6 +509,7 @@ Kernel.TrainData.TrainData.Value.TrainLength &lt;= Lmax()</PreCondition></PreCon
 </Case></Cases>
 </Function><Function
  Type="Double"
+ Default=""
  Implemented="TRUE"
  Name="a_eb"
  Guid="0864aada-30c9-4257-a677-b2e2dcc736df"
@@ -575,6 +591,7 @@ Kernel.TrainData.TrainData.Value.TrainLength &lt;= 1500.0</PreCondition></PreCon
 </Case></Cases>
 </Function><Function
  Type="Double"
+ Default=""
  Implemented="TRUE"
  Name="b_eb"
  Guid="cb1d0a0d-ce2f-4ca0-bf39-1c1d1003240f"
@@ -656,6 +673,7 @@ Kernel.TrainData.TrainData.Value.TrainLength &lt;= 1500.0</PreCondition></PreCon
 </Case></Cases>
 </Function><Function
  Type="Double"
+ Default=""
  Implemented="TRUE"
  Name="c_eb"
  Guid="dae67f64-af6c-4a38-bee8-9021106ae5f7"
@@ -737,6 +755,7 @@ Kernel.TrainData.TrainData.Value.TrainLength &lt;= 1500.0</PreCondition></PreCon
 </Case></Cases>
 </Function><Function
  Type="Double"
+ Default=""
  Implemented="TRUE"
  Name="L_eb"
  Guid="18778b64-ae1c-46cf-bbb9-6d85d4ea66fe"
@@ -777,6 +796,7 @@ TrainData.Value.BrakePosition == BrakePositions.FreightTrainInG</PreCondition></
 </Case></Cases>
 </Function><Function
  Type="Double"
+ Default=""
  Implemented="TRUE"
  Name="a_sb"
  Guid="f9be1f48-7a24-49bd-8adc-644643e918fc"
@@ -858,6 +878,7 @@ Kernel.TrainData.TrainData.Value.TrainLength &lt;= 1500.0</PreCondition></PreCon
 </Case></Cases>
 </Function><Function
  Type="Double"
+ Default=""
  Implemented="TRUE"
  Name="b_sb"
  Guid="ab6f6102-0b9f-40db-88d0-793a1932989d"
@@ -939,6 +960,7 @@ Kernel.TrainData.TrainData.Value.TrainLength &lt;= 1500.0</PreCondition></PreCon
 </Case></Cases>
 </Function><Function
  Type="Double"
+ Default=""
  Implemented="TRUE"
  Name="c_sb"
  Guid="5205ab92-7232-4254-b5cd-6d9b2b1ac52b"
@@ -1020,6 +1042,7 @@ Kernel.TrainData.TrainData.Value.TrainLength &lt;= 1500.0</PreCondition></PreCon
 </Case></Cases>
 </Function><Function
  Type="Double"
+ Default=""
  Implemented="TRUE"
  Name="L_sb"
  Guid="e619d4fb-276d-4d1f-8629-63d609ce8bd6"

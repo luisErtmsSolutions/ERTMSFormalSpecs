@@ -26,74 +26,31 @@ namespace GUI.SpecificationView
 {
     public partial class Window : BaseForm
     {
-        public override MyPropertyGrid Properties
-        {
-            get { return propertyGrid; }
-        }
-
-        public RichTextBox ExpressionTextBox
-        {
-            get { return specBrowserTextView.TextBox; }
-        }
-
-        public override RichTextBox MessagesTextBox
-        {
-            get { return messagesRichTextBox.TextBox; }
-        }
-
         public override BaseTreeView TreeView
         {
             get { return specBrowserTreeView; }
         }
 
         /// <summary>
-        /// The rule set which is used to check the specifications
-        /// </summary>
-        private DataDictionary.Dictionary dictionary;
-        public DataDictionary.Dictionary Dictionary
-        {
-            get { return dictionary; }
-            private set
-            {
-                dictionary = value;
-                specBrowserTreeView.Root = dictionary;
-                Text = dictionary.Name + " specification view";
-            }
-        }
-
-        /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="specification"></param>
-        public Window(DataDictionary.Dictionary dictionary)
+        public Window()
         {
             InitializeComponent();
+            SpecificInitialisation();
 
-            specBrowserTextView.AutoComplete = false;
-            messagesRichTextBox.AutoComplete = false;
-
-            specBrowserTextView.TextBox.TextChanged += new EventHandler(TextBox_TextChanged);
-            FormClosed += new FormClosedEventHandler(Window_FormClosed);
-            Visible = false;
-            Dictionary = dictionary;
-
-            ResizeDescriptionArea(propertyGrid, 0);
-
-            Refresh();
-
-            DockAreas = WeifenLuo.WinFormsUI.Docking.DockAreas.DockLeft;
+            specBrowserTreeView.Root = EFSSystem.INSTANCE;
         }
 
-        void TextBox_TextChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Perform speicific initializations
+        /// </summary>
+        private void SpecificInitialisation()
         {
-            Paragraph paragraph = Selected as Paragraph;
-            if (paragraph != null)
-            {
-                if (paragraph.Text.CompareTo(specBrowserTextView.Text) != 0)
-                {
-                    paragraph.Text = specBrowserTextView.Text;
-                }
-            }
+            FormClosed += new FormClosedEventHandler(Window_FormClosed);
+            Visible = false;
+            DockAreas = WeifenLuo.WinFormsUI.Docking.DockAreas.DockLeft;
         }
 
         /// <summary>
@@ -109,7 +66,6 @@ namespace GUI.SpecificationView
         public override void Refresh()
         {
             specBrowserTreeView.Refresh();
-            int applicableCounter = Dictionary.ApplicableParagraphs.Count;
             base.Refresh();
         }
 

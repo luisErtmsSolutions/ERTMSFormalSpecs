@@ -90,6 +90,11 @@ namespace DataDictionary.Specification
         public bool Hidden { get { return false; } set { } }
 
         /// <summary>
+        /// Indicates that the element is pinned
+        /// </summary>
+        public bool Pinned { get { return getPinned(); } set { setPinned(value); } }
+
+        /// <summary>
         /// The explanation of the element
         /// </summary>
         /// <param name="explainSubElements">Precises if we need to explain the sub elements (if any)</param>

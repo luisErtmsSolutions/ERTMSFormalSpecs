@@ -1,4 +1,7 @@
 <NameSpace
+ X="110"
+ Width="100"
+ Height="50"
  Name="GUI"
  Guid="6b59a14b-59e5-4f91-89b7-107a15aee0c5"
 >
@@ -7,6 +10,7 @@
 <Functions>
 <Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  Name="d_EBI"
  Guid="c1f6a3d5-d606-4f86-ab36-29fb5a886e2a"
@@ -48,6 +52,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  Name="d_P"
  Guid="4ae86037-ce7f-4345-84d9-c47b3a56383b"
@@ -77,6 +82,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="SpeedRestrictions"
  Guid="46dc90b5-4414-422d-b79e-c6dd04220757"
@@ -116,6 +122,7 @@ INITIAL_VALUE BaseTypes.MaxSpeedFunction) (Distance)</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="TargetSpeedRestriction"
  Guid="e086594b-5c91-4e58-b60e-8d04ee160e10"

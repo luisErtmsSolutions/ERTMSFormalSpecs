@@ -27,7 +27,7 @@ using WeifenLuo.WinFormsUI.Docking;
 
 namespace GUI.GraphView
 {
-    public partial class GraphView : DockContent, IBaseForm
+    public partial class GraphView : BaseForm
     {
         /// <summary>
         /// The functions to be displayed in this graph view
@@ -155,45 +155,6 @@ namespace GUI.GraphView
         }
 
         /// <summary>
-        /// The property grid used to edit elements properties
-        /// </summary>
-        public MyPropertyGrid Properties { get { return null; } }
-
-        /// <summary>
-        /// The text editor for expressions
-        /// </summary>
-        public RichTextBox ExpressionTextBox { get { return null; } }
-
-        /// <summary>
-        /// The text editor for comments
-        /// </summary>
-        public RichTextBox CommentsTextBox { get { return null; } }
-
-        /// <summary>
-        /// The text editor for messages
-        /// </summary>
-        public RichTextBox MessagesTextBox { get { return null; } }
-
-        public EditorTextBox RequirementsTextBox { get { return null; } }
-
-        public EditorTextBox ExpressionEditorTextBox { get { return null; } }
-
-        /// <summary>
-        /// The main tree view of the form
-        /// </summary>
-        public BaseTreeView TreeView { get { return null; } }
-
-        /// <summary>
-        /// The sub tree view of the form
-        /// </summary>
-        public BaseTreeView subTreeView { get { return null; } }
-
-        /// <summary>
-        /// The explain text box
-        /// </summary>
-        public ExplainTextBox ExplainTextBox { get { return null; } }
-
-        /// <summary>
         /// Allows to refresh the view, according to the fact that the structure for the model could change
         /// </summary>
         public override void Refresh()
@@ -214,7 +175,7 @@ namespace GUI.GraphView
         /// <summary>
         /// Refreshes the model
         /// </summary>
-        public void RefreshModel()
+        public override void RefreshModel()
         {
             // The model is always the same function
         }
@@ -238,11 +199,6 @@ namespace GUI.GraphView
         /// Colors used to display functions
         /// </summary>
         private static string[] COLORS = { "blue", "red", "green", "orange", "black", "purple", "yellow" };
-
-        /// <summary>
-        /// Provides the model element currently selected in this IBaseForm
-        /// </summary>
-        public Utils.IModelElement Selected { get { return null; } }
 
         /// <summary>
         /// Creates the picture associated to this graph

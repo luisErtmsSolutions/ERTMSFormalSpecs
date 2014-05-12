@@ -4,7 +4,7 @@
 all: bin/$(PROJECT).dll
 
 bin/$(PROJECT).dll :  
-	@banner $(PROJECT)
+	-@banner $(PROJECT)
 	@make clean
 	@-mkdir bin
 	@$(BUILD)

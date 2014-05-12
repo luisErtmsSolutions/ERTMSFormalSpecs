@@ -54,6 +54,7 @@
 </Enum></Enumerations>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="PositionReportEventsTracker"
@@ -136,6 +137,7 @@
 >
 </ReqRef><Comment>Contains the previous value of session state in order to know if that value has changed.</Comment>
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  Name="PositionReportParametersValues"
  Guid="0cfceaa4-617d-4da2-835a-9da4e0f84f51"
@@ -228,6 +230,7 @@
 >
 </ReqRef><Comment>The locations where the position report has to be sent.</Comment>
 </StructureElement></Structure><Structure
+ Default=""
  NeedsRequirement="FALSE"
  Name="PositionReportParameters"
  Guid="dafba94d-6433-44d4-9e3f-ba35ffadb8ea"
@@ -252,6 +255,7 @@
 >
 <Comment>The position report parameters.</Comment>
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="LastPositionReportInformation"
@@ -309,6 +313,7 @@
 >
 </ReqRef><Comment>The LRBG according to which the last position report was sent.</Comment>
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  Name="PositionLocation"
  Guid="22647d7a-ba05-4975-8cb5-f8392fab6640"
@@ -368,6 +373,7 @@
 <Functions>
 <Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  Name="SendReportDueToCommunicationSessionIsEstablished"
  Guid="06396c3e-d71c-45c8-8a5f-01b87812bd95"
@@ -387,6 +393,7 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SendReportDueToLevelChange"
@@ -407,6 +414,7 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SendReportDueToLossOfTrainIntegrityDetected"
@@ -429,6 +437,7 @@ TIU.TrainIntegrity.Status == Messages.Q_LENGTH.Train_integrity_lost</Expression>
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SendReportDueToModeChange"
@@ -475,6 +484,7 @@ TIU.TrainIntegrity.Status == Messages.Q_LENGTH.Train_integrity_lost</Expression>
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SendReportDueToPositionReportTimeReached"
@@ -495,6 +505,7 @@ TIU.TrainIntegrity.Status == Messages.Q_LENGTH.Train_integrity_lost</Expression>
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SendReportDueToPositionReportDistanceReached"
@@ -515,6 +526,7 @@ TIU.TrainIntegrity.Status == Messages.Q_LENGTH.Train_integrity_lost</Expression>
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SendReportDueToSpecialLocationNow"
@@ -535,6 +547,7 @@ TIU.TrainIntegrity.Status == Messages.Q_LENGTH.Train_integrity_lost</Expression>
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SendReportDueToStandstillReached"
@@ -555,6 +568,7 @@ TIU.TrainIntegrity.Status == Messages.Q_LENGTH.Train_integrity_lost</Expression>
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SendReportDueToTrainIntegrityConfirmedByDriver"
@@ -580,6 +594,7 @@ TIU.TrainIntegrity.Status in [
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SendReportDueToPositionReportSpecialLocationReached"
@@ -605,6 +620,7 @@ TIU.TrainIntegrity.Status in [
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  NeedsRequirement="FALSE"
  Name="SendReportDueToLRBGCompliantBGPassed"
  Guid="6deafe8f-5156-4e8d-b53b-48a9f7361756"
@@ -624,6 +640,7 @@ TIU.TrainIntegrity.Status in [
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  NeedsRequirement="FALSE"
  Name="SendReportDueToLevelTransitionBorderPassedWithMinSafeRearEnd"
  Guid="653f40d4-26f6-4bd3-a8f7-37dc03dcb5ef"
@@ -643,6 +660,7 @@ TIU.TrainIntegrity.Status in [
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  NeedsRequirement="FALSE"
  Name="SendReportDueToSpecialLocationLRBGCompliantBG"
  Guid="d82afd23-bb03-4a72-8cbf-8733bb209752"
@@ -662,6 +680,7 @@ TIU.TrainIntegrity.Status in [
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SendReportNow"
@@ -785,6 +804,7 @@ TIU.TrainIntegrity.Status in [
 </Case></Cases>
 </Function><Function
  Type="PositionReportSpecialLocation"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ERTMSSpecialLocationConverter"
@@ -829,6 +849,7 @@ TIU.TrainIntegrity.Status in [
 </Case></Cases>
 </Function><Function
  Type="Messages.M_LEVEL"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="FillLevelInformation"
@@ -862,6 +883,7 @@ TIU.TrainIntegrity.Status in [
 </Case></Cases>
 </Function><Function
  Type="Messages.M_MODE"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="FillModeInformation"
@@ -895,6 +917,7 @@ TIU.TrainIntegrity.Status in [
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Length"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="FillTrainIntegrityInformation"
@@ -949,6 +972,7 @@ TIU.TrainIntegrity.Status in [
 </Case></Cases>
 </Function><Function
  Type="Messages.PACKET.TRAIN_TO_TRACK.POSITION_REPORTS.Message"
+ Default=""
  Implemented="TRUE"
  Name="CreatePositionReport"
  Guid="2c0dadbb-d07b-4fb5-8371-d890520965f8"
@@ -1075,6 +1099,7 @@ TIU.TrainIntegrity.Status in [
 </Case></Cases>
 </Function><Function
  Type="Messages.Q_STATUS"
+ Default=""
  Implemented="TRUE"
  Name="FillQStatus"
  Guid="b0cba2fa-7765-443d-8e8c-58a283e252bf"
@@ -1121,6 +1146,7 @@ TIU.TrainIntegrity.Status in [
 </Case></Cases>
 </Function><Function
  Type="Default.MessageTypes.Distance"
+ Default=""
  Implemented="TRUE"
  Name="FillDistance"
  Guid="06a30396-059d-48ce-8307-81d1ef4237e7"

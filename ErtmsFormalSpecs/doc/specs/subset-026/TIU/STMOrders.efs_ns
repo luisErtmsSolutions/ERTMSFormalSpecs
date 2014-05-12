@@ -6,6 +6,7 @@
 </NameSpaces>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  Name="BrakeInhibitStruct"
  Guid="78cf7e1b-d098-4812-8d9e-ba265ce76b20"

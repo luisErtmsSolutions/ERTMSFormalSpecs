@@ -1,8 +1,9 @@
 <NameSpace
- X="180"
- Y="60"
+ X="440"
+ Y="160"
  Width="100"
- Height="6200"
+ Height="50"
+ Pinned="TRUE"
  Name="Kernel"
  Guid="838d10c3-e56e-4b01-83ac-4480aa6fb8b8"
 >
@@ -91,6 +92,11 @@
 <Enumerations>
 <Enum
  Default="SupervisionStatus.Normal"
+ X="600"
+ Y="30"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="SupervisionStatus"
  Guid="c9d18bec-7195-4bb6-aaa2-9ff991ede889"
@@ -136,6 +142,11 @@
 </EnumValue></Values>
 </Enum><Enum
  Default="DriverAckTimeOut"
+ X="970"
+ Y="90"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="BrakeReason"
  Guid="0fb8e0ec-b6c6-4517-b005-253d3c0ebdea"
@@ -161,6 +172,12 @@
 </Enum></Enumerations>
 <Structures>
 <Structure
+ Default=""
+ X="970"
+ Y="260"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="DriverId"
  Guid="5d5998ab-e9d2-4bd5-b5be-364586273200"
@@ -195,6 +212,12 @@
 >
 </ReqRef><Comment>The data state of the driver id.</Comment>
 </StructureElement></Structure><Structure
+ Default=""
+ X="600"
+ Y="210"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="LevelData"
  Guid="93dfea80-bbe6-4ac1-9718-6b369bd16254"
@@ -236,6 +259,12 @@
 <Comment></Comment>
 </ReqRef><Comment>The data state of the current ERTMS/ETCS level.</Comment>
 </StructureElement></Structure><Structure
+ Default=""
+ X="970"
+ Y="200"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="TrainRunningNumber"
  Guid="6d1d2f39-3d8d-4dd7-8ba6-046f8d0ccb89"
@@ -277,6 +306,12 @@ The bcd notation as required by 7.5.92 is not possible in the model. Hence we st
 >
 </ReqRef><Comment>Data state of the train running number.</Comment>
 </StructureElement></Structure><Structure
+ Default=""
+ X="800"
+ Y="90"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="EmergencyStop"
  Guid="7b0227c8-823b-44f7-9095-f54804077a15"
@@ -330,6 +365,12 @@ The bcd notation as required by 7.5.92 is not possible in the model. Hence we st
  Guid="3f89f43d-554f-45d9-b2ea-ad274c34225c"
 >
 </StructureElement></Structure><Structure
+ Default=""
+ X="600"
+ Y="150"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="OperatedSystemVersion"
  Guid="e4602fc9-bbc3-4fd4-920b-19c1f9c8e08c"
@@ -361,6 +402,12 @@ The bcd notation as required by 7.5.92 is not possible in the model. Hence we st
 >
 <Comment>Value of the ERTMS/ETCS operated system.</Comment>
 </StructureElement></Structure><Structure
+ Default=""
+ X="970"
+ Y="20"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="BaliseGroup"
  Guid="ff655bbd-fc18-4fd1-ba0a-bc9d6d701c0f"
@@ -370,7 +417,8 @@ The bcd notation as required by 7.5.92 is not possible in the model. Hence we st
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="30ca3f74-cfc2-4e19-9e58-f3daaa115444"
 >
-</ReqRef><StructureElement
+</ReqRef><Comment></Comment>
+<StructureElement
  TypeName="Boolean"
  Default="Boolean.False"
  Mode="Internal"
@@ -399,6 +447,11 @@ The bcd notation as required by 7.5.92 is not possible in the model. Hence we st
 <Collection
  TypeName="Kernel.EmergencyStop"
  Default="[]"
+ X="600"
+ Y="90"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="EmergencyStopsCol"
  Guid="9543cdba-100d-4b27-90d5-f248e12b2645"
@@ -419,6 +472,11 @@ The bcd notation as required by 7.5.92 is not possible in the model. Hence we st
  TypeName="BaliseGroup"
  MaxSize="20"
  Default="[]"
+ X="800"
+ Y="20"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="BaliseGroups"
  Guid="cce51957-40e7-474b-8e1e-7611c46f1c12"
@@ -433,6 +491,11 @@ The bcd notation as required by 7.5.92 is not possible in the model. Hence we st
 <StateMachines>
 <StateMachine
  Default="NoProcedure"
+ X="970"
+ Y="320"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  NeedsRequirement="FALSE"
  Name="HandleModeChangeSM"
  Guid="470b0371-f7ee-48fa-88a7-680ddaa71b72"
@@ -9292,6 +9355,12 @@ The bcd notation as required by 7.5.92 is not possible in the model. Hence we st
 <Functions>
 <Function
  Type="EmergencyStop"
+ Default=""
+ X="180"
+ Y="90"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="CreateEmergencyStop"
  Guid="ed5c4ddd-670a-414d-961c-9ef4c2963243"
@@ -9334,6 +9403,12 @@ The bcd notation as required by 7.5.92 is not possible in the model. Hence we st
 </Case></Cases>
 </Function><Function
  Type="Kernel.EmergencyStop"
+ Default=""
+ X="180"
+ Y="150"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="ClosestStopLocation"
  Guid="60af8f56-9ae5-4e3d-b04a-709236d5e630"
@@ -9365,6 +9440,12 @@ INITIAL_VALUE EmergencyStop
 </Case></Cases>
 </Function><Function
  Type="Kernel.EmergencyStop"
+ Default=""
+ X="180"
+ Y="210"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="MinEmergencyStopDistance"
  Guid="760d41cd-34f8-4a83-8e8d-d49e57d0c208"
@@ -9401,6 +9482,11 @@ INITIAL_VALUE EmergencyStop
 </Function></Functions>
 <Procedures>
 <Procedure
+ X="30"
+ Y="210"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="HandleInputs"
@@ -9677,10 +9763,16 @@ BTM.AntennaPosition ( Default.DistanceInterval.Min ) &gt; (BTM.Linking.CurrentLi
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="30"
+ Y="270"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  NeedsRequirement="FALSE"
  Name="InitializeTestEnvironment"
  Guid="7cde642d-80d9-4a06-9f70-c9a305706ab2"
 >
+<Comment></Comment>
 <Rules>
 <Rule
  Priority="Processing"
@@ -9853,6 +9945,11 @@ DMI2 will be the slave and will be connected to the first desk of the CabB.</Com
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="30"
+ Y="90"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="AddEmergencyStop"
  Guid="ceb27117-9325-44f7-88ca-b8341a1a09d6"
@@ -9957,10 +10054,16 @@ Kernel.EmergencyStops</Action></Actions>
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="30"
+ Y="150"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="RemoveEmergencyStop"
  Guid="f336793a-dd82-40af-b8d5-efe066418065"
 >
+<Comment></Comment>
 <Parameters>
 <Parameter
  Type="Messages.NID_EM"
@@ -10019,6 +10122,11 @@ Kernel.EmergencyStops</Action></Actions>
  Type="DriverId"
  DefaultValue=""
  VariableMode="Internal"
+ X="800"
+ Y="260"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="DriverId"
  Guid="8dddc729-7598-4f91-83f1-18dd8ebf600b"
@@ -10038,6 +10146,11 @@ Kernel.EmergencyStops</Action></Actions>
  Type="Kernel.LevelData"
  DefaultValue=""
  VariableMode="Internal"
+ X="420"
+ Y="210"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="Level"
  Guid="5308bb4c-2f99-44c0-8637-c53268611e5f"
@@ -10058,6 +10171,11 @@ Kernel.EmergencyStops</Action></Actions>
  Type="Mode"
  DefaultValue="Mode.NP"
  VariableMode="Internal"
+ X="370"
+ Y="350"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="Mode"
  Guid="995e813d-7495-4cac-9611-6ab01d0e601f"
@@ -10072,6 +10190,11 @@ Kernel.EmergencyStops</Action></Actions>
  Type="Boolean"
  DefaultValue="False"
  VariableMode="Internal"
+ X="260"
+ Y="350"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="PowerOn"
  Guid="59961cdf-c80c-4210-a62d-8f81397dd4c3"
@@ -10086,6 +10209,11 @@ Kernel.EmergencyStops</Action></Actions>
  Type="TrainRunningNumber"
  DefaultValue=""
  VariableMode="Internal"
+ X="800"
+ Y="200"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="TrainRunningNumber"
  Guid="62073aab-9036-4212-9edc-5cc9c9e478a5"
@@ -10111,6 +10239,11 @@ Kernel.EmergencyStops</Action></Actions>
  Type="Kernel.EmergencyStopsCol"
  DefaultValue=""
  VariableMode="Internal"
+ X="420"
+ Y="90"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="EmergencyStops"
  Guid="13961675-22c5-406e-905d-a628ef0abf5a"
@@ -10120,6 +10253,7 @@ Kernel.EmergencyStops</Action></Actions>
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="ff0f661b-1ff8-4d89-b9c3-9920c2e5be19"
 >
+<Comment>Store the emergency stop messages for reference</Comment>
 </ReqRef><ReqRef
  Id="19082c8b-d1cc-4d23-a9da-8581737a0760"
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
@@ -10130,6 +10264,11 @@ Kernel.EmergencyStops</Action></Actions>
  Type="Default.BaseTypes.Distance"
  DefaultValue=""
  VariableMode="Internal"
+ X="260"
+ Y="470"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="FirstTargetAtZeroSpeed"
  Guid="0ee9ae99-b788-45ca-af88-08cd87b7bb19"
@@ -10147,7 +10286,13 @@ Kernel.EmergencyStops</Action></Actions>
 </ReqRef><Comment>Represents the first target at zero speed.</Comment>
 </Variable><Variable
  Type="Default.BaseTypes.Distance"
+ DefaultValue=""
  VariableMode="Internal"
+ X="590"
+ Y="470"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="IndicationLocationAtMrspSpeed"
  Guid="243c9ed8-c310-40ad-99ef-c37ee2bd589b"
@@ -10167,6 +10312,11 @@ Kernel.EmergencyStops</Action></Actions>
  Type="Kernel.SupervisionStatus"
  DefaultValue=""
  VariableMode="Internal"
+ X="420"
+ Y="30"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="SupervisionStatus"
  Guid="2ddc647d-7d6d-47ef-b66e-23e93b18c46e"
@@ -10186,6 +10336,11 @@ Kernel.EmergencyStops</Action></Actions>
  Type="Default.BaseTypes.Distance"
  DefaultValue="0.0"
  VariableMode="Internal"
+ X="370"
+ Y="470"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="TargetDistance"
@@ -10201,6 +10356,11 @@ Kernel.EmergencyStops</Action></Actions>
  Type="Kernel.NationalValues.NationalDefaultData"
  DefaultValue=""
  VariableMode="Internal"
+ X="40"
+ Y="470"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="DefaultValues"
  Guid="cd6bdcc7-694e-440a-8fc2-bbe071d2230f"
@@ -10220,6 +10380,11 @@ Kernel.EmergencyStops</Action></Actions>
  Type="Default.NID_NTC"
  DefaultValue="NID_NTC.NOT_APPLICABLE"
  VariableMode="Internal"
+ X="40"
+ Y="350"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="NationalSystemId"
  Guid="d779be35-e181-4d80-bff0-fc43fc35d682"
@@ -10234,6 +10399,11 @@ Kernel.EmergencyStops</Action></Actions>
  Type="OperatedSystemVersion"
  DefaultValue=""
  VariableMode="InOut"
+ X="420"
+ Y="150"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="OperatedSystemVersion"
  Guid="a93e58ed-59ef-487f-bfe3-eac1c3a8242f"
@@ -10249,6 +10419,11 @@ Kernel.EmergencyStops</Action></Actions>
  Type="Boolean"
  DefaultValue="Boolean.False"
  VariableMode="Internal"
+ X="150"
+ Y="350"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="MissionIsOnGoing"
  Guid="5a9ba8b6-63c2-4fc6-aa30-8c87db612259"
@@ -10298,6 +10473,10 @@ Kernel.EmergencyStops</Action></Actions>
  Type="Default.BaseTypes.Time"
  DefaultValue="0.0"
  VariableMode="Internal"
+ X="810"
+ Y="470"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CurrentTime"
  Guid="ebb894e6-f214-4679-8014-5d2808a8025c"
@@ -10312,6 +10491,11 @@ Kernel.EmergencyStops</Action></Actions>
  Type="Default.BaseTypes.Time"
  DefaultValue="0.34"
  VariableMode="Internal"
+ X="700"
+ Y="470"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CycleDuration"
@@ -10322,6 +10506,11 @@ Kernel.EmergencyStops</Action></Actions>
  Type="Messages.NID_ENGINE"
  DefaultValue="0"
  VariableMode="Internal"
+ X="480"
+ Y="350"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="NidEngine"
@@ -10330,7 +10519,13 @@ Kernel.EmergencyStops</Action></Actions>
 <Comment>The NID of the engine, used for sending messages to the trackside.</Comment>
 </Variable><Variable
  Type="String"
+ DefaultValue=""
  VariableMode="Internal"
+ X="590"
+ Y="350"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="TripReason"
@@ -10344,21 +10539,39 @@ Kernel.EmergencyStops</Action></Actions>
 </ReqRef><Comment>Represents the trip raison, if any.</Comment>
 </Variable><Variable
  Type="Kernel.HandleModeChangeSM"
+ DefaultValue=""
  VariableMode="Internal"
+ X="800"
+ Y="320"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Name="HandleModeChange"
  Guid="478d6d56-8c92-4b72-92ef-e4fe79d4ceda"
 >
+<Comment></Comment>
 </Variable><Variable
  Type="Boolean"
  DefaultValue="False"
  VariableMode="Internal"
+ X="150"
+ Y="470"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Name="TrainDataVerified"
  Guid="8fa81bf4-0f19-4ae8-b2e3-1f0480008ce9"
 >
+<Comment></Comment>
 </Variable><Variable
  Type="Default.BaseTypes.Distance"
  DefaultValue="300.0"
  VariableMode="Constant"
+ X="480"
+ Y="470"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="DistanceToKeepInfoInTheRear"
  Guid="916c47dd-ea25-4512-bcfa-4fe991bdf6e0"
@@ -10368,10 +10581,15 @@ Kernel.EmergencyStops</Action></Actions>
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="9d85b957-d0a8-4d57-89ff-6c96551ff133"
 >
-</ReqRef></Variable></Variables>
+</ReqRef><Comment></Comment>
+</Variable></Variables>
 <Rules>
 <Rule
  Priority="UpdateINTERNAL"
+ X="30"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  NeedsRequirement="FALSE"
  Name="HandleInputs"
  Guid="db5fbd34-5030-4e07-bf04-219670c582ea"
@@ -10394,11 +10612,16 @@ Kernel.EmergencyStops</Action></Actions>
 </RuleCondition></Conditions>
 </Rule><Rule
  Priority="CleanUp"
+ X="140"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="UpdateSystemTime"
  Guid="46585923-b629-4166-8a63-015a66498ae6"
 >
+<Comment></Comment>
 <SubRules></SubRules>
 <Conditions>
 <RuleCondition

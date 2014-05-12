@@ -1,8 +1,9 @@
 <NameSpace
- X="400"
- Y="150"
- Width="350"
- Height="300"
+ X="1100"
+ Y="480"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Name="SpeedAndDistanceMonitoring"
  Guid="29ccd64e-2889-44e6-8b10-6499287bee06"
 >
@@ -27,6 +28,10 @@
 <Enumerations>
 <Enum
  Default="Ceiling"
+ X="70"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="MonitoringType"
  Guid="2ac16c16-edca-4fb7-bbc0-d5da4e832e66"
@@ -51,7 +56,8 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="812775a4-f2f7-474d-ac2d-22d81cdf07d2"
 >
-</ReqRef><Values>
+</ReqRef><Comment></Comment>
+<Values>
 <EnumValue
  Value="0"
  Name="Ceiling"
@@ -70,6 +76,10 @@
 </EnumValue></Values>
 </Enum><Enum
  Default="SupervisionStatus.Normal"
+ X="200"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SupervisionStatus"
  Guid="425b2655-5563-4f7d-a175-e9ccc940ac92"
@@ -111,6 +121,12 @@
 <Functions>
 <Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="50"
+ Y="10"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="f41"
  Guid="574a6d60-6f0a-4231-a88a-b3218269d93e"
@@ -202,6 +218,12 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="50"
+ Y="70"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="SBIsAvailableForUse"
  Guid="b0b21ecb-3c0b-4844-9f7a-1a6e39b0b2fa"
@@ -225,6 +247,12 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="50"
+ Y="130"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="PermittedSpeed"
  Guid="98c15b8c-4a8b-4fc0-8d3c-6e940e541fe2"
@@ -249,7 +277,8 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="f3f297e1-a2c6-47b7-b7e9-90e061ae4b1f"
 >
-</ReqRef><Parameters>
+</ReqRef><Comment></Comment>
+<Parameters>
 <Parameter
  Type="Default.BaseTypes.Distance"
  Name="Distance"
@@ -301,6 +330,11 @@
 </Function></Functions>
 <Procedures>
 <Procedure
+ X="720"
+ Y="60"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  NeedsRequirement="FALSE"
  Name="UpdateMonitoring"
  Guid="3343f3ef-10d0-4a24-9849-d799ebf3c545"
@@ -346,6 +380,11 @@ ReleaseSpeedSupervision.StartRSM ( ReleaseSpeedSupervision.ReleaseSpeed ) &lt;= 
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="830"
+ Y="60"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="TriggerEBCommand"
@@ -376,6 +415,10 @@ ReleaseSpeedSupervision.StartRSM ( ReleaseSpeedSupervision.ReleaseSpeed ) &lt;= 
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="610"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="TriggerSBCommand"
@@ -436,11 +479,19 @@ ReleaseSpeedSupervision.StartRSM ( ReleaseSpeedSupervision.ReleaseSpeed ) &lt;= 
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="720"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  NeedsRequirement="FALSE"
  Name="RevokeEBCommand"
  Guid="4a1fb3de-7c1f-4285-9c15-c45bc8536ccf"
 >
 </Procedure><Procedure
+ X="830"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="RevokeSBCommand"
@@ -496,6 +547,10 @@ ReleaseSpeedSupervision.StartRSM ( ReleaseSpeedSupervision.ReleaseSpeed ) &lt;= 
  Type="MonitoringType"
  DefaultValue="MonitoringType.Ceiling"
  VariableMode="Internal"
+ X="70"
+ Y="260"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Monitoring"
  Guid="98bc4b2a-6da7-440d-9bf2-e41fe5486bce"
@@ -510,6 +565,10 @@ ReleaseSpeedSupervision.StartRSM ( ReleaseSpeedSupervision.ReleaseSpeed ) &lt;= 
  Type="Boolean"
  DefaultValue="Boolean.False"
  VariableMode="Internal"
+ X="400"
+ Y="460"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SBTriggered"
  Guid="76745709-6a98-447f-88dc-47ae1d3f280e"
@@ -534,6 +593,10 @@ ReleaseSpeedSupervision.StartRSM ( ReleaseSpeedSupervision.ReleaseSpeed ) &lt;= 
  Type="Boolean"
  DefaultValue="Boolean.False"
  VariableMode="Internal"
+ X="180"
+ Y="460"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="EBTriggered"
  Guid="34c6c135-edd7-4757-86c3-b26967d80b7d"
@@ -558,6 +621,10 @@ ReleaseSpeedSupervision.StartRSM ( ReleaseSpeedSupervision.ReleaseSpeed ) &lt;= 
  Type="Boolean"
  DefaultValue="Boolean.False"
  VariableMode="Internal"
+ X="70"
+ Y="460"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TractionCutOffTriggered"
  Guid="977c190f-a73a-4ed6-a0f3-3c8abe725756"
@@ -577,6 +644,10 @@ ReleaseSpeedSupervision.StartRSM ( ReleaseSpeedSupervision.ReleaseSpeed ) &lt;= 
  Type="SpeedAndDistanceMonitoring.SupervisionStatus"
  DefaultValue="SupervisionStatus.Normal"
  VariableMode="Internal"
+ X="200"
+ Y="260"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Supervision"
  Guid="80030642-6eaa-408e-9f33-e3ecf28e70ce"
@@ -591,6 +662,10 @@ ReleaseSpeedSupervision.StartRSM ( ReleaseSpeedSupervision.ReleaseSpeed ) &lt;= 
  Type="Boolean"
  DefaultValue="Boolean.False"
  VariableMode="Internal"
+ X="290"
+ Y="460"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SpeedAndDistanceMonitoringIsActive"
  Guid="f5e2bfa5-4c2a-4ac6-bdae-34426c0f9a9f"
@@ -605,6 +680,10 @@ ReleaseSpeedSupervision.StartRSM ( ReleaseSpeedSupervision.ReleaseSpeed ) &lt;= 
  Type="Boolean"
  DefaultValue="Boolean.False"
  VariableMode="Incoming"
+ X="730"
+ Y="460"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="TCOSpecified"
@@ -615,6 +694,10 @@ ReleaseSpeedSupervision.StartRSM ( ReleaseSpeedSupervision.ReleaseSpeed ) &lt;= 
  Type="Boolean"
  DefaultValue="Boolean.False"
  VariableMode="Internal"
+ X="620"
+ Y="460"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SBSpecified"
  Guid="b53c4e24-e8b7-4d9c-87a7-e02c83a336d3"
@@ -629,6 +712,10 @@ ReleaseSpeedSupervision.StartRSM ( ReleaseSpeedSupervision.ReleaseSpeed ) &lt;= 
  Type="Boolean"
  DefaultValue="Boolean.False"
  VariableMode="Internal"
+ X="510"
+ Y="460"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TrainTripped"
  Guid="53d8badf-f08b-4d97-8f5e-710965ab272f"

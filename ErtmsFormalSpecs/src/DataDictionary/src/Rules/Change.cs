@@ -187,5 +187,21 @@ namespace DataDictionary.Rules
 
             return retVal;
         }
+
+        public override string ToString()
+        {
+            string retVal = "";
+
+            foreach (Change change in Changes)
+            {
+                if (!string.IsNullOrEmpty(retVal))
+                {
+                    retVal += "\n";
+                }
+                retVal += change.Variable.FullName + " <- " + change.NewValue.LiteralName;
+            }
+
+            return retVal;
+        }
     }
 }

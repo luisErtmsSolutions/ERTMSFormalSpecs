@@ -213,9 +213,9 @@ namespace GUI.BoxArrowDiagram
         }
 
         /// <summary>
-        /// The size of a arrow when no initial box is defined
+        /// The default size of a arrow. This is used when one of the control ending the arrow does not belong to the diagram
         /// </summary>
-        public static int INITIAL_ARROW_LENGTH = 40;
+        public int DEFAULT_ARROW_LENGTH = 40;
 
         private static double ARROW_LENGTH = 10.0;
         private static double ARROW_ANGLE = Math.PI / 6;
@@ -333,7 +333,7 @@ namespace GUI.BoxArrowDiagram
                 }
                 else if (targetBoxControl != null)
                 {
-                    retVal = new Point(targetBoxControl.Center.X, targetBoxControl.Location.Y - INITIAL_ARROW_LENGTH);
+                    retVal = new Point(targetBoxControl.Center.X, targetBoxControl.Location.Y - DEFAULT_ARROW_LENGTH);
                 }
                 else
                 {
@@ -387,11 +387,11 @@ namespace GUI.BoxArrowDiagram
                 }
                 else if (initialBoxControl != null)
                 {
-                    retVal = new Point(initialBoxControl.Center.X, initialBoxControl.Location.Y + initialBoxControl.Height + INITIAL_ARROW_LENGTH);
+                    retVal = new Point(initialBoxControl.Center.X, initialBoxControl.Location.Y + initialBoxControl.Height + DEFAULT_ARROW_LENGTH);
                 }
                 else
                 {
-                    retVal = new Point(50, 50 + INITIAL_ARROW_LENGTH);
+                    retVal = new Point(50, 50 + DEFAULT_ARROW_LENGTH);
                 }
 
                 retVal.Offset(EndOffset);   // This offset is used to have final arrows unaligned
@@ -650,7 +650,7 @@ namespace GUI.BoxArrowDiagram
             // Position of the text box for initial arrows
             if (SourceBoxControl == null)
             {
-                y = y - INITIAL_ARROW_LENGTH / 2;
+                y = y - DEFAULT_ARROW_LENGTH / 2;
             }
 
             return new Rectangle(x, y, Width, Height);

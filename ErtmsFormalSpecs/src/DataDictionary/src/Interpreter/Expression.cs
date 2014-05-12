@@ -336,6 +336,11 @@ namespace DataDictionary.Interpreter
         public SymbolTable LocalScope { get; private set; }
 
         /// <summary>
+        /// Indicates that default values should be used when no value is specifically provided
+        /// </summary>
+        public bool UseDefaultValue { get; set; }
+
+        /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="instance">The instance on which interpretation should be performed</param>
@@ -343,6 +348,7 @@ namespace DataDictionary.Interpreter
         {
             LocalScope = new SymbolTable();
             Instance = null;
+            UseDefaultValue = true;
         }
 
         /// <summary>
@@ -353,6 +359,7 @@ namespace DataDictionary.Interpreter
         {
             LocalScope = new SymbolTable();
             Instance = instance;
+            UseDefaultValue = true;
         }
 
         /// <summary>
@@ -363,6 +370,7 @@ namespace DataDictionary.Interpreter
         {
             LocalScope = other.LocalScope;
             Instance = other.Instance;
+            UseDefaultValue = other.UseDefaultValue;
         }
 
         /// <summary>
@@ -374,6 +382,7 @@ namespace DataDictionary.Interpreter
         {
             LocalScope = other.LocalScope;
             Instance = instance;
+            UseDefaultValue = true;
         }
 
         /// <summary>

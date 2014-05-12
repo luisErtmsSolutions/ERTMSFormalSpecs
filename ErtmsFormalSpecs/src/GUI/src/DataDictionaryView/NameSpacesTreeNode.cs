@@ -142,12 +142,18 @@ namespace GUI.DataDictionaryView
         {
             base.SelectionChanged(false);
 
+            Window window = BaseForm as Window;
+            if (window != null)
+            {
+                window.modelDiagramPanel.Model = Item;
+                window.modelDiagramPanel.RefreshControl();
+            }
+
             List<DataDictionary.Types.NameSpace> namespaces = new List<DataDictionary.Types.NameSpace>();
             foreach (DataDictionary.Types.NameSpace aNamespace in Item.NameSpaces)
             {
                 namespaces.Add(aNamespace);
             }
-
             GUIUtils.MDIWindow.SetStatus(NameSpaceTreeNode.CreateStatMessage(namespaces, true));
         }
     }

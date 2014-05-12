@@ -24,22 +24,17 @@ namespace GUI.TestRunnerView
     {
         public override MyPropertyGrid Properties
         {
-            get { return propertyGrid; }
-        }
-
-        public override RichTextBox MessagesTextBox
-        {
-            get { return messageRichTextBox.TextBox; }
+            get { return null; }
         }
 
         public override EditorTextBox RequirementsTextBox
         {
-            get { return requirementsTextBox; }
+            get { return null; }
         }
 
         public override EditorTextBox ExpressionEditorTextBox
         {
-            get { return expressionEditorTextBox; }
+            get { return null; }
         }
 
 
@@ -50,7 +45,7 @@ namespace GUI.TestRunnerView
 
         public override ExplainTextBox ExplainTextBox
         {
-            get { return explainTextBox; }
+            get { return null; }
         }
 
         /// <summary>
@@ -91,35 +86,15 @@ namespace GUI.TestRunnerView
         /// Constructor
         /// </summary>
         /// <param name="dictionary"></param>
-        public Window(DataDictionary.EFSSystem efsSystem)
+        public Window()
         {
             InitializeComponent();
 
-            messageRichTextBox.AutoComplete = false;
-            requirementsTextBox.AutoComplete = false;
-            explainTextBox.AutoComplete = false;
-
-            requirementsTextBox.ReadOnly = true;
-            explainTextBox.ReadOnly = true;
-
             FormClosed += new FormClosedEventHandler(Window_FormClosed);
-            expressionEditorTextBox.TextBox.TextChanged += new EventHandler(TextBox_TextChanged);
             Text = "System test view";
             Visible = false;
-            EFSSystem = efsSystem;
-
-            ResizeDescriptionArea(propertyGrid, 20);
-
+            EFSSystem = EFSSystem.INSTANCE;
             Refresh();
-        }
-
-        void TextBox_TextChanged(object sender, EventArgs e)
-        {
-            IExpressionable expressionable = Selected as IExpressionable;
-            if (expressionable != null && expressionable == expressionEditorTextBox.Instance)
-            {
-                expressionable.ExpressionText = expressionEditorTextBox.TextBox.Text;
-            }
         }
 
         /// <summary>
@@ -164,13 +139,6 @@ namespace GUI.TestRunnerView
             });
         }
 
-        public override void SynchronizeForm()
-        {
-            base.SynchronizeForm();
-
-            evcTimeLineControl.Refresh();
-        }
-
         /// <summary>
         /// Refreshes the display
         /// </summary>
@@ -212,7 +180,8 @@ namespace GUI.TestRunnerView
                     }
 
                     testBrowserTreeView.Refresh();
-                    evcTimeLineControl.Refresh();
+                    testDescriptionTimeLineControl.Refresh();
+                    testExecutionTimeLineControl.Refresh();
 
                     frameToolStripComboBox.Items.Clear();
                     List<string> frames = new List<string>();
@@ -235,7 +204,7 @@ namespace GUI.TestRunnerView
                     frameToolStripComboBox.Text = selectedFrame;
                     frameToolStripComboBox.ToolTipText = selectedFrame;
 
-                    if (Frame != null && frameToolStripComboBox.Text.CompareTo(Frame.Name) != 0)
+                    if (Frame == null || frameToolStripComboBox.Text.CompareTo(Frame.Name) != 0)
                     {
                         subSequenceSelectorComboBox.Items.Clear();
                         foreach (DataDictionary.Dictionary dictionary in EFSSystem.Dictionaries)
@@ -292,7 +261,7 @@ namespace GUI.TestRunnerView
 
         private void stepOnce_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = timeLineTabPage;
+            tabControl1.SelectedTab = testExecutionTabPage;
             StepOnce();
         }
 
@@ -305,7 +274,7 @@ namespace GUI.TestRunnerView
             }
             Clear();
             GUIUtils.MDIWindow.RefreshAfterStep();
-            tabControl1.SelectedTab = timeLineTabPage;
+            tabControl1.SelectedTab = testExecutionTabPage;
         }
 
         public void Clear()
@@ -342,7 +311,7 @@ namespace GUI.TestRunnerView
 
         private void rewindButton_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = timeLineTabPage;
+            tabControl1.SelectedTab = testExecutionTabPage;
             StepBack();
         }
 
@@ -445,11 +414,10 @@ namespace GUI.TestRunnerView
 
         private void frameSelectorComboBox_SelectionChanged(object sender, EventArgs e)
         {
-            if (Frame != null && Frame.Name.CompareTo(frameToolStripComboBox.Text) != 0)
+            if (Frame == null || Frame.Name.CompareTo(frameToolStripComboBox.Text) != 0)
             {
                 EFSSystem.Runner = null;
             }
-
             Refresh();
         }
 

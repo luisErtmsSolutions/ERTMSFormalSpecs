@@ -1,8 +1,9 @@
 <NameSpace
- X="1210"
- Y="590"
+ X="990"
+ Y="420"
  Width="100"
- Height="100"
+ Height="50"
+ Pinned="TRUE"
  Name="TSR"
  Guid="ddbb76e4-1952-4bfd-99d6-732ca3bbe208"
 >
@@ -10,6 +11,7 @@
 </NameSpaces>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  Name="TemporarySpeedRestriction"
  Guid="0750c483-234a-40dc-ad60-7476fe9389a6"
@@ -161,6 +163,7 @@
 <Functions>
 <Function
  Type="Default.BaseTypes.Length"
+ Default=""
  Implemented="TRUE"
  Name="TSRLength"
  Guid="e1f7e134-d7fc-432e-a021-fead8af82896"
@@ -201,6 +204,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="TSRSpeedRestriction"
@@ -239,6 +243,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="SpeedRestrictions"
  Guid="3aa45245-3edf-4e8e-81b4-37889a104200"
@@ -289,6 +294,7 @@ INITIAL_VALUE BaseTypes.MaxSpeedFunction) (Distance)</Expression>
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CurrentTargetDueToTSR"

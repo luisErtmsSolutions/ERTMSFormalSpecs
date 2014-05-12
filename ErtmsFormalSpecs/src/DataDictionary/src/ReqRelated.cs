@@ -14,6 +14,7 @@
 // --
 // ------------------------------------------------------------------------------
 
+using DataDictionary.Specification;
 namespace DataDictionary
 {
     public class ReqRelated : Generated.ReqRelated, ICommentable
@@ -51,6 +52,29 @@ namespace DataDictionary
         public virtual bool ImplementationPartiallyCompleted
         {
             get { return getImplemented(); }
+        }
+
+        /// <summary>
+        /// Provides the description of all requirements
+        /// </summary>
+        /// <returns></returns>
+        public override string RequirementDescription()
+        {
+            string retVal = "";
+
+            foreach (Paragraph paragraph in ModeledParagraphs)
+            {
+                if (EFSSystem.INSTANCE.DisplayRequirementsAsList)
+                {
+                    retVal += paragraph.FullId + ", ";
+                }
+                else
+                {
+                    retVal += paragraph.FullId + ":" + paragraph.getText() + "\n\n";
+                }
+            }
+
+            return retVal;
         }
     }
 }

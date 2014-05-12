@@ -48,48 +48,20 @@ namespace GUI.DataDictionaryView
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.nextErrortoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.nextWarningToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.nextInfoToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dataDictTree = new GUI.DataDictionaryView.DataDictionaryTreeView();
-            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.dataDictPropertyGrid = new GUI.MyPropertyGrid();
-            this.tabControl = new System.Windows.Forms.TabControl();
-            this.descriptionTabPage = new System.Windows.Forms.TabPage();
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.requirementsTextBox = new GUI.EditorTextBox();
-            this.ruleExplainTextBox = new GUI.ExplainTextBox();
-            this.expressionEditorTextBox = new GUI.EditorTextBox();
-            this.usageTabPage = new System.Windows.Forms.TabPage();
-            this.usageTreeView = new GUI.DataDictionaryView.UsageTreeView.UsageTreeView();
-            this.messagesGroupBox = new System.Windows.Forms.GroupBox();
-            this.messagesRichTextBox = new GUI.EditorTextBox();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.modelDiagramPanel = new GUI.ModelDiagram.ModelDiagramPanel();
             this.toolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
-            this.splitContainer4.Panel1.SuspendLayout();
-            this.splitContainer4.Panel2.SuspendLayout();
-            this.splitContainer4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
-            this.tabControl.SuspendLayout();
-            this.descriptionTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
-            this.splitContainer3.Panel1.SuspendLayout();
-            this.splitContainer3.Panel2.SuspendLayout();
-            this.splitContainer3.SuspendLayout();
-            this.usageTabPage.SuspendLayout();
-            this.messagesGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip
@@ -119,6 +91,28 @@ namespace GUI.DataDictionaryView
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.ToolTipText = "Select previous marking";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.ToolTipText = "Select next marking";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // nextErrortoolStripButton
             // 
@@ -155,25 +149,6 @@ namespace GUI.DataDictionaryView
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 25);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.dataDictTree);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.splitContainer4);
-            this.splitContainer1.Size = new System.Drawing.Size(926, 548);
-            this.splitContainer1.SplitterDistance = 306;
-            this.splitContainer1.SplitterWidth = 3;
-            this.splitContainer1.TabIndex = 5;
-            // 
             // dataDictTree
             // 
             this.dataDictTree.AllowDrop = true;
@@ -189,219 +164,38 @@ namespace GUI.DataDictionaryView
             this.dataDictTree.Size = new System.Drawing.Size(306, 548);
             this.dataDictTree.TabIndex = 3;
             // 
-            // splitContainer4
+            // splitContainer1
             // 
-            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer4.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer4.Name = "splitContainer4";
-            this.splitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 25);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
+            this.splitContainer1.Name = "splitContainer1";
             // 
-            // splitContainer4.Panel1
+            // splitContainer1.Panel1
             // 
-            this.splitContainer4.Panel1.Controls.Add(this.splitContainer2);
+            this.splitContainer1.Panel1.Controls.Add(this.dataDictTree);
             // 
-            // splitContainer4.Panel2
+            // splitContainer1.Panel2
             // 
-            this.splitContainer4.Panel2.Controls.Add(this.messagesGroupBox);
-            this.splitContainer4.Size = new System.Drawing.Size(617, 548);
-            this.splitContainer4.SplitterDistance = 459;
-            this.splitContainer4.TabIndex = 6;
+            this.splitContainer1.Panel2.Controls.Add(this.modelDiagramPanel);
+            this.splitContainer1.Size = new System.Drawing.Size(926, 548);
+            this.splitContainer1.SplitterDistance = 306;
+            this.splitContainer1.SplitterWidth = 3;
+            this.splitContainer1.TabIndex = 5;
             // 
-            // splitContainer2
+            // modelDiagramPanel
             // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Margin = new System.Windows.Forms.Padding(2);
-            this.splitContainer2.Name = "splitContainer2";
-            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.dataDictPropertyGrid);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.tabControl);
-            this.splitContainer2.Size = new System.Drawing.Size(617, 459);
-            this.splitContainer2.SplitterDistance = 182;
-            this.splitContainer2.SplitterWidth = 3;
-            this.splitContainer2.TabIndex = 5;
-            // 
-            // dataDictPropertyGrid
-            // 
-            this.dataDictPropertyGrid.AllowDrop = true;
-            this.dataDictPropertyGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataDictPropertyGrid.Location = new System.Drawing.Point(0, 0);
-            this.dataDictPropertyGrid.Name = "dataDictPropertyGrid";
-            this.dataDictPropertyGrid.PropertySort = System.Windows.Forms.PropertySort.Categorized;
-            this.dataDictPropertyGrid.Size = new System.Drawing.Size(617, 182);
-            this.dataDictPropertyGrid.TabIndex = 4;
-            // 
-            // tabControl
-            // 
-            this.tabControl.Controls.Add(this.descriptionTabPage);
-            this.tabControl.Controls.Add(this.usageTabPage);
-            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl.Location = new System.Drawing.Point(0, 0);
-            this.tabControl.Margin = new System.Windows.Forms.Padding(2);
-            this.tabControl.Name = "tabControl";
-            this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(617, 274);
-            this.tabControl.TabIndex = 1;
-            // 
-            // descriptionTabPage
-            // 
-            this.descriptionTabPage.Controls.Add(this.splitContainer3);
-            this.descriptionTabPage.Location = new System.Drawing.Point(4, 22);
-            this.descriptionTabPage.Margin = new System.Windows.Forms.Padding(2);
-            this.descriptionTabPage.Name = "descriptionTabPage";
-            this.descriptionTabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.descriptionTabPage.Size = new System.Drawing.Size(609, 248);
-            this.descriptionTabPage.TabIndex = 4;
-            this.descriptionTabPage.Text = "Description";
-            this.descriptionTabPage.UseVisualStyleBackColor = true;
-            // 
-            // splitContainer3
-            // 
-            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer3.Location = new System.Drawing.Point(2, 2);
-            this.splitContainer3.Margin = new System.Windows.Forms.Padding(2);
-            this.splitContainer3.Name = "splitContainer3";
-            // 
-            // splitContainer3.Panel1
-            // 
-            this.splitContainer3.Panel1.Controls.Add(this.requirementsTextBox);
-            // 
-            // splitContainer3.Panel2
-            // 
-            this.splitContainer3.Panel2.Controls.Add(this.ruleExplainTextBox);
-            this.splitContainer3.Panel2.Controls.Add(this.expressionEditorTextBox);
-            this.splitContainer3.Size = new System.Drawing.Size(605, 244);
-            this.splitContainer3.SplitterDistance = 302;
-            this.splitContainer3.SplitterWidth = 3;
-            this.splitContainer3.TabIndex = 0;
-            // 
-            // requirementsTextBox
-            // 
-            this.requirementsTextBox.AllowDrop = true;
-            this.requirementsTextBox.AutoComplete = true;
-            this.requirementsTextBox.ConsiderOnlyTypes = false;
-            this.requirementsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.requirementsTextBox.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.requirementsTextBox.Instance = null;
-            this.requirementsTextBox.Lines = new string[] {""};
-            this.requirementsTextBox.Location = new System.Drawing.Point(0, 0);
-            this.requirementsTextBox.Name = "requirementsTextBox";
-            this.requirementsTextBox.ReadOnly = false;
-            this.requirementsTextBox.Rtf = resources.GetString("requirementsTextBox.Rtf");
-            this.requirementsTextBox.Size = new System.Drawing.Size(302, 244);
-            this.requirementsTextBox.TabIndex = 0;
-            // 
-            // ruleExplainTextBox
-            // 
-            this.ruleExplainTextBox.AutoComplete = true;
-            this.ruleExplainTextBox.ConsiderOnlyTypes = false;
-            this.ruleExplainTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ruleExplainTextBox.Instance = null;
-            this.ruleExplainTextBox.Lines = new string[] {""};
-            this.ruleExplainTextBox.Location = new System.Drawing.Point(0, 0);
-            this.ruleExplainTextBox.Name = "ruleExplainTextBox";
-            this.ruleExplainTextBox.ReadOnly = true;
-            this.ruleExplainTextBox.Rtf = resources.GetString("ruleExplainTextBox.Rtf");
-            this.ruleExplainTextBox.Size = new System.Drawing.Size(300, 244);
-            this.ruleExplainTextBox.TabIndex = 24;
-            // 
-            // expressionEditorTextBox
-            // 
-            this.expressionEditorTextBox.AutoComplete = true;
-            this.expressionEditorTextBox.ConsiderOnlyTypes = false;
-            this.expressionEditorTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.expressionEditorTextBox.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.expressionEditorTextBox.Instance = null;
-            this.expressionEditorTextBox.Lines = new string[] {""};
-            this.expressionEditorTextBox.Location = new System.Drawing.Point(0, 0);
-            this.expressionEditorTextBox.Name = "expressionEditorTextBox";
-            this.expressionEditorTextBox.ReadOnly = false;
-            this.expressionEditorTextBox.Rtf = resources.GetString("expressionEditorTextBox.Rtf");
-            this.expressionEditorTextBox.Size = new System.Drawing.Size(300, 244);
-            this.expressionEditorTextBox.TabIndex = 0;
-            this.expressionEditorTextBox.Visible = false;
-            // 
-            // usageTabPage
-            // 
-            this.usageTabPage.Controls.Add(this.usageTreeView);
-            this.usageTabPage.Location = new System.Drawing.Point(4, 22);
-            this.usageTabPage.Margin = new System.Windows.Forms.Padding(2);
-            this.usageTabPage.Name = "usageTabPage";
-            this.usageTabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.usageTabPage.Size = new System.Drawing.Size(609, 248);
-            this.usageTabPage.TabIndex = 3;
-            this.usageTabPage.Text = "Usage";
-            this.usageTabPage.UseVisualStyleBackColor = true;
-            // 
-            // usageTreeView
-            // 
-            this.usageTreeView.AllowDrop = true;
-            this.usageTreeView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usageTreeView.HideSelection = false;
-            this.usageTreeView.ImageIndex = 0;
-            this.usageTreeView.LabelEdit = true;
-            this.usageTreeView.Location = new System.Drawing.Point(2, 2);
-            this.usageTreeView.Margin = new System.Windows.Forms.Padding(2);
-            this.usageTreeView.Name = "usageTreeView";
-            this.usageTreeView.Root = null;
-            this.usageTreeView.Selected = null;
-            this.usageTreeView.SelectedImageIndex = 0;
-            this.usageTreeView.Size = new System.Drawing.Size(605, 244);
-            this.usageTreeView.TabIndex = 0;
-            // 
-            // messagesGroupBox
-            // 
-            this.messagesGroupBox.Controls.Add(this.messagesRichTextBox);
-            this.messagesGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.messagesGroupBox.Location = new System.Drawing.Point(0, 0);
-            this.messagesGroupBox.Name = "messagesGroupBox";
-            this.messagesGroupBox.Size = new System.Drawing.Size(617, 85);
-            this.messagesGroupBox.TabIndex = 0;
-            this.messagesGroupBox.TabStop = false;
-            this.messagesGroupBox.Text = "Messages";
-            // 
-            // messagesRichTextBox
-            // 
-            this.messagesRichTextBox.AutoComplete = true;
-            this.messagesRichTextBox.ConsiderOnlyTypes = false;
-            this.messagesRichTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.messagesRichTextBox.Instance = null;
-            this.messagesRichTextBox.Lines = new string[] {""};
-            this.messagesRichTextBox.Location = new System.Drawing.Point(3, 16);
-            this.messagesRichTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.messagesRichTextBox.Name = "messagesRichTextBox";
-            this.messagesRichTextBox.ReadOnly = false;
-            this.messagesRichTextBox.Rtf = resources.GetString("messagesRichTextBox.Rtf");
-            this.messagesRichTextBox.Size = new System.Drawing.Size(611, 66);
-            this.messagesRichTextBox.TabIndex = 1;
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.ToolTipText = "Select previous marking";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "toolStripButton2";
-            this.toolStripButton2.ToolTipText = "Select next marking";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            this.modelDiagramPanel.AllowDrop = true;
+            this.modelDiagramPanel.AutoScroll = true;
+            this.modelDiagramPanel.Dictionary = null;
+            this.modelDiagramPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.modelDiagramPanel.Location = new System.Drawing.Point(0, 0);
+            this.modelDiagramPanel.Model = null;
+            this.modelDiagramPanel.Name = "modelDiagramPanel";
+            this.modelDiagramPanel.NameSpace = null;
+            this.modelDiagramPanel.Selected = null;
+            this.modelDiagramPanel.Size = new System.Drawing.Size(617, 548);
+            this.modelDiagramPanel.TabIndex = 0;
             // 
             // Window
             // 
@@ -423,22 +217,6 @@ namespace GUI.DataDictionaryView
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.splitContainer4.Panel1.ResumeLayout(false);
-            this.splitContainer4.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
-            this.splitContainer4.ResumeLayout(false);
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
-            this.tabControl.ResumeLayout(false);
-            this.descriptionTabPage.ResumeLayout(false);
-            this.splitContainer3.Panel1.ResumeLayout(false);
-            this.splitContainer3.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
-            this.splitContainer3.ResumeLayout(false);
-            this.usageTabPage.ResumeLayout(false);
-            this.messagesGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -448,27 +226,15 @@ namespace GUI.DataDictionaryView
 
         private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private DataDictionaryTreeView dataDictTree;
-        private MyPropertyGrid dataDictPropertyGrid;
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.TabPage usageTabPage;
-        public UsageTreeView.UsageTreeView usageTreeView;
-        private System.Windows.Forms.TabPage descriptionTabPage;
-        private System.Windows.Forms.SplitContainer splitContainer3;
-        public EditorTextBox requirementsTextBox;
-        public ExplainTextBox ruleExplainTextBox;
         private System.Windows.Forms.ToolStripButton nextErrortoolStripButton;
         private System.Windows.Forms.ToolStripButton nextWarningToolStripButton;
         private System.Windows.Forms.ToolStripButton nextInfoToolStripButton;
-        private EditorTextBox messagesRichTextBox;
-        private System.Windows.Forms.SplitContainer splitContainer4;
-        private System.Windows.Forms.GroupBox messagesGroupBox;
-        private EditorTextBox expressionEditorTextBox;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private DataDictionaryTreeView dataDictTree;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        public ModelDiagram.ModelDiagramPanel modelDiagramPanel;
     }
 }

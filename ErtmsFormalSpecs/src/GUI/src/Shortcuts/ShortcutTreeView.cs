@@ -15,7 +15,7 @@
 // ------------------------------------------------------------------------------
 namespace GUI.Shortcuts
 {
-    public partial class ShortcutTreeView : TypedTreeView<DataDictionary.Shortcuts.ShortcutDictionary>
+    public partial class ShortcutTreeView : TypedTreeView<DataDictionary.EFSSystem>
     {
         /// <summary>
         /// Constructor
@@ -32,7 +32,7 @@ namespace GUI.Shortcuts
         protected override void BuildModel()
         {
             Nodes.Clear();
-            foreach (DataDictionary.Dictionary dictionary in Root.EFSSystem.Dictionaries)
+            foreach (DataDictionary.Dictionary dictionary in Root.Dictionaries)
             {
                 Nodes.Add(new ShortcutDictionaryTreeNode(dictionary.ShortcutsDictionary, true));
             }

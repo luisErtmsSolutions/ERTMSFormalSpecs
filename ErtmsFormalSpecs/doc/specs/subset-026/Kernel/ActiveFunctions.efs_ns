@@ -1,4 +1,9 @@
 <NameSpace
+ X="380"
+ Y="600"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Name="ActiveFunctions"
  Guid="2e084590-0115-4ff8-b512-b2ed5a60fd7e"
 >
@@ -7,6 +12,9 @@
 <Functions>
 <Function
  Type="Boolean"
+ Default=""
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="ProvideJuridicalData"
  Guid="98fa69b5-1290-4247-a9cf-fcc160a947cb"

@@ -171,5 +171,26 @@ namespace DataDictionary.Tests
 
             return retVal;
         }
+
+        /// <summary>
+        /// Provides the number of actions & expectations for this test case
+        /// </summary>
+        public int ActionCount
+        {
+            get
+            {
+                int retVal = 0;
+
+                foreach (Step step in Steps)
+                {
+                    foreach (SubStep subStep in step.SubSteps)
+                    {
+                        retVal += subStep.Actions.Count + subStep.Expectations.Count;
+                    }
+                }
+
+                return retVal;
+            }
+        }
     }
 }

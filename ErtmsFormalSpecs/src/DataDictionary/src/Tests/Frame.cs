@@ -208,17 +208,8 @@ namespace DataDictionary.Tests
         {
             bool retVal = false;
 
-            bool silentMode = ModelElement.BeSilent;
-            try
-            {
-                ModelElement.BeSilent = true;
-                Expression tree = EFSSystem.Parser.Expression(this, expression, null, false);
-                retVal = tree != null;
-            }
-            finally
-            {
-                ModelElement.BeSilent = silentMode;
-            }
+            Expression tree = EFSSystem.Parser.Expression(this, expression, null, false, null, true);
+            retVal = tree != null;
 
             return retVal;
         }

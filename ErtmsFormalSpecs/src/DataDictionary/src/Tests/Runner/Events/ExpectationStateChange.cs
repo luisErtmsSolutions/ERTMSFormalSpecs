@@ -60,8 +60,8 @@ namespace DataDictionary.Tests.Runner.Events
         /// <param name="newState">the new expectation state</param>
         /// <param name="prevState">the previous expectation state</param>
         /// <param name="message">the message associated to this expectation state change</param>
-        public ExpectationStateChange(Expect expect)
-            : base("Expectation state change", expect.Expectation)
+        public ExpectationStateChange(Expect expect, Generated.acceptor.RulePriority? priority)
+            : base("Expectation state change", expect.Expectation, priority)
         {
             Expect = expect;
         }
@@ -103,8 +103,8 @@ namespace DataDictionary.Tests.Runner.Events
         /// Constructor
         /// </summary>
         /// <param name="expect"></param>
-        public FailedExpectation(Expect expect)
-            : base(expect)
+        public FailedExpectation(Expect expect, Generated.acceptor.RulePriority? priority)
+            : base(expect, priority)
         {
             Message = "Failed expectation : " + Expect.Expectation.Name;
         }
@@ -141,8 +141,8 @@ namespace DataDictionary.Tests.Runner.Events
         /// Constructor
         /// </summary>
         /// <param name="expect"></param>
-        public ExpectationReached(Expect expect)
-            : base(expect)
+        public ExpectationReached(Expect expect, Generated.acceptor.RulePriority? priority)
+            : base(expect, priority)
         {
             Message = "Expectation reached : " + Expect.Expectation.Name;
         }

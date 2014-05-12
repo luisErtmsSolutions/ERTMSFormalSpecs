@@ -10,6 +10,7 @@
 </NameSpaces>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SRPB"
@@ -93,6 +94,7 @@
  Guid="89380bf4-0da8-4e2a-b952-ccb1e09ddadb"
 >
 </ReqRef></StructureElement></Structure><Structure
+ Default=""
  NeedsRequirement="FALSE"
  Name="SRPBProfile"
  Guid="2995ce6b-ecff-4aef-b477-4b3d72c29141"
@@ -155,6 +157,7 @@
 <Functions>
 <Function
  Type="SRPB"
+ Default=""
  Implemented="TRUE"
  Name="CreateNewSpeedRestriction"
  Guid="72a8b72d-3072-46bc-9ecf-9b4b82daabfa"
@@ -229,6 +232,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="EBSpeedRestrictions"
  Guid="137e9a66-3ec7-48f0-acf7-e86cd4b74f11"
@@ -280,6 +284,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="ComputePermittedSpeed"
  Guid="fdda0714-2f08-468b-9aa5-db0b8389b3d4"
@@ -343,6 +348,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="ComputeSBCeilingSpeedIntervention"
  Guid="51b7e8a2-a2f3-499f-9794-248e4bd4dff0"
@@ -398,6 +404,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  Name="Dbec"
  Guid="c21f881b-d886-45ff-bed7-bab1d5e1a2e8"
@@ -445,6 +452,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="Vdelta0"
  Guid="25c05d76-e738-4198-b39e-efd3cdcbaefa"
@@ -498,6 +506,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
  Implemented="TRUE"
  Name="A_safe"
  Guid="ff987aec-c295-4490-9d64-fa62fe5e15ba"
@@ -576,6 +585,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
  Implemented="TRUE"
  Name="A_safe_forAdhesionFactor"
  Guid="dc41e8e5-5660-4ff8-9008-a987e8a87ecc"
@@ -679,6 +689,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
  Implemented="TRUE"
  Name="Default_A_safe"
  Guid="69eff3b7-a426-44c8-bd99-aa655ab5379d"
@@ -735,6 +746,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="SBSpeedRestrictions"
  Guid="96960abf-ca14-404a-a50f-416490ef20c6"
@@ -786,6 +798,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  Name="SB_PBD"
  Guid="777a4305-497b-43fe-b1db-8f90284c21d6"
@@ -813,6 +826,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
  Implemented="TRUE"
  Name="A_expected"
  Guid="5be61eb7-4d89-4255-92a2-d237529fc6fc"
@@ -888,6 +902,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="SpeedRestrictions"
  Guid="9a44a992-4b4e-4f13-a03c-45b2bad776b4"
@@ -933,6 +948,7 @@ INITIAL_VALUE BaseTypes.MaxSpeedFunction ) (Distance)</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="PBDSpeedRestriction"

@@ -1,4 +1,6 @@
 <NameSpace
+ Width="100"
+ Height="50"
  Name="Exceptions"
  Guid="7d1c0c24-a170-48ed-8841-b0c010a699fc"
 >
@@ -7,6 +9,9 @@
 <Functions>
 <Function
  Type="Boolean"
+ Default=""
+ Width="100"
+ Height="50"
  Name="ModeException1"
  Guid="034367d7-472a-4034-a591-ee6350e8788c"
 >
@@ -24,6 +29,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="110"
+ Width="100"
+ Height="50"
  Name="ModeException2"
  Guid="5cdd55cf-d890-4ead-bb0c-f06b20f3d499"
 >
@@ -41,6 +50,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="220"
+ Width="100"
+ Height="50"
  Name="ModeException3"
  Guid="639e03d6-a29a-4000-8bfd-be4d29f3acac"
 >
@@ -58,6 +71,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="330"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="ModeException4"
  Guid="21fd38d7-67c9-44ff-9709-f32926227037"
@@ -76,6 +93,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="440"
+ Width="100"
+ Height="50"
  Name="ModeException5"
  Guid="7e672dc0-a6bd-4cdd-a1bf-4664ac4f3616"
 >
@@ -93,6 +114,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="550"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="ModeException6"
  Guid="e17191e5-c29c-4a1c-8f40-8a8a46aea49f"
@@ -111,6 +136,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="660"
+ Width="100"
+ Height="50"
  Name="ModeException7"
  Guid="c40f5a20-fa5a-40e9-86d9-bcba009a5e0f"
 >
@@ -128,6 +157,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="770"
+ Width="100"
+ Height="50"
  Name="ModeException8"
  Guid="f00014c7-db79-48b3-b562-c4b9bbfe6345"
 >
@@ -145,6 +178,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="880"
+ Width="100"
+ Height="50"
  Name="LevelException1"
  Guid="39d68369-eea6-4343-a9e8-40973926aa0b"
 >
@@ -162,6 +199,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ Y="60"
+ Width="100"
+ Height="50"
  Name="LevelException10"
  Guid="84e55b64-8f4b-45df-a053-e31cbaf0d63d"
 >
@@ -179,6 +220,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="110"
+ Y="60"
+ Width="100"
+ Height="50"
  Name="LevelException11"
  Guid="fc6dabb6-0ae3-40a9-bcdd-c123292cd56e"
 >
@@ -196,6 +242,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="220"
+ Y="60"
+ Width="100"
+ Height="50"
  Name="LevelException2"
  Guid="048a0583-20f8-4097-a658-8c9c651aba09"
 >
@@ -208,6 +259,11 @@
 </Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="330"
+ Y="60"
+ Width="100"
+ Height="50"
  Name="LevelException3"
  Guid="c034bce0-7d90-4d69-bbcc-c2fbb0b4bf2e"
 >
@@ -225,6 +281,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="440"
+ Y="60"
+ Width="100"
+ Height="50"
  Name="LevelException4"
  Guid="22b57433-c706-40d7-968b-27b06299f5f7"
 >
@@ -242,6 +303,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="550"
+ Y="60"
+ Width="100"
+ Height="50"
  Name="LevelException5"
  Guid="2f876a47-7fbc-4120-8ff9-88cc363bc445"
 >
@@ -259,6 +325,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="660"
+ Y="60"
+ Width="100"
+ Height="50"
  Name="LevelException6"
  Guid="4c295f58-1705-4527-8618-61aeabdc4734"
 >
@@ -276,6 +347,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="770"
+ Y="60"
+ Width="100"
+ Height="50"
  Name="LevelException7"
  Guid="69e64376-b105-4dc0-b16a-9f88bacf5d67"
 >
@@ -293,6 +369,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="880"
+ Y="60"
+ Width="100"
+ Height="50"
  Name="LevelException8"
  Guid="9e10795a-8de1-416b-a670-960fa2f9eda0"
 >
@@ -310,6 +391,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ Y="120"
+ Width="100"
+ Height="50"
  Name="LevelException9"
  Guid="23c0241b-dbaf-484d-9350-dd81ee9b5df6"
 >
@@ -327,6 +412,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="110"
+ Y="120"
+ Width="100"
+ Height="50"
  Name="LevelException12"
  Guid="40f25e3b-0f3f-4852-9f55-b79d3091098f"
 >
@@ -344,6 +434,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="220"
+ Y="120"
+ Width="100"
+ Height="50"
  Name="LevelException13"
  Guid="f22c3573-f8d1-4f7d-bc9c-4913b4c9844b"
 >

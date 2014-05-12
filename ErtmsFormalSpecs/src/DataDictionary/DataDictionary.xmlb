@@ -207,6 +207,7 @@
       <FIELD NAME="X"                   TYPE="INTEGER" />
       <FIELD NAME="Y"                   TYPE="INTEGER" />
       <FIELD NAME="Hidden"              TYPE="BOOLEAN" />
+      <FIELD NAME="Pinned"              TYPE="BOOLEAN" />
       <FIELD NAME="Comment"             TYPE="PCHAR"   />
     </FIELDS>
     <ATTRIBUTES>
@@ -215,6 +216,7 @@
       <ATTR NAME="Width"  TARGET="Width"  OPTIONAL="TRUE" DEFAULT="0" />
       <ATTR NAME="Height" TARGET="Height" OPTIONAL="TRUE" DEFAULT="0" />
       <ATTR NAME="Hidden" TARGET="Hidden" OPTIONAL="TRUE" DEFAULT="FALSE" />
+      <ATTR NAME="Pinned" TARGET="Pinned" OPTIONAL="TRUE" DEFAULT="FALSE" />
     </ATTRIBUTES>
     <FORMULA>
       <CONCAT>
@@ -317,9 +319,21 @@
       <FIELD NAME="Default" TYPE="PCHAR">
         <META NAME="TargetName">DefaultValue</META>
       </FIELD>
+      <FIELD NAME="Width"               TYPE="INTEGER" />
+      <FIELD NAME="Height"              TYPE="INTEGER" />
+      <FIELD NAME="X"                   TYPE="INTEGER" />
+      <FIELD NAME="Y"                   TYPE="INTEGER" />
+      <FIELD NAME="Hidden"              TYPE="BOOLEAN" />
+      <FIELD NAME="Pinned"              TYPE="BOOLEAN" />
     </FIELDS>
     <ATTRIBUTES>
       <ATTR NAME="Default" TARGET="Default" OPTIONAL="TRUE" />
+      <ATTR NAME="X"       TARGET="X"      OPTIONAL="TRUE" DEFAULT="0" />
+      <ATTR NAME="Y"       TARGET="Y"      OPTIONAL="TRUE" DEFAULT="0" />
+      <ATTR NAME="Width"   TARGET="Width"  OPTIONAL="TRUE" DEFAULT="0" />
+      <ATTR NAME="Height"  TARGET="Height" OPTIONAL="TRUE" DEFAULT="0" />
+      <ATTR NAME="Hidden"  TARGET="Hidden" OPTIONAL="TRUE" DEFAULT="FALSE" />
+      <ATTR NAME="Pinned"  TARGET="Pinned" OPTIONAL="TRUE" DEFAULT="FALSE" />
     </ATTRIBUTES>
   </ELEMENT>
 
@@ -548,7 +562,21 @@
       <FIELD NAME="StateMachine" REFTYPE="StateMachine" />
       <FIELD NAME="Rules"        REFTYPE="Rule" />
       <FIELD NAME="Parameters"	 REFTYPE="Parameter" />
+      <FIELD NAME="Width"        TYPE="INTEGER" />
+      <FIELD NAME="Height"       TYPE="INTEGER" />
+      <FIELD NAME="X"            TYPE="INTEGER" />
+      <FIELD NAME="Y"            TYPE="INTEGER" />
+      <FIELD NAME="Hidden"       TYPE="BOOLEAN" />
+      <FIELD NAME="Pinned"              TYPE="BOOLEAN" />
     </FIELDS>
+    <ATTRIBUTES>
+      <ATTR NAME="X"         TARGET="X"         OPTIONAL="TRUE" DEFAULT="0" />
+      <ATTR NAME="Y"         TARGET="Y"         OPTIONAL="TRUE" DEFAULT="0" />
+      <ATTR NAME="Width"     TARGET="Width"     OPTIONAL="TRUE" DEFAULT="0" />
+      <ATTR NAME="Height"    TARGET="Height"    OPTIONAL="TRUE" DEFAULT="0" />
+      <ATTR NAME="Hidden"    TARGET="Hidden"    OPTIONAL="TRUE" DEFAULT="FALSE" />
+      <ATTR NAME="Pinned"    TARGET="Pinned" OPTIONAL="TRUE" DEFAULT="FALSE" />
+    </ATTRIBUTES>
     <FORMULA>
       <CONCAT>
         <ENCLOSED NAME="Parameters" OPTIONAL="TRUE" >
@@ -608,12 +636,14 @@
       <FIELD NAME="Height"       TYPE="INTEGER" />
       <FIELD NAME="X"            TYPE="INTEGER" />
       <FIELD NAME="Y"            TYPE="INTEGER" />
+      <FIELD NAME="Pinned"              TYPE="BOOLEAN" />
     </FIELDS>
     <ATTRIBUTES>
       <ATTR NAME="X"      TARGET="X"      OPTIONAL="TRUE" DEFAULT="0" />
       <ATTR NAME="Y"      TARGET="Y"      OPTIONAL="TRUE" DEFAULT="0" />
       <ATTR NAME="Width"  TARGET="Width"  OPTIONAL="TRUE" DEFAULT="0" />
       <ATTR NAME="Height" TARGET="Height" OPTIONAL="TRUE" DEFAULT="0" />
+      <ATTR NAME="Pinned" TARGET="Pinned" OPTIONAL="TRUE" DEFAULT="FALSE" />
     </ATTRIBUTES>
     <FORMULA>
       <CONCAT>
@@ -631,11 +661,23 @@
       <FIELD NAME="DefaultValue" TYPE="PCHAR" />
       <FIELD NAME="VariableMode" ENUMTYPE="VariableModeEnumType"/>
       <FIELD NAME="SubVariables" REFTYPE="Variable" />
+      <FIELD NAME="Width"        TYPE="INTEGER" />
+      <FIELD NAME="Height"       TYPE="INTEGER" />
+      <FIELD NAME="X"            TYPE="INTEGER" />
+      <FIELD NAME="Y"            TYPE="INTEGER" />
+      <FIELD NAME="Hidden"       TYPE="BOOLEAN" />
+      <FIELD NAME="Pinned"       TYPE="BOOLEAN" />
     </FIELDS>
     <ATTRIBUTES>
       <ATTR NAME="Type"         TARGET="TypeName" OPTIONAL="TRUE" />
       <ATTR NAME="DefaultValue" TARGET="DefaultValue" OPTIONAL="TRUE"/>
       <ATTR NAME="VariableMode" TARGET="VariableMode" OPTIONAL="TRUE" DEFAULT="Internal"/>
+      <ATTR NAME="X"            TARGET="X"         OPTIONAL="TRUE" DEFAULT="0" />
+      <ATTR NAME="Y"            TARGET="Y"         OPTIONAL="TRUE" DEFAULT="0" />
+      <ATTR NAME="Width"        TARGET="Width"     OPTIONAL="TRUE" DEFAULT="0" />
+      <ATTR NAME="Height"       TARGET="Height"    OPTIONAL="TRUE" DEFAULT="0" />
+      <ATTR NAME="Hidden"       TARGET="Hidden"    OPTIONAL="TRUE" DEFAULT="FALSE" />
+      <ATTR NAME="Pinned"       TARGET="Pinned" OPTIONAL="TRUE" DEFAULT="FALSE" />
     </ATTRIBUTES>
     <FORMULA>
       <CONCAT>
@@ -656,9 +698,21 @@
     <FIELDS>
       <FIELD NAME="Priority"      ENUMTYPE="RulePriority" />
       <FIELD NAME="Conditions"    REFTYPE="RuleCondition" />
+      <FIELD NAME="Width"         TYPE="INTEGER" />
+      <FIELD NAME="Height"        TYPE="INTEGER" />
+      <FIELD NAME="X"             TYPE="INTEGER" />
+      <FIELD NAME="Y"             TYPE="INTEGER" />
+      <FIELD NAME="Hidden"        TYPE="BOOLEAN" />
+      <FIELD NAME="Pinned"        TYPE="BOOLEAN" />
     </FIELDS>
     <ATTRIBUTES>
-      <ATTR NAME="Priority" TARGET="Priority" OPTIONAL="TRUE" />
+      <ATTR NAME="Priority"  TARGET="Priority" OPTIONAL="TRUE" />
+      <ATTR NAME="X"         TARGET="X"         OPTIONAL="TRUE" DEFAULT="0" />
+      <ATTR NAME="Y"         TARGET="Y"         OPTIONAL="TRUE" DEFAULT="0" />
+      <ATTR NAME="Width"     TARGET="Width"     OPTIONAL="TRUE" DEFAULT="0" />
+      <ATTR NAME="Height"    TARGET="Height"    OPTIONAL="TRUE" DEFAULT="0" />
+      <ATTR NAME="Hidden"    TARGET="Hidden"    OPTIONAL="TRUE" DEFAULT="FALSE" />
+      <ATTR NAME="Pinned"    TARGET="Pinned" OPTIONAL="TRUE" DEFAULT="FALSE" />
     </ATTRIBUTES>
     <FORMULA>
       <CONCAT>
@@ -1273,6 +1327,7 @@
       <FIELD NAME="RecursiveSelection"   TYPE="BOOLEAN" />
       <FIELD NAME="RequirementsStatus"   ENUMTYPE="SPEC_IMPLEMENTED_ENUM" />
       <FIELD NAME="Default"              TYPE="BOOLEAN" />
+      <FIELD NAME="Pinned"               TYPE="BOOLEAN" />
     </FIELDS>
     <ATTRIBUTES>
       <ATTR NAME="X"                   TARGET="X"                    OPTIONAL="TRUE" DEFAULT="0" />
@@ -1282,6 +1337,7 @@
       <ATTR NAME="RecursiveSelection"  TARGET="RecursiveSelection"   OPTIONAL="TRUE" DEFAULT="FALSE" />
       <ATTR NAME="RequirementsStatus"  TARGET="RequirementsStatus"   OPTIONAL="TRUE" />
       <ATTR NAME="Default"             TARGET="Default"              OPTIONAL="TRUE" DEFAULT="FALSE" />
+      <ATTR NAME="Pinned"              TARGET="Pinned" OPTIONAL="TRUE" DEFAULT="FALSE" />
     </ATTRIBUTES>
     <FORMULA>
       <CONCAT>

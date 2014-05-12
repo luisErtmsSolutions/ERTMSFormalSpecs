@@ -371,5 +371,34 @@ namespace DataDictionary.Interpreter.Statement
         {
             return Call.ToString();
         }
+
+        /// <summary>
+        /// Provides a real short description of this statement
+        /// </summary>
+        /// <returns></returns>
+        public override string ShortShortDescription()
+        {
+            return Call.Called.Name;
+        }
+
+        /// <summary>
+        /// Provides the usage description done by this statement
+        /// </summary>
+        /// <returns></returns>
+        public override ModeEnum UsageDescription()
+        {
+            ModeEnum retVal = ModeEnum.Call;
+
+            return retVal;
+        }
+
+        /// <summary>
+        /// Provides the main model elemnt affected by this statement
+        /// </summary>
+        /// <returns></returns>
+        public override ModelElement AffectedElement()
+        {
+            return Call.Called.Ref as ModelElement;
+        }
     }
 }

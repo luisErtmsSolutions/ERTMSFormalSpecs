@@ -47,6 +47,7 @@
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL" />
     <Reference Include="LibGit2Sharp, Version=0.14.1.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL" />
+    <Reference Include="ObjectListView, Version=2.7.0.30628, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -102,6 +103,66 @@
     <Compile Include="src\BoxArrowDiagram\ArrowControl.Designer.cs">
       <DependentUpon>ArrowControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\EditorView\ParagraphTextChangeHandler.cs" />
+    <Compile Include="src\ModelDiagram\CollectionModelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\ModelDiagram\TypeModelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\ModelDiagram\RuleModelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\ModelDiagram\StateMachineModelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\ModelDiagram\EnumModelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\ModelDiagram\RangeModelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\ModelDiagram\StructureModelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\ModelDiagram\ProcedureModelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\ModelDiagram\FunctionModelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\ModelDiagram\VariableModelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\ModelDiagram\NameSpaceModelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\ModelDiagram\ModelArrowControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\ModelDiagram\ModelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\ModelDiagram\ModelDiagramPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\SelectionHistory\Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\SelectionHistory\Window.Designer.cs">
+      <DependentUpon>Window.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\EditorView\CommentableTextChangeHandler.cs" />
+    <Compile Include="src\EditorView\CommentWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\EditorView\ExpressionWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\EditorView\VariableValueTextChangeHandler.cs" />
+    <Compile Include="src\EditorView\TypeTextChangeHandler.cs" />
+    <Compile Include="src\EditorView\DefaultValueTextChangeHandler.cs" />
+    <Compile Include="src\EditorView\ExpressionableTextChangeHandler.cs" />
     <Compile Include="src\IPCInterface\EFSService.cs" />
     <Compile Include="src\IPCInterface\IEFSService.cs" />
     <Compile Include="src\IPCInterface\Values\BoolValue.cs" />
@@ -113,6 +174,24 @@
     <Compile Include="src\IPCInterface\Values\StringValue.cs" />
     <Compile Include="src\IPCInterface\Values\StructureValue.cs" />
     <Compile Include="src\IPCInterface\Values\Value.cs" />
+    <Compile Include="src\MessagesView\Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\MessagesView\Window.Designer.cs">
+      <DependentUpon>Window.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\MoreInfoView\Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\MoreInfoView\Window.Designer.cs">
+      <DependentUpon>Window.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\PropertyView\Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\PropertyView\Window.Designer.cs">
+      <DependentUpon>Window.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\RequirementSetDiagram\RequirementSetControl.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -130,16 +209,16 @@
     <Compile Include="src\DataDictionaryView\StructureProceduresTreeNode.cs" />
     <Compile Include="src\DataDictionaryView\StructureStateMachinesTreeNode.cs" />
     <Compile Include="src\DataDictionaryView\StateMachinesTreeNode.cs" />
-    <Compile Include="src\EditorForm.cs">
+    <Compile Include="src\EditorView\Window.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\EditorForm.Designer.cs">
-      <DependentUpon>EditorForm.cs</DependentUpon>
+    <Compile Include="src\EditorView\Window.Designer.cs">
+      <DependentUpon>Window.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\EditorTextBox.cs">
+    <Compile Include="src\EditorView\EditorTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="src\EditorTextBox.Designer.cs">
+    <Compile Include="src\EditorView\EditorTextBox.Designer.cs">
       <DependentUpon>EditorTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="src\Excel\Frm_ExcelImport.cs">
@@ -326,6 +405,12 @@
     <Compile Include="src\DictionarySelector\DictionarySelector.Designer.cs">
       <DependentUpon>DictionarySelector.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\RequirementsView\Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\RequirementsView\Window.Designer.cs">
+      <DependentUpon>Window.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\RulePerformances\RulesPerformances.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -375,6 +460,13 @@
     <Compile Include="src\StateDiagram\TransitionControl.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="src\StructureEditor\CustomizeTreeView.cs" />
+    <Compile Include="src\StructureEditor\Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\StructureEditor\Window.designer.cs">
+      <DependentUpon>Window.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\SynchronizationHandler.cs" />
     <Compile Include="src\TestRunnerView\ActionsTreeNode.cs" />
     <Compile Include="src\TestRunnerView\ExplainBox.cs">
@@ -395,6 +487,9 @@
     <Compile Include="src\TestRunnerView\TestTreeView.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="src\TestRunnerView\TimeLineControl\DynamicTimeLineControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="src\TestRunnerView\TimeLineControl\FilterConfiguration.cs" />
     <Compile Include="src\TestRunnerView\TimeLineControl\Filtering.cs">
       <SubType>Form</SubType>
@@ -402,17 +497,17 @@
     <Compile Include="src\TestRunnerView\TimeLineControl\Filtering.Designer.cs">
       <DependentUpon>Filtering.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\TestRunnerView\TimeLineControl\StepBack.cs">
+    <Compile Include="src\TestRunnerView\TimeLineControl\StaticTimeLineControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="src\TestRunnerView\TimeLineControl\StepOnce.cs">
+    <Compile Include="src\TestRunnerView\TimeLineControl\TimeLineControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="src\TestRunnerView\TimeLineControl\EventControl.cs">
-      <SubType>Component</SubType>
+    <Compile Include="src\TestRunnerView\Watch\Window.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\TestRunnerView\TimeLineControl\TimeLineButton.cs">
-      <SubType>Component</SubType>
+    <Compile Include="src\TestRunnerView\Watch\Window.Designer.cs">
+      <DependentUpon>Window.cs</DependentUpon>
     </Compile>
     <Compile Include="src\TranslationRules\FolderTreeNode.cs" />
     <Compile Include="src\TranslationRules\SourceTextsTreeNode.cs" />
@@ -438,9 +533,6 @@
     <Compile Include="src\DataDictionaryView\Window.Designer.cs">
       <DependentUpon>Window.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\TestRunnerView\TimeLineControl\TimeLineControl.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="src\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -459,6 +551,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="src\TestRunnerView\Window.Designer.cs">
+      <DependentUpon>Window.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UsageView\Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UsageView\Window.Designer.cs">
       <DependentUpon>Window.cs</DependentUpon>
     </Compile>
     <Compile Include="src\VersionSelector\VersionSelector.cs">
@@ -492,6 +590,18 @@
     <EmbeddedResource Include="src\BoxArrowDiagram\ArrowControl.resx">
       <DependentUpon>ArrowControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\SelectionHistory\Window.resx">
+      <DependentUpon>Window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\MessagesView\Window.resx">
+      <DependentUpon>Window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\MoreInfoView\Window.resx">
+      <DependentUpon>Window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\PropertyView\Window.resx">
+      <DependentUpon>Window.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\RequirementSetDiagram\RequirementSetDiagramWindow.resx">
       <DependentUpon>RequirementSetDiagramWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -507,10 +617,10 @@
     <EmbeddedResource Include="src\DataDictionaryView\Window.resx">
       <DependentUpon>Window.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\EditorForm.resx">
-      <DependentUpon>EditorForm.cs</DependentUpon>
+    <EmbeddedResource Include="src\EditorView\Window.resx">
+      <DependentUpon>Window.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\EditorTextBox.resx">
+    <EmbeddedResource Include="src\EditorView\EditorTextBox.resx">
       <DependentUpon>EditorTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\Excel\Frm_ExcelImport.resx">
@@ -558,6 +668,9 @@
     <EmbeddedResource Include="src\DictionarySelector\DictionarySelector.resx">
       <DependentUpon>DictionarySelector.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\RequirementsView\Window.resx">
+      <DependentUpon>Window.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\RulePerformances\RulesPerformances.resx">
       <DependentUpon>RulesPerformances.cs</DependentUpon>
     </EmbeddedResource>
@@ -573,25 +686,25 @@
     <EmbeddedResource Include="src\StateDiagram\TransitionControl.resx">
       <DependentUpon>TransitionControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\StructureEditor\Window.resx">
+      <DependentUpon>Window.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\TestRunnerView\ExplainBox.resx">
       <DependentUpon>ExplainBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\TestRunnerView\TimeLineControl\Filtering.resx">
       <DependentUpon>Filtering.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\TestRunnerView\TimeLineControl\StepBack.resx">
-      <DependentUpon>StepBack.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\TestRunnerView\TimeLineControl\StepOnce.resx">
-      <DependentUpon>StepOnce.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\TestRunnerView\TimeLineControl\TimeLineControl.resx">
-      <DependentUpon>TimeLineControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="src\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\SpecificationView\Window.resx">
+      <DependentUpon>Window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\TestRunnerView\TimeLineControl\TimeLineControl.resx">
+      <DependentUpon>TimeLineControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\TestRunnerView\Watch\Window.resx">
       <DependentUpon>Window.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\TestRunnerView\Window.resx">
@@ -601,6 +714,9 @@
     <EmbeddedResource Include="src\TranslationRules\Window.resx">
       <DependentUpon>Window.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UsageView\Window.resx">
+      <DependentUpon>Window.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\VersionSelector\VersionSelector.resx">
       <DependentUpon>VersionSelector.cs</DependentUpon>
@@ -657,6 +773,22 @@
     <None Include="resources\folder_opened.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="resources\unpin.png" />
+    <None Include="resources\wheel.png" />
+    <None Include="resources\train.png" />
+    <None Include="resources\error.png" />
+    <None Include="resources\success.png" />
+    <None Include="resources\question_mark.png" />
+    <None Include="resources\antenna.png" />
+    <None Include="resources\balance.png" />
+    <None Include="resources\speed_control.png" />
+    <None Include="resources\in.png" />
+    <None Include="resources\out.png" />
+    <None Include="resources\in_out.png" />
+    <None Include="resources\internal.png" />
+    <None Include="resources\call.png" />
+    <None Include="resources\pin.png" />
+    <Content Include="resources\tools.png" />
     <None Include="resources\type_icon.png" />
     <None Include="resources\call_icon.png" />
     <Content Include="resources\model_icon.png" />
@@ -665,6 +797,7 @@
     <None Include="resources\read_icon.png" />
     <Content Include="resources\test_icon.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy $(ProjectDir)\..\etc\logconfig.xml $(TargetDir)</PostBuildEvent>

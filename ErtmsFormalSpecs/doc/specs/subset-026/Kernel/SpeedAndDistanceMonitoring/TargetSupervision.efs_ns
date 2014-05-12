@@ -1,8 +1,8 @@
 <NameSpace
- X="500"
- Y="180"
- Width="400"
- Height="400"
+ X="680"
+ Y="260"
+ Width="100"
+ Height="50"
  Name="TargetSupervision"
  Guid="cec82dde-4045-4785-a20d-9c2abe607506"
 >
@@ -18,6 +18,10 @@
 </NameSpaceRef></NameSpaces>
 <Structures>
 <Structure
+ Default=""
+ Y="60"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Target"
  Guid="865a3683-bb23-4dc3-bad6-3c9736df8945"
@@ -60,6 +64,9 @@
  TypeName="Target"
  MaxSize="100"
  Default="[]"
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Targets"
  Guid="b733d87f-dc21-4dab-9e13-5bd163b900e0"
@@ -73,6 +80,10 @@
 <Functions>
 <Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="d_SBI2"
  Guid="9adc8b34-1349-4001-9841-1dc58a51e7fa"
@@ -114,6 +125,11 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="110"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Aest2"
  Guid="97367189-da40-44f4-ac7f-d5acf60c5074"
@@ -133,6 +149,11 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="220"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Aest1"
  Guid="319e4074-e09c-430f-a41a-23a0389fb042"
@@ -152,6 +173,11 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Time"
+ Default=""
+ X="330"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="T_berem"
  Guid="d25c38fd-2621-49db-b165-50862f9393b5"
@@ -176,6 +202,10 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Time"
+ Default=""
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="T_traction"
  Guid="c0301ef5-7b18-4b59-b64f-366563d7736a"
@@ -229,6 +259,11 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="110"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Vdelta0"
  Guid="a710f39d-04d1-40fd-8f6f-1a6749f4884b"
@@ -267,6 +302,11 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="220"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Vdelta1"
  Guid="9e4076d6-9f68-4408-92a7-d7e2ecbe89c5"
@@ -292,6 +332,11 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="330"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Vdelta2"
  Guid="c0ddea96-f7af-44a3-8df5-f303a4402b42"
@@ -316,6 +361,10 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Vbec"
  Guid="5def626f-c8b9-4fdd-bdaa-a819a582a64b"
@@ -347,6 +396,11 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="110"
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Dbec"
  Guid="c944e947-d8e2-47b1-978a-27f775b4aec5"
@@ -384,6 +438,11 @@ BaseTypes.SpeedToMS ( BaseTypes.MaxSpeed ( X1 =&gt; Vest + Vdelta0() + Vdelta1()
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="220"
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="d_EBI"
  Guid="70924901-cff4-4895-b502-d0dc03e91af4"
@@ -441,6 +500,11 @@ BaseTypes.SpeedToMS ( BaseTypes.MaxSpeed ( X1 =&gt; Vest + Vdelta0() + Vdelta1()
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="330"
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="ServiceBrakeFeedbackAvailable"
  Guid="465a5792-5c1e-404e-abf1-9c2053dfac35"
@@ -465,6 +529,10 @@ BaseTypes.SpeedToMS ( BaseTypes.MaxSpeed ( X1 =&gt; Vest + Vdelta0() + Vdelta1()
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ Y="480"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Vsbi2"
  Guid="9eee0499-6300-469b-bb17-4162898ff2c5"
@@ -506,6 +574,11 @@ BaseTypes.SpeedToMS ( BaseTypes.MaxSpeed ( X1 =&gt; Vest + Vdelta0() + Vdelta1()
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="110"
+ Y="480"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Vsbi1"
  Guid="e657ee32-0530-42e6-ae03-e5bdcbca6165"
@@ -541,6 +614,11 @@ BaseTypes.SpeedToMS ( BaseTypes.MaxSpeed ( X1 =&gt; Vest + Vdelta0() + Vdelta1()
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Time"
+ Default=""
+ X="220"
+ Y="480"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="T_indication"
  Guid="c7e8f32b-2ab1-45c9-b974-f8940e9a501a"
@@ -578,6 +656,11 @@ BaseTypes.SpeedToMS ( BaseTypes.MaxSpeed ( X1 =&gt; Vest + Vdelta0() + Vdelta1()
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="330"
+ Y="480"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="d_SBI2_MREBDT"
  Guid="fdbf32ad-9c1a-414c-9d9f-a855f9b3ce5f"
@@ -609,6 +692,10 @@ INITIAL_VALUE
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ Y="540"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="d_FLOI"
  Guid="01fe7a01-a860-481f-bb0d-666db0f74def"
@@ -643,6 +730,11 @@ INITIAL_VALUE
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="110"
+ Y="540"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="V_P_EOA"
  Guid="e53bbfb6-f615-4220-bf4a-53900602d192"
@@ -715,6 +807,11 @@ INITIAL_VALUE
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="220"
+ Y="540"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="V_P_EBD_Target"
  Guid="32777de1-dcc5-4e84-a87d-fc7c53f5ef17"
@@ -798,6 +895,11 @@ DistanceForSpeed ( Function =&gt; EBD, Speed =&gt; Vtarget )</PreCondition></Pre
 </Function><Function
  Type="Default.BaseTypes.Speed"
  Cacheable="TRUE"
+ Default=""
+ X="330"
+ Y="540"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SBD"
  Guid="fcea94f1-cd48-473c-9b64-4604dffa4a9a"
@@ -843,6 +945,10 @@ DistanceForSpeed ( Function =&gt; EBD, Speed =&gt; Vtarget )</PreCondition></Pre
 </Function><Function
  Type="Default.BaseTypes.Speed"
  Cacheable="TRUE"
+ Default=""
+ Y="600"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="GUI"
  Guid="25a50d8a-67be-4a4a-8e2a-528242187c9d"
@@ -872,6 +978,11 @@ DistanceForSpeed ( Function =&gt; EBD, Speed =&gt; Vtarget )</PreCondition></Pre
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="110"
+ Y="600"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="V_P_MRDT"
  Guid="1e4dbe7f-a6a6-4336-bbfb-3e05f6fb09a5"
@@ -891,6 +1002,11 @@ DistanceForSpeed ( Function =&gt; EBD, Speed =&gt; Vtarget )</PreCondition></Pre
 </Function><Function
  Type="Default.BaseTypes.Speed"
  Cacheable="TRUE"
+ Default=""
+ X="220"
+ Y="600"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="EBD"
  Guid="052db52b-a60c-4335-91da-4767174b220c"
@@ -930,6 +1046,11 @@ DistanceForSpeed ( Function =&gt; EBD, Speed =&gt; Vtarget )</PreCondition></Pre
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="330"
+ Y="600"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="EBD_Target"
  Guid="ffb70553-e106-43d7-b1e5-c21f7695ad93"
@@ -974,6 +1095,10 @@ DistanceForSpeed ( Function =&gt; EBD, Speed =&gt; Vtarget )</PreCondition></Pre
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ Y="660"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="TargetToGraph"
@@ -1020,6 +1145,11 @@ DistanceForSpeed ( Function =&gt; EBD, Speed =&gt; Vtarget )</PreCondition></Pre
 </Function><Function
  Type="Target"
  Cacheable="TRUE"
+ Default=""
+ X="110"
+ Y="660"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="MRDT"
  Guid="c23acb47-fdeb-4b58-b3df-fdf995401020"
@@ -1043,6 +1173,11 @@ INITIAL_VALUE
 </Case></Cases>
 </Function><Function
  Type="Target"
+ Default=""
+ X="220"
+ Y="660"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="MinTarget"
  Guid="a78639d3-3001-473f-97a6-b4b96c1da340"
@@ -1134,6 +1269,11 @@ V_P_EBD_Target
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="330"
+ Y="660"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="FLOIComparedDistance"
  Guid="8a094575-9b75-4b4a-8646-29612c3c547c"
@@ -1208,6 +1348,10 @@ V_P_EBD_Target
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ Y="720"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="V_P_DMI"
  Guid="9d863556-7e7d-42b2-994a-447321c65271"
@@ -1226,6 +1370,11 @@ V_P_EBD_Target
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="110"
+ Y="720"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="V_FLOI_DMI"
  Guid="e7fb5746-f019-4849-8e26-45b0825554d0"
@@ -1261,6 +1410,11 @@ V_P_EBD_Target
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="220"
+ Y="720"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="d_SBI1"
  Guid="ff23d7c3-131e-4650-a009-eeb08d75daee"
@@ -1312,6 +1466,11 @@ V_P_EBD_Target
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="330"
+ Y="720"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="d_I"
  Guid="04b0e355-ce9e-4713-b048-1d187f455a95"
@@ -1366,6 +1525,10 @@ V_P_EBD_Target
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ Y="780"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="d_P"
  Guid="0606aabb-af6c-453f-9aee-2d0d0819c67f"
@@ -1435,6 +1598,11 @@ V_P_EBD_Target
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="110"
+ Y="780"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="d_W"
  Guid="0ee7721f-a288-498b-8262-14d7025c07ac"
@@ -1485,6 +1653,11 @@ V_P_EBD_Target
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="220"
+ Y="780"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="InterventionValue"
  Guid="d5766119-e66c-4e9e-8d2a-2334fc12fd9e"
@@ -1511,6 +1684,11 @@ V_P_EBD_Target
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="330"
+ Y="780"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="EBIvalue"
  Guid="67e0983b-e9ca-4a28-85d3-89dd78057c88"
@@ -1557,6 +1735,9 @@ V_P_EBD_Target
 </Function></Functions>
 <Procedures>
 <Procedure
+ Y="900"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="InitializeTimeIntervals"
  Guid="5dc3458e-4b55-484a-973e-c7cbf3a2bae0"
@@ -1658,6 +1839,9 @@ V_P_EBD_Target
  Type="Default.BaseTypes.Time"
  DefaultValue="0.0"
  VariableMode="Internal"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="T_bs1"
  Guid="f967f8e6-aab3-4c66-892c-08bf18b8fde8"
@@ -1672,6 +1856,10 @@ V_P_EBD_Target
  Type="Default.BaseTypes.Time"
  DefaultValue="0.0"
  VariableMode="Internal"
+ X="110"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="T_bs2"
  Guid="1561b05c-905c-4271-846f-279dc012082d"
@@ -1686,6 +1874,10 @@ V_P_EBD_Target
  Type="Default.BaseTypes.Time"
  DefaultValue="4.0"
  VariableMode="Internal"
+ X="220"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="T_driver"
  Guid="9bfce9f1-4d0b-4c74-92b8-bf8dc511eefa"
@@ -1716,6 +1908,10 @@ V_P_EBD_Target
  Type="Default.BaseTypes.Time"
  DefaultValue="2.0"
  VariableMode="Internal"
+ X="330"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="T_warning"
  Guid="657ed886-eeba-4c46-83e6-f4fe255fffbf"
@@ -1745,6 +1941,9 @@ V_P_EBD_Target
 <Rules>
 <Rule
  Priority="UpdateINTERNAL"
+ Y="960"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="UpdateSupervisionStatus"
  Guid="5c06c616-21d2-4288-8b8f-b2df2cbcd921"

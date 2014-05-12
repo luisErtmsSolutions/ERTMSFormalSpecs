@@ -1,8 +1,9 @@
 <NameSpace
- X="490"
- Y="90"
+ X="310"
+ Y="160"
  Width="100"
  Height="50"
+ Pinned="TRUE"
  Name="STM"
  Guid="379a7d78-a7e1-4553-a269-32408f2c73d4"
 >
@@ -10,6 +11,7 @@
 </NameSpaces>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  Name="SpeedSupervision"
  Guid="4b99c30c-b634-4167-8cb2-3a6d3ac661e2"
@@ -47,6 +49,7 @@
 <Functions>
 <Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="MaxSpeedRestrictions"
  Guid="3a1c538f-da90-4d66-98bc-93304ce2e950"
@@ -92,6 +95,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="SystemSpeedRestrictions"
  Guid="901adcef-ec5c-47dc-aba0-280c7153d1db"

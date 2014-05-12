@@ -93,6 +93,7 @@
 <Functions>
 <Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  Name="ConditionExitsApplicability"
  Guid="873d51f3-eb83-48d8-a167-fd16e60ade7c"
@@ -167,6 +168,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="BrakingConditionLength"

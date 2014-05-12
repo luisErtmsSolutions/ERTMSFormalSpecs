@@ -1,4 +1,9 @@
 <NameSpace
+ X="570"
+ Y="160"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Name="EURORADIO"
  Guid="e1153af3-3878-4752-bfdb-9a6c11411de4"
 >
@@ -186,6 +191,7 @@
 </Enum></Enumerations>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  Name="RBCStruct"
  Guid="a486085f-3201-4bf5-8db8-cf3027c03815"
@@ -3393,6 +3399,7 @@ Aftter a defined number of repetitions, if no acknowledgement is received from t
 </StateMachine></State></States>
 </StateMachine></StateMachines>
 </Structure><Structure
+ Default=""
  Implemented="TRUE"
  Name="ContactOrderStruct"
  Guid="0b20f5b7-2179-44b2-b8c4-19c69efa393a"
@@ -3500,6 +3507,7 @@ Aftter a defined number of repetitions, if no acknowledgement is received from t
 >
 </ReqRef><Comment>Indicates whether the order applies also to Sleeping units.</Comment>
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  Name="RIUStruct"
  Guid="b15198c3-238e-44cf-bd78-8b40d48ea78f"
@@ -3529,6 +3537,7 @@ Aftter a defined number of repetitions, if no acknowledgement is received from t
 >
 <Comment>Identifier of the RIU.</Comment>
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  Name="SessionManagementStruct"
  Guid="395169e1-4c72-48ca-950b-fa0d473758a1"
@@ -3669,6 +3678,7 @@ Aftter a defined number of repetitions, if no acknowledgement is received from t
 >
 </ReqRef><Comment>Indicates if the trackside has sent the Initiation of a communication session message.</Comment>
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  Name="RBCIdStruct"
  Guid="06bc7e20-822b-4896-a367-bc92333c4911"
@@ -3698,6 +3708,7 @@ Aftter a defined number of repetitions, if no acknowledgement is received from t
 >
 <Comment>Identifier of the RBC.</Comment>
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  Name="RBCContactStruct"
  Guid="34a7c15c-662b-4a6d-a149-5587a333e7cf"
@@ -3758,6 +3769,7 @@ Aftter a defined number of repetitions, if no acknowledgement is received from t
 >
 </ReqRef><Comment>Data state of the contact information.</Comment>
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  Name="TerminalStruct"
  Guid="d55c89a9-b712-45c6-a15c-1829f68822b8"
@@ -4241,6 +4253,7 @@ After that, if an order to contact an Accepting RBC was received, it will be han
 </StateMachine></State></States>
 </StateMachine></StateMachines>
 </Structure><Structure
+ Default=""
  Implemented="TRUE"
  Name="AvailableNetworksStruct"
  Guid="e6849568-73f7-4b28-ae32-8b6bf0058e00"
@@ -4272,6 +4285,7 @@ After that, if an order to contact an Accepting RBC was received, it will be han
 >
 <Comment>Collection of available and allowed networks.</Comment>
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  Name="SystemVersionStruct"
  Guid="d57ddcfd-645d-4096-81d5-c12c41bd57bb"
@@ -4351,6 +4365,7 @@ After that, if an order to contact an Accepting RBC was received, it will be han
 <Functions>
 <Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  Name="HasActiveSession"
  Guid="7b48d082-5d7b-4d27-8757-6e110b3f9f7d"
@@ -4387,6 +4402,7 @@ Terminal2.RBCConnection.ConnectionState in RBCStruct.ConnectionStateSM.Connected
 </Case></Cases>
 </Function><Function
  Type="RBCStruct"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CurrentRBCConnection"
@@ -4413,6 +4429,7 @@ Terminal2.RBCConnection.ConnectionState in RBCStruct.ConnectionStateSM.Connected
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  Name="AllSessionsClosed"
  Guid="d5ab709a-c73f-4f2a-bece-c9c7586dcde5"
@@ -4434,6 +4451,7 @@ Terminal2.RBCConnection.ConnectionState in RBCStruct.ConnectionStateSM.Inactive<
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  Name="OneMobileTerminalIsAvailable"
  Guid="e31f0ce4-5ca7-4615-9f01-e835968b6bb2"
@@ -4455,6 +4473,7 @@ Terminal2 != EMPTY</Expression>
 </Case></Cases>
 </Function><Function
  Type="ContactActionEnum"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ConvertActionToPerform"
@@ -4486,6 +4505,7 @@ Terminal2 != EMPTY</Expression>
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ConvertAppliesToSleepingUnits"
@@ -4517,6 +4537,7 @@ Terminal2 != EMPTY</Expression>
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  Name="MobileTerminalRegisteredToNetwork"
  Guid="af2b63fd-7a74-4d0c-9dd5-640bccd97f2c"
@@ -4548,6 +4569,7 @@ Terminal2.RegistrationState in TerminalStruct.RegistrationStateSM.Registered</Ex
 </Case></Cases>
 </Function><Function
  Type="TerminalStruct"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CurrentTerminal"
@@ -4590,6 +4612,7 @@ Terminal2.RegistrationState in TerminalStruct.RegistrationStateSM.Registered</Ex
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  Name="SessionIsAlreadyEstablishedWithRequestedRBC"
  Guid="c4eccae5-0e53-41e7-af15-9608b3f9878d"
@@ -4631,6 +4654,7 @@ It can only return false if there is no open session or if the last known RBC ha
 </Case></Cases>
 </Function><Function
  Type="SystemVersionEnum"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ConvertSystemVersion"
@@ -4675,6 +4699,7 @@ It can only return false if there is no open session or if the last known RBC ha
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  Name="SystemVersionIsCompatible"
  Guid="28b8bd9c-0c28-4b56-8672-4510358507e8"
@@ -4720,6 +4745,7 @@ It can only return false if there is no open session or if the last known RBC ha
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="TerminalIsRegistered"
@@ -4744,6 +4770,7 @@ aTerminal.RegistrationState in TerminalStruct.RegistrationStateSM.Registered</Ex
 </Case></Cases>
 </Function><Function
  Type="RBCStruct"
+ Default=""
  Implemented="TRUE"
  Name="SelectRBCToContact"
  Guid="edc183ce-4765-4875-9d3a-fcdbb85d8b1d"
@@ -4789,6 +4816,7 @@ TerminalIsRegistered ( aTerminal=&gt; Terminal2 )</PreCondition></PreConditions>
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  Name="SessionHasToBeEstablished"
  Guid="5038c7fd-eeb6-4629-878c-aa6f52c39063"
@@ -4879,6 +4907,7 @@ anRBC.ContactRBCOrder.ActionToPerform == ContactActionEnum.Establish</PreConditi
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  Name="MessageCanBeSent"
  Guid="e4578232-0a7b-4b6d-82f8-34004ee84e07"
@@ -4910,6 +4939,7 @@ anRBC.ContactRBCOrder.ActionToPerform == ContactActionEnum.Establish</PreConditi
 </Case></Cases>
 </Function><Function
  Type="RBCStruct"
+ Default=""
  Implemented="TRUE"
  Name="SecondaryRBCConnection"
  Guid="74ee579a-acba-4659-83ae-89dc0f8c11b6"
@@ -4947,6 +4977,7 @@ anRBC.ContactRBCOrder.ActionToPerform == ContactActionEnum.Establish</PreConditi
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  Name="OrderToTerminateHandingOverRBCIsReceived"
  Guid="c6080dad-e9ff-4072-b1d5-8700f0f8ca97"
@@ -4981,6 +5012,7 @@ CurrentRBCConnection().ContactRBCOrder.ActionToPerform == ContactActionEnum.Term
 </Case></Cases>
 </Function><Function
  Type="SafeRadioConnectionStatusEnum"
+ Default=""
  Implemented="TRUE"
  Name="SafeRadioConnectionStatusToDisplay"
  Guid="01f97d52-632a-4415-ba9d-13258655f467"

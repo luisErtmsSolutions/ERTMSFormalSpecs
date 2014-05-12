@@ -25,7 +25,7 @@ namespace DataDictionary.Interpreter
         /// <summary>
         /// The left expression of this expression
         /// </summary>
-        public Expression Left { get; private set; }
+        public Expression Left { get; set; }
 
         /// <summary>
         /// The available operators
@@ -73,7 +73,7 @@ namespace DataDictionary.Interpreter
         /// <summary>
         /// The right expression of this expression
         /// </summary>
-        public Expression Right { get; private set; }
+        public Expression Right { get; set; }
 
         /// <summary>
         /// Constructor

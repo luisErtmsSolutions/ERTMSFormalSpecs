@@ -24,6 +24,7 @@ namespace GUI.Converters
     using System.Windows.Forms.Design;
     using DataDictionary;
     using System.Windows.Forms;
+    using GUI.EditorView;
 
     /// <summary>
     /// TODO: Update summary.
@@ -33,53 +34,6 @@ namespace GUI.Converters
         public override UITypeEditorEditStyle GetEditStyle(ITypeDescriptorContext context)
         {
             return UITypeEditorEditStyle.Modal;
-        }
-
-        /// <summary>
-        /// Sets the string value into the right property
-        /// </summary>
-        /// <param name="instance"></param>
-        /// <param name="value"></param>
-        private class TextChangeHandler : EditorForm.HandleTextChange
-        {
-            /// <summary>
-            /// Constructor
-            /// </summary>
-            /// <param name="instance"></param>
-            public TextChangeHandler(ModelElement instance)
-                : base(instance)
-            {
-            }
-
-            /// <summary>
-            /// The way text is retrieved from the instance
-            /// </summary>
-            /// <returns></returns>
-            public override string GetText()
-            {
-                string retVal = "";
-                ICommentable commentable = Instance as ICommentable;
-
-                if (commentable != null)
-                {
-                    retVal = commentable.Comment;
-                }
-                return retVal;
-            }
-
-            /// <summary>
-            /// The way text is set back in the instance
-            /// </summary>
-            /// <returns></returns>
-            public override void SetText(string text)
-            {
-                ICommentable commentable = Instance as ICommentable;
-
-                if (commentable != null)
-                {
-                    commentable.Comment = text;
-                }
-            }
         }
 
         /// <summary>
@@ -105,9 +59,10 @@ namespace GUI.Converters
                 ICommentable commentable = value as ICommentable;
                 if (commentable != null)
                 {
-                    EditorForm form = new EditorForm();
+                    EditorView.Window form = new EditorView.Window();
+                    form.DockAreas = WeifenLuo.WinFormsUI.Docking.DockAreas.Float;
                     form.AutoComplete = false;
-                    TextChangeHandler handler = new TextChangeHandler(commentable as ModelElement);
+                    CommentableTextChangeHandler handler = new CommentableTextChangeHandler(commentable as ModelElement);
                     form.setChangeHandler(handler);
                     GUIUtils.MDIWindow.AddChildWindow(form, WeifenLuo.WinFormsUI.Docking.DockAreas.Float);
                 }

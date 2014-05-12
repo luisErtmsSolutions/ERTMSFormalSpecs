@@ -1,7 +1,11 @@
 <NameSpace
+ X="260"
+ Width="100"
+ Height="50"
  Name="BrakingParameters"
  Guid="232c9103-9b40-4a2e-a1b9-9ad65b04f119"
 >
+<Comment></Comment>
 <NameSpaces>
 <NameSpaceRef
  Name="ConversionModel"
@@ -14,6 +18,10 @@
  MaxValue="1"
  Precision="DoublePrecision"
  Default="1.0"
+ X="1430"
+ Y="1060"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CorrectionFactor"
@@ -24,6 +32,10 @@
 <Enumerations>
 <Enum
  Default="PassengerTrainInP"
+ X="390"
+ Y="460"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Verified="TRUE"
  Name="BrakePositions"
@@ -54,6 +66,10 @@
 </EnumValue></Values>
 </Enum><Enum
  Default="Regenerative"
+ X="510"
+ Y="460"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Verified="TRUE"
  Name="SpecialBrakeName"
@@ -94,6 +110,10 @@
 </EnumValue></Values>
 </Enum><Enum
  Default="BrakeInterfaceStatus.NoInterface"
+ X="630"
+ Y="460"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="BrakeInterfaceStatus"
  Guid="9b6ead73-b051-42d8-b801-79e50fadb672"
@@ -144,6 +164,11 @@
 </Enum></Enumerations>
 <Structures>
 <Structure
+ Default=""
+ X="1220"
+ Y="1360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Verified="TRUE"
  Name="BrakingModel"
@@ -223,6 +248,11 @@
 >
 <Comment></Comment>
 </StructureElement></Structure><Structure
+ Default=""
+ X="1270"
+ Y="1250"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Verified="TRUE"
  Name="BrakingModelSet"
@@ -317,6 +347,11 @@
  Guid="2c209a4c-5f36-4d8e-b146-635923ac2712"
 >
 </StructureElement></Structure><Structure
+ Default=""
+ X="1420"
+ Y="1290"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="BNSModel"
  Guid="07224b93-dca5-4446-b001-83401c17ba57"
@@ -363,6 +398,11 @@
  Guid="acc3a5c8-40c3-4b06-b586-a4bb63d50299"
 >
 </StructureElement></Structure><Structure
+ Default=""
+ X="1370"
+ Y="1440"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Verified="TRUE"
  Name="T_brake_build_upSet"
@@ -517,6 +557,11 @@
  Guid="7b8f5cd5-9aef-4afb-9194-b47576ed1ff4"
 >
 </StructureElement></Structure><Structure
+ Default=""
+ X="1440"
+ Y="1160"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CorrectFactorValue"
  Guid="b8ac0b12-eff0-4be0-acd0-5cf60599b005"
@@ -604,6 +649,11 @@
 >
 <Comment></Comment>
 </StructureElement></Structure><Structure
+ Default=""
+ X="1590"
+ Y="1520"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Kdry_rstValues"
  Guid="f2ed4c25-2ea0-4dd9-8a15-47bd377bb7b9"
@@ -712,6 +762,11 @@
  Guid="cec8f8b9-7c7b-467d-a0ba-760f89964e86"
 >
 </StructureElement></Structure><Structure
+ Default=""
+ X="1540"
+ Y="1390"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="EBModelSet"
  Guid="0e5184a0-73a1-4fb1-90b2-3dcfd23c6ba7"
@@ -801,6 +856,11 @@
 >
 </ReqRef><Comment></Comment>
 </StructureElement></Structure><Structure
+ Default=""
+ X="1590"
+ Y="1250"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SBModelSet"
  Guid="e011d563-27db-4268-b039-6577732c4401"
@@ -837,6 +897,11 @@
  Guid="69595d4a-a675-41e3-a697-99adfbd5ce47"
 >
 </ReqRef></StructureElement></Structure><Structure
+ Default=""
+ X="1650"
+ Y="1390"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Kwet_rstValuesSet"
  Guid="a196aa57-7eee-4147-a125-b14860cdb8fe"
@@ -928,6 +993,11 @@
  Guid="0fce2299-8fa5-438f-be5d-df8d674ca883"
 >
 </StructureElement></Structure><Structure
+ Default=""
+ X="1250"
+ Y="1500"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Kdry_rstValuesSet"
  Guid="47967924-0232-465c-921b-b655e46a996c"
@@ -1019,6 +1089,11 @@
  Guid="5a56908b-2d74-442c-b8c2-d0a7357ed656"
 >
 </StructureElement></Structure><Structure
+ Default=""
+ X="1360"
+ Y="1580"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="BrakingModelValue"
@@ -1046,6 +1121,11 @@
 >
 <Comment></Comment>
 </StructureElement></Structure><Structure
+ Default=""
+ X="1480"
+ Y="1580"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="BNSModelSet"
  Guid="c27dfa99-d442-46a9-b18d-b5793bb68a0f"
@@ -1127,6 +1207,11 @@
 <Functions>
 <Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="230"
+ Y="230"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="BrakingModelFunction"
  Guid="9c700b00-129b-4a61-919b-97e6936a5b41"
@@ -1235,6 +1320,11 @@
 </Case></Cases>
 </Function><Function
  Type="BrakingModel"
+ Default=""
+ X="360"
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SelectBNSBrakingModel_TrackCondition"
  Guid="5e4a14dc-26ed-42ab-b5cd-25abf199f1fc"
@@ -1295,6 +1385,11 @@
 </Case></Cases>
 </Function><Function
  Type="BNSModel"
+ Default=""
+ X="490"
+ Y="50"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SelectBNSModelSet"
  Guid="871ef307-9a99-4f44-a17d-e5abf6bc3eb2"
@@ -1338,6 +1433,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="620"
+ Y="20"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="UseBrakeFor_A_brake_service"
  Guid="d44540db-a4af-4339-a04c-9e92489c6e89"
@@ -1406,6 +1506,11 @@ TrainData.Value.EddyCurrentBrakeInterface in [BrakeInterfaceStatus.SB, BrakeInte
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="750"
+ Y="20"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="UseBrakeFor_T_brake_service"
  Guid="5b22ee88-d458-457f-a24e-4838959acefa"
@@ -1480,6 +1585,11 @@ TrainData.Value.EpBrakeInterface in [BrakeInterfaceStatus.SB, BrakeInterfaceStat
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="880"
+ Y="40"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="UseBrakeFor_A_brake_emergency"
  Guid="95f6b128-c200-42ea-8c81-e2078567151f"
@@ -1556,6 +1666,11 @@ TrainData.Value.MagneticShoeBrakeInterface in [BrakeInterfaceStatus.EB, BrakeInt
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="1000"
+ Y="90"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="UseBrakeFor_T_brake_emergency"
  Guid="28167b49-0c40-4079-b267-ccb3d540d8d5"
@@ -1641,6 +1756,11 @@ TrainData.Value.EpBrakeInterface in [BrakeInterfaceStatus.EB, BrakeInterfaceStat
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Time"
+ Default=""
+ X="1120"
+ Y="160"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Verified="TRUE"
  Name="T_brake_build_upValue"
@@ -1915,6 +2035,11 @@ TrainData.Value.EpBrakeInterface in [BrakeInterfaceStatus.EB, BrakeInterfaceStat
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Time"
+ Default=""
+ X="1240"
+ Y="280"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="T_traction_cut_off"
  Guid="f5393620-a1a4-413e-9802-a53d77b16a9a"
@@ -1935,6 +2060,11 @@ TrainData.Value.EpBrakeInterface in [BrakeInterfaceStatus.EB, BrakeInterfaceStat
 </Case></Cases>
 </Function><Function
  Type="CorrectionFactor"
+ Default=""
+ X="140"
+ Y="440"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Kdry_rst"
  Guid="b6bcfeb3-9015-4fea-8990-21a0fc62e065"
@@ -2237,6 +2367,11 @@ TrainData.Value.EpBrakeInterface in [BrakeInterfaceStatus.EB, BrakeInterfaceStat
 </Case></Cases>
 </Function><Function
  Type="CorrectFactorValue"
+ Default=""
+ X="280"
+ Y="380"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SelectKwetValue"
  Guid="ea9ca8d6-7032-4e3e-8cf2-48f2037e212b"
@@ -2369,6 +2504,11 @@ TrainData.Value.EpBrakeInterface in [BrakeInterfaceStatus.EB, BrakeInterfaceStat
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="450"
+ Y="320"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Verified="TRUE"
  Name="A_traction"
@@ -2415,6 +2555,11 @@ TrainData.Value.EpBrakeInterface in [BrakeInterfaceStatus.EB, BrakeInterfaceStat
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Time"
+ Default=""
+ X="610"
+ Y="320"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="T_brake_service"
  Guid="5704e556-a9f2-4101-9308-d04e42ce35f3"
@@ -2456,6 +2601,11 @@ TrainData.Value.EpBrakeInterface in [BrakeInterfaceStatus.EB, BrakeInterfaceStat
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Time"
+ Default=""
+ X="760"
+ Y="340"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="T_brake_emergency"
  Guid="85a4b415-f31f-428b-ae44-94a6bc8c0145"
@@ -2498,6 +2648,11 @@ TrainData.Value.EpBrakeInterface in [BrakeInterfaceStatus.EB, BrakeInterfaceStat
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="900"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="A_ebmax"
  Guid="1f8f83aa-b6e1-48b2-839c-e536fc99bbda"
@@ -2529,6 +2684,11 @@ TrainData.Value.EpBrakeInterface in [BrakeInterfaceStatus.EB, BrakeInterfaceStat
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="1050"
+ Y="400"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="ContributionOfSpecialBrakeIsTakenIntoAccount"
  Guid="d3542eb5-9afc-4283-9efa-62079914e859"
@@ -2586,6 +2746,11 @@ TIU.AdditionalBrakesActive
 </Case></Cases>
 </Function><Function
  Type="BrakingModel"
+ Default=""
+ X="1200"
+ Y="450"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SelectBrakingModel"
  Guid="cb3170eb-ab08-4b35-9cfe-05c341868e46"
@@ -2723,6 +2888,11 @@ TIU.AdditionalBrakesActive
 </Case></Cases>
 </Function><Function
  Type="CorrectionFactor"
+ Default=""
+ X="1320"
+ Y="500"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CorrectionFactorFunction"
  Guid="c25f5248-16d1-4586-ab50-5e1dd381fb00"
@@ -2850,6 +3020,11 @@ TIU.AdditionalBrakesActive
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="120"
+ Y="610"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Default_brk_normal_service"
  Guid="6d44fc0e-ac12-4c08-a1a9-a1bda1dd50f0"
@@ -2889,6 +3064,11 @@ TIU.AdditionalBrakesActive
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="270"
+ Y="630"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="A_brake_safe"
  Guid="9c44c64a-d62e-4a64-a380-0de88d2687a2"
@@ -2996,6 +3176,11 @@ A_brake_emergency ( d =&gt; d, V =&gt; V )</Expression>
 </Case></Cases>
 </Function><Function
  Type="Kdry_rstValues"
+ Default=""
+ X="450"
+ Y="650"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SelectKdryValue"
  Guid="73d6b42e-a8b5-4e6d-8314-6f143a84665f"
@@ -3128,6 +3313,11 @@ A_brake_emergency ( d =&gt; d, V =&gt; V )</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="610"
+ Y="710"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="A_safe"
  Guid="3a51a287-065e-4dc7-8e00-12dedb5c948d"
@@ -3196,6 +3386,11 @@ A_brake_emergency ( d =&gt; d, V =&gt; V )</Expression>
 </Case></Cases>
 </Function><Function
  Type="CorrectionFactor"
+ Default=""
+ X="760"
+ Y="760"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Kwet_rst"
  Guid="2ddfebcf-9923-4ccb-9f92-206df96e0c22"
@@ -3244,6 +3439,11 @@ A_brake_emergency ( d =&gt; d, V =&gt; V )</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="910"
+ Y="790"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="A_brk_emergency"
  Guid="8c0e12c8-aa2a-4bae-b459-950f7d4d9d51"
@@ -3307,6 +3507,11 @@ A_brake_emergency ( d =&gt; d, V =&gt; V )</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="1060"
+ Y="770"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="A_brake_service"
  Guid="7dff17ae-fcfa-400a-bc27-0b3eeaf48da5"
@@ -3373,6 +3578,11 @@ A_brake_emergency ( d =&gt; d, V =&gt; V )</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="1200"
+ Y="730"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Default_A_safe"
  Guid="3826e442-a2a8-4f3e-bb17-facb7f5fc065"
@@ -3419,6 +3629,11 @@ A_brake_emergency ( d =&gt; d, V =&gt; V )</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="1320"
+ Y="680"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="A_safe_forAdhesionFactor"
  Guid="8c4852ba-aa87-4ed8-8174-e93c41bff92e"
@@ -3512,6 +3727,11 @@ A_brake_emergency ( d =&gt; d, V =&gt; V )</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="160"
+ Y="790"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="A_brake_emergency"
  Guid="9146769b-28c0-4c85-ab4b-307a1ae8a13e"
@@ -3585,6 +3805,11 @@ A_brake_emergency ( d =&gt; d, V =&gt; V )</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="330"
+ Y="880"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="A_brk_normal_service"
  Guid="b18f9939-3ee6-41b2-ab1b-dbe8b6d046e7"
@@ -3642,6 +3867,11 @@ A_brake_emergency ( d =&gt; d, V =&gt; V )</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="510"
+ Y="980"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Default_brk_emergency"
  Guid="43449e7c-2bf4-49a7-b741-029c5b2d3f32"
@@ -3688,6 +3918,11 @@ A_brake_emergency ( d =&gt; d, V =&gt; V )</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="670"
+ Y="1070"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="A_expected"
  Guid="0550b93a-3d3e-4d7a-9dba-cfd9daf43afb"
@@ -3772,6 +4007,11 @@ A_brake_emergency ( d =&gt; d, V =&gt; V )</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Time"
+ Default=""
+ X="780"
+ Y="1160"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="T_be"
  Guid="ea47b016-c61f-43a9-a71c-70ab82eac35a"
@@ -3830,6 +4070,11 @@ A_brake_emergency ( d =&gt; d, V =&gt; V )</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Time"
+ Default=""
+ X="900"
+ Y="1130"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="T_bs"
  Guid="91b4ac93-610f-478e-9e7f-ea602edb75cb"
@@ -3867,6 +4112,11 @@ A_brake_emergency ( d =&gt; d, V =&gt; V )</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="1020"
+ Y="1090"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="A_brake_normal_service"
  Guid="68df6213-46a1-4c2f-8c67-6b5d2198a586"
@@ -3923,6 +4173,11 @@ A_brake_emergency ( d =&gt; d, V =&gt; V )</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="1130"
+ Y="1010"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Default_brk_service"
  Guid="6e5e9aa0-5b0e-4636-b35f-75bcce2a9e58"
@@ -3963,6 +4218,11 @@ A_brake_emergency ( d =&gt; d, V =&gt; V )</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="1240"
+ Y="900"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="A_brk_service_TrackCondition"
  Guid="d742ef1b-2a72-4b5c-91a4-a4a32cbbd41d"
@@ -4004,6 +4264,11 @@ A_brake_emergency ( d =&gt; d, V =&gt; V )</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="240"
+ Y="980"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="A_normal_service"
  Guid="b452c7f8-633a-4534-bf4c-6a31c23363f6"
@@ -4070,6 +4335,11 @@ A_brake_emergency ( d =&gt; d, V =&gt; V )</Expression>
 </Case></Cases>
 </Function><Function
  Type="BrakingModel"
+ Default=""
+ X="400"
+ Y="1110"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SelectBNSBrakingModel"
  Guid="41ad0419-520c-41c1-ad3b-f145c9cd4409"
@@ -4123,6 +4393,11 @@ A_brake_emergency ( d =&gt; d, V =&gt; V )</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="580"
+ Y="1190"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="A_brk_service"
  Guid="443507c3-7c4d-408d-b642-e4807cd6f709"
@@ -4181,6 +4456,10 @@ A_brake_emergency ( d =&gt; d, V =&gt; V )</Expression>
 </Function></Functions>
 <Procedures>
 <Procedure
+ X="110"
+ Y="1300"
+ Width="100"
+ Height="50"
  NeedsRequirement="FALSE"
  Name="Initialize"
  Guid="a715fb74-3eaa-4c9e-ae98-89318e334731"
@@ -4239,6 +4518,10 @@ A_brake_emergency ( d =&gt; d, V =&gt; V )</Expression>
  Type="Boolean"
  DefaultValue=""
  VariableMode="Constant"
+ X="1500"
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="ContributionOfSpecialBrakeIsAllowed"
  Guid="09dba4d5-6f09-4fcf-b59a-1f2f461d0a54"
@@ -4260,6 +4543,10 @@ A_brake_emergency ( d =&gt; d, V =&gt; V )</Expression>
 <Rules>
 <Rule
  Priority="Processing"
+ X="1570"
+ Y="270"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CheckSpecialBrakesInterfaceConsistency"
  Guid="a55d97f5-25c6-4c5e-aecb-0b9a11dcc0b3"

@@ -1,0 +1,17 @@
+C:\Users\james\Desktop\ERTMSFormalSpecs\ErtmsFormalSpecs\src\EFSInterface\bin\Debug\EFSInterface.exe.config
+C:\Users\james\Desktop\ERTMSFormalSpecs\ErtmsFormalSpecs\src\EFSInterface\bin\Debug\EFSInterface.exe
+C:\Users\james\Desktop\ERTMSFormalSpecs\ErtmsFormalSpecs\src\EFSInterface\bin\Debug\EFSInterface.pdb
+C:\Users\james\Desktop\ERTMSFormalSpecs\ErtmsFormalSpecs\src\EFSInterface\bin\Debug\DataDictionary.dll
+C:\Users\james\Desktop\ERTMSFormalSpecs\ErtmsFormalSpecs\src\EFSInterface\bin\Debug\Utils.dll
+C:\Users\james\Desktop\ERTMSFormalSpecs\ErtmsFormalSpecs\src\EFSInterface\bin\Debug\XmlBooster.dll
+C:\Users\james\Desktop\ERTMSFormalSpecs\ErtmsFormalSpecs\src\EFSInterface\bin\Debug\HistoricalData.dll
+C:\Users\james\Desktop\ERTMSFormalSpecs\ErtmsFormalSpecs\src\EFSInterface\bin\Debug\log4net.dll
+C:\Users\james\Desktop\ERTMSFormalSpecs\ErtmsFormalSpecs\src\EFSInterface\bin\Debug\ErtmsSolutions.dll
+C:\Users\james\Desktop\ERTMSFormalSpecs\ErtmsFormalSpecs\src\EFSInterface\bin\Debug\DataDictionary.pdb
+C:\Users\james\Desktop\ERTMSFormalSpecs\ErtmsFormalSpecs\src\EFSInterface\bin\Debug\Utils.pdb
+C:\Users\james\Desktop\ERTMSFormalSpecs\ErtmsFormalSpecs\src\EFSInterface\bin\Debug\XmlBooster.pdb
+C:\Users\james\Desktop\ERTMSFormalSpecs\ErtmsFormalSpecs\src\EFSInterface\bin\Debug\HistoricalData.pdb
+C:\Users\james\Desktop\ERTMSFormalSpecs\ErtmsFormalSpecs\src\EFSInterface\bin\Debug\ErtmsSolutions.pdb
+C:\Users\james\Desktop\ERTMSFormalSpecs\ErtmsFormalSpecs\src\EFSInterface\obj\x86\Debug\EFSInterface.exe
+C:\Users\james\Desktop\ERTMSFormalSpecs\ErtmsFormalSpecs\src\EFSInterface\obj\x86\Debug\EFSInterface.pdb
+C:\Users\james\Desktop\ERTMSFormalSpecs\ErtmsFormalSpecs\src\EFSInterface\obj\x86\Debug\EFSInterface.csprojResolveAssemblyReference.cache

@@ -1,4 +1,7 @@
 <NameSpace
+ X="110"
+ Width="100"
+ Height="50"
  Name="EUROBALISE"
  Guid="2cb0f068-af58-4901-a222-8fb6b9b8a694"
 >
@@ -6,6 +9,7 @@
 </NameSpaces>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  Name="Message"
  Guid="5d8b0668-c063-49b3-96ea-8948148feef9"
@@ -183,6 +187,7 @@
  Guid="e77517d5-2b73-4c9c-84a9-26cbefb0bc26"
 >
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  Name="SubStructure1"
  Guid="f616343d-424f-4245-ad52-9015d9505211"

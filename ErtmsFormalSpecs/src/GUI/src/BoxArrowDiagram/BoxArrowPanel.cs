@@ -21,6 +21,9 @@ using System.Windows.Forms;
 using DataDictionary.Constants;
 using DataDictionary.Types;
 using DataDictionary;
+using System.IO;
+using System.Globalization;
+using ErtmsSolutions.Utils.RunProcessExec;
 
 namespace GUI.BoxArrowDiagram
 {
@@ -29,6 +32,7 @@ namespace GUI.BoxArrowDiagram
         where ArrowModel : class, DataDictionary.IGraphicalArrow<BoxModel>
     {
         private System.Windows.Forms.ToolStripMenuItem refreshMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reDisplayMenuItem;
 
         private void InitializeStartMenu()
         {
@@ -39,16 +43,46 @@ namespace GUI.BoxArrowDiagram
             refreshMenuItem.Name = "refreshMenuItem";
             refreshMenuItem.Size = new System.Drawing.Size(161, 22);
             refreshMenuItem.Text = "Refresh";
-            refreshMenuItem.Click += new System.EventHandler(refreshBoxMenuItem_Click);
+            refreshMenuItem.Click += new System.EventHandler(refreshMenuItem_Click);
+            // 
+            // Redisplay
+            // 
+            reDisplayMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            reDisplayMenuItem.Name = "reDisplayMenuItem";
+            reDisplayMenuItem.Size = new System.Drawing.Size(250, 22);
+            reDisplayMenuItem.Text = "Redisplay items";
+            reDisplayMenuItem.Click += new System.EventHandler(reDisplayMenuItem_Click);
 
             contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+                reDisplayMenuItem, 
                 refreshMenuItem});
         }
+
+        /// <summary>
+        /// The images used by this time line control
+        /// </summary>
+        public ImageList Images { get; set; }
+
+        /// <summary>
+        /// The image indexes used to retrieve images
+        /// </summary>
+        public const int PinnedImageIndex = 0;
+        public const int UnPinnedImageIndex = 1;
 
         /// <summary>
         /// The size of an box control button
         /// </summary>
         public Size DefaultBoxSize = new Size(100, 50);
+
+        /// <summary>
+        /// The model 
+        /// </summary>
+        private object __model = null;
+
+        /// <summary>
+        /// The model element for which this panel is built
+        /// </summary>
+        public object Model { get { return __model; } set { __model = value; InitPositionHandling(); } }
 
         /// <summary>
         /// Constructor
@@ -65,6 +99,11 @@ namespace GUI.BoxArrowDiagram
             DragEnter += new DragEventHandler(DragEnterHandler);
             DragDrop += new DragEventHandler(DragDropHandler);
             AllowDrop = true;
+            DoubleBuffered = true;
+
+            Images = new ImageList();
+            Images.Images.Add(GUI.Properties.Resources.pin);
+            Images.Images.Add(GUI.Properties.Resources.unpin);
         }
 
         /// <summary>
@@ -118,9 +157,143 @@ namespace GUI.BoxArrowDiagram
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void refreshBoxMenuItem_Click(object sender, EventArgs e)
+        private void refreshMenuItem_Click(object sender, EventArgs e)
         {
             RefreshControl();
+        }
+
+        /// <summary>
+        /// Refreshes the panel
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void reDisplayMenuItem_Click(object sender, EventArgs e)
+        {
+            string filePath = System.IO.Path.GetTempFileName();
+            try
+            {
+                // Generate the .dot file
+                StreamWriter writer = new StreamWriter(filePath);
+                writer.WriteLine("digraph Test {");
+                Dictionary<string, BoxModel> theBoxes = new Dictionary<string, BoxModel>();
+                Dictionary<string, List<BoxModel>> theBoxesByType = new Dictionary<string, List<BoxModel>>();
+                foreach (BoxModel box in getBoxes())
+                {
+                    // Keep track of the boxes
+                    theBoxes[box.Guid] = box;
+                    string boxType = box.GetType().ToString();
+                    if (!theBoxesByType.ContainsKey(boxType))
+                    {
+                        theBoxesByType[boxType] = new List<BoxModel>();
+                    }
+                    theBoxesByType[boxType].Add(box);
+
+                    string name = box.GraphicalName;
+                    if (name.Length > 12)
+                    {
+                        name = name.Substring(0, 12) + "...";
+                    }
+
+                    string pinned = "";
+                    if (box.Pinned)
+                    {
+                        pinned = "!";
+                    }
+                    writer.WriteLine(string.Format(CultureInfo.InvariantCulture, "  \"{0}\"[shape=record,width={1},height={2},label={3},pos=\"{4},{5}{6}\"];", box.Guid, DefaultBoxSize.Width / 100.0, DefaultBoxSize.Height / 100.0, box.GraphicalName, box.X / 100.0, box.Y / 100.0, pinned));
+                }
+
+                // Generate the arrows
+                foreach (ArrowModel arrow in getArrows())
+                {
+                    string sourceGuid = "";
+                    if (arrow.Source != null)
+                    {
+                        sourceGuid = arrow.Source.Guid;
+                    }
+                    string targetGuid = "";
+                    if (arrow.Target != null)
+                    {
+                        targetGuid = arrow.Target.Guid;
+                    }
+                    writer.WriteLine(string.Format(CultureInfo.InvariantCulture, "  \"{0}\" -> \"{1}\";", sourceGuid, targetGuid));
+                }
+
+                // Generate dependancies betweens boxes
+                foreach (List<BoxModel> boxesOfAKind in theBoxesByType.Values)
+                {
+                    for (int i = 0; i < boxesOfAKind.Count - 1; i++)
+                    {
+                        for (int j = i + 1; j < boxesOfAKind.Count; j++)
+                        {
+                            writer.WriteLine(string.Format(CultureInfo.InvariantCulture, "  \"{0}\" -> \"{1}\"[penwidth=0,arrowhead=none,len={2}];", boxesOfAKind[i].Guid, boxesOfAKind[j].Guid, ((boxesOfAKind.Count + 5) / 5) * DefaultBoxSize.Width / 100.0));
+                        }
+                    }
+                }
+
+                writer.WriteLine("}");
+                writer.Close();
+
+                // Run graphviz
+                RunProcessExec pe = new RunProcessExec(
+                    /* WorkingDirectory,    */ @".",
+                    /* Path,                */ @"c:\Program Files (x86)\Graphviz 2.28\bin",
+                    /* Program,             */ "neato.exe",
+                    /* Arguments,           */ "-O -Tplain " + filePath,
+                    /* FName_StandardInput, */ null,
+                    /* FName_StandardOutput,*/ null,
+                    /* FName_StandardError, */ null,
+                    /* TimeSpan TimeOut)    */ new TimeSpan(0, 0, 0, 1 /*second*/));
+
+                // Retrieve results
+                RunProcessExec.ProcessExecResult_Struct result = pe.StartAndWait();
+                if (result.ExecResult == RunProcessExec.ProcessExecResult_Enum.OK)
+                {
+                    StreamReader reader = new StreamReader(filePath + ".plain");
+                    while (!reader.EndOfStream)
+                    {
+                        string line = reader.ReadLine();
+                        string[] words = line.Split(' ');
+                        if (words.Length > 0)
+                        {
+                            if (words[0] == "node" && words.Length >= 6)
+                            {
+                                string guid = words[1].Substring(1, words[1].Length - 2);     // Remove the quotes
+                                if (theBoxes.ContainsKey(guid))
+                                {
+                                    BoxModel box = theBoxes[guid];
+                                    if (!box.Pinned)
+                                    {
+                                        box.X = (int)(Decimal.Parse(words[2], CultureInfo.InvariantCulture) * 100);
+                                        box.Y = (int)(Decimal.Parse(words[3], CultureInfo.InvariantCulture) * 100);
+                                        box.Width = DefaultBoxSize.Width;
+                                        box.Height = DefaultBoxSize.Height;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                RefreshControl();
+            }
+            catch (Exception excp)
+            {
+                MessageBox.Show("Cannot perfom operation due to error " + excp.Message, "Cannot perform operation", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                try
+                {
+                    if (filePath != null)
+                    {
+                        File.Delete(filePath);
+                        File.Delete(filePath + ".plain");
+                    }
+                }
+                catch (Exception)
+                {
+                }
+            }
         }
 
         /// <summary>
@@ -367,7 +540,7 @@ namespace GUI.BoxArrowDiagram
         public abstract List<ArrowModel> getArrows();
 
         /// <summary>
-        /// Refreshes the control according to the state machine
+        /// Refreshes the control according to the model
         /// </summary>
         public void RefreshControl()
         {
@@ -389,14 +562,17 @@ namespace GUI.BoxArrowDiagram
                 }
                 arrows.Clear();
 
-                foreach (BoxModel model in getBoxes())
+                List<BoxModel> theBoxes = getBoxes();
+                foreach (BoxModel model in theBoxes)
                 {
                     BoxControl<BoxModel, ArrowModel> boxControl = createBox(model);
                     boxControl.Parent = this;
                     boxControl.RefreshControl();
                     boxes[model] = boxControl;
                 }
-                foreach (ArrowModel model in getArrows())
+
+                List<ArrowModel> theArrows = getArrows();
+                foreach (ArrowModel model in theArrows)
                 {
                     bool showArrow = true;
                     if (model.Source != null)
@@ -644,23 +820,35 @@ namespace GUI.BoxArrowDiagram
             return retVal;
         }
 
-        private Point currentPosition = new Point(1, 1);
+        /// <summary>
+        /// The next position available for a computed box position
+        /// </summary>
+        protected Point CurrentPosition = new Point(1, 1);
+
+        /// <summary>
+        /// Reinitialises the automatic position handling
+        /// </summary>
+        protected virtual void InitPositionHandling()
+        {
+            CurrentPosition = new Point(1, 1);
+        }
 
         /// <summary>
         /// Provides the next available position in the box-arrow diagram
         /// </summary>
         /// <returns></returns>
-        public Point GetNextPosition()
+        public virtual Point GetNextPosition(BoxModel model)
         {
-            Point retVal = new Point(currentPosition.X, currentPosition.Y);
+            Point retVal = new Point(CurrentPosition.X, CurrentPosition.Y);
 
-            int X_OFFSET = DefaultBoxSize.Width + 10;
-            int Y_OFFSET = DefaultBoxSize.Height + 10;
+            // Prepare the next call for GetNextPosition
+            int X_OFFSET = model.Width + 10;
+            int Y_OFFSET = model.Height + 10;
 
-            currentPosition.Offset(X_OFFSET, 0);
-            if (currentPosition.X > Size.Width - DefaultBoxSize.Width)
+            CurrentPosition.Offset(X_OFFSET, 0);
+            if (CurrentPosition.X > Size.Width - model.Width)
             {
-                currentPosition = new Point(1, currentPosition.Y + Y_OFFSET);
+                CurrentPosition = new Point(1, CurrentPosition.Y + Y_OFFSET);
             }
 
             return retVal;
@@ -731,7 +919,14 @@ namespace GUI.BoxArrowDiagram
         /// <returns></returns>
         internal bool isSelected(Control control)
         {
-            return EnclosingWindow.isSelected(control);
+            bool retVal = false;
+
+            if (EnclosingWindow != null)
+            {
+                retVal = EnclosingWindow.isSelected(control);
+            }
+
+            return retVal;
         }
     }
 }

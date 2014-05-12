@@ -19,7 +19,7 @@ using Utils;
 
 namespace DataDictionary.Functions
 {
-    public class Procedure : Generated.Procedure, Utils.ISubDeclarator, ICallable, TextualExplain
+    public class Procedure : Generated.Procedure, Utils.ISubDeclarator, ICallable, TextualExplain, IGraphicalDisplay
     {
         /// <summary>
         /// Constructor
@@ -255,5 +255,60 @@ namespace DataDictionary.Functions
             return TextualExplainUtilities.Encapsule(retVal);
         }
 
+
+        /// <summary>
+        /// The X position
+        /// </summary>
+        public int X
+        {
+            get { return getX(); }
+            set { setX(value); }
+        }
+
+        /// <summary>
+        /// The Y position
+        /// </summary>
+        public int Y
+        {
+            get { return getY(); }
+            set { setY(value); }
+        }
+
+        /// <summary>
+        /// The width
+        /// </summary>
+        public int Width
+        {
+            get { return getWidth(); }
+            set { setWidth(value); }
+        }
+
+        /// <summary>
+        /// The height
+        /// </summary>
+        public int Height
+        {
+            get { return getHeight(); }
+            set { setHeight(value); }
+        }
+
+        /// <summary>
+        /// The name to be displayed
+        /// </summary>
+        public string GraphicalName { get { return Name; } }
+
+        /// <summary>
+        /// Indicates whether the namespace is hidden
+        /// </summary>
+        public bool Hidden
+        {
+            get { return getHidden(); }
+            set { setHidden(value); }
+        }
+
+        /// <summary>
+        /// Indicates that the element is pinned
+        /// </summary>
+        public bool Pinned { get { return getPinned(); } set { setPinned(value); } }
     }
 }

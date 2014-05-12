@@ -1,4 +1,8 @@
 <NameSpace
+ X="820"
+ Y="10"
+ Width="100"
+ Height="50"
  Name="ERA_BrakingCurvesVerification"
  Guid="336a4b67-324d-4b67-b2ce-31dc4f686df4"
 >
@@ -7,6 +11,7 @@
 <Functions>
 <Function
  Type="Boolean"
+ Default=""
  NeedsRequirement="FALSE"
  Name="Compare"
  Guid="e28e6af8-9a4e-4301-a06b-00654d61ce89"
@@ -33,6 +38,7 @@
 </Case></Cases>
 </Function><Function
  Type="Double"
+ Default=""
  NeedsRequirement="FALSE"
  Name="AbsoluteValue"
  Guid="5583d127-8106-4b70-818b-44eeadd96040"
@@ -63,6 +69,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  NeedsRequirement="FALSE"
  Name="ConvertTargetDistance"
  Guid="cdded46f-adbd-4dde-ac56-2eeeec5c17c7"
@@ -84,6 +91,7 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  NeedsRequirement="FALSE"
  Name="CompareAcceleration"
  Guid="b9d2686e-06d9-4932-8ec2-3ccca803d773"

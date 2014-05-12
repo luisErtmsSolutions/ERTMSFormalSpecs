@@ -1134,7 +1134,7 @@ namespace DataDictionary.Functions
         /// </summary>
         /// <param name="explainSubElements">Precises if we need to explain the sub elements (if any)</param>
         /// <returns></returns>
-        public string getExplain(bool explainSubElements)
+        public override string getExplain(bool explainSubElements)
         {
             string retVal = getExplain(0);
 
@@ -1272,6 +1272,16 @@ namespace DataDictionary.Functions
             CachedValue = null;
             Graph = null;
             Surface = null;
+        }
+
+        /// <summary>
+        /// Converts a structure value to its corresponding structure expression.
+        /// null entries correspond to the default value
+        /// </summary>
+        /// <returns></returns>
+        public string ToExpressionWithDefault()
+        {
+            return "";
         }
     }
 }

@@ -1,15 +1,23 @@
 <NameSpace
- X="1150"
- Y="100"
+ X="1100"
+ Y="420"
  Width="100"
  Height="50"
+ Pinned="TRUE"
  Name="LX"
  Guid="b086b356-2889-4262-a7bb-ae9355607b0a"
 >
+<Comment></Comment>
 <NameSpaces>
 </NameSpaces>
 <Structures>
 <Structure
+ Default=""
+ X="400"
+ Y="310"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="LevelCrossing"
  Guid="02504b1e-5cef-4fa8-b6ec-b2928255acdf"
@@ -199,6 +207,11 @@
  TypeName="LevelCrossing"
  MaxSize="20"
  Default="[]"
+ X="220"
+ Y="310"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="LevelCrossings"
  Guid="f7ac6fa8-6bd4-4b62-818b-23b38afbfbeb"
@@ -218,6 +231,12 @@
 <Functions>
 <Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="40"
+ Y="20"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="SpeedRestrictions"
  Guid="43f4c956-b164-47bd-8d4a-3bedc17819d2"
@@ -264,6 +283,12 @@ INITIAL_VALUE BaseTypes.MaxSpeedFunction) (Distance)</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="40"
+ Y="80"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="LXSpeedRestriction"
  Guid="b2e86dbf-3f29-4693-b45a-9152ff8e90d1"
@@ -337,6 +362,12 @@ INITIAL_VALUE BaseTypes.MaxSpeedFunction) (Distance)</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="150"
+ Y="20"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="NonProtectedSpeed"
  Guid="fc60e92d-e251-48d6-85be-da9ced8c827f"
@@ -372,6 +403,12 @@ INITIAL_VALUE BaseTypes.MaxSpeedFunction) (Distance)</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="150"
+ Y="80"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="StoppingAreaSpeed"
  Guid="38fbcc58-30db-45fc-90ee-de1f34963493"
@@ -423,6 +460,12 @@ INITIAL_VALUE BaseTypes.MaxSpeedFunction) (Distance)</Expression>
 </Case></Cases>
 </Function><Function
  Type="LevelCrossing"
+ Default=""
+ X="260"
+ Y="20"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CreateLevelCrossing"
@@ -499,6 +542,10 @@ INITIAL_VALUE BaseTypes.MaxSpeedFunction) (Distance)</Expression>
 </Function></Functions>
 <Procedures>
 <Procedure
+ X="40"
+ Y="210"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="LXReceived"
  Guid="ea0c2341-28a7-4f3c-b952-200b3c078ff1"
@@ -606,6 +653,11 @@ IN LevelCrossings</Action></Actions>
  Type="LevelCrossings"
  DefaultValue=""
  VariableMode="Internal"
+ X="40"
+ Y="310"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="LevelCrossings"
  Guid="f57bad76-0297-460a-916f-2c6ce1af3ffd"

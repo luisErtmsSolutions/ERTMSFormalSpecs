@@ -270,7 +270,7 @@ namespace DataDictionary.Types
         {
             string retVal = TextualExplainUtilities.Comment(this, indentLevel);
 
-            retVal += TextualExplainUtilities.Pad("{" + Name + " : ENUMERATION}", indentLevel);
+            retVal += TextualExplainUtilities.Pad(Name + "{\\b : ENUMERATION}", indentLevel);
             foreach (Constants.EnumValue enumValue in Values)
             {
                 retVal += "\\par" + enumValue.getExplain(indentLevel + 2);
@@ -284,12 +284,11 @@ namespace DataDictionary.Types
         /// </summary>
         /// <param name="explainSubElements">Precises if we need to explain the sub elements (if any)</param>
         /// <returns></returns>
-        public string getExplain(bool explainSubElements)
+        public override string getExplain(bool explainSubElements)
         {
             string retVal = getExplain(0);
 
             return TextualExplainUtilities.Encapsule(retVal);
         }
-
     }
 }

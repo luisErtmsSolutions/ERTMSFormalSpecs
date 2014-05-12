@@ -26,6 +26,7 @@
 </ReqRef></Range></Ranges>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="GradientInfo"
@@ -50,6 +51,7 @@
  Guid="039d5a8a-f499-4018-b8f3-7d61e4b2f82e"
 >
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="DefaultGradientForTSR"
@@ -65,6 +67,7 @@
  Guid="6b187c8d-a38a-46c2-8a20-f9ef07e9ae2e"
 >
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CorFactValue"
@@ -91,6 +94,7 @@
  Guid="c9b932d9-bfca-4f89-872e-ce70be10b9e0"
 >
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CorFact"
@@ -172,6 +176,7 @@
 <Functions>
 <Function
  Type="Default.BaseTypes.Gradient"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="GradientProfileWithDefaultValue"
@@ -208,6 +213,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="GradientEnd"
@@ -256,6 +262,7 @@ INITIAL_VALUE
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Gradient"
+ Default=""
  Implemented="TRUE"
  Name="GradientInfoProfile_NonCompensated"
  Guid="fe442e63-2182-4938-b9f1-19a8cd772e42"
@@ -316,6 +323,7 @@ Outside the distances provided by the gradient, the gradient value is defined as
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Gradient"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CreateGradient"
@@ -385,6 +393,7 @@ Outside the distances provided by the gradient, the gradient value is defined as
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="AbsoluteDistance"
@@ -421,6 +430,7 @@ USING
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Gradient"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CompensateGradientWithRotatingMass"
@@ -508,6 +518,7 @@ The formulae are easier than in subset 26 since the values of grad and M_rotatin
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
  Implemented="TRUE"
  Name="A_gradient"
  Guid="d5c5b564-eea9-4148-93ea-4ffed87b2929"
@@ -559,6 +570,7 @@ The formulae are easier than in subset 26 since the values of grad and M_rotatin
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Gradient"
+ Default=""
  Implemented="TRUE"
  Name="GradientInfoProfileSummary_NonCompensated"
  Guid="7b37d34e-061c-4bdf-86dc-3a39188e50c3"
@@ -592,6 +604,7 @@ The formulae are easier than in subset 26 since the values of grad and M_rotatin
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Gradient"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="GradientProfile"
@@ -641,6 +654,7 @@ The formulae are easier than in subset 26 since the values of grad and M_rotatin
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Gradient"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="GradientInfoProfile"
@@ -716,6 +730,7 @@ Outside the distances provided by the gradient, the gradient value is defined as
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Gradient"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="GradientInfoProfileSummary"
@@ -745,6 +760,7 @@ Outside the distances provided by the gradient, the gradient value is defined as
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Gradient"
+ Default=""
  Implemented="TRUE"
  Name="GradientProfile_NonCompensated"
  Guid="a3728098-b4c0-49c0-9ded-4ec3484e433b"
@@ -819,6 +835,7 @@ Outside the distances provided by the gradient, the gradient value is defined as
 </Case></Cases>
 </Function><Function
  Type="CorrectionFactor"
+ Default=""
  Implemented="TRUE"
  Name="CorrectionFactorFunction"
  Guid="7de99599-e199-4386-ab35-d0718105e0f9"
@@ -903,6 +920,7 @@ Outside the distances provided by the gradient, the gradient value is defined as
 </Case></Cases>
 </Function><Function
  Type="CorrectionFactor"
+ Default=""
  Implemented="TRUE"
  Name="KnPlus"
  Guid="8042f812-5300-4cd0-bf08-5d04c9348522"
@@ -929,6 +947,7 @@ Outside the distances provided by the gradient, the gradient value is defined as
 </Case></Cases>
 </Function><Function
  Type="CorrectionFactor"
+ Default=""
  Implemented="TRUE"
  Name="KnMin"
  Guid="51d26fca-6603-4fe9-8336-9e3da9ce5449"

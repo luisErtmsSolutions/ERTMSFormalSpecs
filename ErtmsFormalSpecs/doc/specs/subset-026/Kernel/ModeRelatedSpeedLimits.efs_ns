@@ -1,8 +1,9 @@
 <NameSpace
- X="1400"
- Y="600"
- Width="200"
+ X="270"
+ Y="660"
+ Width="100"
  Height="50"
+ Pinned="TRUE"
  Name="ModeRelatedSpeedLimits"
  Guid="89989471-9882-4745-8a2f-2c5d3d48cf9a"
 >
@@ -10,6 +11,7 @@
 </NameSpaces>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  Name="TracksideModeRelatedSpeedRestrictions"
  Guid="523cf0fe-f3be-44f2-b067-220907fe2557"
@@ -62,6 +64,7 @@
 <Functions>
 <Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="LSModeSpeedLimit"
  Guid="39bbb191-1abc-4cb2-a0bf-12035f821bc9"
@@ -116,6 +119,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="OSModeSpeedLimit"
  Guid="d1912dc6-0d89-45cc-90bf-b90c6ce33b64"
@@ -170,6 +174,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SpeedRestrictions"
@@ -272,6 +277,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="RVModeSpeedLimit"
  Guid="c7416c45-7d6b-4d0b-ab9a-9cd473bfadbc"
@@ -306,6 +312,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="SHModeSpeedLimit"
  Guid="d0e8fe21-b9ef-4d2f-8534-3a96ca1b5417"
@@ -355,6 +362,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="SRModeSpeedLimit"
  Guid="be9c9a4d-1289-4c10-befe-194f50ec5723"
@@ -404,6 +412,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="UNModeSpeedLimit"
  Guid="47d1e243-9c5a-413f-b617-8184bb795278"

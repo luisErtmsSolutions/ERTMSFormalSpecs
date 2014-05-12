@@ -39,8 +39,8 @@ namespace DataDictionary.Tests.Runner.Events
         /// Constructor
         /// </summary>
         /// <param name="action"The action which raised the variable update></param>
-        public VariableUpdate(Rules.Action action, Utils.IModelElement instance)
-            : base(action.Statement.ToString(), instance)
+        public VariableUpdate(Rules.Action action, Utils.IModelElement instance, Generated.acceptor.RulePriority? priority)
+            : base(action.ExpressionText, instance, priority)
         {
             Action = action;
         }
@@ -94,5 +94,16 @@ namespace DataDictionary.Tests.Runner.Events
             base.RollBack();
             Changes.RollBack();
         }
+
+        /// <summary>
+        /// The explanation of the element
+        /// </summary>
+        /// <param name="explainSubElements">Precises if we need to explain the sub elements (if any)</param>
+        /// <returns></returns>
+        public override string getExplain(bool explainSubElements)
+        {
+            return TextualExplainUtilities.Encapsule(Changes.ToString());
+        }
+
     }
 }

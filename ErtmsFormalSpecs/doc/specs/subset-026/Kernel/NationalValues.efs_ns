@@ -1,11 +1,13 @@
 <NameSpace
- X="180"
- Y="10"
- Width="1400"
+ X="990"
+ Y="540"
+ Width="100"
  Height="50"
+ Pinned="TRUE"
  Name="NationalValues"
  Guid="ab0c0598-d909-46cd-a861-9e42c8dac64b"
 >
+<Comment></Comment>
 <NameSpaces>
 </NameSpaces>
 <Ranges>
@@ -14,6 +16,11 @@
  MaxValue="1.55"
  Precision="DoublePrecision"
  Default="0.0"
+ X="10"
+ Y="670"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="CorFactorKr"
  Guid="9c7841f8-44ee-4c7b-9d95-8f9c5e633c13"
@@ -28,6 +35,11 @@
  MaxValue="1.55"
  Precision="DoublePrecision"
  Default="0.0"
+ X="530"
+ Y="670"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="CorFactorKt"
  Guid="81bfda52-1869-4476-b83f-416021a6fe5e"
@@ -37,11 +49,17 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="52c4aabe-1a96-4a92-b633-e84a2717dc9e"
 >
-</ReqRef></Range><Range
+</ReqRef><Comment></Comment>
+</Range><Range
  MinValue="0.0"
  MaxValue="2.54"
  Precision="DoublePrecision"
  Default="0.0"
+ X="1030"
+ Y="600"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="CorFactorKv"
  Guid="ea4125fa-26dd-425b-8c7c-74e73b0c25df"
@@ -56,6 +74,11 @@
  MaxValue="1.0"
  Precision="DoublePrecision"
  Default="0.0"
+ X="680"
+ Y="360"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="WeightFactor"
  Guid="d8b83ead-bde2-42f4-81d3-70509ad8181f"
@@ -65,9 +88,16 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="5ee86021-e176-4540-845e-68bcbed2e0c0"
 >
-</ReqRef></Range></Ranges>
+</ReqRef><Comment></Comment>
+</Range></Ranges>
 <Structures>
 <Structure
+ Default=""
+ X="290"
+ Y="470"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="NationalValues"
@@ -129,6 +159,12 @@
  Guid="d86f6885-fb00-477a-8793-f89d20740808"
 >
 </ReqRef></StructureElement></Structure><Structure
+ Default=""
+ X="480"
+ Y="470"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="NationalDefaultData"
  Guid="26269253-e818-4d28-b655-4a02aaf52e18"
@@ -993,11 +1029,18 @@
 >
 </ReqRef><Comment></Comment>
 </StructureElement></Structure><Structure
+ Default=""
+ X="180"
+ Y="670"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="KrIntValue"
  Guid="c31d7ee3-3af1-4ae0-b186-feafcd48f1b7"
 >
+<Comment></Comment>
 <StructureElement
  TypeName="Default.BaseTypes.Length"
  Default="Default.BaseTypes.Length.Infinity"
@@ -1035,6 +1078,12 @@
  Guid="e26bdd41-fa5c-4fe6-9b20-d234bb665d79"
 >
 </ReqRef></StructureElement></Structure><Structure
+ Default=""
+ X="420"
+ Y="670"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="KrIntValueSet"
  Guid="9a5b95ab-10d8-49e1-8ccb-83113970a44b"
@@ -1054,7 +1103,8 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="29afc98c-9444-4d34-bc61-4a0968a7719c"
 >
-</ReqRef><StructureElement
+</ReqRef><Comment></Comment>
+<StructureElement
  TypeName="KrIntValue"
  Default="Kernel.NationalValues.KrIntValue { LengthStep =&gt; 0.0 }"
  Mode="Internal"
@@ -1100,6 +1150,12 @@
  Guid="2bc9baf5-689c-4683-8c9d-7e61496df30f"
 >
 </StructureElement></Structure><Structure
+ Default=""
+ X="1030"
+ Y="470"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="KvIntValue_FreightTrain"
@@ -1142,6 +1198,12 @@
  Guid="1d9d89c2-d9cb-4722-bfe2-9771339aa9ab"
 >
 </ReqRef></StructureElement></Structure><Structure
+ Default=""
+ X="630"
+ Y="600"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="KvIntValueSet_PassengerTrain"
  Guid="ca191328-3e2c-4b63-81a6-dd6fb753ce61"
@@ -1238,6 +1300,12 @@
  Guid="f10f78d6-c8c7-411f-a61b-7063caa323a5"
 >
 </ReqRef></StructureElement></Structure><Structure
+ Default=""
+ X="830"
+ Y="600"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="KvIntValue_PassengerTrain"
  Guid="0277029c-9d4b-48b4-8f68-a2c4c7d8b291"
@@ -1307,6 +1375,12 @@
  Guid="36b720d4-744e-49b9-9ec5-0be7954c2e7c"
 >
 </ReqRef></StructureElement></Structure><Structure
+ Default=""
+ X="830"
+ Y="470"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="KvIntValueSet_FreightTrain"
  Guid="b8cee096-cde5-458a-9707-d1c73314a3c3"
@@ -1402,6 +1476,12 @@
 <Functions>
 <Function
  Type="NationalValues"
+ Default=""
+ X="30"
+ Y="300"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="CreateNewNationalValues"
  Guid="383ff4ad-c76d-4d85-9df9-145c33786300"
@@ -1635,6 +1715,11 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="30"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="OverrideRelatedSpeedRestrictions"
  Guid="7154247b-2d20-43d1-958a-d089b9c4ce39"
@@ -1707,6 +1792,11 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="140"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="A_MAXREDADH"
  Guid="237c959b-92b5-460e-891a-e132ba211983"
@@ -1834,6 +1924,11 @@
 </Case></Cases>
 </Function><Function
  Type="CorFactorKt"
+ Default=""
+ X="250"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="KtResolution"
  Guid="a5aa8704-838e-4360-8b93-eeedaafe47ed"
@@ -1860,6 +1955,12 @@
 </Case></Cases>
 </Function><Function
  Type="WeightFactor"
+ Default=""
+ X="140"
+ Y="60"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="WeightFactResolution"
  Guid="96d979f0-6cb7-4c35-aa67-6efa84aef151"
@@ -1891,6 +1992,11 @@
 </Case></Cases>
 </Function><Function
  Type="CorFactorKr"
+ Default=""
+ X="360"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="KrResolution"
  Guid="9cf61d7c-6ca1-4e8f-a56b-a9fe1ba70f8f"
@@ -1917,6 +2023,11 @@
 </Case></Cases>
 </Function><Function
  Type="CorFactorKv"
+ Default=""
+ X="470"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="KvResolution"
  Guid="3f454256-a049-4173-bc9c-201accccf5bf"
@@ -1943,6 +2054,12 @@
 </Case></Cases>
 </Function><Function
  Type="CorFactorKr"
+ Default=""
+ X="360"
+ Y="60"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="Kr_intFunction"
  Guid="c1efc677-7c29-4ead-8ab2-0b50e84e74da"
@@ -1957,7 +2074,8 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="a3165ba0-ad25-42e6-9bbd-10c131d4f413"
 >
-</ReqRef><Parameters>
+</ReqRef><Comment></Comment>
+<Parameters>
 <Parameter
  Type="KrIntValueSet"
  Name="aKr_int"
@@ -2026,6 +2144,12 @@
 </Case></Cases>
 </Function><Function
  Type="CorFactorKv"
+ Default=""
+ X="470"
+ Y="60"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="Kv_intFunction_FreightTrains"
  Guid="c3afb732-3883-4328-b268-a3d0e169767d"
@@ -2040,7 +2164,8 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="b9dbb08b-4b23-4967-96ba-1746d32ecc48"
 >
-</ReqRef><Parameters>
+</ReqRef><Comment></Comment>
+<Parameters>
 <Parameter
  Type="KvIntValueSet_FreightTrain"
  Name="aKv_int"
@@ -2109,6 +2234,12 @@
 </Case></Cases>
 </Function><Function
  Type="CorFactorKv"
+ Default=""
+ X="470"
+ Y="180"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="Kv_intFunction_PassengerTrains"
  Guid="4c368072-eb9c-46f7-a37d-e5825a53c8d0"
@@ -2213,6 +2344,12 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="470"
+ Y="120"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="Kv_intValueFunction"
  Guid="fdb4ec03-c40a-476d-abcb-0656aa3f4e4e"
@@ -2281,6 +2418,12 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="470"
+ Y="240"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="Kv_int"
  Guid="05acdecd-a454-458b-b41f-34b5eae0a54c"
@@ -2341,6 +2484,12 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
+ X="250"
+ Y="60"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="Kr_int"
  Guid="b80e7499-0cc1-49a7-aa23-21f2c2ce0caa"
@@ -2350,7 +2499,8 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="82c0aaf5-610a-4688-aa13-548259970495"
 >
-</ReqRef><Parameters>
+</ReqRef><Comment></Comment>
+<Parameters>
 <Parameter
  Type="Default.BaseTypes.Length"
  Name="L"
@@ -2376,6 +2526,12 @@
 </Function><Function
  Type="Default.BaseTypes.Speed"
  Cacheable="TRUE"
+ Default=""
+ X="140"
+ Y="240"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="MaxDistInSRSpeedRestriction"
  Guid="beff0cfe-7c2c-4583-b570-504c58d54f05"
@@ -2417,6 +2573,12 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="30"
+ Y="60"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ComputationOfGUIIsEnabled"
@@ -2445,6 +2607,12 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="140"
+ Y="180"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CompensationOfInaccuracyOfTheSpeedIsInhibited"
@@ -2455,7 +2623,8 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="c83ce6d6-46b1-452b-adaf-52aa5261bf33"
 >
-</ReqRef><Cases>
+</ReqRef><Comment></Comment>
+<Cases>
 <Case
  Name="NationalValues"
  Guid="7e79a92c-a2be-4cad-af3c-e69674b84aa6"
@@ -2473,6 +2642,12 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="140"
+ Y="120"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ReleaseSpeed"
@@ -2483,7 +2658,8 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="963a4f47-3b16-4fce-84d9-f6ce3b001a46"
 >
-</ReqRef><Cases>
+</ReqRef><Comment></Comment>
+<Cases>
 <Case
  Name="NationalValues"
  Guid="02a4b48d-4259-464e-8f73-0f5587887c26"
@@ -2501,6 +2677,12 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="30"
+ Y="180"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="UseOfSBFeedbackIsPermitted"
@@ -2511,7 +2693,8 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="107fcc47-58a6-48b0-86ce-4fc5a73fd976"
 >
-</ReqRef><Cases>
+</ReqRef><Comment></Comment>
+<Cases>
 <Case
  Name="NationalValues"
  Guid="a50453e8-e00d-4277-ab5d-eed72b01afff"
@@ -2529,6 +2712,12 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="140"
+ Y="300"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="ReleaseOfEBIsPermitted"
  Guid="b9edb3fc-53c1-4267-86ab-8723bc511c5a"
@@ -2538,7 +2727,8 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="caf1decf-26b8-4671-a9ac-fb85b6756eb0"
 >
-</ReqRef><Cases>
+</ReqRef><Comment></Comment>
+<Cases>
 <Case
  Name="NationalValues_Standstill"
  Guid="779c4f9e-14ef-41b5-9896-f28f9f3d6f59"
@@ -2570,6 +2760,12 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="30"
+ Y="120"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="UseOfSBIsInhibited"
@@ -2598,11 +2794,18 @@
 </Case></Cases>
 </Function><Function
  Type="CorFactorKt"
+ Default=""
+ X="30"
+ Y="240"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="IntegratedCorrectionFactorForBrakeBuildUpTime"
  Guid="58e29de2-38e6-4c37-984c-18341be74312"
 >
+<Comment></Comment>
 <Cases>
 <Case
  Name="NationalValues"
@@ -2622,6 +2825,10 @@
 </Function></Functions>
 <Procedures>
 <Procedure
+ X="850"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="NationalValuesReceived"
  Guid="7bd5ba33-cfc2-45cf-a2eb-7e3a8cef239f"
@@ -2733,6 +2940,10 @@
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="850"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateKvIntValueSet"
  Guid="32022afb-5a87-4e39-9be6-8b72330e744e"
@@ -2858,6 +3069,10 @@
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="850"
+ Y="240"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateKvIntValue"
  Guid="dcada860-e0bd-45ef-ab27-2c683e2449f8"
@@ -2935,6 +3150,10 @@
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="850"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CreateKrIntValueSet"
@@ -2996,6 +3215,10 @@
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="850"
+ Y="60"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateKrIntValue"
  Guid="aa18dd70-4ad2-488f-8110-7f0abcedc667"
@@ -3090,6 +3313,10 @@
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="850"
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateKvIntValue_FreightTrain"
  Guid="cb53bd91-f44c-4c6b-a33f-1a47175393f4"
@@ -3176,6 +3403,9 @@
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="850"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateKvIntValue_PassengerTrain"
  Guid="16eeba6c-5933-4e9c-9500-5f6ed3103619"
@@ -3293,6 +3523,11 @@
  Type="NationalValues"
  DefaultValue=""
  VariableMode="Internal"
+ X="100"
+ Y="440"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="NotApplicableNationalValues"
  Guid="c2d9d4f6-ee74-4af9-b1a1-c1c8d1b94c38"
@@ -3321,6 +3556,11 @@
  Type="NationalValues"
  DefaultValue=""
  VariableMode="Internal"
+ X="100"
+ Y="500"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="ApplicableNationalValues"
  Guid="dc0d4977-1d4d-4d94-b4d8-54b15cdce9a7"
@@ -3351,6 +3591,11 @@
  Type="NationalDefaultData"
  DefaultValue=""
  VariableMode="Internal"
+ X="480"
+ Y="350"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="DefaultValues"
  Guid="643313ac-94b6-41ca-bc72-34e264176bd5"
@@ -3365,6 +3610,9 @@
 <Rules>
 <Rule
  Priority="Processing"
+ X="670"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="NVBecomeApplicable"
  Guid="9f5dee4e-50f1-492d-94da-64278acc22f3"
@@ -3374,7 +3622,8 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="6344e292-f74f-4630-9844-ee60a555fd12"
 >
-</ReqRef><SubRules></SubRules>
+</ReqRef><Comment></Comment>
+<SubRules></SubRules>
 <Conditions>
 <RuleCondition
  Implemented="TRUE"

@@ -190,7 +190,6 @@ namespace GUI.HistoryView
             this.beforeRichTextBox.ConsiderOnlyTypes = false;
             this.beforeRichTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.beforeRichTextBox.Instance = null;
-            this.beforeRichTextBox.Lines = new string[] { };
             this.beforeRichTextBox.Location = new System.Drawing.Point(3, 16);
             this.beforeRichTextBox.Name = "beforeRichTextBox";
             this.beforeRichTextBox.ReadOnly = true;
@@ -215,7 +214,6 @@ namespace GUI.HistoryView
             this.afterRichTextBox.ConsiderOnlyTypes = false;
             this.afterRichTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.afterRichTextBox.Instance = null;
-            this.afterRichTextBox.Lines = new string[] { };
             this.afterRichTextBox.Location = new System.Drawing.Point(3, 16);
             this.afterRichTextBox.Name = "afterRichTextBox";
             this.afterRichTextBox.ReadOnly = true;

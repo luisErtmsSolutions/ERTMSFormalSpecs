@@ -24,11 +24,12 @@ namespace DataDictionary.Values
             {
                 string retVal = Val;
 
-                if (!retVal.StartsWith("'"))
+                string tmp = retVal;
+                if (!tmp.StartsWith("'"))
                 {
                     retVal = "'" + retVal;
                 }
-                if (!retVal.EndsWith("'"))
+                if (!tmp.EndsWith("'"))
                 {
                     retVal = retVal + "'";
                 }

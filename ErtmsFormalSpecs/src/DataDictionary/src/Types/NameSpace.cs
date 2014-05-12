@@ -1,4 +1,4 @@
-// ------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 // -- Copyright ERTMS Solutions
 // -- Licensed under the EUPL V.1.1
 // -- http://joinup.ec.europa.eu/software/page/eupl/licence-eupl
@@ -557,6 +557,11 @@ namespace DataDictionary.Types
             get { return getHidden(); }
             set { setHidden(value); }
         }
+
+        /// <summary>
+        /// Indicates that the element is pinned
+        /// </summary>
+        public bool Pinned { get { return getPinned(); } set { setPinned(value); } }
 
         /// <summary>
         /// Provides an explanation of the namespace

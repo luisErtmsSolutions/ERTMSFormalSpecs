@@ -43,8 +43,8 @@ namespace DataDictionary.Tests.Runner.Events
         /// Constructor
         /// </summary>
         /// <param name="step">The activated step</param>
-        public SubStepActivated(Tests.SubStep subStep)
-            : base(subStep.Name, subStep)
+        public SubStepActivated(Tests.SubStep subStep, Generated.acceptor.RulePriority? priority)
+            : base(subStep.Name, subStep, priority)
         {
             SubStep = subStep;
         }
@@ -66,7 +66,7 @@ namespace DataDictionary.Tests.Runner.Events
                 {
                     if (action.Statement != null)
                     {
-                        Updates.Add(new VariableUpdate(action, SubStep.Dictionary));
+                        Updates.Add(new VariableUpdate(action, SubStep.Dictionary, runner.CurrentPriority));
                     }
                     else
                     {
@@ -95,7 +95,7 @@ namespace DataDictionary.Tests.Runner.Events
             // Store the step corresponding expectations
             foreach (Expectation expectation in subStep.Expectations)
             {
-                TimeLine.AddModelEvent(new Events.Expect(expectation), runner);
+                TimeLine.AddModelEvent(new Events.Expect(expectation, runner.CurrentPriority), runner);
             }
         }
 

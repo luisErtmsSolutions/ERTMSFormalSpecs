@@ -1,4 +1,6 @@
 <NameSpace
+ Width="100"
+ Height="50"
  Name="LevelCrossing"
  Guid="98ea9a68-03c5-41d6-9133-7441ae29faed"
 >
@@ -7,6 +9,7 @@
 <Functions>
 <Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  Name="d_EBI"
  Guid="dcbd6c62-c25a-49db-8a5f-affcc526cab0"
@@ -43,6 +46,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  Name="d_SBI2"
  Guid="14dc23e3-3a52-43d4-b0ec-ab1c829cbeef"
@@ -69,6 +73,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  Name="d_FLOI"
  Guid="dab63110-7e4a-4214-afaf-99b99473537c"
@@ -104,6 +109,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  Name="d_P"
  Guid="b9678abe-a41b-49d3-83df-ef6febdf0de1"

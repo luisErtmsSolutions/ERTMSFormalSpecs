@@ -66,8 +66,8 @@ namespace DataDictionary.Tests.Runner.Events
         /// Constructor
         /// </summary>
         /// <param name="id"></param>
-        public Expect(Expectation expectation)
-            : base(expectation.ExpressionText, expectation)
+        public Expect(Expectation expectation, Generated.acceptor.RulePriority? priority)
+            : base(expectation.ExpressionText, expectation, priority)
         {
             Expectation = expectation;
             State = EventState.Active;

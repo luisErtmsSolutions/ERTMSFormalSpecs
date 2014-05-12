@@ -6,6 +6,7 @@
 </NameSpaces>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  Name="CurrentConsumptionInformation"
  Guid="7a5297cd-00d0-4a5f-8ed4-c41cee5098e2"
@@ -68,6 +69,7 @@
 <Functions>
 <Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CCProfileStartLocation"
@@ -95,6 +97,7 @@
 </Case></Cases>
 </Function><Function
  Type="Messages.M_CURRENT"
+ Default=""
  Implemented="TRUE"
  Name="CCAtDistance"
  Guid="eceb13fd-b0d1-4aaa-8b83-bb8c3f0794d1"
@@ -139,6 +142,7 @@
 </Case></Cases>
 </Function><Function
  Type="Messages.M_CURRENT"
+ Default=""
  Implemented="TRUE"
  Name="CurrentCCConditions"
  Guid="81439991-0207-4ce9-af00-eb75745b35d1"

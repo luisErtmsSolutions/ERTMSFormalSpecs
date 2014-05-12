@@ -48,6 +48,8 @@ namespace GUI.TestRunnerView
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.nextErrortoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.nextWarningToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.nextInfoToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -68,42 +70,19 @@ namespace GUI.TestRunnerView
             this.toolStripCurrentStepTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.testBrowserTreeView = new GUI.TestRunnerView.TestTreeView();
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.propertyGrid = new GUI.MyPropertyGrid();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.descriptionTabPage = new System.Windows.Forms.TabPage();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.requirementsTextBox = new GUI.EditorTextBox();
-            this.expressionEditorTextBox = new GUI.EditorTextBox();
-            this.explainTextBox = new GUI.ExplainTextBox();
-            this.timeLineTabPage = new System.Windows.Forms.TabPage();
-            this.evcTimeLineControl = new GUI.TestRunnerView.TimeLineControl.TimeLineControl();
-            this.messagesGroupBox = new System.Windows.Forms.GroupBox();
-            this.messageRichTextBox = new GUI.EditorTextBox();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.testDescriptionTabPage = new System.Windows.Forms.TabPage();
+            this.testDescriptionTimeLineControl = new GUI.TestRunnerView.TimeLineControl.StaticTimeLineControl();
+            this.testExecutionTabPage = new System.Windows.Forms.TabPage();
+            this.testExecutionTimeLineControl = new GUI.TestRunnerView.TimeLineControl.DynamicTimeLineControl();
             this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
-            this.splitContainer3.Panel1.SuspendLayout();
-            this.splitContainer3.Panel2.SuspendLayout();
-            this.splitContainer3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
-            this.splitContainer5.Panel1.SuspendLayout();
-            this.splitContainer5.Panel2.SuspendLayout();
-            this.splitContainer5.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.descriptionTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
-            this.timeLineTabPage.SuspendLayout();
-            this.messagesGroupBox.SuspendLayout();
+            this.testDescriptionTabPage.SuspendLayout();
+            this.testExecutionTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip2
@@ -147,6 +126,28 @@ namespace GUI.TestRunnerView
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.ToolTipText = "Select previous marking";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.ToolTipText = "Select next marking";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // nextErrortoolStripButton
             // 
@@ -296,7 +297,7 @@ namespace GUI.TestRunnerView
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.splitContainer3);
+            this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
             this.splitContainer1.Size = new System.Drawing.Size(926, 548);
             this.splitContainer1.SplitterDistance = 306;
             this.splitContainer1.SplitterWidth = 3;
@@ -317,211 +318,65 @@ namespace GUI.TestRunnerView
             this.testBrowserTreeView.Size = new System.Drawing.Size(306, 548);
             this.testBrowserTreeView.TabIndex = 1;
             // 
-            // splitContainer3
-            // 
-            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer3.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer3.Name = "splitContainer3";
-            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer3.Panel1
-            // 
-            this.splitContainer3.Panel1.Controls.Add(this.splitContainer5);
-            // 
-            // splitContainer3.Panel2
-            // 
-            this.splitContainer3.Panel2.Controls.Add(this.messagesGroupBox);
-            this.splitContainer3.Size = new System.Drawing.Size(617, 548);
-            this.splitContainer3.SplitterDistance = 459;
-            this.splitContainer3.TabIndex = 2;
-            // 
-            // splitContainer5
-            // 
-            this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer5.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer5.Margin = new System.Windows.Forms.Padding(2);
-            this.splitContainer5.Name = "splitContainer5";
-            this.splitContainer5.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer5.Panel1
-            // 
-            this.splitContainer5.Panel1.Controls.Add(this.propertyGrid);
-            // 
-            // splitContainer5.Panel2
-            // 
-            this.splitContainer5.Panel2.Controls.Add(this.tabControl1);
-            this.splitContainer5.Size = new System.Drawing.Size(617, 459);
-            this.splitContainer5.SplitterDistance = 182;
-            this.splitContainer5.SplitterWidth = 3;
-            this.splitContainer5.TabIndex = 1;
-            // 
-            // propertyGrid
-            // 
-            this.propertyGrid.AllowDrop = true;
-            this.propertyGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.propertyGrid.Location = new System.Drawing.Point(0, 0);
-            this.propertyGrid.Margin = new System.Windows.Forms.Padding(2);
-            this.propertyGrid.Name = "propertyGrid";
-            this.propertyGrid.PropertySort = System.Windows.Forms.PropertySort.Categorized;
-            this.propertyGrid.Size = new System.Drawing.Size(617, 182);
-            this.propertyGrid.TabIndex = 0;
-            // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.descriptionTabPage);
-            this.tabControl1.Controls.Add(this.timeLineTabPage);
+            this.tabControl1.Controls.Add(this.testDescriptionTabPage);
+            this.tabControl1.Controls.Add(this.testExecutionTabPage);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(617, 274);
+            this.tabControl1.Size = new System.Drawing.Size(617, 548);
             this.tabControl1.TabIndex = 1;
             // 
-            // descriptionTabPage
+            // testDescriptionTabPage
             // 
-            this.descriptionTabPage.Controls.Add(this.splitContainer2);
-            this.descriptionTabPage.Location = new System.Drawing.Point(4, 22);
-            this.descriptionTabPage.Name = "descriptionTabPage";
-            this.descriptionTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.descriptionTabPage.Size = new System.Drawing.Size(609, 248);
-            this.descriptionTabPage.TabIndex = 3;
-            this.descriptionTabPage.Text = "Description";
-            this.descriptionTabPage.UseVisualStyleBackColor = true;
+            this.testDescriptionTabPage.Controls.Add(this.testDescriptionTimeLineControl);
+            this.testDescriptionTabPage.Location = new System.Drawing.Point(4, 22);
+            this.testDescriptionTabPage.Name = "testDescriptionTabPage";
+            this.testDescriptionTabPage.Size = new System.Drawing.Size(609, 522);
+            this.testDescriptionTabPage.TabIndex = 4;
+            this.testDescriptionTabPage.Text = "Test description";
+            this.testDescriptionTabPage.UseVisualStyleBackColor = true;
             // 
-            // splitContainer2
+            // testDescriptionTimeLineControl
             // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer2.Name = "splitContainer2";
+            this.testDescriptionTimeLineControl.AllowDrop = true;
+            this.testDescriptionTimeLineControl.AutoScroll = true;
+            this.testDescriptionTimeLineControl.AutoSize = true;
+            this.testDescriptionTimeLineControl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.testDescriptionTimeLineControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.testDescriptionTimeLineControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.testDescriptionTimeLineControl.Location = new System.Drawing.Point(0, 0);
+            this.testDescriptionTimeLineControl.Name = "testDescriptionTimeLineControl";
+            this.testDescriptionTimeLineControl.Size = new System.Drawing.Size(609, 522);
+            this.testDescriptionTimeLineControl.TabIndex = 0;
+            this.testDescriptionTimeLineControl.TestCase = null;
             // 
-            // splitContainer2.Panel1
+            // testExecutionTabPage
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.requirementsTextBox);
+            this.testExecutionTabPage.Controls.Add(this.testExecutionTimeLineControl);
+            this.testExecutionTabPage.Location = new System.Drawing.Point(4, 22);
+            this.testExecutionTabPage.Margin = new System.Windows.Forms.Padding(2);
+            this.testExecutionTabPage.Name = "testExecutionTabPage";
+            this.testExecutionTabPage.Padding = new System.Windows.Forms.Padding(2);
+            this.testExecutionTabPage.Size = new System.Drawing.Size(609, 522);
+            this.testExecutionTabPage.TabIndex = 0;
+            this.testExecutionTabPage.Text = "Test execution";
+            this.testExecutionTabPage.UseVisualStyleBackColor = true;
             // 
-            // splitContainer2.Panel2
+            // testExecutionTimeLineControl
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.expressionEditorTextBox);
-            this.splitContainer2.Panel2.Controls.Add(this.explainTextBox);
-            this.splitContainer2.Size = new System.Drawing.Size(603, 242);
-            this.splitContainer2.SplitterDistance = 301;
-            this.splitContainer2.TabIndex = 4;
-            // 
-            // requirementsTextBox
-            // 
-            this.requirementsTextBox.AutoComplete = true;
-            this.requirementsTextBox.ConsiderOnlyTypes = false;
-            this.requirementsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.requirementsTextBox.Instance = null;
-            this.requirementsTextBox.Lines = new string[] { "" };
-            this.requirementsTextBox.Location = new System.Drawing.Point(0, 0);
-            this.requirementsTextBox.Name = "requirementsTextBox";
-            this.requirementsTextBox.ReadOnly = false;
-            this.requirementsTextBox.Rtf = resources.GetString("requirementsTextBox.Rtf");
-            this.requirementsTextBox.Size = new System.Drawing.Size(301, 242);
-            this.requirementsTextBox.TabIndex = 0;
-            // 
-            // expressionEditorTextBox
-            // 
-            this.expressionEditorTextBox.AutoComplete = true;
-            this.expressionEditorTextBox.ConsiderOnlyTypes = false;
-            this.expressionEditorTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.expressionEditorTextBox.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.expressionEditorTextBox.Instance = null;
-            this.expressionEditorTextBox.Lines = new string[] { "" };
-            this.expressionEditorTextBox.Location = new System.Drawing.Point(0, 0);
-            this.expressionEditorTextBox.Name = "expressionEditorTextBox";
-            this.expressionEditorTextBox.ReadOnly = false;
-            this.expressionEditorTextBox.Rtf = resources.GetString("expressionEditorTextBox.Rtf");
-            this.expressionEditorTextBox.Size = new System.Drawing.Size(298, 242);
-            this.expressionEditorTextBox.TabIndex = 4;
-            this.expressionEditorTextBox.Visible = false;
-            // 
-            // explainTextBox
-            // 
-            this.explainTextBox.AutoComplete = true;
-            this.explainTextBox.ConsiderOnlyTypes = false;
-            this.explainTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.explainTextBox.Instance = null;
-            this.explainTextBox.Lines = new string[] { "" };
-            this.explainTextBox.Location = new System.Drawing.Point(0, 0);
-            this.explainTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.explainTextBox.Name = "explainTextBox";
-            this.explainTextBox.ReadOnly = false;
-            this.explainTextBox.Rtf = resources.GetString("explainTextBox.Rtf");
-            this.explainTextBox.Size = new System.Drawing.Size(298, 242);
-            this.explainTextBox.TabIndex = 3;
-            // 
-            // timeLineTabPage
-            // 
-            this.timeLineTabPage.Controls.Add(this.evcTimeLineControl);
-            this.timeLineTabPage.Location = new System.Drawing.Point(4, 22);
-            this.timeLineTabPage.Margin = new System.Windows.Forms.Padding(2);
-            this.timeLineTabPage.Name = "timeLineTabPage";
-            this.timeLineTabPage.Padding = new System.Windows.Forms.Padding(2);
-            this.timeLineTabPage.Size = new System.Drawing.Size(609, 248);
-            this.timeLineTabPage.TabIndex = 0;
-            this.timeLineTabPage.Text = "Time line";
-            this.timeLineTabPage.UseVisualStyleBackColor = true;
-            // 
-            // evcTimeLineControl
-            // 
-            this.evcTimeLineControl.AutoScroll = true;
-            this.evcTimeLineControl.AutoSize = true;
-            this.evcTimeLineControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.evcTimeLineControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.evcTimeLineControl.Location = new System.Drawing.Point(2, 2);
-            this.evcTimeLineControl.Name = "evcTimeLineControl";
-            this.evcTimeLineControl.Size = new System.Drawing.Size(605, 244);
-            this.evcTimeLineControl.TabIndex = 1;
-            this.evcTimeLineControl.Text = "evcTimeLineControl1";
-            // 
-            // messagesGroupBox
-            // 
-            this.messagesGroupBox.Controls.Add(this.messageRichTextBox);
-            this.messagesGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.messagesGroupBox.Location = new System.Drawing.Point(0, 0);
-            this.messagesGroupBox.Name = "messagesGroupBox";
-            this.messagesGroupBox.Size = new System.Drawing.Size(617, 85);
-            this.messagesGroupBox.TabIndex = 0;
-            this.messagesGroupBox.TabStop = false;
-            this.messagesGroupBox.Text = "Messages";
-            // 
-            // messageRichTextBox
-            // 
-            this.messageRichTextBox.AutoComplete = true;
-            this.messageRichTextBox.ConsiderOnlyTypes = false;
-            this.messageRichTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.messageRichTextBox.Instance = null;
-            this.messageRichTextBox.Lines = new string[] { "" };
-            this.messageRichTextBox.Location = new System.Drawing.Point(3, 16);
-            this.messageRichTextBox.Name = "messageRichTextBox";
-            this.messageRichTextBox.ReadOnly = false;
-            this.messageRichTextBox.Rtf = resources.GetString("messageRichTextBox.Rtf");
-            this.messageRichTextBox.Size = new System.Drawing.Size(611, 66);
-            this.messageRichTextBox.TabIndex = 4;
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.ToolTipText = "Select previous marking";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "toolStripButton2";
-            this.toolStripButton2.ToolTipText = "Select next marking";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            this.testExecutionTimeLineControl.AutoScroll = true;
+            this.testExecutionTimeLineControl.AutoSize = true;
+            this.testExecutionTimeLineControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.testExecutionTimeLineControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.testExecutionTimeLineControl.Location = new System.Drawing.Point(2, 2);
+            this.testExecutionTimeLineControl.Name = "testExecutionTimeLineControl";
+            this.testExecutionTimeLineControl.Size = new System.Drawing.Size(605, 518);
+            this.testExecutionTimeLineControl.TabIndex = 1;
+            this.testExecutionTimeLineControl.Text = "evcTimeLineControl1";
             // 
             // Window
             // 
@@ -542,23 +397,11 @@ namespace GUI.TestRunnerView
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.splitContainer3.Panel1.ResumeLayout(false);
-            this.splitContainer3.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
-            this.splitContainer3.ResumeLayout(false);
-            this.splitContainer5.Panel1.ResumeLayout(false);
-            this.splitContainer5.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
-            this.splitContainer5.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            this.descriptionTabPage.ResumeLayout(false);
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
-            this.timeLineTabPage.ResumeLayout(false);
-            this.timeLineTabPage.PerformLayout();
-            this.messagesGroupBox.ResumeLayout(false);
+            this.testDescriptionTabPage.ResumeLayout(false);
+            this.testDescriptionTabPage.PerformLayout();
+            this.testExecutionTabPage.ResumeLayout(false);
+            this.testExecutionTabPage.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -569,13 +412,10 @@ namespace GUI.TestRunnerView
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private TimeLineControl.TimeLineControl evcTimeLineControl;
+        private TimeLineControl.DynamicTimeLineControl testExecutionTimeLineControl;
         private TestTreeView testBrowserTreeView;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private MyPropertyGrid propertyGrid;
         private System.Windows.Forms.ToolStripTextBox toolStripTimeTextBox;
-        private System.Windows.Forms.SplitContainer splitContainer5;
-        public GUI.ExplainTextBox explainTextBox;
         private System.Windows.Forms.ToolStripButton StepOnceButton;
         private System.Windows.Forms.ToolStripButton RestartButton;
         private System.Windows.Forms.ToolStripButton rewindButton;
@@ -592,18 +432,13 @@ namespace GUI.TestRunnerView
         private System.Windows.Forms.ToolStripLabel toolStripLabel5;
         private System.Windows.Forms.ToolStripComboBox frameToolStripComboBox;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private EditorTextBox messageRichTextBox;
-        private System.Windows.Forms.SplitContainer splitContainer2;
-        private EditorTextBox requirementsTextBox;
-        private System.Windows.Forms.SplitContainer splitContainer3;
-        private System.Windows.Forms.GroupBox messagesGroupBox;
-        private EditorTextBox expressionEditorTextBox;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         public System.Windows.Forms.TabControl tabControl1;
-        public System.Windows.Forms.TabPage timeLineTabPage;
-        public System.Windows.Forms.TabPage descriptionTabPage;
+        public System.Windows.Forms.TabPage testExecutionTabPage;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.TabPage testDescriptionTabPage;
+        public TimeLineControl.StaticTimeLineControl testDescriptionTimeLineControl;
 
     }
 }

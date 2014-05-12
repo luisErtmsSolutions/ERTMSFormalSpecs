@@ -1,16 +1,23 @@
 <NameSpace
- X="1040"
- Y="180"
- Width="200"
- Height="400"
+ X="790"
+ Y="260"
+ Width="100"
+ Height="50"
  Name="PreIndicationLocation"
  Guid="8975141d-87b4-4f7b-9cfd-a0e026aa8ac1"
 >
+<Comment></Comment>
 <NameSpaces>
 </NameSpaces>
 <Functions>
 <Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="20"
+ Y="160"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="d_EBI"
  Guid="25077a4d-2005-43b7-85bb-9a493f2c72ce"
@@ -47,6 +54,12 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="20"
+ Y="220"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="d_SBI2"
  Guid="9bb663ce-e8e8-4bd2-8e83-e8b8748d59a7"
@@ -73,6 +86,12 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="240"
+ Y="220"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="d_I"
  Guid="dc704916-e5cb-4eea-a118-d25fd3c2d5b5"
@@ -92,7 +111,8 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="8c3cd904-121a-4804-a7e1-1d205ce987aa"
 >
-</ReqRef><Parameters>
+</ReqRef><Comment></Comment>
+<Parameters>
 <Parameter
  Type="Default.BaseTypes.Speed"
  Name="Vmrsp"
@@ -108,6 +128,12 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="130"
+ Y="160"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="d_P_EOA"
  Guid="6e840631-e405-49da-af54-fd87deb27d11"
@@ -143,6 +169,12 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="130"
+ Y="300"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="Compute_d_preindication"
  Guid="7fabfa64-423f-4dff-9d43-8860b61137bf"
@@ -221,6 +253,12 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="130"
+ Y="220"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="d_I_EOA"
  Guid="b747aa02-f496-41f1-acfe-a455b8039557"
@@ -246,6 +284,12 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="240"
+ Y="160"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="d_P"
  Guid="14e456ed-c180-4d64-ba58-3e97a654a998"
@@ -281,6 +325,12 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="20"
+ Y="300"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="d_preindication"
  Guid="22dbac85-5953-4f33-bf20-79beb74b725a"
@@ -305,7 +355,8 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="169ec5bc-d765-443a-ab45-0d5c7dbbd232"
 >
-</ReqRef><Cases>
+</ReqRef><Comment></Comment>
+<Cases>
 <Case
  Name="Value"
  Guid="77b61b8d-bb27-49b3-95c5-027e22b5eba2"
@@ -318,6 +369,11 @@
  Type="Default.BaseTypes.Time"
  DefaultValue="7.0"
  VariableMode="Constant"
+ X="100"
+ Y="10"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="T_preindication"
  Guid="68afe859-409d-4646-bde4-a94f2e4e0c1d"

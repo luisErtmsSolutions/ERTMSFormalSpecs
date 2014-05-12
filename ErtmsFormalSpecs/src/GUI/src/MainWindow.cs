@@ -29,6 +29,7 @@ namespace GUI
     using GUI.SpecificationView;
     using Utils;
     using WeifenLuo.WinFormsUI.Docking;
+    using GUI.EditorView;
 
     public partial class MainWindow : Form
     {
@@ -61,17 +62,17 @@ namespace GUI
         /// <summary>
         /// The editors opened in the MDI
         /// </summary>
-        public HashSet<EditorForm> Editors
+        public HashSet<EditorView.Window> Editors
         {
             get
             {
-                HashSet<EditorForm> retVal = new HashSet<EditorForm>();
+                HashSet<EditorView.Window> retVal = new HashSet<EditorView.Window>();
 
                 foreach (Form form in SubForms)
                 {
-                    if (form is EditorForm)
+                    if (form is EditorView.Window)
                     {
-                        retVal.Add((EditorForm)form);
+                        retVal.Add((EditorView.Window)form);
                     }
                 }
 
@@ -113,21 +114,139 @@ namespace GUI
         }
 
         /// <summary>
+        /// Finds a  specific window in a collection of windows
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        private static class GenericWindowHandling<T>
+            where T : Form, new()
+        {
+            /// <summary>
+            /// Finds the specified element in the collection provided
+            /// </summary>
+            /// <param name="?"></param>
+            /// <returns></returns>
+            public static T find(ICollection<Form> subWindows)
+            {
+                T retVal = null;
+
+                foreach (Form form in subWindows)
+                {
+                    retVal = form as T;
+                    if (retVal != null)
+                    {
+                        break;
+                    }
+                }
+
+                return retVal;
+            }
+
+            /// <summary>
+            /// Finds the specified element in the collection provided
+            /// </summary>
+            /// <param name="?"></param>
+            /// <returns></returns>
+            public static T find(ICollection<IBaseForm> subWindows)
+            {
+                T retVal = null;
+
+                foreach (IBaseForm form in subWindows)
+                {
+                    retVal = form as T;
+                    if (retVal != null)
+                    {
+                        break;
+                    }
+                }
+
+                return retVal;
+            }
+
+            /// <summary>
+            /// Displays or shows the window, at the specified location
+            /// </summary>
+            /// <param name="window"></param>
+            /// <param name="subWindow"></param>
+            /// <param name="area"></param>
+            /// <param name="force">Indicates that the doc area should be set before trying to open the window</param>
+            public static void AddOrShow(MainWindow window, T subWindow, DockAreas area)
+            {
+                if (subWindow == null)
+                {
+                    subWindow = new T();
+                    window.AddChildWindow(subWindow, area);
+                }
+                else
+                {
+                    subWindow.Show();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Provides a message view window
+        /// </summary>
+        public MessagesView.Window MessagesWindow
+        {
+            get
+            {
+                return GenericWindowHandling<MessagesView.Window>.find(SubWindows);
+            }
+        }
+
+        /// <summary>
+        /// Provides a more info view window
+        /// </summary>
+        public MoreInfoView.Window MoreInfoWindow
+        {
+            get
+            {
+                return GenericWindowHandling<MoreInfoView.Window>.find(SubWindows);
+            }
+        }
+
+        /// <summary>
+        /// Provides a property view window
+        /// </summary>
+        public PropertyView.Window PropertyWindow
+        {
+            get
+            {
+                return GenericWindowHandling<PropertyView.Window>.find(SubWindows);
+            }
+        }
+
+        /// <summary>
+        /// Provides a requirement view window
+        /// </summary>
+        public RequirementsView.Window RequirementsWindow
+        {
+            get
+            {
+                return GenericWindowHandling<RequirementsView.Window>.find(SubWindows);
+            }
+        }
+
+        /// <summary>
+        /// Provides a usage view window
+        /// </summary>
+        public UsageView.Window UsageWindow
+        {
+            get
+            {
+                return GenericWindowHandling<UsageView.Window>.find(SubWindows);
+            }
+        }
+
+
+        /// <summary>
         /// Provides a data dictionary window
         /// </summary>
         public DataDictionaryView.Window DataDictionaryWindow
         {
             get
             {
-                foreach (IBaseForm form in SubWindows)
-                {
-                    if (form is DataDictionaryView.Window)
-                    {
-                        return (DataDictionaryView.Window)form;
-                    }
-                }
-
-                return null;
+                return GenericWindowHandling<DataDictionaryView.Window>.find(SubWindows);
             }
         }
 
@@ -138,15 +257,7 @@ namespace GUI
         {
             get
             {
-                foreach (IBaseForm form in SubWindows)
-                {
-                    if (form is SpecificationView.Window)
-                    {
-                        return (SpecificationView.Window)form;
-                    }
-                }
-
-                return null;
+                return GenericWindowHandling<SpecificationView.Window>.find(SubWindows);
             }
         }
 
@@ -157,15 +268,7 @@ namespace GUI
         {
             get
             {
-                foreach (IBaseForm form in SubWindows)
-                {
-                    if (form is HistoryView.Window)
-                    {
-                        return (HistoryView.Window)form;
-                    }
-                }
-
-                return null;
+                return GenericWindowHandling<HistoryView.Window>.find(SubWindows);
             }
         }
 
@@ -176,15 +279,18 @@ namespace GUI
         {
             get
             {
-                foreach (IBaseForm form in SubWindows)
-                {
-                    if (form is TestRunnerView.Window)
-                    {
-                        return (TestRunnerView.Window)form;
-                    }
-                }
+                return GenericWindowHandling<TestRunnerView.Window>.find(SubWindows);
+            }
+        }
 
-                return null;
+        /// <summary>
+        /// Provides a watch window
+        /// </summary>
+        public TestRunnerView.Watch.Window WatchWindow
+        {
+            get
+            {
+                return GenericWindowHandling<TestRunnerView.Watch.Window>.find(SubWindows);
             }
         }
 
@@ -213,26 +319,44 @@ namespace GUI
         {
             get
             {
-                foreach (IBaseForm form in SubWindows)
-                {
-                    if (form is Shortcuts.Window)
-                    {
-                        return (Shortcuts.Window)form;
-                    }
-                }
-
-                DataDictionary.Dictionary dictionary = GetActiveDictionary();
-                if (dictionary != null)
-                {
-                    Shortcuts.Window newWindow = new Shortcuts.Window(dictionary.ShortcutsDictionary);
-                    newWindow.Location = new System.Drawing.Point(Width - newWindow.Width - 20, 0);
-                    AddChildWindow(newWindow, DockAreas.DockRight);
-                    return newWindow;
-                }
-
-                return null;
+                return GenericWindowHandling<Shortcuts.Window>.find(SubWindows);
             }
         }
+
+        /// <summary>
+        /// The selection history window
+        /// </summary>
+        private SelectionHistory.Window SelectionHistoryWindow
+        {
+            get
+            {
+                return GenericWindowHandling<SelectionHistory.Window>.find(SubWindows);
+            }
+        }
+
+
+        /// <summary>
+        /// The editor window
+        /// </summary>
+        private EditorView.ExpressionWindow ExpressionEditorWindow
+        {
+            get
+            {
+                return GenericWindowHandling<EditorView.ExpressionWindow>.find(SubWindows);
+            }
+        }
+
+        /// <summary>
+        /// The comment window
+        /// </summary>
+        private EditorView.CommentWindow CommentEditorWindow
+        {
+            get
+            {
+                return GenericWindowHandling<EditorView.CommentWindow>.find(SubWindows);
+            }
+        }
+
 
         /// <summary>
         /// The thread used to synchronize node names with their model
@@ -257,7 +381,7 @@ namespace GUI
                 instance.Invoke((MethodInvoker)delegate
                 {
                     instance.UpdateTitle();
-                    foreach (EditorForm editor in instance.Editors)
+                    foreach (EditorView.Window editor in instance.Editors)
                     {
                         if (!editor.EditorTextBoxHasFocus())
                         {
@@ -468,14 +592,10 @@ namespace GUI
                 {
                     SubForms.Add(docContent);
 
-
+                    docContent.DockAreas = dockArea;
                     if (dockArea == DockAreas.DockLeft)
                     {
                         docContent.Show(dockPanel, DockState.DockLeftAutoHide);
-                    }
-                    else if (dockArea == DockAreas.DockRight)
-                    {
-                        docContent.Show(dockPanel, DockState.DockRightAutoHide);
                     }
                     else if (dockArea == DockAreas.Float)
                     {
@@ -613,12 +733,7 @@ namespace GUI
                         DataDictionary.Dictionary dictionary = openFileOperation.Dictionary;
                         DataDictionary.Generated.ControllersManager.DesactivateAllNotifications();
 
-                        // Only open the specification window if specifications are available in the opened file
-                        if (dictionary.Specifications != null && dictionary.AllParagraphs.Count > 0)
-                        {
-                            AddChildWindow(new SpecificationView.Window(dictionary), DockAreas.DockLeft);
-                        }
-
+                        // Display the document views
                         // Only open the model view window if model elements are available in the opened file
                         DataDictionaryView.Window modelWindow = null;
                         if (dictionary.NameSpaces.Count > 0)
@@ -626,42 +741,33 @@ namespace GUI
                             modelWindow = new DataDictionaryView.Window(dictionary);
                             AddChildWindow(modelWindow, DockAreas.Document);
                         }
+                        GenericWindowHandling<TestRunnerView.Window>.AddOrShow(this, TestWindow, DockAreas.Document);
 
-                        // Only shold the tests window if tests are defined in the opened file
-                        if (dictionary.Tests.Count > 0)
-                        {
-                            IBaseForm testWindow = TestWindow;
-                            if (testWindow == null)
-                            {
-                                AddChildWindow(new TestRunnerView.Window(EFSSystem), DockAreas.Document);
-                            }
-                            else
-                            {
-                                testWindow.RefreshModel();
-                            }
-                        }
+                        // Display the views in the left pane
+                        GenericWindowHandling<SpecificationView.Window>.AddOrShow(this, SpecificationWindow, DockAreas.DockLeft);
 
-                        // Only open the shortcuts window if there are some shortcuts defined
-                        if (dictionary.ShortcutsDictionary != null)
-                        {
-                            IBaseForm shortcutsWindow = ShortcutsWindow;
-                            if (shortcutsWindow != null)
-                            {
-                                shortcutsWindow.RefreshModel();
-                            }
-                        }
+                        // Display the views in the bottom pane
+                        GenericWindowHandling<RequirementsView.Window>.AddOrShow(this, RequirementsWindow, DockAreas.DockBottom);
+                        GenericWindowHandling<UsageView.Window>.AddOrShow(this, UsageWindow, DockAreas.DockBottom);
 
-                        {
-                            HistoryView.Window historyWindow = HistoryWindow;
-                            if (historyWindow == null)
-                            {
-                                AddChildWindow(new HistoryView.Window(), DockAreas.DockRight);
-                            }
-                            else
-                            {
-                                historyWindow.RefreshModel();
-                            }
-                        }
+                        GenericWindowHandling<EditorView.ExpressionWindow>.AddOrShow(this, ExpressionEditorWindow, DockAreas.DockBottom);
+                        ExpressionEditorWindow.Show(RequirementsWindow.Pane, DockAlignment.Right, 0.5);
+                        GenericWindowHandling<EditorView.CommentWindow>.AddOrShow(this, CommentEditorWindow, DockAreas.DockBottom);
+                        GenericWindowHandling<MoreInfoView.Window>.AddOrShow(this, MoreInfoWindow, DockAreas.DockBottom);
+                        GenericWindowHandling<TestRunnerView.Watch.Window>.AddOrShow(this, WatchWindow, DockAreas.DockBottom);
+                        MoreInfoWindow.Show();
+
+                        // Display the views in the right pane
+                        GenericWindowHandling<PropertyView.Window>.AddOrShow(this, PropertyWindow, DockAreas.DockRight);
+                        GenericWindowHandling<HistoryView.Window>.AddOrShow(this, HistoryWindow, DockAreas.DockRight);
+                        HistoryWindow.Show(PropertyWindow.Pane, DockAlignment.Bottom, 0.6);
+                        GenericWindowHandling<Shortcuts.Window>.AddOrShow(this, ShortcutsWindow, DockAreas.DockRight);
+                        ShortcutsWindow.Show(HistoryWindow.Pane, HistoryWindow);
+                        GenericWindowHandling<SelectionHistory.Window>.AddOrShow(this, SelectionHistoryWindow, DockAreas.DockRight);
+                        SelectionHistoryWindow.Show(ShortcutsWindow.Pane, ShortcutsWindow);
+
+                        GenericWindowHandling<MessagesView.Window>.AddOrShow(this, MessagesWindow, DockAreas.DockRight);
+                        MessagesWindow.Show(HistoryWindow.Pane, DockAlignment.Bottom, 0.3);
 
                         if (modelWindow != null)
                         {
@@ -1410,12 +1516,10 @@ namespace GUI
                 {
                     ((GraphView.GraphView)form).RefreshAfterStep();
                 }
-
                 if (form is DataDictionaryView.Window)
                 {
                     ((DataDictionaryView.Window)form).RefreshAfterStep();
                 }
-
                 if (form is StateDiagram.StateDiagramWindow)
                 {
                     ((StateDiagram.StateDiagramWindow)form).RefreshAfterStep();
@@ -1424,7 +1528,10 @@ namespace GUI
                 {
                     ((TestRunnerView.Window)form).RefreshAfterStep();
                 }
-
+                if (form is TestRunnerView.Watch.Window)
+                {
+                    ((TestRunnerView.Watch.Window)form).RefreshAfterStep();
+                }
             }
         }
 
@@ -1437,32 +1544,96 @@ namespace GUI
         /// Keeps track of a new selection
         /// </summary>
         /// <param name="selected"></param>
-        public void HandleSelection(IModelElement selected)
+        public void HandleSelection(BaseTreeNode selected)
         {
-            if (selected != null)
+            if (selected != null && selected.Model != null)
             {
+                IModelElement model = selected.Model;
                 if (!HandlingSelection)
                 {
                     try
                     {
                         HandlingSelection = true;
 
+                        // Messages
+                        MessagesView.Window messageView = MessagesWindow;
+                        if (messageView != null)
+                        {
+                            messageView.SetModel(model);
+                        }
+
+                        // More info
+                        MoreInfoView.Window moreInfoView = MoreInfoWindow;
+                        if (moreInfoView != null)
+                        {
+                            moreInfoView.SetModel(model as TextualExplain);
+                        }
+
+                        // Properties
+                        PropertyView.Window propertyView = PropertyWindow;
+                        if (propertyView != null)
+                        {
+                            propertyView.SetModel(selected);
+                        }
+
+                        // Related requirements
+                        RequirementsView.Window requirementsView = RequirementsWindow;
+                        if (requirementsView != null)
+                        {
+                            requirementsView.SetModel((DataDictionary.ModelElement)model);
+                        }
+
+                        // Expression editor view
+                        EditorView.ExpressionWindow editorView = ExpressionEditorWindow;
+                        if (editorView != null)
+                        {
+                            IExpressionable expressionable = model as IExpressionable;
+                            if (expressionable != null)
+                            {
+                                editorView.setChangeHandler(new ExpressionableTextChangeHandler((DataDictionary.ModelElement)expressionable));
+                            }
+                            else
+                            {
+                                Paragraph paragraph = model as Paragraph;
+                                if (paragraph != null)
+                                {
+                                    editorView.setChangeHandler(new ParagraphTextChangeHandler(paragraph));
+                                }
+
+                                else
+                                {
+                                    editorView.setChangeHandler(null);
+                                }
+                            }
+                        }
+
+                        // Comment editor view
+                        EditorView.CommentWindow commentView = CommentEditorWindow;
+                        if (commentView != null)
+                        {
+                            commentView.setChangeHandler(new CommentableTextChangeHandler((DataDictionary.ModelElement)(model as ICommentable)));
+                        }
+
+                        // Uages 
+                        UsageView.Window usageView = UsageWindow;
+                        if (usageView != null)
+                        {
+                            usageView.SetModel((DataDictionary.ModelElement)model);
+                        }
+
+                        // History
                         if (SelectionHistory.Count > MAX_SELECTION_HISTORY)
                         {
                             SelectionHistory.RemoveAt(SelectionHistory.Count - 1);
                         }
 
-                        if (SelectionHistory.Count == 0 || SelectionHistory[0] != selected)
+                        if (SelectionHistory.Count == 0 || SelectionHistory[0] != model)
                         {
-                            SelectionHistory.Insert(0, selected);
-
-                            foreach (Form form in SubForms)
+                            SelectionHistory.Insert(0, model);
+                            SelectionHistory.Window selectionHistoryWindow = GenericWindowHandling<SelectionHistory.Window>.find(SubForms);
+                            if (selectionHistoryWindow != null)
                             {
-                                Shortcuts.Window shortcutWindow = form as Shortcuts.Window;
-                                if (shortcutWindow != null)
-                                {
-                                    shortcutWindow.RefreshModel();
-                                }
+                                selectionHistoryWindow.RefreshModel();
                             }
                         }
                     }
@@ -1523,11 +1694,7 @@ namespace GUI
 
         private void showSpecificationViewToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            DataDictionary.Dictionary dictionary = GetActiveDictionary();
-            if (dictionary != null)
-            {
-                AddChildWindow(new SpecificationView.Window(dictionary), DockAreas.DockLeft);
-            }
+            GenericWindowHandling<SpecificationView.Window>.AddOrShow(this, SpecificationWindow, DockAreas.DockLeft);
         }
 
         private void showModelViewToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -1541,23 +1708,12 @@ namespace GUI
 
         private void showShortcutsViewToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            AddChildWindow(ShortcutsWindow, DockAreas.DockRight);
+            GenericWindowHandling<Shortcuts.Window>.AddOrShow(this, ShortcutsWindow, DockAreas.DockRight);
         }
 
         private void showTestsToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            if (EFSSystem != null)
-            {
-                Form testWindow = TestWindow;
-                if (testWindow == null)
-                {
-                    AddChildWindow(new TestRunnerView.Window(EFSSystem), DockAreas.Document);
-                }
-                else
-                {
-                    testWindow.Select();
-                }
-            }
+            GenericWindowHandling<TestRunnerView.Window>.AddOrShow(this, TestWindow, DockAreas.Document);
         }
 
         private void showTranslationViewToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1650,6 +1806,51 @@ namespace GUI
             DataDictionary.Dictionary dictionary = GUIUtils.MDIWindow.GetActiveDictionary();
             window.SetEnclosing(dictionary);
             window.Text = "Requirement sets for " + dictionary.Name;
+        }
+
+        private void showWatchViewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GenericWindowHandling<TestRunnerView.Watch.Window>.AddOrShow(this, WatchWindow, DockAreas.DockBottom);
+        }
+
+        private void showMessagesVoewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GenericWindowHandling<MessagesView.Window>.AddOrShow(this, MessagesWindow, DockAreas.DockBottom);
+        }
+
+        private void showMoreInfoViewToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            GenericWindowHandling<MoreInfoView.Window>.AddOrShow(this, MoreInfoWindow, DockAreas.DockBottom);
+        }
+
+        private void showProperyViewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GenericWindowHandling<PropertyView.Window>.AddOrShow(this, PropertyWindow, DockAreas.DockRight);
+        }
+
+        private void showRequirementViewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GenericWindowHandling<RequirementsView.Window>.AddOrShow(this, RequirementsWindow, DockAreas.DockBottom);
+        }
+
+        private void showUsageViewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GenericWindowHandling<UsageView.Window>.AddOrShow(this, UsageWindow, DockAreas.DockBottom);
+        }
+
+        private void showSelectionHistoryViewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GenericWindowHandling<SelectionHistory.Window>.AddOrShow(this, SelectionHistoryWindow, DockAreas.DockBottom);
+        }
+
+        private void showExpressionEditorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GenericWindowHandling<EditorView.ExpressionWindow>.AddOrShow(this, ExpressionEditorWindow, DockAreas.DockBottom);
+        }
+
+        private void showCommentEditorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GenericWindowHandling<EditorView.CommentWindow>.AddOrShow(this, CommentEditorWindow, DockAreas.DockBottom);
         }
     }
 }

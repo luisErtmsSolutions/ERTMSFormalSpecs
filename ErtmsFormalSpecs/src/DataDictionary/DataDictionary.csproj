@@ -218,6 +218,7 @@
     <Compile Include="src\Types\NameSpace.cs" />
     <Compile Include="src\Types\TypeInconsistancyException.cs" />
     <Compile Include="src\Values\BoolValue.cs" />
+    <Compile Include="src\Values\DefaultValue.cs" />
     <Compile Include="src\Values\DoubleValue.cs" />
     <Compile Include="src\Values\ListValue.cs" />
     <Compile Include="src\Values\PlaceHolder.cs" />

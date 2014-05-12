@@ -1,8 +1,9 @@
 <NameSpace
- X="10"
- Y="100"
+ X="990"
+ Y="660"
  Width="100"
- Height="750"
+ Height="50"
+ Pinned="TRUE"
  Name="TrainPosition"
  Guid="9768eb28-0355-4891-b84a-b57bb9df171e"
 >
@@ -10,6 +11,11 @@
 </NameSpaces>
 <Structures>
 <Structure
+ Default=""
+ X="190"
+ Y="10"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TrainPosition"
  Guid="607a75d0-3d30-4e13-9431-91746926f303"
@@ -60,6 +66,11 @@ The confidence interval can be computed using Kernel.ConfidenceInterval.Confiden
 >
 </ReqRef><Comment>The data state of the train position.</Comment>
 </StructureElement></Structure><Structure
+ Default=""
+ X="190"
+ Y="100"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="DirectionalTrainPositionInformation"
  Guid="ed65a176-3ac0-42bf-94aa-77bfa166d800"
@@ -116,6 +127,11 @@ The confidence interval can be computed using Kernel.ConfidenceInterval.Confiden
 <Functions>
 <Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="130"
+ Y="190"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="FrontEndPosition"
  Guid="0398d7f6-6b64-407d-9e5b-dca2fbc88cd4"
@@ -178,6 +194,11 @@ The confidence interval can be computed using Kernel.ConfidenceInterval.Confiden
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="20"
+ Y="190"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="RearEndPosition"
  Guid="4a6bae4e-f993-4dba-a059-0760076ece8a"
@@ -251,6 +272,10 @@ The confidence interval can be computed using Kernel.ConfidenceInterval.Confiden
 </Function></Functions>
 <Procedures>
 <Procedure
+ X="20"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="UpdatePositionState"
@@ -305,6 +330,9 @@ The confidence interval can be computed using Kernel.ConfidenceInterval.Confiden
  Type="TrainPosition"
  DefaultValue=""
  VariableMode="Internal"
+ X="10"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Position"
  Guid="ae945ace-8720-498a-a351-dcc74280808f"

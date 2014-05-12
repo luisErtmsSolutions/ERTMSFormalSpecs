@@ -127,7 +127,7 @@ namespace GUI.StateDiagram
         /// <summary>
         /// The state machine displayed by this panel
         /// </summary>
-        public StateMachine StateMachine { get; set; }
+        public StateMachine StateMachine { get { return Model as StateMachine; } set { Model = value; } }
 
         /// <summary>
         /// The state machine variable (if any) displayed by this panel

@@ -39,6 +39,13 @@ namespace DataDictionary.Values
         /// <param name="setEnclosing">Indicates that the new value enclosing element should be set</param>
         /// <returns></returns>
         IValue RightSide(Variables.IVariable variable, bool duplicate, bool setEnclosing);
+
+        /// <summary>
+        /// Converts a structure value to its corresponding structure expression.
+        /// null entries correspond to the default value
+        /// </summary>
+        /// <returns></returns>
+        string ToExpressionWithDefault();
     }
 
     public abstract class Value : IValue, IEnclosed
@@ -221,6 +228,27 @@ namespace DataDictionary.Values
         /// Indicates if the element holds messages, or is part of a path to a message 
         /// </summary>
         public MessagePathInfoEnum MessagePathInfo { get { return MessagePathInfoEnum.Nothing; } }
+
+        /// <summary>
+        /// The enclosing value, if exists
+        /// </summary>
+        public Value EnclosingValue
+        {
+            get
+            {
+                return Utils.EnclosingFinder<Value>.find(this);
+            }
+        }
+
+        /// <summary>
+        /// Converts a structure value to its corresponding structure expression.
+        /// null entries correspond to the default value
+        /// </summary>
+        /// <returns></returns>
+        public virtual string ToExpressionWithDefault()
+        {
+            return FullName;
+        }
     }
 
     public abstract class BaseValue<CorrespondingType, StorageType> : Value
@@ -245,17 +273,6 @@ namespace DataDictionary.Values
             : base(type)
         {
             Val = val;
-        }
-
-        /// <summary>
-        /// The enclosing value, if exists
-        /// </summary>
-        public Value EnclosingValue
-        {
-            get
-            {
-                return Utils.EnclosingFinder<Value>.find(this);
-            }
         }
     }
 }

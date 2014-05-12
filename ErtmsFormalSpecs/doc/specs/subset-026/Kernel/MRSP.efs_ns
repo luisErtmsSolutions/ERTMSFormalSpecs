@@ -1,17 +1,22 @@
 <NameSpace
- X="1170"
- Y="180"
- Width="300"
- Height="300"
+ X="990"
+ Y="480"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Name="MRSP"
  Guid="f0c4da0d-ec84-47ac-bd70-102fbca865c0"
 >
+<Comment></Comment>
 <NameSpaces>
 </NameSpaces>
 <Functions>
 <Function
  Type="Default.BaseTypes.Speed"
  Cacheable="TRUE"
+ Default=""
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SpeedRestrictions"

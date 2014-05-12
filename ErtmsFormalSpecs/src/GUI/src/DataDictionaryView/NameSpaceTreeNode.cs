@@ -264,6 +264,12 @@ namespace GUI.DataDictionaryView
 
             List<DataDictionary.Types.NameSpace> namespaces = new List<DataDictionary.Types.NameSpace>();
             namespaces.Add(Item);
+            Window window = BaseForm as Window;
+            if (window != null && window.modelDiagramPanel.Model != Item)
+            {
+                window.modelDiagramPanel.Model = Item;
+                window.modelDiagramPanel.RefreshControl();
+            }
 
             GUIUtils.MDIWindow.SetStatus(CreateStatMessage(namespaces, false));
         }

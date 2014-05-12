@@ -169,7 +169,7 @@ namespace DataDictionary.Constants
                 retVal += " : " + getValue();
             }
 
-            return TextualExplainUtilities.Pad("{" + retVal + "}", indentLevel);
+            return TextualExplainUtilities.Pad(retVal, indentLevel);
         }
 
         /// <summary>
@@ -180,6 +180,16 @@ namespace DataDictionary.Constants
         public string getExplain(bool subElements)
         {
             return getExplain(0);
+        }
+
+        /// <summary>
+        /// Converts a structure value to its corresponding structure expression.
+        /// null entries correspond to the default value
+        /// </summary>
+        /// <returns></returns>
+        public string ToExpressionWithDefault()
+        {
+            return FullName;
         }
     }
 }

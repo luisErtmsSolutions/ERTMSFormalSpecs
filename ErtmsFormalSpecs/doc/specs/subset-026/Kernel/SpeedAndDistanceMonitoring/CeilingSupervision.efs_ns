@@ -1,7 +1,7 @@
 <NameSpace
- X="500"
- Y="670"
- Width="400"
+ X="790"
+ Y="320"
+ Width="100"
  Height="50"
  Name="CeilingSupervision"
  Guid="81bdbc9f-ad93-486d-b739-3c5d7f7e1987"
@@ -11,6 +11,12 @@
 <Functions>
 <Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="160"
+ Y="70"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="C_ebi"
@@ -41,6 +47,12 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="160"
+ Y="130"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="C_sbi"
@@ -71,6 +83,12 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="160"
+ Y="190"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="C_warning"
@@ -91,7 +109,8 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="42852671-1ff7-4048-a16b-cf7bca8f1851"
 >
-</ReqRef><Cases>
+</ReqRef><Comment></Comment>
+<Cases>
 <Case
  Name="Always"
  Guid="46ab034c-51f8-4828-950e-823da37a4bd7"
@@ -100,6 +119,12 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="50"
+ Y="190"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="dV_warning"
@@ -146,6 +171,12 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="50"
+ Y="70"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="dV_ebi"
@@ -192,6 +223,12 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="50"
+ Y="130"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="dV_sbi"
@@ -238,6 +275,12 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="50"
+ Y="10"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="P"
  Guid="7f997819-31a5-4ba8-98df-a6c27c151e17"
@@ -327,6 +370,12 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="270"
+ Y="190"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="W"
  Guid="781ab15d-a672-46ae-a68a-2847d66af653"
@@ -370,6 +419,12 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="50"
+ Y="270"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="SupervisedSpeed"
  Guid="a3eaf16c-bef1-4884-88ff-219ad88ad06d"
@@ -389,7 +444,8 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="7c477d16-41d2-40bf-99a4-fbdeff189a96"
 >
-</ReqRef><Cases>
+</ReqRef><Comment></Comment>
+<Cases>
 <Case
  Name="MRSP speed increases"
  Guid="205dcdf8-afad-400a-8b0f-bd79283c1037"
@@ -407,6 +463,12 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="270"
+ Y="130"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="SBI"
  Guid="a82234d1-a73e-4bc9-9b75-ef1ea078b570"
@@ -421,7 +483,8 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="8124b3f4-5df4-4e72-8d4c-f630e20785bb"
 >
-</ReqRef><Parameters>
+</ReqRef><Comment></Comment>
+<Parameters>
 <Parameter
  Type="Default.BaseTypes.Distance"
  Name="Distance"
@@ -440,6 +503,12 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="270"
+ Y="70"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="EBI"
  Guid="b345fd15-c250-4356-bfc4-85fc682a9af3"
@@ -508,6 +577,11 @@
  Type="Default.BaseTypes.Speed"
  DefaultValue="210.0"
  VariableMode="Internal"
+ X="290"
+ Y="360"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="V_ebi_max"
@@ -538,6 +612,11 @@
  Type="Default.BaseTypes.Speed"
  DefaultValue="5.0"
  VariableMode="Internal"
+ X="680"
+ Y="360"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="dV_warning_max"
@@ -568,6 +647,11 @@
  Type="Default.BaseTypes.Speed"
  DefaultValue="110.0"
  VariableMode="Internal"
+ X="290"
+ Y="470"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="V_ebi_min"
@@ -598,6 +682,11 @@
  Type="Default.BaseTypes.Speed"
  DefaultValue="7.5"
  VariableMode="Internal"
+ X="180"
+ Y="470"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="dV_ebi_min"
@@ -628,6 +717,11 @@
  Type="Default.BaseTypes.Speed"
  DefaultValue="4.0"
  VariableMode="Internal"
+ X="680"
+ Y="470"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="dV_warning_min"
@@ -658,6 +752,11 @@
  Type="Default.BaseTypes.Speed"
  DefaultValue="15.0"
  VariableMode="Internal"
+ X="180"
+ Y="360"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="dV_ebi_max"
@@ -688,6 +787,11 @@
  Type="Default.BaseTypes.Speed"
  DefaultValue="140.0"
  VariableMode="Internal"
+ X="790"
+ Y="360"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="V_warning_max"
@@ -718,6 +822,11 @@
  Type="Default.BaseTypes.Speed"
  DefaultValue="110.0"
  VariableMode="Internal"
+ X="790"
+ Y="470"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="V_warning_min"
@@ -748,6 +857,11 @@
  Type="Default.BaseTypes.Speed"
  DefaultValue="10.0"
  VariableMode="Internal"
+ X="430"
+ Y="360"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="dV_sbi_max"
@@ -778,6 +892,11 @@
  Type="Default.BaseTypes.Speed"
  DefaultValue="5.5"
  VariableMode="Internal"
+ X="430"
+ Y="470"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="dV_sbi_min"
@@ -808,6 +927,11 @@
  Type="Default.BaseTypes.Speed"
  DefaultValue="210.0"
  VariableMode="Internal"
+ X="540"
+ Y="360"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="V_sbi_max"
@@ -838,6 +962,11 @@
  Type="Default.BaseTypes.Speed"
  DefaultValue="110.0"
  VariableMode="Internal"
+ X="540"
+ Y="470"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="V_sbi_min"
@@ -868,6 +997,11 @@
 <Rules>
 <Rule
  Priority="UpdateINTERNAL"
+ X="580"
+ Y="60"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="UpdateSupervisionStatus"
  Guid="b2b37881-3fbf-443e-89d3-42e487c2305c"
@@ -892,7 +1026,8 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="becfa08a-aa7a-4b59-a7d9-560b6ae975de"
 >
-</ReqRef><SubRules></SubRules>
+</ReqRef><Comment></Comment>
+<SubRules></SubRules>
 <Conditions>
 <RuleCondition
  NeedsRequirement="FALSE"

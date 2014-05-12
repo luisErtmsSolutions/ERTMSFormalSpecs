@@ -15,6 +15,9 @@
 // ------------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
+using DataDictionary.Types;
+using System.Text;
+using DataDictionary.Variables;
 
 namespace DataDictionary.Values
 {
@@ -34,7 +37,8 @@ namespace DataDictionary.Values
         /// Constructor
         /// </summary>
         /// <param name="structure"></param>
-        public StructureValue(Types.Structure structure)
+        /// <paraparam name="setDefaultValue">Indicates that default values should be set</paraparam>
+        public StructureValue(Types.Structure structure, bool setDefaultValue = true)
             : base(structure, new Dictionary<string, Utils.INamable>())
         {
             Enclosing = structure;
@@ -58,7 +62,16 @@ namespace DataDictionary.Values
                     variable.Name = element.Name;
                     variable.Mode = element.Mode;
                     variable.Default = element.Default;
-                    variable.Value = variable.DefaultValue;
+
+                    if (setDefaultValue)
+                    {
+                        variable.Value = variable.DefaultValue;
+                    }
+                    else
+                    {
+                        string defaultValue = variable.GetDefaultValueText();
+                        variable.Value = new DefaultValue(variable);
+                    }
                     set(variable);
                 }
             }
@@ -113,17 +126,13 @@ namespace DataDictionary.Values
         /// <param name="val"></param>
         public void set(Variables.IVariable variable)
         {
-            if (Val.ContainsKey(variable.Name))
+            StructureElement element = Structure.findStructureElement(variable.Name);
+
+            if (element != null)
             {
-                Variables.IVariable var = Val[variable.Name] as Variables.IVariable;
-                if (var != null)
-                {
-                    var.Value = variable.Value;
-                }
-            }
-            else
-            {
-                Val.Add(variable.Name, variable);
+                variable.Type = element.Type;
+                Val[variable.Name] = variable;
+                variable.Enclosing = this;
             }
         }
 
@@ -249,6 +258,35 @@ namespace DataDictionary.Values
             }
 
             return retVal;
+        }
+
+        /// <summary>
+        /// Converts a structure value to its corresponding structure expression.
+        /// null entries correspond to the default value
+        /// </summary>
+        /// <returns></returns>
+        public override string ToExpressionWithDefault()
+        {
+            StringBuilder retVal = new StringBuilder();
+
+            retVal.Append(Type.FullName + "{");
+            bool first = true;
+            foreach (object tmp in Val.Values)
+            {
+                Variables.Variable variable = tmp as Variables.Variable;
+                if (variable != null && !(variable.Value is DefaultValue))
+                {
+                    if (!first)
+                    {
+                        retVal.Append(",");
+                    }
+                    retVal.Append("\n  " + variable.Name + " => " + variable.Value.ToExpressionWithDefault());
+                    first = false;
+                }
+            }
+            retVal.Append("\n}");
+
+            return retVal.ToString();
         }
     }
 }

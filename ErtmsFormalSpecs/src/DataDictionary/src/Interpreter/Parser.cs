@@ -1043,14 +1043,17 @@ namespace DataDictionary.Interpreter
         /// <param name="filter">The filter to apply when performing the semantic analysis</param>
         /// <param name="doSemanticalAnalysis">true indicates that the semantical analysis should be performed</param>
         /// <param name="log">the element on which errors should be raised. By default, this is root</param>
+        /// <param name="silent">Indicates whether errors should be reported (silent = false) or not</param>
         /// <returns></returns>
-        public Expression Expression(ModelElement root, string expression, BaseFilter filter = null, bool doSemanticalAnalysis = true, ModelElement log = null)
+        public Expression Expression(ModelElement root, string expression, BaseFilter filter = null, bool doSemanticalAnalysis = true, ModelElement log = null, bool silent = false)
         {
             Expression retVal = null;
 
+            bool previousSilentMode = ModelElement.BeSilent;
             try
             {
                 Generated.ControllersManager.DesactivateAllNotifications();
+                ModelElement.BeSilent = silent;
 
                 // Setup context
                 Root = root;
@@ -1094,6 +1097,7 @@ namespace DataDictionary.Interpreter
             }
             finally
             {
+                ModelElement.BeSilent = previousSilentMode;
                 Generated.ControllersManager.ActivateAllNotifications();
             }
 
@@ -1254,14 +1258,17 @@ namespace DataDictionary.Interpreter
         /// </summary>
         /// <param name="root">the element for which this statemennt should be parsed</param>
         /// <param name="expression"></param>
+        /// <param name="silent">Indicates whether errors should be reported (silent == false) or not</param>
         /// <returns></returns>
-        public Statement.Statement Statement(ModelElement root, string expression)
+        public Statement.Statement Statement(ModelElement root, string expression, bool silent = false)
         {
             Statement.Statement retVal = null;
+            bool previousSilentMode = ModelElement.BeSilent;
 
             try
             {
                 Generated.ControllersManager.DesactivateAllNotifications();
+                ModelElement.BeSilent = silent;
 
                 Root = root;
                 Buffer = expression.ToCharArray();
@@ -1287,6 +1294,7 @@ namespace DataDictionary.Interpreter
             }
             finally
             {
+                ModelElement.BeSilent = previousSilentMode;
                 Generated.ControllersManager.ActivateAllNotifications();
             }
 

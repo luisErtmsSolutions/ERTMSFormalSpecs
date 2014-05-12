@@ -1,8 +1,9 @@
 <NameSpace
- X="280"
- Y="120"
+ X="50"
+ Y="660"
  Width="100"
  Height="50"
+ Pinned="TRUE"
  Name="SR"
  Guid="17f64d90-458d-45b9-9ff9-4a4ef3831ae8"
 >
@@ -10,6 +11,7 @@
 </NameSpaces>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SR"
@@ -63,6 +65,7 @@
 <Functions>
 <Function
  Type="BaliseGroups"
+ Default=""
  NeedsRequirement="FALSE"
  Name="CreateBaliseGroups"
  Guid="f9550a10-747b-4726-934e-39d8fbcbc99a"
@@ -92,6 +95,7 @@
 </Case></Cases>
 </Function><Function
  Type="BaliseGroup"
+ Default=""
  NeedsRequirement="FALSE"
  Name="CreateBaliseGroup"
  Guid="bc1d36bc-7e0f-49ec-82dd-86fd6960a5ab"
@@ -117,6 +121,7 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  Name="SRAuthorised"
  Guid="66457f7a-7ec2-4fc3-893e-c35ea8203573"

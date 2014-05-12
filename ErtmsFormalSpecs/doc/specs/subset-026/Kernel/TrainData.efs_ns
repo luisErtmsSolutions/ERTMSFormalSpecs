@@ -1,12 +1,14 @@
 <NameSpace
- X="150"
- Y="360"
+ X="680"
+ Y="660"
  Width="100"
  Height="50"
  Hidden="TRUE"
+ Pinned="TRUE"
  Name="TrainData"
  Guid="358b4397-898a-491c-b419-7aa8d28b929f"
 >
+<Comment></Comment>
 <NameSpaces>
 <NameSpaceRef
  Name="BrakingParameters"
@@ -19,6 +21,10 @@
  MaxValue="1023"
  Precision="IntegerPrecision"
  Default="0"
+ X="850"
+ Y="230"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="NID_CTRACTION"
@@ -29,10 +35,16 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="b6d712e5-5f7d-440d-bb1f-10ebc5af2437"
 >
-</ReqRef></Range></Ranges>
+</ReqRef><Comment></Comment>
+</Range></Ranges>
 <Enumerations>
 <Enum
  Default="FreightTrainInG"
+ X="80"
+ Y="220"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="TrainCategoryEnum"
  Guid="65ca8804-0dd2-4a11-a5e1-0b66cc57a1e8"
@@ -42,7 +54,8 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="0cf71ae6-160a-421c-bd8c-6dd7d9008e86"
 >
-</ReqRef><Values>
+</ReqRef><Comment></Comment>
+<Values>
 <EnumValue
  Value="1"
  Name="FreightTrainInP"
@@ -67,6 +80,12 @@
 </Enum></Enumerations>
 <Structures>
 <Structure
+ Default=""
+ X="290"
+ Y="340"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="TrainCategoriesStruct"
@@ -143,6 +162,11 @@
 >
 </ReqRef><Comment>Represents other specific categories to which possibly belongs the train.</Comment>
 </StructureElement></Structure><Structure
+ Default=""
+ X="530"
+ Y="340"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TrainDataValues"
  Guid="a88ac166-43da-46e0-8091-e0f3221a3828"
@@ -954,6 +978,11 @@
 >
 </ReqRef><Comment>DefaultValue is set arbitrarily. #morido, 13/10/09</Comment>
 </StructureElement></Structure><Structure
+ Default=""
+ X="690"
+ Y="340"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TrainDataStruct"
  Guid="dc6f60e8-2d18-4977-a75c-6dd9f6943205"
@@ -993,6 +1022,11 @@
 >
 <Comment></Comment>
 </StructureElement></Structure><Structure
+ Default=""
+ X="690"
+ Y="230"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TractionSystem"
  Guid="335e9a19-90f3-46e6-8a11-b52e2af05b9f"
@@ -1032,6 +1066,11 @@
  Guid="08a83f29-49b3-4288-8b46-1666daa7c3f4"
 >
 </ReqRef></StructureElement></Structure><Structure
+ Default=""
+ X="530"
+ Y="440"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TractionModel"
  Guid="d2a12f57-25a4-4c9e-8dd5-4b4fee608d7e"
@@ -1075,6 +1114,11 @@
  TypeName="TrainCategoryEnum"
  MaxSize="15"
  Default="[]"
+ X="80"
+ Y="330"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="OtherInternationalCategories"
  Guid="e20153cb-044b-43d4-ab95-69b5f42c31e4"
@@ -1089,6 +1133,11 @@
  TypeName="TractionSystem"
  MaxSize="20"
  Default="[]"
+ X="530"
+ Y="230"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="TractionSystems"
  Guid="4210ef2c-4589-41af-b937-8db131fa5296"
@@ -1098,13 +1147,18 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="6ef0fc58-94bc-4254-897e-c7e7ff6a1e87"
 >
-</ReqRef></Collection></Collections>
+</ReqRef><Comment></Comment>
+</Collection></Collections>
 <Procedures>
 <Procedure
+ X="10"
+ Width="100"
+ Height="50"
  NeedsRequirement="FALSE"
  Name="InitializeTrainData"
  Guid="71722c61-36f8-4c73-9471-14eb436d205a"
 >
+<Comment></Comment>
 <Rules>
 <Rule
  Priority="Processing"
@@ -1958,6 +2012,10 @@
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="10"
+ Y="70"
+ Width="100"
+ Height="50"
  NeedsRequirement="FALSE"
  Name="Initialize"
  Guid="47ef17c8-315c-4519-a3c6-4ad190fb967d"
@@ -2050,6 +2108,10 @@
  Type="TrainDataStruct"
  DefaultValue=""
  VariableMode="Internal"
+ X="850"
+ Y="340"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TrainData"
  Guid="33d537eb-4e0a-4e12-8d14-d3c3cb84b6d0"

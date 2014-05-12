@@ -39,8 +39,8 @@ namespace DataDictionary.Tests.Runner.Events
         /// Constructor
         /// </summary>
         /// <param name="id"></param>
-        public RuleFired(Rules.RuleCondition ruleCondition)
-            : base(ruleCondition.Name, ruleCondition)
+        public RuleFired(Rules.RuleCondition ruleCondition, Generated.acceptor.RulePriority priority)
+            : base(ruleCondition.Name, ruleCondition, priority)
         {
             RuleCondition = ruleCondition;
             Updates = new List<VariableUpdate>();

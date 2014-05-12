@@ -28,7 +28,7 @@ namespace Utils
         /// <summary>
         /// The enclosing model element
         /// </summary>
-        object Enclosing { get; }
+        object Enclosing { get; set; }
     }
 
     /// <summary>

@@ -36,11 +36,6 @@ namespace GUI.HistoryView
             get { return null; }
         }
 
-        public override RichTextBox MessagesTextBox
-        {
-            get { return null; }
-        }
-
         public override BaseTreeView TreeView
         {
             get { return historyTreeView; }

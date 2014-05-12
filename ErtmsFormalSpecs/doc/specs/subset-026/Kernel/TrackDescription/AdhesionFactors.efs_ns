@@ -10,6 +10,7 @@
 </NameSpaces>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  Name="AdhesionFactor"
  Guid="dbdade40-4de6-4418-bf4e-557f8840956b"
@@ -86,6 +87,7 @@
 <Functions>
 <Function
  Type="Default.BaseTypes.Length"
+ Default=""
  Implemented="TRUE"
  Name="AdhFactorLength"
  Guid="d076ad86-414a-4b43-8311-88e0eb0d2e07"
@@ -112,6 +114,7 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  Name="AdhFactorModificationAllowed"
  Guid="008648ff-8694-4efb-a4e8-a2a26c30633b"

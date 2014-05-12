@@ -1,11 +1,13 @@
 <NameSpace
- X="540"
- Y="560"
- Width="500"
- Height="900"
+ X="440"
+ Y="100"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Name="BTM"
  Guid="abe3c9de-4d7b-4a03-a327-8f85ce216c28"
 >
+<Comment></Comment>
 <NameSpaces>
 <NameSpaceRef
  Name="Linking"
@@ -14,6 +16,12 @@
 </NameSpaceRef></NameSpaces>
 <Structures>
 <Structure
+ Default=""
+ X="690"
+ Y="460"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="BaliseGroup"
  Guid="5ec3b420-18e5-4e1a-9d06-81474b8546eb"
@@ -69,6 +77,12 @@
 >
 </ReqRef><Comment>Indicates of the orientation of the LRBG can be determined.</Comment>
 </StructureElement></Structure><Structure
+ Default=""
+ X="500"
+ Y="460"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="Position"
@@ -111,6 +125,11 @@
  TypeName="BaliseGroup"
  MaxSize="8"
  Default="[]"
+ X="700"
+ Y="350"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="BaliseGroups"
@@ -121,6 +140,11 @@
  TypeName="Messages.EUROBALISE.Message"
  MaxSize="8"
  Default="[]"
+ X="590"
+ Y="280"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="BaliseGroupMessages"
  Guid="e78a099b-8642-4076-a591-f69bc658f42c"
@@ -135,6 +159,12 @@
 <Functions>
 <Function
  Type="Default.BaseTypes.Length"
+ Default=""
+ X="260"
+ Y="80"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="BGLocationAccuracy"
  Guid="82c93aa7-24c7-4c34-ba73-364413bf02cc"
@@ -182,6 +212,12 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="40"
+ Y="20"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="TravelledDistanceFromLRBG"
  Guid="f74474aa-0762-458a-9afe-da10aed23e8e"
@@ -220,6 +256,12 @@
 </Case></Cases>
 </Function><Function
  Type="BaliseGroup"
+ Default=""
+ X="40"
+ Y="140"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="FartherLRBG"
  Guid="1a488722-6327-48c3-b7d2-acf35d480352"
@@ -242,6 +284,12 @@
 </Case></Cases>
 </Function><Function
  Type="BaliseGroup"
+ Default=""
+ X="40"
+ Y="80"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SelectFartherBG"
@@ -335,6 +383,12 @@
 </Case></Cases>
 </Function><Function
  Type="BaliseGroup"
+ Default=""
+ X="150"
+ Y="80"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SelectNearerBG"
@@ -428,6 +482,12 @@
 </Case></Cases>
 </Function><Function
  Type="BaliseGroup"
+ Default=""
+ X="260"
+ Y="140"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="PreviousLRBG"
  Guid="9f7a84b1-1005-45f6-b9a7-9675d7b6593a"
@@ -450,6 +510,12 @@
 </Case></Cases>
 </Function><Function
  Type="Position"
+ Default=""
+ X="150"
+ Y="20"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="PositionFromOdometry"
@@ -470,6 +536,12 @@
 </Case></Cases>
 </Function><Function
  Type="Default.Orientation"
+ Default=""
+ X="370"
+ Y="80"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="BaliseGroupOrientation"
  Guid="6c6b5376-aa00-4f46-84a0-6aece30174c1"
@@ -533,6 +605,12 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="150"
+ Y="140"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="LRBGCandidate"
  Guid="09e83b0e-f7e5-4b6c-bdcc-f525de451186"
@@ -565,6 +643,12 @@ NOT Available ( Linking.CurrentLinking() ) AND THERE_IS_IN CurrentBaliseGroup | 
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="40"
+ Y="230"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="BaliseTelegramToBeHandled"
  Guid="5784ea65-414e-4412-8db7-bad78ec32edf"
@@ -628,6 +712,12 @@ NOT Available ( Linking.CurrentLinking() ) AND THERE_IS_IN CurrentBaliseGroup | 
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="150"
+ Y="230"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="ConsiderPacket"
  Guid="dd01bcbc-e748-427d-a352-41a5eff3f636"
@@ -704,6 +794,12 @@ PacketOrientation == Messages.Q_DIR.Both_directions</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="260"
+ Y="230"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="AntennaPosition"
  Guid="71e1a1a9-1a82-4b22-9f19-0ead55a18d7e"
@@ -730,6 +826,12 @@ PacketOrientation == Messages.Q_DIR.Both_directions</Expression>
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="150"
+ Y="290"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="IsSingleBaliseGroup"
  Guid="35c94014-3076-4d7f-9364-9793510f3456"
@@ -754,6 +856,12 @@ PacketOrientation == Messages.Q_DIR.Both_directions</Expression>
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="40"
+ Y="290"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="IsLocationReference"
  Guid="ab39a627-bbab-4874-84a7-53e629e0f391"
@@ -807,6 +915,12 @@ PacketOrientation == Messages.Q_DIR.Both_directions</Expression>
 </Case></Cases>
 </Function><Function
  Type="Messages.EUROBALISE.SubStructure1"
+ Default=""
+ X="260"
+ Y="290"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="MAOfTelegram"
  Guid="93fca8b1-bdc9-42c4-ae84-3f961d540f93"
@@ -833,6 +947,12 @@ PacketOrientation == Messages.Q_DIR.Both_directions</Expression>
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="260"
+ Y="350"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="HasRevSupervisionInfo"
  Guid="1a1f56fd-2bca-4f91-8a90-d02c1d34904e"
@@ -874,6 +994,12 @@ PacketOrientation == Messages.Q_DIR.Both_directions</Expression>
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="40"
+ Y="410"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="HasRevAreaInfo"
  Guid="3e1ec123-1277-43e1-8020-f53b8b7b36ee"
@@ -905,6 +1031,12 @@ PacketOrientation == Messages.Q_DIR.Both_directions</Expression>
 </Case></Cases>
 </Function><Function
  Type="Messages.PACKET.TRACK_TO_TRAIN.REVERSING_SUPERVISION_INFORMATION.Message"
+ Default=""
+ X="40"
+ Y="350"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="RevSupervisionPacket"
@@ -927,6 +1059,12 @@ PacketOrientation == Messages.Q_DIR.Both_directions</Expression>
 </Case></Cases>
 </Function><Function
  Type="Messages.EUROBALISE.SubStructure1"
+ Default=""
+ X="150"
+ Y="350"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="ModeProfileOfTelegram"
  Guid="56402f8b-c1d4-41d4-af27-16d374cf98af"
@@ -954,6 +1092,11 @@ PacketOrientation == Messages.Q_DIR.Both_directions</Expression>
 </Function></Functions>
 <Procedures>
 <Procedure
+ X="710"
+ Y="190"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  NeedsRequirement="FALSE"
  Name="HandleNewPacket"
  Guid="052d0827-c337-4549-9724-72afe831fafd"
@@ -1753,6 +1896,11 @@ PacketOrientation == Messages.Q_DIR.Both_directions</Expression>
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="710"
+ Y="130"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="HandleNewLRBG"
  Guid="c31fd441-b73c-4a8c-b590-155d2827dab2"
@@ -1846,6 +1994,11 @@ PacketOrientation == Messages.Q_DIR.Both_directions</Expression>
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="820"
+ Y="70"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="HandleUnlinkedBG"
  Guid="0f2d4a7d-28af-484b-8188-84b0c872dc6a"
@@ -1903,6 +2056,11 @@ PacketOrientation == Messages.Q_DIR.Both_directions</Expression>
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="820"
+ Y="130"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="HandleBaliseTelegram"
@@ -2117,6 +2275,11 @@ ON Message.Sequence1</Action></Actions>
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="820"
+ Y="190"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="StoreBaliseGroupMessage"
@@ -2256,6 +2419,11 @@ If all the messages of the current balise group have been received, calls Handle
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="710"
+ Y="70"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="HandleNewPacketMA"
  Guid="bdc26224-250c-4d50-8ae8-d9ec84234e3c"
@@ -2334,6 +2502,11 @@ If all the messages of the current balise group have been received, calls Handle
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="820"
+ Y="10"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="HandleBaliseMessage"
  Guid="48414d07-b40a-4ad6-be9e-77b423eb55fe"
@@ -2419,6 +2592,11 @@ ON CurrentBaliseGroup | BaliseTelegramToBeHandled ( X )</Action></Actions>
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="710"
+ Y="10"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="HandleNewPacketModeProfile"
  Guid="1944fec5-3bdf-4188-bae3-2f4676823c84"
@@ -2501,6 +2679,11 @@ ON CurrentBaliseGroup | BaliseTelegramToBeHandled ( X )</Action></Actions>
  Type="Default.BaseTypes.Length"
  DefaultValue="0.0"
  VariableMode="Constant"
+ X="560"
+ Y="620"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="BGLocationDetectionError"
  Guid="e97a89af-3348-47eb-8fa4-8e19e66b5278"
@@ -2521,6 +2704,11 @@ ON CurrentBaliseGroup | BaliseTelegramToBeHandled ( X )</Action></Actions>
  Type="Messages.EUROBALISE.Message"
  DefaultValue="EMPTY"
  VariableMode="InOut"
+ X="440"
+ Y="620"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="Message"
@@ -2536,6 +2724,11 @@ ON CurrentBaliseGroup | BaliseTelegramToBeHandled ( X )</Action></Actions>
  Type="BaliseGroup"
  DefaultValue="EMPTY"
  VariableMode="Internal"
+ X="690"
+ Y="560"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="LRBG"
  Guid="06c55d45-6f6b-44e0-a0df-de6dc2de2e0a"
@@ -2550,6 +2743,11 @@ ON CurrentBaliseGroup | BaliseTelegramToBeHandled ( X )</Action></Actions>
  Type="Position"
  DefaultValue=""
  VariableMode="Internal"
+ X="560"
+ Y="560"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="UnlinkedBGPosition"
@@ -2566,6 +2764,11 @@ ON CurrentBaliseGroup | BaliseTelegramToBeHandled ( X )</Action></Actions>
  Type="BaliseGroups"
  DefaultValue="[]"
  VariableMode="Internal"
+ X="840"
+ Y="350"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="PreviousLRBGs"
  Guid="4552d13d-fb1c-495c-950c-24ad3eb2d288"
@@ -2581,6 +2784,11 @@ ON CurrentBaliseGroup | BaliseTelegramToBeHandled ( X )</Action></Actions>
  Type="BaliseGroupMessages"
  DefaultValue="[]"
  VariableMode="Internal"
+ X="840"
+ Y="280"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  NeedsRequirement="FALSE"
  Name="CurrentBaliseGroup"
  Guid="eb904a47-339a-4e18-b6b4-c87384133417"
@@ -2590,6 +2798,11 @@ ON CurrentBaliseGroup | BaliseTelegramToBeHandled ( X )</Action></Actions>
  Type="Position"
  DefaultValue="EMPTY"
  VariableMode="Internal"
+ X="440"
+ Y="560"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="BGLocationReference"
@@ -2615,6 +2828,11 @@ ON CurrentBaliseGroup | BaliseTelegramToBeHandled ( X )</Action></Actions>
  Type="Default.BaseTypes.Distance"
  DefaultValue="0.0"
  VariableMode="Internal"
+ X="690"
+ Y="620"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="ActiveAntennaPosition"
  Guid="dff8c2aa-be92-4d2d-8c31-3afdce4eea69"
@@ -2630,6 +2848,11 @@ ON CurrentBaliseGroup | BaliseTelegramToBeHandled ( X )</Action></Actions>
 <Rules>
 <Rule
  Priority="CleanUp"
+ X="150"
+ Y="530"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="Clean Up"
  Guid="027c7622-f051-4f14-b4db-c9cc9b6487ff"
@@ -2689,6 +2912,11 @@ ON CurrentBaliseGroup | BaliseTelegramToBeHandled ( X )</Action></Actions>
 </RuleCondition></Conditions>
 </Rule><Rule
  Priority="Verification"
+ X="40"
+ Y="530"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  NeedsRequirement="FALSE"
  Name="Incomplete balise group received"
  Guid="898a6047-388a-4c9c-85e6-9dade9e6c758"

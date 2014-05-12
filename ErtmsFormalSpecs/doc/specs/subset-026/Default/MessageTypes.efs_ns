@@ -1,4 +1,8 @@
 <NameSpace
+ X="820"
+ Y="150"
+ Width="100"
+ Height="50"
  Name="MessageTypes"
  Guid="b671bc1c-bb8b-4892-8dd4-e7ff95685943"
 >
@@ -122,6 +126,7 @@
 <Functions>
 <Function
  Type="BaseTypes.Length"
+ Default=""
  Implemented="TRUE"
  Verified="TRUE"
  NeedsRequirement="FALSE"
@@ -145,6 +150,7 @@
 </Case></Cases>
 </Function><Function
  Type="BaseTypes.Gradient"
+ Default=""
  NeedsRequirement="FALSE"
  Name="QScaleGradient"
  Guid="01a12dce-9529-47a2-b7ca-32a4e9ec7879"
@@ -166,6 +172,7 @@
 </Case></Cases>
 </Function><Function
  Type="BaseTypes.Acceleration"
+ Default=""
  NeedsRequirement="FALSE"
  Name="DecelerationResolution"
  Guid="06092188-a00c-4a15-9e63-e807f02ba265"
@@ -192,6 +199,7 @@
 </Case></Cases>
 </Function><Function
  Type="MessageTypes.Speed"
+ Default=""
  NeedsRequirement="FALSE"
  Name="UnResolveSpeed"
  Guid="546594f2-b0e6-40f7-911a-30de489aa2a9"
@@ -227,6 +235,7 @@
 </Case></Cases>
 </Function><Function
  Type="MessageTypes.Length"
+ Default=""
  NeedsRequirement="FALSE"
  Name="UnScaleLength"
  Guid="82c0b878-e405-4ed0-a792-5f948c15f26a"
@@ -284,6 +293,7 @@
 </Case></Cases>
 </Function><Function
  Type="BaseTypes.Speed"
+ Default=""
  NeedsRequirement="FALSE"
  Name="SpeedResolution"
  Guid="a6810c09-56df-4744-842f-023c0e59c92e"
@@ -310,6 +320,7 @@
 </Case></Cases>
 </Function><Function
  Type="BaseTypes.Length"
+ Default=""
  NeedsRequirement="FALSE"
  Name="QScaleLength"
  Guid="d939f01e-5aca-485a-90c1-a1ace317b34d"
@@ -358,6 +369,7 @@
 </Case></Cases>
 </Function><Function
  Type="MessageTypes.Distance"
+ Default=""
  NeedsRequirement="FALSE"
  Name="UnScaleDistance"
  Guid="09fb6390-d261-4af0-8873-a71af6b73b2d"
@@ -415,6 +427,7 @@
 </Case></Cases>
 </Function><Function
  Type="BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  Verified="TRUE"
  NeedsRequirement="FALSE"
@@ -465,6 +478,7 @@
 </Case></Cases>
 </Function><Function
  Type="BaseTypes.Acceleration"
+ Default=""
  NeedsRequirement="FALSE"
  Name="AccelerationResolution"
  Guid="6711c7a1-7622-4e08-acad-5fff44b95ae5"
@@ -491,6 +505,7 @@
 </Case></Cases>
 </Function><Function
  Type="MessageTypes.Time"
+ Default=""
  NeedsRequirement="FALSE"
  Name="UnResolveTime"
  Guid="796ab421-d591-4514-b5e3-3723d4109e32"
@@ -521,6 +536,7 @@
 </Case></Cases>
 </Function><Function
  Type="BaseTypes.Time"
+ Default=""
  NeedsRequirement="FALSE"
  Name="TimeResolution"
  Guid="59622f5f-701b-40a7-a3d0-bdd43e4a531f"

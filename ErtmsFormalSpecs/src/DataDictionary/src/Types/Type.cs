@@ -81,7 +81,7 @@ namespace DataDictionary.Types
     /// <summary>
     /// A type. All types must inherit from this class
     /// </summary>
-    public class Type : Generated.Type, IDefaultValueElement
+    public class Type : Generated.Type, IDefaultValueElement, IGraphicalDisplay
     {
         /// <summary>
         /// Provides the enclosing namespace
@@ -193,17 +193,8 @@ namespace DataDictionary.Types
         {
             bool retVal = false;
 
-            bool silentMode = ModelElement.BeSilent;
-            try
-            {
-                ModelElement.BeSilent = true;
-                Expression tree = EFSSystem.Parser.Expression(this, expression, null, false);
-                retVal = tree != null;
-            }
-            finally
-            {
-                ModelElement.BeSilent = silentMode;
-            }
+            Expression tree = EFSSystem.Parser.Expression(this, expression, null, false, null, true);
+            retVal = tree != null;
 
             return retVal;
         }
@@ -484,6 +475,71 @@ namespace DataDictionary.Types
         public virtual Type CombineType(Type right, BinaryExpression.OPERATOR Operator)
         {
             return null;
+        }
+
+        /// <summary>
+        /// The X position
+        /// </summary>
+        public int X
+        {
+            get { return getX(); }
+            set { setX(value); }
+        }
+
+        /// <summary>
+        /// The Y position
+        /// </summary>
+        public int Y
+        {
+            get { return getY(); }
+            set { setY(value); }
+        }
+
+        /// <summary>
+        /// The width
+        /// </summary>
+        public int Width
+        {
+            get { return getWidth(); }
+            set { setWidth(value); }
+        }
+
+        /// <summary>
+        /// The height
+        /// </summary>
+        public int Height
+        {
+            get { return getHeight(); }
+            set { setHeight(value); }
+        }
+
+        /// <summary>
+        /// The name to be displayed
+        /// </summary>
+        public virtual string GraphicalName { get { return Name; } }
+
+        /// <summary>
+        /// Indicates whether the namespace is hidden
+        /// </summary>
+        public bool Hidden
+        {
+            get { return getHidden(); }
+            set { setHidden(value); }
+        }
+
+        /// <summary>
+        /// Indicates that the element is pinned
+        /// </summary>
+        public bool Pinned { get { return getPinned(); } set { setPinned(value); } }
+
+        /// <summary>
+        /// Provides an explanation of the range
+        /// </summary>
+        /// <param name="explainSubElements">Precises if we need to explain the sub elements (if any)</param>
+        /// <returns></returns>
+        public virtual string getExplain(bool explainSubElements)
+        {
+            return Name + " {\\b : STATE MACHINE}";
         }
     }
 

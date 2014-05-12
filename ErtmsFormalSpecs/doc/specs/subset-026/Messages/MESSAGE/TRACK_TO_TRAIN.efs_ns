@@ -90,6 +90,7 @@
 </NameSpaceRef></NameSpaces>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  Name="Message"
  Guid="4509d2e2-b849-44ad-8a6b-e3c065dc8be4"

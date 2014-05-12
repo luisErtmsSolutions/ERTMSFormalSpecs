@@ -14,6 +14,8 @@
 // --
 // ------------------------------------------------------------------------------
 
+using System.Text;
+using System.Collections.Generic;
 namespace DataDictionary
 {
     public abstract class ModelElement : Generated.BaseModelElement
@@ -180,6 +182,24 @@ namespace DataDictionary
 
             return retVal;
         }
+
+        /// <summary>
+        /// Provides the description of the requirements related to this model element 
+        /// </summary>
+        /// <returns></returns>
+        public virtual string RequirementDescription()
+        {
+            string retVal = "";
+
+            ReqRelated reqRelated = Utils.EnclosingFinder<ReqRelated>.find(this, true);
+            if (reqRelated != null)
+            {
+                retVal = reqRelated.RequirementDescription();
+            }
+
+            return retVal;
+        }
+
     }
 
     public interface TextualExplain
@@ -246,7 +266,7 @@ namespace DataDictionary
 
             foreach (string line in data.Split('\n'))
             {
-                retVal = retVal + Pad("{\\cf11//" + line + "}\\cf1\\par", padlen);
+                retVal = retVal + Pad("{\\cf11//" + line + "}\\cf1\\par ", padlen);
             }
 
             return retVal;
@@ -323,6 +343,11 @@ namespace DataDictionary
         }
 
         /// <summary>
+        /// The kind of opening brace
+        /// </summary>
+        private enum BraceType { command, character };
+
+        /// <summary>
         /// Adds RTF prefixes and postfixes
         /// </summary>
         /// <param name="data"></param>
@@ -331,10 +356,75 @@ namespace DataDictionary
         {
             string retVal = data;
 
-            if (!retVal.StartsWith("\\rtf"))
+            if (!retVal.StartsWith("{\\rtf"))
             {
                 // Replaces all end of lines with \par
                 retVal = retVal.Replace("\n", "\\par ");
+
+                // Replaces braces
+                // Hyp : Braces are always balanced
+                Stack<BraceType> braces = new Stack<BraceType>();
+                StringBuilder tmp = new StringBuilder();
+                for (int i = 0; i < retVal.Length; i++)
+                {
+                    if (retVal[i] == '{')
+                    {
+                        if (i < retVal.Length - 4)
+                        {
+                            if (retVal[i + 1] == '{')
+                            {
+                                tmp.Append("{");
+                                braces.Push(BraceType.command);
+                            }
+                            else if (retVal[i + 1] != '\\')
+                            {
+                                tmp.Append("\\{");
+                                braces.Push(BraceType.character);
+                            }
+                            else if (retVal.Substring(i + 2, 3) == "par")
+                            {
+                                tmp.Append("\\{ ");
+                                braces.Push(BraceType.character);
+                            }
+                            else
+                            {
+                                tmp.Append("{");
+                                braces.Push(BraceType.command);
+                            }
+                        }
+                        else
+                        {
+                            tmp.Append("\\{");
+                            braces.Push(BraceType.character);
+                        }
+                    }
+                    else if (retVal[i] == '}')
+                    {
+                        if (braces.Count > 0)
+                        {
+                            BraceType braceType = braces.Pop();
+                            switch (braceType)
+                            {
+                                case BraceType.character:
+                                    tmp.Append("\\}");
+                                    break;
+
+                                case BraceType.command:
+                                    tmp.Append("}");
+                                    break;
+                            }
+                        }
+                        else
+                        {
+                            tmp.Append("\\}");
+                        }
+                    }
+                    else
+                    {
+                        tmp.Append(retVal[i]);
+                    }
+                }
+                retVal = tmp.ToString();
 
                 // This is used to ensure that the right style is used for the text
                 retVal = "{\\cf11}\\cf1" + retVal;

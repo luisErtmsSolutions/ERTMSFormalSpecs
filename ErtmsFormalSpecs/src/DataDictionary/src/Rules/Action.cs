@@ -94,17 +94,8 @@ namespace DataDictionary.Rules
         {
             bool retVal = false;
 
-            bool silentMode = ModelElement.BeSilent;
-            try
-            {
-                ModelElement.BeSilent = true;
-                Interpreter.Statement.Statement tree = EFSSystem.Parser.Statement(this, expression);
-                retVal = tree != null;
-            }
-            finally
-            {
-                ModelElement.BeSilent = silentMode;
-            }
+            Interpreter.Statement.Statement tree = EFSSystem.Parser.Statement(this, expression, true);
+            retVal = tree != null;
 
             return retVal;
         }

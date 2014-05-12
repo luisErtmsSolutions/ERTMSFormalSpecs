@@ -1,8 +1,9 @@
 <NameSpace
- X="1510"
- Y="60"
+ X="440"
+ Y="220"
  Width="100"
- Height="6200"
+ Height="50"
+ Pinned="TRUE"
  Name="DMI"
  Guid="27079fd5-b597-44b6-9a91-248896c6f707"
 >
@@ -147,6 +148,7 @@
 </Enum></Enumerations>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="DMIStruct"
@@ -10073,6 +10075,7 @@ PreviousMode: represents the train mode displayed on the DMI during the previous
  Guid="ce7a5712-d89f-413e-b4fc-4b8c9a3c4c3d"
 >
 </ReqRef></StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="InputInformation"
@@ -10111,6 +10114,7 @@ PreviousMode: represents the train mode displayed on the DMI during the previous
  Guid="ffabf60b-484e-4c36-aef3-9547d8096736"
 >
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="OutputInformation"
@@ -10149,6 +10153,7 @@ PreviousMode: represents the train mode displayed on the DMI during the previous
  Guid="6c189f2e-c00e-4abd-b10f-05a935d98f15"
 >
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  Name="DriverAction"
  Guid="5dd3c365-cb7f-4914-8bba-2ceab13ccfbc"
@@ -10182,6 +10187,7 @@ PreviousMode: represents the train mode displayed on the DMI during the previous
  Guid="051b7121-12e3-4987-90bc-2bc9840446e9"
 >
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="InhibitionAction"
@@ -10207,6 +10213,7 @@ PreviousMode: represents the train mode displayed on the DMI during the previous
  Guid="80b24576-e2e7-4b1a-9f7b-8fa2670edeeb"
 >
 </StructureElement></Structure><Structure
+ Default=""
  NeedsRequirement="FALSE"
  Name="RbcIdNumberChoice"
  Guid="66eb7be5-8ed1-4123-a7e6-fd29a32f4100"
@@ -10245,6 +10252,7 @@ PreviousMode: represents the train mode displayed on the DMI during the previous
  Guid="1a024936-e626-43f0-b95b-fca512490227"
 >
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="DisplayLanguage"
@@ -10308,6 +10316,7 @@ PreviousMode: represents the train mode displayed on the DMI during the previous
 <Functions>
 <Function
  Type="DMI.DMIStruct"
+ Default=""
  Implemented="TRUE"
  Name="MasterDMI"
  Guid="a73ed919-cd79-497a-a960-8ff0650d282c"
@@ -10340,6 +10349,7 @@ PreviousMode: represents the train mode displayed on the DMI during the previous
 </Case></Cases>
 </Function><Function
  Type="DMI.DMIStruct"
+ Default=""
  Implemented="TRUE"
  Name="SlaveDMI"
  Guid="c3252f0f-82fc-4a6d-9e59-635fe574107a"
@@ -10376,6 +10386,7 @@ PreviousMode: represents the train mode displayed on the DMI during the previous
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ModeChanged"
@@ -10391,6 +10402,7 @@ PreviousMode: represents the train mode displayed on the DMI during the previous
 </Case></Cases>
 </Function><Function
  Type="TIU.CabStruct"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CabOfDMI"
@@ -10431,6 +10443,7 @@ PreviousMode: represents the train mode displayed on the DMI during the previous
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  Name="DeskIsOpen"
  Guid="1849ab3d-c834-4645-a0dc-965e031fe2e0"
@@ -10475,6 +10488,7 @@ PreviousMode: represents the train mode displayed on the DMI during the previous
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  Name="DesksAreClosed"
  Guid="7533be36-4dc9-4172-9b3f-9651d90522e8"

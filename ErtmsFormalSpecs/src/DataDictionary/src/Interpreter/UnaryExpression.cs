@@ -43,7 +43,7 @@ namespace DataDictionary.Interpreter
         /// <summary>
         /// The expression for the unary op
         /// </summary>
-        public Expression Expression { get; private set; }
+        public Expression Expression { get; set; }
 
         /// <summary>
         /// The unary operator used

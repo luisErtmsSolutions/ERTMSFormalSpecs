@@ -260,6 +260,11 @@ namespace DataDictionary.Constants
         public bool Hidden { get { return false; } set { } }
 
         /// <summary>
+        /// Indicates that the element is pinned
+        /// </summary>
+        public bool Pinned { get { return getPinned(); } set { setPinned(value); } }
+
+        /// <summary>
         /// The enclosing state machine
         /// </summary>
         public Types.StateMachine EnclosingStateMachine
@@ -418,6 +423,16 @@ namespace DataDictionary.Constants
             retVal.setFather(getFather());
             retVal.StateMachine = StateMachine.instanciate();
             return retVal;
+        }
+
+        /// <summary>
+        /// Converts a structure value to its corresponding structure expression.
+        /// null entries correspond to the default value
+        /// </summary>
+        /// <returns></returns>
+        public string ToExpressionWithDefault()
+        {
+            return FullName;
         }
     }
 }

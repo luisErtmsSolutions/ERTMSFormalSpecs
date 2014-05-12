@@ -6,6 +6,7 @@
 </NameSpaces>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="Message"
@@ -395,6 +396,7 @@
  Guid="c88921d6-f2cc-43d3-bc82-4c0804d59aa1"
 >
 </ReqRef></StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SubStructure1"
@@ -429,6 +431,7 @@
  Guid="74d63918-b5c1-4ccb-ab59-6c316f88e3e8"
 >
 </ReqRef></StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SubStructure2"
@@ -528,6 +531,7 @@
  Guid="e3652537-610f-4ea6-b68e-b4dc22ecd22e"
 >
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SubStructure3"
@@ -716,6 +720,7 @@
  Guid="6ada41d3-76f4-4c44-af27-e84c1c2f2b74"
 >
 </ReqRef></StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SubStructure4"
@@ -750,6 +755,7 @@
  Guid="c92a243f-2b1f-41af-840d-0461eb1d8276"
 >
 </ReqRef></StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SubStructure5"
@@ -784,6 +790,7 @@
  Guid="a89ab887-79f9-403b-8304-0c8af2dec17d"
 >
 </ReqRef></StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SubStructure6"

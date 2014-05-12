@@ -55,7 +55,7 @@ namespace DataDictionary.Interpreter
         /// <summary>
         /// The location referenced by this designator
         /// </summary>
-        private LocationEnum Location
+        public LocationEnum Location
         {
             get
             {

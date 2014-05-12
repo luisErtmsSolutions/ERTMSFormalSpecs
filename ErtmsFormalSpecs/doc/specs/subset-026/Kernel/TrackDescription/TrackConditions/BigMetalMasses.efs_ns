@@ -6,6 +6,7 @@
 </NameSpaces>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  Name="BigMetalMassesInformation"
  Guid="20f0007f-dcf5-4b3c-b52e-1de6cffe79d6"
@@ -64,6 +65,7 @@
 <Functions>
 <Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  Name="BMMSectionEnd"
  Guid="611bd0c2-48fe-489f-8a43-364caca2b92a"
@@ -101,6 +103,7 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  Name="BMMAtDistance"
  Guid="e10781ac-cbff-4ff5-ac75-5a41400cf2d1"
@@ -140,6 +143,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="BMMProfileStartLocation"
@@ -167,6 +171,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  Name="NewBMMInfoStartLocation"
  Guid="10813a2a-daf4-4bdd-8981-2f5e866394c7"
@@ -204,6 +209,7 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  Name="CurrentBMMConditions"
  Guid="8f9dabf4-eecf-4c72-89e6-cfdda29dabba"

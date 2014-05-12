@@ -365,5 +365,23 @@ namespace DataDictionary.Interpreter.Statement
 
             return retVal;
         }
+
+        /// <summary>
+        /// Provides a real short description of this statement
+        /// </summary>
+        /// <returns></returns>
+        public override string ShortShortDescription()
+        {
+            return ListExpression.ToString();
+        }
+
+        /// <summary>
+        /// Provides the main model elemnt affected by this statement
+        /// </summary>
+        /// <returns></returns>
+        public override ModelElement AffectedElement()
+        {
+            return ListExpression.Ref as ModelElement;
+        }
     }
 }

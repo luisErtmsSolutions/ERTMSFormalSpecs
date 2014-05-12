@@ -21,49 +21,9 @@ namespace GUI.DataDictionaryView
 {
     public partial class Window : BaseForm
     {
-        public override MyPropertyGrid Properties
-        {
-            get { return dataDictPropertyGrid; }
-        }
-
-        public override RichTextBox MessagesTextBox
-        {
-            get
-            {
-                if (messagesRichTextBox != null)
-                {
-                    return messagesRichTextBox.TextBox;
-                }
-                else
-                {
-                    return null;
-                }
-            }
-        }
-
-        public override EditorTextBox RequirementsTextBox
-        {
-            get { return requirementsTextBox; }
-        }
-
-        public override EditorTextBox ExpressionEditorTextBox
-        {
-            get { return expressionEditorTextBox; }
-        }
-
         public override BaseTreeView TreeView
         {
             get { return dataDictTree; }
-        }
-
-        public override BaseTreeView subTreeView
-        {
-            get { return usageTreeView; }
-        }
-
-        public override ExplainTextBox ExplainTextBox
-        {
-            get { return ruleExplainTextBox; }
         }
 
         /// <summary>
@@ -80,6 +40,14 @@ namespace GUI.DataDictionaryView
                 Text = dictionary.Name + " model view";
             }
         }
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public Window()
+        {
+            InitializeComponent();
+            SpecificInitialization();
+        }
 
         /// <summary>
         /// Constructor
@@ -88,34 +56,20 @@ namespace GUI.DataDictionaryView
         public Window(DataDictionary.Dictionary dictionary)
         {
             InitializeComponent();
+            SpecificInitialization();
 
-            messagesRichTextBox.AutoComplete = false;
-            requirementsTextBox.AutoComplete = false;
-            ruleExplainTextBox.AutoComplete = false;
-
-            ruleExplainTextBox.ReadOnly = true;
-            requirementsTextBox.ReadOnly = true;
-
-            FormClosed += new FormClosedEventHandler(Window_FormClosed);
-            expressionEditorTextBox.TextBox.TextChanged += new EventHandler(TextBox_TextChanged);
-            Visible = false;
             Dictionary = dictionary;
-
-            // TODO : Does not work yet
-            // GUIUtils.ResizePropertyGridSplitter(Properties, 25);
-
-            ResizeDescriptionArea(dataDictPropertyGrid, 20);
 
             Refresh();
         }
 
-        void TextBox_TextChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Perform specific initialization
+        /// </summary>
+        private void SpecificInitialization()
         {
-            IExpressionable expressionable = Selected as IExpressionable;
-            if (expressionable != null && expressionable == expressionEditorTextBox.Instance)
-            {
-                expressionable.ExpressionText = expressionEditorTextBox.Text;
-            }
+            FormClosed += new FormClosedEventHandler(Window_FormClosed);
+            Visible = false;
         }
 
         /// <summary>

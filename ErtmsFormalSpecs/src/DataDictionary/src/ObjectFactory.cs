@@ -55,6 +55,7 @@ namespace DataDictionary
             obj.setWidth(0);
             obj.setHeight(0);
             obj.setHidden(false);
+            obj.setPinned(false);
 
             base.visit(obj, visitSubNodes);
         }
@@ -62,6 +63,19 @@ namespace DataDictionary
         public override void visit(Generated.EnumValue obj, bool visitSubNodes)
         {
             obj.setValue("0");
+
+            base.visit(obj, visitSubNodes);
+        }
+
+        public override void visit(Generated.Type obj, bool visitSubNodes)
+        {
+            obj.setX(0);
+            obj.setY(0);
+            obj.setWidth(0);
+            obj.setHeight(0);
+            obj.setHidden(false);
+            obj.setPinned(false);
+            obj.setDefault("");
 
             base.visit(obj, visitSubNodes);
         }
@@ -95,6 +109,18 @@ namespace DataDictionary
             base.visit(obj, visitSubNodes);
         }
 
+        public override void visit(Generated.Procedure obj, bool visitSubNodes)
+        {
+            obj.setX(0);
+            obj.setY(0);
+            obj.setWidth(0);
+            obj.setHeight(0);
+            obj.setHidden(false);
+            obj.setPinned(false);
+
+            base.visit(obj, visitSubNodes);
+        }
+
         public override void visit(Generated.State obj, bool visitSubNodes)
         {
             obj.setX(0);
@@ -108,6 +134,12 @@ namespace DataDictionary
         public override void visit(Generated.Variable obj, bool visitSubNodes)
         {
             obj.setVariableMode(Generated.acceptor.VariableModeEnumType.aInternal);
+            obj.setX(0);
+            obj.setY(0);
+            obj.setWidth(0);
+            obj.setHeight(0);
+            obj.setHidden(false);
+            obj.setPinned(false);
 
             base.visit(obj, visitSubNodes);
         }
@@ -115,6 +147,12 @@ namespace DataDictionary
         public override void visit(Generated.Rule obj, bool visitSubNodes)
         {
             obj.setPriority(Generated.acceptor.RulePriority.aProcessing);
+            obj.setX(0);
+            obj.setY(0);
+            obj.setWidth(0);
+            obj.setHeight(0);
+            obj.setHidden(false);
+            obj.setPinned(false);
 
             base.visit(obj, visitSubNodes);
         }

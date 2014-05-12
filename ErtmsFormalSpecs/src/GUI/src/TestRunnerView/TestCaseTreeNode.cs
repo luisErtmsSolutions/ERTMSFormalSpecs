@@ -104,6 +104,7 @@ namespace GUI.TestRunnerView
             steps = new StepsTreeNode(Item, buildSubNodes);
             Nodes.Add(steps);
         }
+
         /// <summary>
         /// Creates the editor for this tree node
         /// </summary>
@@ -203,7 +204,8 @@ namespace GUI.TestRunnerView
             Window window = BaseForm as Window;
             if (window != null)
             {
-                window.tabControl1.SelectedTab = window.timeLineTabPage;
+                window.RefreshAfterStep();
+                window.tabControl1.SelectedTab = window.testExecutionTabPage;
             }
         }
         #endregion
@@ -282,6 +284,18 @@ namespace GUI.TestRunnerView
             retVal.Insert(13, new MenuItem("-"));
 
             return retVal;
+        }
+
+        public override void SelectionChanged(bool displayStatistics)
+        {
+            base.SelectionChanged(displayStatistics);
+
+            Window window = BaseForm as Window;
+            if (window != null)
+            {
+                window.testDescriptionTimeLineControl.TestCase = Item;
+                window.testDescriptionTimeLineControl.Refresh();
+            }
         }
     }
 }

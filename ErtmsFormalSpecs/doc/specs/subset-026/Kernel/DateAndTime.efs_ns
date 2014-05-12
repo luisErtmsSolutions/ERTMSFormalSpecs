@@ -1,49 +1,90 @@
 <NameSpace
+ X="680"
+ Y="600"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Name="DateAndTime"
  Guid="d3efb284-2fb1-46e2-92d5-ccff0c832ffd"
 >
+<Comment></Comment>
 <NameSpaces>
 </NameSpaces>
 <Variables>
 <Variable
  Type="Integer"
  VariableMode="Internal"
+ X="50"
+ Y="10"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Name="Year"
  Guid="1e3e94fc-dd4c-4322-9cf3-aebd378247a4"
 >
 </Variable><Variable
  Type="Integer"
  VariableMode="Internal"
+ X="160"
+ Y="10"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Name="Month"
  Guid="552d4bfc-3e26-4dee-927e-888a36d45fff"
 >
 </Variable><Variable
  Type="Integer"
  VariableMode="Internal"
+ X="270"
+ Y="10"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Name="Day"
  Guid="1c138f3b-ae2c-4f2c-a820-307161cfff23"
 >
 </Variable><Variable
  Type="Integer"
  VariableMode="Internal"
+ X="380"
+ Y="10"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Name="Hour"
  Guid="5c14a03d-049b-4e41-ad57-fc5379f79590"
 >
 </Variable><Variable
  Type="Integer"
  VariableMode="Internal"
+ X="490"
+ Y="10"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Name="Min"
  Guid="f80d3b1c-f929-4609-89a3-fc96812f5d66"
 >
 </Variable><Variable
  Type="Integer"
  VariableMode="Internal"
+ X="600"
+ Y="10"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Name="Sec"
  Guid="c9eb8530-f443-4638-9bf9-658f5f290300"
 >
 </Variable><Variable
  Type="Integer"
  VariableMode="Internal"
+ X="710"
+ Y="10"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Name="TTS"
  Guid="08bb934e-f973-4aeb-a219-d223b7c93097"
 >

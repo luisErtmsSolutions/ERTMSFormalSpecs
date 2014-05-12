@@ -1,8 +1,9 @@
 <NameSpace
- X="20"
- Y="70"
+ X="310"
+ Y="100"
  Width="100"
  Height="50"
+ Pinned="TRUE"
  Name="LTM"
  Guid="2b034182-3a89-4586-a6c2-00ef365dc40b"
 >

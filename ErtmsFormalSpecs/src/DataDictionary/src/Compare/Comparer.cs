@@ -1327,6 +1327,10 @@ namespace DataDictionary.Compare
             {
                 diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Hidden", other.getHidden().ToString(), obj.getHidden().ToString()) );
             }
+            if ( obj.getPinned() != other.getPinned() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Pinned", other.getPinned().ToString(), obj.getPinned().ToString()) );
+            }
             if ( !CompareUtil.canonicalStringEquality(obj.getComment(), other.getComment()) )
             {
                 diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Comment", other.getComment(), obj.getComment()) );
@@ -1370,6 +1374,30 @@ namespace DataDictionary.Compare
             if ( !CompareUtil.canonicalStringEquality(obj.getDefault(), other.getDefault()) )
             {
                 diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Default", other.getDefault(), obj.getDefault()) );
+            }
+            if ( obj.getWidth() != other.getWidth() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Width", other.getWidth().ToString(), obj.getWidth().ToString()) );
+            }
+            if ( obj.getHeight() != other.getHeight() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Height", other.getHeight().ToString(), obj.getHeight().ToString()) );
+            }
+            if ( obj.getX() != other.getX() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "X", other.getX().ToString(), obj.getX().ToString()) );
+            }
+            if ( obj.getY() != other.getY() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Y", other.getY().ToString(), obj.getY().ToString()) );
+            }
+            if ( obj.getHidden() != other.getHidden() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Hidden", other.getHidden().ToString(), obj.getHidden().ToString()) );
+            }
+            if ( obj.getPinned() != other.getPinned() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Pinned", other.getPinned().ToString(), obj.getPinned().ToString()) );
             }
         }
 
@@ -2244,6 +2272,30 @@ namespace DataDictionary.Compare
                     }
                 }
             }
+            if ( obj.getWidth() != other.getWidth() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Width", other.getWidth().ToString(), obj.getWidth().ToString()) );
+            }
+            if ( obj.getHeight() != other.getHeight() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Height", other.getHeight().ToString(), obj.getHeight().ToString()) );
+            }
+            if ( obj.getX() != other.getX() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "X", other.getX().ToString(), obj.getX().ToString()) );
+            }
+            if ( obj.getY() != other.getY() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Y", other.getY().ToString(), obj.getY().ToString()) );
+            }
+            if ( obj.getHidden() != other.getHidden() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Hidden", other.getHidden().ToString(), obj.getHidden().ToString()) );
+            }
+            if ( obj.getPinned() != other.getPinned() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Pinned", other.getPinned().ToString(), obj.getPinned().ToString()) );
+            }
         }
 
         /// <summary>
@@ -2427,6 +2479,10 @@ namespace DataDictionary.Compare
             {
                 diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Y", other.getY().ToString(), obj.getY().ToString()) );
             }
+            if ( obj.getPinned() != other.getPinned() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Pinned", other.getPinned().ToString(), obj.getPinned().ToString()) );
+            }
         }
 
         /// <summary>
@@ -2515,6 +2571,30 @@ namespace DataDictionary.Compare
                     }
                 }
             }
+            if ( obj.getWidth() != other.getWidth() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Width", other.getWidth().ToString(), obj.getWidth().ToString()) );
+            }
+            if ( obj.getHeight() != other.getHeight() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Height", other.getHeight().ToString(), obj.getHeight().ToString()) );
+            }
+            if ( obj.getX() != other.getX() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "X", other.getX().ToString(), obj.getX().ToString()) );
+            }
+            if ( obj.getY() != other.getY() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Y", other.getY().ToString(), obj.getY().ToString()) );
+            }
+            if ( obj.getHidden() != other.getHidden() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Hidden", other.getHidden().ToString(), obj.getHidden().ToString()) );
+            }
+            if ( obj.getPinned() != other.getPinned() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Pinned", other.getPinned().ToString(), obj.getPinned().ToString()) );
+            }
         }
 
         /// <summary>
@@ -2594,6 +2674,30 @@ namespace DataDictionary.Compare
                         diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aRemove , "Conditions", otherElement.Name) );
                     }
                 }
+            }
+            if ( obj.getWidth() != other.getWidth() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Width", other.getWidth().ToString(), obj.getWidth().ToString()) );
+            }
+            if ( obj.getHeight() != other.getHeight() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Height", other.getHeight().ToString(), obj.getHeight().ToString()) );
+            }
+            if ( obj.getX() != other.getX() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "X", other.getX().ToString(), obj.getX().ToString()) );
+            }
+            if ( obj.getY() != other.getY() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Y", other.getY().ToString(), obj.getY().ToString()) );
+            }
+            if ( obj.getHidden() != other.getHidden() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Hidden", other.getHidden().ToString(), obj.getHidden().ToString()) );
+            }
+            if ( obj.getPinned() != other.getPinned() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Pinned", other.getPinned().ToString(), obj.getPinned().ToString()) );
             }
         }
 
@@ -4566,6 +4670,10 @@ namespace DataDictionary.Compare
             if ( obj.getDefault() != other.getDefault() )
             {
                 diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Default", other.getDefault().ToString(), obj.getDefault().ToString()) );
+            }
+            if ( obj.getPinned() != other.getPinned() )
+            {
+                diff.appendChanges ( new Diff(obj, HistoricalData.Generated.acceptor.ChangeOperationEnum.aChange, "Pinned", other.getPinned().ToString(), obj.getPinned().ToString()) );
             }
         }
 

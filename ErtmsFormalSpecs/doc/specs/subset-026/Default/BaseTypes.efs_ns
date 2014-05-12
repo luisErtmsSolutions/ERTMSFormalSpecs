@@ -1,4 +1,8 @@
 <NameSpace
+ X="820"
+ Y="80"
+ Width="100"
+ Height="50"
  Name="BaseTypes"
  Guid="2a7d1254-c37b-451b-83c4-3174d5d3a1c4"
 >
@@ -166,6 +170,7 @@
 <Functions>
 <Function
  Type="BaseTypes.Length"
+ Default=""
  NeedsRequirement="FALSE"
  Name="DistanceToLength"
  Guid="3183ca17-f2a7-4c82-92ba-291cce34a2bf"
@@ -202,6 +207,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  NeedsRequirement="FALSE"
  Name="LengthToDistance"
  Guid="54e75178-8c9b-4843-8821-d997840a91fb"
@@ -238,6 +244,7 @@
 </Case></Cases>
 </Function><Function
  Type="Gradient"
+ Default=""
  NeedsRequirement="FALSE"
  Name="IndefiniteGradientFunction"
  Guid="800dfab5-6aa8-4ce2-a93c-a661bd3ac496"
@@ -259,6 +266,7 @@
 </Case></Cases>
 </Function><Function
  Type="Gradient"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="MinGradient"
@@ -313,6 +321,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="MinSpeed"
@@ -367,6 +376,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="MaxSpeedFunction"
@@ -389,6 +399,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="MinAcceleration"
@@ -443,6 +454,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="AddDistance"
@@ -479,6 +491,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Length"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="MinLength"
@@ -533,6 +546,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="MaxDistance"
@@ -587,6 +601,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="MaxSpeed"
@@ -641,6 +656,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="MaxTime"
@@ -695,6 +711,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Acceleration"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="MaxAcceleration"
@@ -749,6 +766,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="MinDistance"
@@ -803,6 +821,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="AbsoluteSpeed"
@@ -834,6 +853,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Length"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="MaxLength"
@@ -888,6 +908,7 @@
 </Case></Cases>
 </Function><Function
  Type="BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SpeedToMS"
@@ -910,6 +931,7 @@
 </Case></Cases>
 </Function><Function
  Type="BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SpeedToKmH"

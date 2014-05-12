@@ -1,8 +1,9 @@
 <NameSpace
- X="30"
- Y="10"
+ X="1100"
+ Y="660"
  Width="100"
  Height="50"
+ Pinned="TRUE"
  Name="ConfidenceInterval"
  Guid="17a181d0-e8b0-4a15-a486-e4c8d384e6bd"
 >
@@ -11,6 +12,9 @@
 <Functions>
 <Function
  Type="Default.BaseTypes.Length"
+ Default=""
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AdditionalConfidenceInterval"
  Guid="36980024-60a3-4538-a230-15555f13a173"
@@ -53,6 +57,10 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Length"
+ Default=""
+ X="110"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AdditionalOverReadingAmount"
  Guid="241d3685-2625-46b5-816e-2c3bbde2e2da"
@@ -75,6 +83,10 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Length"
+ Default=""
+ X="220"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AdditionalUnderReadingAmount"
  Guid="667a637a-a2cf-451f-9d63-5e1ca260c99d"
@@ -97,6 +109,10 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Length"
+ Default=""
+ X="330"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="OverReadingAmount"
  Guid="87e19358-e57c-46e5-b2cb-d2034ef39b71"
@@ -130,6 +146,10 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Length"
+ Default=""
+ X="440"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="UnderReadingAmount"
  Guid="e23cc11d-fec9-4b9b-91f2-c053690c5421"
@@ -163,6 +183,10 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Length"
+ Default=""
+ X="550"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="ConfidenceInterval"
  Guid="a40dfb8e-8d14-4ca5-a849-7ff2e9b645c9"

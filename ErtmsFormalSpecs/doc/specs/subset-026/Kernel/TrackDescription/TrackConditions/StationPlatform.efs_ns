@@ -6,6 +6,7 @@
 </NameSpaces>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  Name="StationPlatform"
  Guid="1d309980-5fef-4858-8509-9698eac509ae"
@@ -59,6 +60,7 @@
 >
 </ReqRef><Comment>Is True if the train needs to account for platform information</Comment>
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  Name="StationPlatformInformation"
  Guid="11a0f7bd-dbea-4a8c-b7af-4671a9a9da53"
@@ -132,6 +134,7 @@
 <Functions>
 <Function
  Type="StationPlatformInformation"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="MakeSPProfilePoint"
@@ -188,6 +191,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  Name="SPSectionEnd"
  Guid="624a6a0a-0d06-472e-8e14-3c10b530d8f9"
@@ -230,6 +234,7 @@
 </Case></Cases>
 </Function><Function
  Type="StationPlatform"
+ Default=""
  Implemented="TRUE"
  Name="SPAtDistance"
  Guid="dd1482f8-b3f0-45cb-b664-2b54999b8470"
@@ -269,6 +274,7 @@
 </Case></Cases>
 </Function><Function
  Type="StationPlatform"
+ Default=""
  Implemented="TRUE"
  Name="CurrentSPConditions"
  Guid="939f5bc3-3549-4fe0-9107-c125fd161569"
@@ -300,6 +306,7 @@ SPAtDistance(TrainPosition.FrontEndPosition(Default.DistanceInterval.Min)).Enabl
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SPProfileStartLocation"

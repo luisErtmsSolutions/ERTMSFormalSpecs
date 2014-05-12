@@ -24,6 +24,7 @@ namespace GUI.Converters
     using System.Windows.Forms.Design;
     using DataDictionary;
     using System.Windows.Forms;
+    using GUI.EditorView;
 
     /// <summary>
     /// TODO: Update summary.
@@ -33,57 +34,6 @@ namespace GUI.Converters
         public override UITypeEditorEditStyle GetEditStyle(ITypeDescriptorContext context)
         {
             return UITypeEditorEditStyle.Modal;
-        }
-
-        /// <summary>
-        /// Sets the string value into the right property
-        /// </summary>
-        /// <param name="instance"></param>
-        /// <param name="value"></param>
-        private class TextChangeHandler : EditorForm.HandleTextChange
-        {
-            /// <summary>
-            /// Constructor
-            /// </summary>
-            /// <param name="instance"></param>
-            public TextChangeHandler(ModelElement instance)
-                : base(instance)
-            {
-            }
-
-            /// <summary>
-            /// The way text is retrieved from the instance
-            /// </summary>
-            /// <returns></returns>
-            public override string GetText()
-            {
-                string retVal = "";
-                DataDictionary.Variables.IVariable variable = Instance as DataDictionary.Variables.IVariable;
-
-                if (variable != null)
-                {
-                    retVal = variable.Value.LiteralName;
-                }
-                return retVal;
-            }
-
-            /// <summary>
-            /// The way text is set back in the instance
-            /// </summary>
-            /// <returns></returns>
-            public override void SetText(string text)
-            {
-                DataDictionary.Variables.IVariable variable = Instance as DataDictionary.Variables.IVariable;
-
-                if (variable != null && variable.Type != null)
-                {
-                    DataDictionary.Values.IValue value = variable.Type.getValue(text);
-                    if (value != null)
-                    {
-                        variable.Value = value;
-                    }
-                }
-            }
         }
 
         /// <summary>
@@ -113,9 +63,9 @@ namespace GUI.Converters
                 DataDictionary.Variables.IVariable variable = value as DataDictionary.Variables.IVariable;
                 if (variable != null)
                 {
-                    EditorForm form = new EditorForm();
+                    EditorView.Window form = new EditorView.Window();
                     form.AutoComplete = true;
-                    TextChangeHandler handler = new TextChangeHandler(variable as ModelElement);
+                    VariableValueTextChangeHandler handler = new VariableValueTextChangeHandler(variable as ModelElement);
                     form.setChangeHandler(handler);
                     GUIUtils.MDIWindow.AddChildWindow(form, WeifenLuo.WinFormsUI.Docking.DockAreas.Float);
                 }

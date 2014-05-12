@@ -6,6 +6,7 @@
 </NameSpaces>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  Name="TractionSystem"
  Guid="44d803d3-4953-4340-b09a-f47f0ee996ef"
@@ -45,6 +46,7 @@
 >
 </ReqRef><Comment>Traction system to be used</Comment>
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  Name="TractionSystemInformation"
  Guid="5881ab92-0757-408b-aece-398ffeb03a16"
@@ -113,6 +115,7 @@
 <Functions>
 <Function
  Type="TractionSystem"
+ Default=""
  Implemented="TRUE"
  Name="CurrentTSConditions"
  Guid="2233537a-fd58-4324-aa5d-62e34a8d754d"
@@ -135,6 +138,7 @@
 </Case></Cases>
 </Function><Function
  Type="TractionSystem"
+ Default=""
  Implemented="TRUE"
  Name="TSAtDistance"
  Guid="038fe2b8-4470-4c67-af8d-0570a63018bc"
@@ -187,6 +191,7 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="TSProfileStartLocation"

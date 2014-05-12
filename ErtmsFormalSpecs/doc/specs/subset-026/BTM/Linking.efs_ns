@@ -1,12 +1,23 @@
 <NameSpace
+ X="40"
+ Y="620"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Name="Linking"
  Guid="9f9dab4e-f382-4269-bbaa-ca168d2a7aef"
 >
+<Comment></Comment>
 <NameSpaces>
 </NameSpaces>
 <Enumerations>
 <Enum
  Default="LinkingReaction.NoReaction"
+ X="840"
+ Y="420"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Verified="TRUE"
  Name="LinkingReaction"
@@ -38,6 +49,12 @@
 </Enum></Enumerations>
 <Structures>
 <Structure
+ Default=""
+ X="670"
+ Y="420"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="LinkingData"
  Guid="039faab4-39ea-4dfc-864e-e17bf3ad51d8"
@@ -147,6 +164,11 @@ Since this only stores what is inside Q_LOCACC (which can only be in the range o
  TypeName="LinkingData"
  MaxSize="30"
  Default="[]"
+ X="500"
+ Y="420"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Verified="TRUE"
  Name="Linkings"
@@ -162,6 +184,12 @@ Since this only stores what is inside Q_LOCACC (which can only be in the range o
 <Functions>
 <Function
  Type="LinkingData"
+ Default=""
+ X="170"
+ Y="210"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Verified="TRUE"
  NeedsRequirement="FALSE"
@@ -216,6 +244,12 @@ Since this only stores what is inside Q_LOCACC (which can only be in the range o
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="170"
+ Y="30"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Verified="TRUE"
  NeedsRequirement="FALSE"
@@ -271,6 +305,12 @@ AND
 </Case></Cases>
 </Function><Function
  Type="LinkingData"
+ Default=""
+ X="60"
+ Y="30"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Verified="TRUE"
  Name="CurrentLinking"
@@ -291,6 +331,12 @@ AND
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="280"
+ Y="30"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Verified="TRUE"
  Name="BGIsUnknownWithRepositioningPacketValidForDirection"
@@ -345,6 +391,12 @@ BaliseGroupOrientation() == CurrentLinking().Orientation</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="60"
+ Y="90"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Verified="TRUE"
  NeedsRequirement="FALSE"
@@ -377,6 +429,12 @@ BaliseGroupOrientation() == CurrentLinking().Orientation</Expression>
 </Case></Cases>
 </Function><Function
  Type="LinkingReaction"
+ Default=""
+ X="60"
+ Y="210"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Verified="TRUE"
  Name="ConvertLinkingReaction"
@@ -426,6 +484,12 @@ BaliseGroupOrientation() == CurrentLinking().Orientation</Expression>
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="170"
+ Y="90"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="LinkingApplicable"
  Guid="2d83fff9-37ec-4fbe-9060-54191f0078ad"
@@ -456,6 +520,12 @@ Justification: This simple function can be used here since the update of availab
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="280"
+ Y="150"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CurrentBGIsLinked"
@@ -478,6 +548,12 @@ FORALL_IN is defensive programming; if the Collection does not have the same val
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="170"
+ Y="150"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="ConsiderUnlinkedBG"
  Guid="dfd8d051-1d51-408f-bb7b-11e260f03e0c"
@@ -499,6 +575,12 @@ FORALL_IN is defensive programming; if the Collection does not have the same val
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="280"
+ Y="90"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="BGIdentityIsValid"
  Guid="736c1e29-e6c1-4329-9a11-181c45d8baa8"
@@ -523,6 +605,12 @@ FORALL_IN is defensive programming; if the Collection does not have the same val
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="60"
+ Y="150"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="TelegramContainsRepositioningInformation"
  Guid="9182d2c5-6efd-4550-ab3d-aac0b5fe4935"
@@ -549,6 +637,12 @@ FORALL_IN is defensive programming; if the Collection does not have the same val
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="280"
+ Y="210"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="ConsistencyError"
  Guid="de79a9cc-73a2-4121-a5ba-eca8a13d75f2"
@@ -616,6 +710,11 @@ CurrentBGWithinFrame()</PreCondition></PreConditions>
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="390"
+ Y="30"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="BGOrientationIsValid"
  Guid="f13ce9c3-8102-404b-9859-179d2c0824fd"
@@ -635,6 +734,12 @@ CurrentBGWithinFrame()</PreCondition></PreConditions>
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="390"
+ Y="90"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="ConsiderBGWithoutLinking"
  Guid="4ebe43f9-4084-42e5-9c71-54b4123a39a3"
@@ -678,6 +783,12 @@ CurrentBGWithinFrame()</PreCondition></PreConditions>
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="390"
+ Y="150"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="ConsiderBGWithLinking"
  Guid="d0a2ce43-1128-4658-89f2-e65df01f1238"
@@ -714,6 +825,9 @@ CurrentBGWithinFrame()</PreCondition></PreConditions>
 </Function></Functions>
 <Procedures>
 <Procedure
+ X="640"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="LinkingInformationReceived"
@@ -848,6 +962,9 @@ IN Linkings</Action></Actions>
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="750"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Verified="TRUE"
  NeedsRequirement="FALSE"
@@ -902,6 +1019,9 @@ IN Linkings</Action></Actions>
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="860"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="StopExpectingCurrentBG"
  Guid="daa0e49f-223d-401a-b2e6-4c43a5fed628"
@@ -942,6 +1062,10 @@ This function is called whenever it is appropriate, so it does not need any prec
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="640"
+ Y="60"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="ApplyLinkingReaction"
  Guid="6ec21532-1ddc-4a6e-81f8-749ef96463da"
@@ -1066,6 +1190,11 @@ This function is called whenever it is appropriate, so it does not need any prec
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="860"
+ Y="60"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="CheckBGBeforeHandling"
  Guid="46db880c-ef3f-4a0a-b4cc-e2d35ba556b3"
@@ -1346,6 +1475,11 @@ If the BG was passed in the right direction, handle the message. If not, the tra
  Type="Linkings"
  DefaultValue="[]"
  VariableMode="Internal"
+ X="500"
+ Y="320"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Verified="TRUE"
  NeedsRequirement="FALSE"
@@ -1365,7 +1499,13 @@ If the BG was passed in the right direction, handle the message. If not, the tra
 </ReqRef><Comment>Stores the next linking data as provided by the balises</Comment>
 </Variable><Variable
  Type="Boolean"
+ DefaultValue=""
  VariableMode="Internal"
+ X="260"
+ Y="320"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="EarlyReception"
@@ -1376,6 +1516,11 @@ If the BG was passed in the right direction, handle the message. If not, the tra
  Type="Boolean"
  DefaultValue="False"
  VariableMode="Internal"
+ X="380"
+ Y="320"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="TrainTripDueToLinkingInconsistency"
  Guid="59b44451-8f40-4f77-9cd0-735dfe0b317b"
@@ -1390,6 +1535,11 @@ If the BG was passed in the right direction, handle the message. If not, the tra
 <Rules>
 <Rule
  Priority="CleanUp"
+ X="60"
+ Y="510"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CleanUpLinkingReaction"

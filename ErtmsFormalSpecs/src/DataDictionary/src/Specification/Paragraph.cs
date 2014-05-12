@@ -780,5 +780,37 @@ namespace DataDictionary.Specification
                 enclosing.FillApplicableRequirementSets(applicableRequirementSets, true);
             }
         }
+
+        /// <summary>
+        /// Indicates if all implementations of the paragraph have been verified
+        /// If there are none, returns false
+        /// </summary>
+        public bool Verified
+        {
+            get
+            {
+                bool retVal = true;
+
+                bool reqRelatedFound = false;
+                foreach (DataDictionary.ReqRef reqRef in Implementations)
+                {
+                    ReqRelated reqRelated = reqRef.Model as ReqRelated;
+
+                    if (reqRelated != null)
+                    {
+                        retVal = retVal && reqRelated.getVerified();
+                        reqRelatedFound = true;
+                    }
+                }
+
+                if(!reqRelatedFound)
+                {
+                    retVal = false;
+                }
+
+                return retVal;
+            }
+        }
+
     }
 }

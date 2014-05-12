@@ -37,6 +37,7 @@ Source: ..\..\bin\log4net.dll; DestDir: {app}\bin; Flags: ignoreversion
 Source: ..\..\bin\ICSharpCode.SharpZipLib.dll; DestDir: {app}\bin; Flags: ignoreversion
 Source: ..\..\bin\LibGit2Sharp.dll; DestDir: {app}\bin; Flags: ignoreversion
 Source: ..\..\bin\WeifenLuo.WinFormsUI.Docking.dll; DestDir: {app}\bin; Flags: ignoreversion
+Source: ..\..\bin\ObjectListView.dll; DestDir: {app}\bin; Flags: ignoreversion
 Source: ..\..\bin\NativeBinaries\*; DestDir: {app}\bin\NativeBinaries; Flags: recursesubdirs
 Source: ..\etc\logconfig.xml; DestDir: {app}\bin; Flags: ignoreversion
 

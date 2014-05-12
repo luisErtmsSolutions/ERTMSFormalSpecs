@@ -1,15 +1,20 @@
 <NameSpace
- X="490"
- Y="420"
+ X="570"
+ Y="100"
  Width="100"
  Height="50"
+ Pinned="TRUE"
  Name="JRU"
  Guid="eb4c743a-9cf0-4670-ae78-1c658e68b69d"
 >
+<Comment></Comment>
 <NameSpaces>
 </NameSpaces>
 <Structures>
 <Structure
+ Default=""
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="JRU"
  Guid="fcd8bc1d-4787-454f-a0d1-863a0d566326"
@@ -1564,6 +1569,9 @@ SPEED_AND_DISTANCE_MONITORING_INFORMATION =&gt; CreateJruSpeedAndDistanceMonitor
  TypeName="Messages.JRU.MESSAGE.Message"
  MaxSize="30"
  Default="[]"
+ Y="60"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="JRUMessagesCollection"
  Guid="eb0177e5-5953-4de1-a99a-dd82f1fa7fd2"
@@ -1638,6 +1646,10 @@ SPEED_AND_DISTANCE_MONITORING_INFORMATION =&gt; CreateJruSpeedAndDistanceMonitor
 <Functions>
 <Function
  Type="Messages.JRU.MESSAGE.GENERAL_MESSAGE.Message"
+ Default=""
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateGeneralMessage"
  Guid="18992937-700e-4c32-8c61-b76ff205298f"
@@ -1684,6 +1696,11 @@ SPEED_AND_DISTANCE_MONITORING_INFORMATION =&gt; CreateJruSpeedAndDistanceMonitor
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.HEADER.Message"
+ Default=""
+ X="110"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateHeader"
  Guid="9962f540-f94d-473f-91e9-bc737b1a13a7"
@@ -1790,6 +1807,11 @@ SPEED_AND_DISTANCE_MONITORING_INFORMATION =&gt; CreateJruSpeedAndDistanceMonitor
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.LEVEL"
+ Default=""
+ X="220"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruLevel"
@@ -1852,6 +1874,11 @@ SPEED_AND_DISTANCE_MONITORING_INFORMATION =&gt; CreateJruSpeedAndDistanceMonitor
 </Case></Cases>
 </Function><Function
  Type="Messages.M_MODE"
+ Default=""
+ X="330"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruMode"
@@ -2013,6 +2040,11 @@ SPEED_AND_DISTANCE_MONITORING_INFORMATION =&gt; CreateJruSpeedAndDistanceMonitor
 </Case></Cases>
 </Function><Function
  Type="MessageTypes.Speed"
+ Default=""
+ X="440"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruVtrain"
@@ -2037,6 +2069,11 @@ SPEED_AND_DISTANCE_MONITORING_INFORMATION =&gt; CreateJruSpeedAndDistanceMonitor
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.SYSTEM_VERSION"
+ Default=""
+ X="550"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruSystemVersion"
@@ -2086,6 +2123,11 @@ SPEED_AND_DISTANCE_MONITORING_INFORMATION =&gt; CreateJruSpeedAndDistanceMonitor
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.MESSAGE.NTC_SELECTED.Message"
+ Default=""
+ X="660"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateNtcSelectedMessage"
  Guid="7392d91f-bade-43c1-a05e-f23920977933"
@@ -2118,6 +2160,11 @@ NID_NTC =&gt; ToJruNidNtc((Kernel.NationalSystemId))
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.NID_NTC"
+ Default=""
+ X="770"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruNidNtc"
@@ -2144,6 +2191,11 @@ NID_NTC =&gt; ToJruNidNtc((Kernel.NationalSystemId))
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="880"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SendNewMessage"
  Guid="0b310333-5920-48db-b09d-f00052cdad46"
@@ -2356,6 +2408,11 @@ SendMTCOMessage(jru)</PreCondition><PreCondition
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="990"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Verified="TRUE"
  Name="LevelChanged"
@@ -2392,6 +2449,11 @@ SendMTCOMessage(jru)</PreCondition><PreCondition
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="1100"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Verified="TRUE"
  Name="SendMessagePeriodically"
@@ -2428,6 +2490,10 @@ SendMTCOMessage(jru)</PreCondition><PreCondition
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ Y="240"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Verified="TRUE"
  Name="ModeChanged"
@@ -2464,6 +2530,11 @@ SendMTCOMessage(jru)</PreCondition><PreCondition
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="110"
+ Y="240"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Verified="TRUE"
  Name="SystemVersionChanged"
@@ -2500,6 +2571,11 @@ SendMTCOMessage(jru)</PreCondition><PreCondition
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="220"
+ Y="240"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Verified="TRUE"
  Name="LevelChangedToNtc"
@@ -2536,6 +2612,11 @@ SendMTCOMessage(jru)</PreCondition><PreCondition
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="330"
+ Y="240"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SendNewGeneralMessage"
  Guid="ef1a800b-b23e-497d-91c6-1239c55b99c2"
@@ -2592,6 +2673,11 @@ OR
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.MESSAGE.TRAIN_DATA.Message"
+ Default=""
+ X="440"
+ Y="240"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateTrainDataMessage"
  Guid="64a9ed0a-2fd4-4fac-8013-c98a74c72536"
@@ -2647,6 +2733,11 @@ M_AIRTIGHT =&gt; ToJruM_AirTight(Kernel.TrainData.TrainData.Value.TrainFittedWit
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="550"
+ Y="240"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TrainDataVerified"
  Guid="e6117187-60a6-4ac3-9012-2fed71d768e2"
@@ -2675,6 +2766,11 @@ M_AIRTIGHT =&gt; ToJruM_AirTight(Kernel.TrainData.TrainData.Value.TrainFittedWit
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_BRAKE_POSITION"
+ Default=""
+ X="660"
+ Y="240"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruMbrakePosition"
@@ -2719,6 +2815,11 @@ M_AIRTIGHT =&gt; ToJruM_AirTight(Kernel.TrainData.TrainData.Value.TrainFittedWit
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_NOM_ROT_MASS"
+ Default=""
+ X="770"
+ Y="240"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruNomRotMass"
@@ -2750,6 +2851,11 @@ M_AIRTIGHT =&gt; ToJruM_AirTight(Kernel.TrainData.TrainData.Value.TrainFittedWit
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_REGENERATIVEBRAKE"
+ Default=""
+ X="880"
+ Y="240"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruMRegenerativeBrake"
@@ -2803,6 +2909,11 @@ M_AIRTIGHT =&gt; ToJruM_AirTight(Kernel.TrainData.TrainData.Value.TrainFittedWit
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_EDDYCURRENTBRAKE"
+ Default=""
+ X="990"
+ Y="240"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruMEddyCurrentBrake"
@@ -2856,6 +2967,11 @@ M_AIRTIGHT =&gt; ToJruM_AirTight(Kernel.TrainData.TrainData.Value.TrainFittedWit
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_MAGNETICSHOEBRAKE"
+ Default=""
+ X="1100"
+ Y="240"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruMMagneticShoeBrake"
@@ -2909,6 +3025,10 @@ M_AIRTIGHT =&gt; ToJruM_AirTight(Kernel.TrainData.TrainData.Value.TrainFittedWit
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_REGENERATIVEBRAKE"
+ Default=""
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruEpBrake"
@@ -2962,6 +3082,11 @@ M_AIRTIGHT =&gt; ToJruM_AirTight(Kernel.TrainData.TrainData.Value.TrainFittedWit
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.Q_TRACTIONCUTOFFINTERFACE"
+ Default=""
+ X="110"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruQ_TractionCutOffFunction"
@@ -2997,6 +3122,11 @@ M_AIRTIGHT =&gt; ToJruM_AirTight(Kernel.TrainData.TrainData.Value.TrainFittedWit
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.Q_SERVICEBRAKEINTERFACE"
+ Default=""
+ X="220"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruQ_ServiceBrakeInterface"
@@ -3032,6 +3162,11 @@ M_AIRTIGHT =&gt; ToJruM_AirTight(Kernel.TrainData.TrainData.Value.TrainFittedWit
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.Q_SERVICEBRAKEFEEDBACK"
+ Default=""
+ X="330"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruQ_ServiceBrakeFeedback"
@@ -3067,6 +3202,11 @@ M_AIRTIGHT =&gt; ToJruM_AirTight(Kernel.TrainData.TrainData.Value.TrainFittedWit
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.Q_BRAKE_CAPT_TYPE"
+ Default=""
+ X="440"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruQ_BrakeCaptType"
@@ -3095,6 +3235,11 @@ M_AIRTIGHT =&gt; ToJruM_AirTight(Kernel.TrainData.TrainData.Value.TrainFittedWit
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_BRAKE_PERCENTAGE"
+ Default=""
+ X="550"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruBrakePercentage"
@@ -3126,6 +3271,11 @@ M_AIRTIGHT =&gt; ToJruM_AirTight(Kernel.TrainData.TrainData.Value.TrainFittedWit
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_AIRTIGHT"
+ Default=""
+ X="660"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruM_AirTight"
@@ -3166,6 +3316,11 @@ M_AIRTIGHT =&gt; ToJruM_AirTight(Kernel.TrainData.TrainData.Value.TrainFittedWit
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="770"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="EmergencyBrakeStatusChanged"
  Guid="6da00ec9-89e7-4c01-8b9d-9ab8ebcdd6d8"
@@ -3201,6 +3356,11 @@ M_AIRTIGHT =&gt; ToJruM_AirTight(Kernel.TrainData.TrainData.Value.TrainFittedWit
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.MESSAGE.EMERGENCY_BRAKE_COMMAND_STATE.Message"
+ Default=""
+ X="880"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateEBCommandStateMessage"
  Guid="0383907d-771d-458e-9f7e-5ae17b398ee3"
@@ -3233,6 +3393,11 @@ M_BRAKE_COMMAND_STATE=&gt;ToJruEBCommanded()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_BRAKE_COMMAND_STATE"
+ Default=""
+ X="990"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruEBCommanded"
@@ -3261,6 +3426,11 @@ M_BRAKE_COMMAND_STATE=&gt;ToJruEBCommanded()
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="1100"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TrainDataHaveChanged"
  Guid="eb4777aa-225d-4faa-8b30-2eb0c633e334"
@@ -3300,6 +3470,10 @@ M_BRAKE_COMMAND_STATE=&gt;ToJruEBCommanded()
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SendTrainDataMessage"
  Guid="3ab09d11-2939-4759-9ae4-4720b8542ee2"
@@ -3340,6 +3514,11 @@ M_BRAKE_COMMAND_STATE=&gt;ToJruEBCommanded()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.MESSAGE.SERVICE_BRAKE_COMMAND_STATE.Message"
+ Default=""
+ X="110"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateSBCommandStateMessage"
  Guid="28e96520-02a7-4e65-a648-e4bf6beca53d"
@@ -3372,6 +3551,11 @@ M_BRAKE_COMMAND_STATE=&gt;ToJruSBCommanded()
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="220"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="ServiceBrakeStatusChanged"
  Guid="19ea6022-b75d-452c-9a0e-a06736cf8fcc"
@@ -3407,6 +3591,11 @@ M_BRAKE_COMMAND_STATE=&gt;ToJruSBCommanded()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_BRAKE_COMMAND_STATE"
+ Default=""
+ X="330"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruSBCommanded"
@@ -3435,6 +3624,11 @@ M_BRAKE_COMMAND_STATE=&gt;ToJruSBCommanded()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.NID_LRBG"
+ Default=""
+ X="440"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruNidLRBG"
@@ -3466,6 +3660,11 @@ M_BRAKE_COMMAND_STATE=&gt;ToJruSBCommanded()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.Q_DLRBG"
+ Default=""
+ X="550"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruQdirLRBG"
@@ -3510,6 +3709,11 @@ M_BRAKE_COMMAND_STATE=&gt;ToJruSBCommanded()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.Q_DLRBG"
+ Default=""
+ X="660"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruQDLRBG"
@@ -3554,6 +3758,11 @@ M_BRAKE_COMMAND_STATE=&gt;ToJruSBCommanded()
 </Case></Cases>
 </Function><Function
  Type="MessageTypes.Length"
+ Default=""
+ X="770"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruLDoubtOver"
@@ -3576,6 +3785,11 @@ M_BRAKE_COMMAND_STATE=&gt;ToJruSBCommanded()
 </Case></Cases>
 </Function><Function
  Type="MessageTypes.Length"
+ Default=""
+ X="880"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruLDoubtUnder"
@@ -3598,6 +3812,11 @@ M_BRAKE_COMMAND_STATE=&gt;ToJruSBCommanded()
 </Case></Cases>
 </Function><Function
  Type="MessageTypes.Distance"
+ Default=""
+ X="990"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruDLRBG"
@@ -3620,6 +3839,11 @@ M_BRAKE_COMMAND_STATE=&gt;ToJruSBCommanded()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.Q_SCALE"
+ Default=""
+ X="1100"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruQScale"
@@ -3664,6 +3888,10 @@ M_BRAKE_COMMAND_STATE=&gt;ToJruSBCommanded()
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TelegramFromBaliseRecieved"
  Guid="0fea15cc-3567-478e-9175-1c3ff3c8fe3b"
@@ -3692,6 +3920,11 @@ M_BRAKE_COMMAND_STATE=&gt;ToJruSBCommanded()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.MESSAGE.TELEGRAM_FROM_BALISE.Message"
+ Default=""
+ X="110"
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateJruTelegramFromBaliseMessage"
  Guid="752aebcd-1a1d-41c5-b68d-9080b2aab245"
@@ -3724,6 +3957,11 @@ TELEGRAM=&gt; BTM.Message
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.MESSAGE.FROM_RBC.Message"
+ Default=""
+ X="220"
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateMessageFromRbc"
  Guid="51063217-69fa-48a3-bafe-94e6d388ec0e"
@@ -3770,6 +4008,11 @@ TELEGRAM =&gt; RbcInfo.MessageIn
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.MESSAGE.TO_RBC.Message"
+ Default=""
+ X="330"
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateMessageToRbc"
  Guid="5ffc2eed-e108-4034-8acb-07bb423b991f"
@@ -3817,6 +4060,11 @@ TELEGRAM =&gt; RbcInfo.MessageOut
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="440"
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="MessageToRbcReady"
  Guid="38b712dc-b8aa-4b95-8d2b-20801254cffe"
@@ -3852,6 +4100,11 @@ TELEGRAM =&gt; RbcInfo.MessageOut
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="550"
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="MessageFromRbcRecieved"
  Guid="112cf923-4d83-4e00-a970-89c06e5bb18c"
@@ -3887,6 +4140,11 @@ TELEGRAM =&gt; RbcInfo.MessageOut
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.MESSAGE.CAB_STATUS.Message"
+ Default=""
+ X="660"
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateCabStatusJruMessage"
  Guid="6d8db90d-bd08-46be-a60d-39853472f958"
@@ -3923,6 +4181,11 @@ M_CAB_A_STATUS =&gt;ToJruCabAStatus(),
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_CAB_A_STATUS"
+ Default=""
+ X="770"
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruCabAStatus"
@@ -3947,6 +4210,11 @@ M_CAB_A_STATUS =&gt;ToJruCabAStatus(),
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_CAB_A_STATUS"
+ Default=""
+ X="880"
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruCabBStatus"
@@ -3971,6 +4239,11 @@ M_CAB_A_STATUS =&gt;ToJruCabAStatus(),
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.Q_CAB_B"
+ Default=""
+ X="990"
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SecondCabIsPresent"
  Guid="d601fc2a-debc-4465-b83d-844a21df6859"
@@ -3999,6 +4272,11 @@ M_CAB_A_STATUS =&gt;ToJruCabAStatus(),
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_CAB_B_STATUS"
+ Default=""
+ X="1100"
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SelectCabBStatus"
  Guid="a8d0beb7-0fc9-452b-8c48-4be90c1a7f66"
@@ -4027,6 +4305,10 @@ M_CAB_A_STATUS =&gt;ToJruCabAStatus(),
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ Y="480"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CabAStatusChanged"
  Guid="10070a2d-8d35-495c-bad7-69256cc83f62"
@@ -4068,6 +4350,11 @@ OR
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="110"
+ Y="480"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CabBStatusChanged"
  Guid="cadeed9a-5ae4-4da9-af75-a6c70bb5c7e8"
@@ -4109,6 +4396,11 @@ OR
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="220"
+ Y="480"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CabIsFittedWithSingleDesk"
  Guid="95ff4c50-8557-48ff-a315-d5d94558b975"
@@ -4139,6 +4431,11 @@ OR
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.Q_SINGLE_DESK"
+ Default=""
+ X="330"
+ Y="480"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SelectSingleDeskValue"
  Guid="4bb0f149-1978-4ae3-baa3-75ea39730c5c"
@@ -4180,6 +4477,11 @@ AND
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_TRAIN_ORIENTATION"
+ Default=""
+ X="440"
+ Y="480"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruMTrainOrientation"
@@ -4221,6 +4523,11 @@ AND
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_DIRECTION_CONTROLLER"
+ Default=""
+ X="550"
+ Y="480"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruDirectionController"
@@ -4265,6 +4572,11 @@ AND
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.MESSAGE.DIRECTION_CONTROLLER_POSITION.Message"
+ Default=""
+ X="660"
+ Y="480"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateDirectionControllerPositionJruMessage"
  Guid="70f6f535-43ba-4741-8bd0-1c123a55cfd5"
@@ -4298,6 +4610,11 @@ M_DIRECTION_CONTROLLER =&gt; ToJruDirectionController(
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="770"
+ Y="480"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SendTrainDirectionControllerMessage"
  Guid="6fef108c-733c-4e33-8d63-457637f02344"
@@ -4357,6 +4674,11 @@ OR
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="880"
+ Y="480"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SendCabStatusMessage"
  Guid="bd5a7101-101b-4236-93d4-08fa993777af"
@@ -4403,6 +4725,11 @@ OR
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_TRACTION_STATUS"
+ Default=""
+ X="990"
+ Y="480"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruTractionStatus"
@@ -4431,6 +4758,11 @@ OR
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.MESSAGE.TRACTION_STATUS.Message"
+ Default=""
+ X="1100"
+ Y="480"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateTractionStatusMessage"
  Guid="9f0cd0e0-cbb2-4ca1-a01c-849ea837d233"
@@ -4463,6 +4795,10 @@ M_TRACTION_STATUS=&gt;ToJruTractionStatus()
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ Y="540"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SendTractionStatusMessage"
  Guid="8db5797c-a0ea-46ef-82f6-53a034950db4"
@@ -4507,6 +4843,11 @@ M_TRACTION_STATUS=&gt;ToJruTractionStatus()
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="110"
+ Y="540"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TractionStatusChanged"
  Guid="520f27ac-f68a-446e-814f-d10400c9593f"
@@ -4542,6 +4883,11 @@ M_TRACTION_STATUS=&gt;ToJruTractionStatus()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_TRAIN_DATA_ENTRY"
+ Default=""
+ X="220"
+ Y="540"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruTrainDataEntry"
@@ -4579,6 +4925,11 @@ M_TRACTION_STATUS=&gt;ToJruTractionStatus()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.MESSAGE.TYPE_OF_TRAIN_DATA_ENTRY.Message"
+ Default=""
+ X="330"
+ Y="540"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateTrainDataEntryMessage"
  Guid="c138db8f-548a-408d-8cc1-d2caf521bd9d"
@@ -4612,6 +4963,11 @@ M_TRAIN_DATA_ENTRY=&gt;ToJruTrainDataEntry()
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="440"
+ Y="540"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SendTrainDataEntry"
  Guid="2976de70-0e85-48b3-a380-2fd0df4d5600"
@@ -4665,6 +5021,11 @@ M_TRAIN_DATA_ENTRY=&gt;ToJruTrainDataEntry()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_NATIONAL_SYSTEM_ISOLATION"
+ Default=""
+ X="550"
+ Y="540"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruNtcIsolated"
@@ -4693,6 +5054,11 @@ M_TRAIN_DATA_ENTRY=&gt;ToJruTrainDataEntry()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.MESSAGE.NATIONAL_SYSTEM_ISOLATION.Message"
+ Default=""
+ X="660"
+ Y="540"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateNationalSystemsIsolationMessage"
  Guid="11a2ab3b-0534-41f8-bf09-7a0941b19454"
@@ -4727,6 +5093,11 @@ M_TRAIN_DATA_ENTRY=&gt;ToJruTrainDataEntry()
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="770"
+ Y="540"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SendNationalSystemIsolationMessage"
  Guid="d0053f41-2e5e-46c6-b1a4-2eedac25a3f8"
@@ -4771,6 +5142,11 @@ M_TRAIN_DATA_ENTRY=&gt;ToJruTrainDataEntry()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_TCO_COMMAND_STATE"
+ Default=""
+ X="880"
+ Y="540"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruTractionCommandState"
@@ -4799,6 +5175,11 @@ M_TRAIN_DATA_ENTRY=&gt;ToJruTrainDataEntry()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.MESSAGE.TRACTION_CUT_OFF_COMMAND_STATE.Message"
+ Default=""
+ X="990"
+ Y="540"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateTractionCutOffMessage"
  Guid="73b3d65d-8ae1-416b-95e7-797235f19724"
@@ -4832,6 +5213,11 @@ M_TRAIN_DATA_ENTRY=&gt;ToJruTrainDataEntry()
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="1100"
+ Y="540"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SendMTCOMessage"
  Guid="cdcedaf3-e36b-403c-b6b6-96f74545da0e"
@@ -4867,6 +5253,10 @@ M_TRAIN_DATA_ENTRY=&gt;ToJruTrainDataEntry()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_SLEEPING"
+ Default=""
+ Y="600"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruSleepingInput"
@@ -4895,6 +5285,11 @@ M_TRAIN_DATA_ENTRY=&gt;ToJruTrainDataEntry()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.MESSAGE.SLEEPING_INPUT.Message"
+ Default=""
+ X="110"
+ Y="600"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateJruSleepingInput"
  Guid="b2f03835-9334-43b8-a0c0-d81e11e6d32b"
@@ -4927,6 +5322,11 @@ M_SLEEPING =&gt; ToJruSleepingInput()
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="220"
+ Y="600"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SendSleppingInput"
  Guid="f4a9d3dd-a17a-4f6c-b7e6-0fd0ab6e4188"
@@ -4971,6 +5371,11 @@ M_SLEEPING =&gt; ToJruSleepingInput()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_PASSIVE_SHUNTTING"
+ Default=""
+ X="330"
+ Y="600"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruPassiveShunting"
@@ -4999,6 +5404,11 @@ M_SLEEPING =&gt; ToJruSleepingInput()
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="440"
+ Y="600"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SendPassiveShuntingMessage"
  Guid="cbe54796-4c07-4ecf-9d0d-1664c383a321"
@@ -5043,6 +5453,11 @@ M_SLEEPING =&gt; ToJruSleepingInput()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.MESSAGE.PASSIVE_SHUNTTING_INPUT.Message"
+ Default=""
+ X="550"
+ Y="600"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreatePassiveShuntingMessage"
  Guid="ccaa00c6-9c14-49c2-8442-59c81d065b97"
@@ -5075,6 +5490,11 @@ M_PASSIVE_SHUNTTING =&gt; ToJruPassiveShunting()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_NON_LEADING"
+ Default=""
+ X="660"
+ Y="600"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruNonLeadingPermited"
@@ -5103,6 +5523,11 @@ M_PASSIVE_SHUNTTING =&gt; ToJruPassiveShunting()
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="770"
+ Y="600"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SendNonLeadingMessage"
  Guid="1b515c81-b5ec-492c-89a0-8c317a8cccf2"
@@ -5147,6 +5572,11 @@ M_PASSIVE_SHUNTTING =&gt; ToJruPassiveShunting()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.MESSAGE.NON_LEADING_INPUT.Message"
+ Default=""
+ X="880"
+ Y="600"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateNonLeadingJruMessage"
  Guid="77df6a5f-0790-4fe8-85b0-105f05c8696e"
@@ -5179,6 +5609,11 @@ M_NON_LEADING =&gt; ToJruNonLeadingPermited()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_RB_STATUS"
+ Default=""
+ X="990"
+ Y="600"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruRegenrativeBrakeStatus"
@@ -5207,6 +5642,11 @@ M_NON_LEADING =&gt; ToJruNonLeadingPermited()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.MESSAGE.REGENERATIVE_BRAKE_STATUS.Message"
+ Default=""
+ X="1100"
+ Y="600"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateJruRegenerativeBrakeStatusMessage"
  Guid="9e3e3701-81f5-4b06-8f6d-5f64390d6328"
@@ -5239,6 +5679,10 @@ M_NON_LEADING =&gt; ToJruNonLeadingPermited()
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ Y="660"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SendRegenerativeBrakeStatusMessage"
  Guid="7c497b9d-e45b-4ab4-967b-a0badb0ff8f4"
@@ -5283,6 +5727,11 @@ M_NON_LEADING =&gt; ToJruNonLeadingPermited()
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="110"
+ Y="660"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="IsStartUp"
@@ -5314,6 +5763,11 @@ M_NON_LEADING =&gt; ToJruNonLeadingPermited()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_MAGNETICSHOEBRAKE"
+ Default=""
+ X="220"
+ Y="660"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruMagneticShoeBrake"
@@ -5342,6 +5796,11 @@ M_NON_LEADING =&gt; ToJruNonLeadingPermited()
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="330"
+ Y="660"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SendMagneticShoeBrakeStatusMessage"
  Guid="8b8957b5-e016-44a3-987c-83d1826cd71a"
@@ -5386,6 +5845,11 @@ M_NON_LEADING =&gt; ToJruNonLeadingPermited()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.MESSAGE.MAGNETIC_SHOE_BRAKE_STATUS.Message"
+ Default=""
+ X="440"
+ Y="660"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateMagneticShoeBrakeStatusJruMessage"
  Guid="1ca6ee0e-823c-48e2-80b1-9784fd7c505f"
@@ -5418,6 +5882,11 @@ M_NON_LEADING =&gt; ToJruNonLeadingPermited()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_ECB_STATUS"
+ Default=""
+ X="550"
+ Y="660"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruEddyCurrentBrakeStatus"
@@ -5446,6 +5915,11 @@ M_NON_LEADING =&gt; ToJruNonLeadingPermited()
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="660"
+ Y="660"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SendEddyCurrentBrakeStatusMessage"
  Guid="109ff4ac-ece9-4811-b91b-073d91db3961"
@@ -5490,6 +5964,11 @@ M_NON_LEADING =&gt; ToJruNonLeadingPermited()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.MESSAGE.EDDY_CURRENT_BRAKE_STATUS.Message"
+ Default=""
+ X="770"
+ Y="660"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateJruEddyCurrentBrakeStatusMessage"
  Guid="612376ab-0adf-4747-a112-0e60bbcde774"
@@ -5522,6 +6001,11 @@ M_NON_LEADING =&gt; ToJruNonLeadingPermited()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.MESSAGE.ELECTRO_PNEUMATIC_BRAKE_STATUS.Message"
+ Default=""
+ X="880"
+ Y="660"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateJruElectroPneumaticBrakeStatus"
  Guid="c70cf61f-6dae-4292-bf4e-bf18be61e3bb"
@@ -5554,6 +6038,11 @@ M_NON_LEADING =&gt; ToJruNonLeadingPermited()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_EP_STATUS"
+ Default=""
+ X="990"
+ Y="660"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruElectroPneumaticBrakeStatus"
@@ -5582,6 +6071,11 @@ M_NON_LEADING =&gt; ToJruNonLeadingPermited()
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="1100"
+ Y="660"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SendElectroPneumaticBrakeStatusMessage"
  Guid="7560b854-b250-4d0c-acc0-cf0d8ee7c187"
@@ -5626,6 +6120,10 @@ M_NON_LEADING =&gt; ToJruNonLeadingPermited()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.MESSAGE.ADDITIONAL_BRAKE_STATUS.Message"
+ Default=""
+ Y="720"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateJruAditionalBrakeStatusMessage"
  Guid="32b20a28-fea2-43fc-9cbb-2ee81c28d7d2"
@@ -5658,6 +6156,11 @@ M_NON_LEADING =&gt; ToJruNonLeadingPermited()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_AB_STATUS"
+ Default=""
+ X="110"
+ Y="720"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruAdditionalBrakeStatus"
@@ -5686,6 +6189,11 @@ M_NON_LEADING =&gt; ToJruNonLeadingPermited()
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="220"
+ Y="720"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SendAdditionalBrakeStatusMessage"
  Guid="21b48e05-4a16-4717-93c4-d325e8b3ee87"
@@ -5730,6 +6238,11 @@ M_NON_LEADING =&gt; ToJruNonLeadingPermited()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_SDMSUPSTAT"
+ Default=""
+ X="330"
+ Y="720"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruSpeedAndDistanceMonitoringsupervisionStatus"
@@ -5785,6 +6298,11 @@ M_NON_LEADING =&gt; ToJruNonLeadingPermited()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.M_SDMTYPE"
+ Default=""
+ X="440"
+ Y="720"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToJruSpeedAndDistanceMonitoringType"
@@ -5827,6 +6345,11 @@ M_NON_LEADING =&gt; ToJruNonLeadingPermited()
 </Case></Cases>
 </Function><Function
  Type="Messages.JRU.MESSAGE.SPEED_AND_DISTANCE_MONITORING_INFORMATION.Message"
+ Default=""
+ X="550"
+ Y="720"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateJruSpeedAndDistanceMonitoringInformationMessage"
  Guid="3de869ca-c99b-4435-8863-78e3b1bbdfd0"
@@ -5868,6 +6391,11 @@ V_RELEASE =&gt; ToMessagesSpeed(DMI.MasterDMI().Out_ReleaseSpeed.Speed)
 </Case></Cases>
 </Function><Function
  Type="MessageTypes.Speed"
+ Default=""
+ X="660"
+ Y="720"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToMessagesSpeed"
@@ -5899,6 +6427,11 @@ V_RELEASE =&gt; ToMessagesSpeed(DMI.MasterDMI().Out_ReleaseSpeed.Speed)
 </Case></Cases>
 </Function><Function
  Type="MessageTypes.Distance"
+ Default=""
+ X="770"
+ Y="720"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ToMessagesDistance"
@@ -5929,6 +6462,11 @@ V_RELEASE =&gt; ToMessagesSpeed(DMI.MasterDMI().Out_ReleaseSpeed.Speed)
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="880"
+ Y="720"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SendSpeedAndDistanceMonitoringInformationMessage"
  Guid="af3fd38d-e5cd-49ff-b9ff-3f05502b63a4"
@@ -6023,6 +6561,9 @@ jru.PreviousVFloiValue != Kernel.SpeedAndDistanceMonitoring.TargetSupervision.V_
 <Variable
  Type="JRU.JRU"
  VariableMode="InOut"
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="JRU1"
  Guid="bbb2ea45-08d4-4c1b-a85c-10a854022eab"

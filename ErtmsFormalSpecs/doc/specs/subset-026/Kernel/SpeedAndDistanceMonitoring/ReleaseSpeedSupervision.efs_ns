@@ -1,16 +1,21 @@
 <NameSpace
- X="90"
- Y="180"
- Width="200"
- Height="400"
+ X="680"
+ Y="320"
+ Width="100"
+ Height="50"
  Name="ReleaseSpeedSupervision"
  Guid="2ef47700-2b29-4937-bb37-0e93c0385ae9"
 >
+<Comment></Comment>
 <NameSpaces>
 </NameSpaces>
 <Functions>
 <Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ Y="60"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="d_FLOI"
  Guid="d703d61a-ec55-414b-bb4e-e640d547c620"
@@ -46,6 +51,11 @@
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="110"
+ Y="60"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="ComputeReleaseSpeedForTarget"
  Guid="30407de2-57ae-4452-9c69-63a754f35b2c"
@@ -78,6 +88,11 @@ STOP_CONDITION
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="220"
+ Y="60"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="d_EBI"
  Guid="1db9768f-f73d-453e-b0db-b4fd46e74e53"
@@ -118,6 +133,11 @@ STOP_CONDITION
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="330"
+ Y="60"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Dbec"
  Guid="d9b30827-9518-41f5-830b-d883cbab5cf2"
@@ -149,6 +169,11 @@ STOP_CONDITION
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="440"
+ Y="60"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Vdelta0rsob"
  Guid="0a66630e-2785-4d6e-8587-e8f1fc7481dc"
@@ -189,6 +214,11 @@ STOP_CONDITION
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="550"
+ Y="60"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="d_tripEOA"
  Guid="34f87796-515a-4fb1-a93a-308560611a89"
@@ -215,6 +245,11 @@ BaseTypes.MaxDistance
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="660"
+ Y="60"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="d_SBI2"
  Guid="d0905bbc-aeb2-4ddf-98b1-d70183e08872"
@@ -241,6 +276,11 @@ BaseTypes.MaxDistance
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="770"
+ Y="60"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="VreleaseFunction"
  Guid="ecb0df54-82ae-48d7-90f9-1834691e783b"
@@ -283,6 +323,11 @@ BaseTypes.MaxDistance
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="880"
+ Y="60"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="ReleaseSpeedSupervisionApplicable"
  Guid="31554a0a-c45f-4ee3-ab5c-840e7667ab99"
@@ -318,6 +363,10 @@ BaseTypes.MaxDistance
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="StartRSM"
  Guid="754f4971-8117-451a-8763-1c1beb1094b3"
@@ -344,6 +393,11 @@ BaseTypes.MaxDistance
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="110"
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="d_EOA"
  Guid="51ed030d-7fee-44a8-ae4e-97632defbc07"
@@ -372,6 +426,11 @@ BaseTypes.MaxDistance
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="220"
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="ReleaseSpeedValue"
  Guid="620fc2b7-2862-420c-99ff-4a7734ea3c16"
@@ -429,6 +488,11 @@ INITIAL_VALUE
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="330"
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="ComputeReleaseSpeed"
  Guid="5c335c34-528e-46f4-9884-8c8b1fa9a7de"
@@ -459,6 +523,11 @@ INITIAL_VALUE
 </Case></Cases>
 </Function><Function
  Type="Double"
+ Default=""
+ X="440"
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="alpha"
  Guid="ab304d57-256e-480e-8d90-505ce5106fcc"
@@ -492,6 +561,9 @@ INITIAL_VALUE
 </Function></Functions>
 <Procedures>
 <Procedure
+ Y="180"
+ Width="100"
+ Height="50"
  NeedsRequirement="FALSE"
  Name="UpdateReleaseSpeed"
  Guid="202a2d5f-f479-43cf-a09f-f9e4ebb24dfd"
@@ -600,6 +672,8 @@ ReleaseSpeedValue(
  Type="Default.BaseTypes.Speed"
  DefaultValue="1.0"
  VariableMode="Constant"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="epsilon"
  Guid="7ee43394-cda2-4bdc-9734-596ab6be0939"
@@ -615,6 +689,9 @@ ReleaseSpeedValue(
  Type="Default.BaseTypes.Speed"
  DefaultValue="0.0"
  VariableMode="Internal"
+ X="110"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="ReleaseSpeed"
  Guid="ce3bea7d-e5a8-4ccb-bbb9-db9e603d9294"

@@ -14,6 +14,7 @@
 // --
 // ------------------------------------------------------------------------------
 using System.Collections.Generic;
+using System.Text;
 
 namespace DataDictionary.Values
 {
@@ -170,6 +171,35 @@ namespace DataDictionary.Values
 
                 return retVal;
             }
+        }
+
+        /// <summary>
+        /// Converts a structure value to its corresponding structure expression.
+        /// null entries correspond to the default value
+        /// </summary>
+        /// <returns></returns>
+        public override string ToExpressionWithDefault()
+        {
+            StringBuilder retVal = new StringBuilder();
+
+            retVal.Append("[");
+
+            bool first = true;
+            foreach (IValue value in Val)
+            {
+                if (value != null)
+                {
+                    if (!first)
+                    {
+                        retVal.Append(", ");
+                    }
+                    retVal.Append(value.ToExpressionWithDefault());
+                    first = false;
+                }
+            }
+            retVal.Append("]");
+
+            return retVal.ToString();
         }
     }
 }

@@ -15,12 +15,15 @@
 // ------------------------------------------------------------------------------
 namespace GUI.SpecificationView
 {
-    public class SpecificationTreeView : TypedTreeView<DataDictionary.Dictionary>
+    public class SpecificationTreeView : TypedTreeView<DataDictionary.EFSSystem>
     {
         protected override void BuildModel()
         {
             Nodes.Clear();
-            Nodes.Add(new SpecificationsTreeNode(Root, true));
+            foreach (DataDictionary.Dictionary dictionary in Root.Dictionaries)
+            {
+                Nodes.Add(new SpecificationsTreeNode(dictionary, true));
+            }
         }
     }
 }

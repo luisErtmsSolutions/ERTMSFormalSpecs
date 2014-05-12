@@ -1,9 +1,10 @@
 <NameSpace
- X="300"
- Y="800"
+ X="820"
+ Y="660"
  Width="100"
  Height="50"
  Hidden="TRUE"
+ Pinned="TRUE"
  Name="Infill"
  Guid="44d64c33-9ae1-40d6-a342-51ea2e902414"
 >
@@ -12,6 +13,12 @@
 <Functions>
 <Function
  Type="Kernel.BaliseGroup"
+ Default=""
+ X="180"
+ Y="170"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Name="CreateBaliseGroup"
  Guid="5ad1147d-dd23-44a6-a648-bbd2debb65cb"
 >
@@ -47,6 +54,11 @@
 </Function></Functions>
 <Procedures>
 <Procedure
+ X="70"
+ Y="170"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="InfillReceived"
  Guid="caaee2cc-ae2d-44eb-b71d-534d0264beed"
@@ -56,7 +68,8 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="feada224-3f7c-460d-8875-1f1294415eb5"
 >
-</ReqRef><Parameters>
+</ReqRef><Comment></Comment>
+<Parameters>
 <Parameter
  Type="Messages.PACKET.TRACK_TO_TRAIN.INFILL_LOCATION_REFERENCE.Message"
  Name="Packet"
@@ -96,6 +109,11 @@
  Type="BaliseGroup"
  DefaultValue="EMPTY"
  VariableMode="Internal"
+ X="70"
+ Y="20"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="Data"
  Guid="b04bd19e-f910-4ad1-abcd-a4c60d7202c9"
@@ -115,6 +133,11 @@
  Type="Boolean"
  DefaultValue="Boolean.True"
  VariableMode="Internal"
+ X="190"
+ Y="20"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="InfillTransmissionMediaAvailable"
  Guid="86d5f155-36d6-41c1-af09-dc6d81c24eaa"

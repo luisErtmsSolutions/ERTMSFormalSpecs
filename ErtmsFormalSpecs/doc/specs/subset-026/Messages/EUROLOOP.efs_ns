@@ -1,4 +1,7 @@
 <NameSpace
+ X="220"
+ Width="100"
+ Height="50"
  Name="EUROLOOP"
  Guid="4690b16c-2040-49f7-aedf-7079dac306f0"
 >
@@ -6,6 +9,7 @@
 </NameSpaces>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  Name="Message"
  Guid="440d9697-1160-4393-8432-46f3db2ca2f4"
@@ -123,6 +127,7 @@
  Guid="3472339e-5538-4da0-a3f7-310c2c0eab53"
 >
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  Name="SubStructure1"
  Guid="c77a4efc-c15d-43f3-af26-5a92a0536a86"

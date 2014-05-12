@@ -1,4 +1,7 @@
 <NameSpace
+ X="220"
+ Width="100"
+ Height="50"
  Name="LevelRules"
  Guid="1c9b3fb4-63bb-4267-b97e-69af3a943281"
 >
@@ -7,6 +10,9 @@
 <Functions>
 <Function
  Type="Boolean"
+ Default=""
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptLevelCrossingInformationFromRBC"
  Guid="563be3f7-b217-4e03-85f5-8a188b6c6847"
@@ -65,6 +71,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="110"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptEOLMInformation"
  Guid="ebeae253-8ca7-4284-8d67-05b1f631a5ec"
@@ -123,6 +133,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="220"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptSessionManagementWithNeighbouringRIU"
  Guid="51015e47-c9b1-4f2a-a2ac-35694127c1f3"
@@ -181,6 +195,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="330"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptInfillLocationReference"
  Guid="dc76818e-634c-4183-b5c8-a170c654203f"
@@ -239,6 +257,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="440"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptLocationIdentity"
  Guid="d8099c5a-c36b-461c-9703-b2092ae0da6a"
@@ -297,6 +319,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="550"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptTrackConditionsBigMetalMasses"
  Guid="4c646d0b-37e2-4a9d-aa52-f65e36505c62"
@@ -355,6 +381,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="660"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptTrackConditionsExcludingBigMetalMasses"
  Guid="fdbf34cc-91e9-4ce5-9f59-77a710474f00"
@@ -413,6 +443,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="770"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptReversingSupervisionInformation"
  Guid="14463ecb-f937-4774-a5a1-a002dc42c021"
@@ -471,6 +505,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="880"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptReversingAreaInformation"
  Guid="e7c38440-244b-4472-9718-5ffc161c407d"
@@ -529,6 +567,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ Y="60"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptDefaultBaliseLoopRIUInformation"
  Guid="e9c0c684-8e6d-4307-b468-c1dd2dabf4fb"
@@ -587,6 +629,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="110"
+ Y="60"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptLevelCrossingInformation"
  Guid="39e17f55-37d2-4145-b72d-f033c50b58cb"
@@ -645,6 +692,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="220"
+ Y="60"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptPermittedBrakingDistanceInformation"
  Guid="25e37228-db64-4eac-9375-97bb99c0e38d"
@@ -703,6 +755,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="330"
+ Y="60"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptTrackAheadFreeUpToLevel2_3TransitionLocation"
  Guid="f297e75c-13f5-48a2-839e-998a061860de"
@@ -761,6 +818,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="440"
+ Y="60"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptSystemVersionOrder"
  Guid="48692228-c6f2-454a-9601-9788a62bd0b7"
@@ -819,6 +881,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="550"
+ Y="60"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptTracksideConstituentSystemVersion"
  Guid="4dca03ce-9200-4bf4-835a-b822e1dbf2aa"
@@ -877,6 +944,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="660"
+ Y="60"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptAcknowledgementOfSessionTermination"
  Guid="a4756819-bbe3-422e-97e0-9318ea247599"
@@ -935,6 +1007,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="770"
+ Y="60"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptConditionalLevelTransitionOrder"
  Guid="b9f222d9-1bdb-4452-8e42-62519d9c6903"
@@ -993,6 +1070,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="880"
+ Y="60"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptLevelTransitionOrder"
  Guid="ed99ec5f-ab8f-421e-be66-69f3eb3345ab"
@@ -1051,6 +1133,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptSessionManagement"
  Guid="3d0a3105-d089-4f2c-9736-d60021fd16cf"
@@ -1109,6 +1195,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="110"
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptRadioNetworkRegistration"
  Guid="8e0bc63c-2064-421c-97f7-1b2eddf75db2"
@@ -1167,6 +1258,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="220"
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptAxleLoadSpeedProfile"
  Guid="ce5e05cb-9ab9-4bd4-bbf2-649837009ef6"
@@ -1225,6 +1321,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="330"
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptSignallingRelatedSpeedRestriction"
  Guid="edb28eef-d406-4c8d-b62e-d97b29ed435a"
@@ -1283,6 +1384,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="440"
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptLinking"
  Guid="34b4fada-3f2e-40b8-95f4-c303bcc6ae8a"
@@ -1341,6 +1447,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="550"
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptNationalValues"
  Guid="640e1a49-db0a-44c6-a0bb-cb71657fb191"
@@ -1399,6 +1510,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="660"
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptMovementAuthority"
  Guid="1582c90b-24db-4495-a401-5d00bed08f5c"
@@ -1457,6 +1573,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="770"
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptInternationalSSP"
  Guid="9eb43b66-4a6f-4e34-9cf9-7249eeeda93b"
@@ -1515,6 +1636,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="880"
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptGradientProfile"
  Guid="1e01f334-b338-4734-b005-ce74688d55ff"
@@ -1573,6 +1699,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptRepositioningInformation"
  Guid="9570bee5-9218-43b4-be5f-fa4da2453867"
@@ -1631,6 +1761,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="110"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptGeographicalPosition"
  Guid="ddc75c9e-2380-4dc2-a80b-a1d448eaefb8"
@@ -1689,6 +1824,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="220"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptFixedTextInformation"
  Guid="551b5a62-d251-411c-afa3-e55728287092"
@@ -1747,6 +1887,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="330"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptPlainTextInformation"
  Guid="fe835891-b757-4f84-958c-b066608e22cd"
@@ -1805,6 +1950,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="440"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptRBCTransitionOrder"
  Guid="5b58b754-e8cc-4283-9db9-4100e3cfc012"
@@ -1863,6 +2013,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="550"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptRadioInfillAreaInformation"
  Guid="cce07668-a3c7-4df6-9762-095af764bd04"
@@ -1921,6 +2076,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="660"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptStopShuntingOnDeskOpening"
  Guid="559bbf9c-1beb-42e8-b93f-fa496497fa54"
@@ -1979,6 +2139,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="770"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptDangerForSHInformation"
  Guid="21c12f23-75cc-44d4-95ef-72cd4026985e"
@@ -2037,6 +2202,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="880"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptAdhesionFactor"
  Guid="8a5a509c-55c3-44f3-8da5-acb08718be91"
@@ -2095,6 +2265,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ Y="240"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptTemporarySpeedRestriction"
  Guid="7f856e48-ab65-461c-9cbc-2a52e0f2aa87"
@@ -2153,6 +2327,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="110"
+ Y="240"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptSRDistanceInformationFromLoop"
  Guid="0b5a4955-9c25-4027-98c3-4187d54aa7c1"
@@ -2211,6 +2390,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="220"
+ Y="240"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptStopIfInSRMode"
  Guid="98d71090-73cf-4f77-819a-ed4f790e4dc2"
@@ -2269,6 +2453,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="330"
+ Y="240"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptTemporarySpeedRestrictionRevocation"
  Guid="65605666-2787-4e5c-abfc-74d6a2e2636b"
@@ -2327,6 +2516,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="440"
+ Y="240"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptRouteSuitabilityData"
  Guid="1eebb2c5-7944-4000-9d45-41c39ddedff4"
@@ -2385,6 +2579,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="550"
+ Y="240"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptDefaultGradientForTSR"
  Guid="8f25e32d-496d-4027-bff9-843fdd476258"
@@ -2443,6 +2642,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="660"
+ Y="240"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptTrainRejectedFromRBC"
  Guid="b22528b8-9f00-4244-9b8d-a3c0649386eb"
@@ -2501,6 +2705,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="770"
+ Y="240"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptInitiationOfSessionFromRBC"
  Guid="01c34b42-b2ea-46ef-8358-8da2e2bf0e01"
@@ -2559,6 +2768,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="880"
+ Y="240"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptTrackAheadFreeRequestFromRBC"
  Guid="4d15691c-4c7d-492d-b694-fd48e54a7b04"
@@ -2617,6 +2831,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptTrainRunningNumberFromRBC"
  Guid="ac89e4e4-0df8-415e-9c92-dfa8cd8b29cd"
@@ -2675,6 +2893,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="110"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptPermittedBrakingDistanceInformationFromRBC"
  Guid="e4889c52-6fef-4fcf-87f9-454bfa9002f1"
@@ -2733,6 +2956,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="220"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptReversingSupervisionInformationFromRBC"
  Guid="6475dc70-a99c-441b-8198-c8dea410b7e1"
@@ -2791,6 +3019,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="330"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptTrainAcceptedFromRBC"
  Guid="b136443f-c773-4e66-906d-8d84fb915aba"
@@ -2849,6 +3082,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="440"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptSoMPositionReportConfirmedByRBCFromRBC"
  Guid="e98355f6-434c-4d67-97e0-0c167e0d64b7"
@@ -2907,6 +3145,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="550"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptReversingAreaInformationFromRBC"
  Guid="dc8f46c5-fbc6-4d85-839f-42927d186f7d"
@@ -2965,6 +3208,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="660"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptPositionReportParametersFromRBC"
  Guid="a9647658-789c-4a80-9408-b49d6979e36f"
@@ -3023,6 +3271,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="770"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptSRAuthorisationFromRBC"
  Guid="6badd37a-e52b-48c0-baf9-5d7bb7baaade"
@@ -3081,6 +3334,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="880"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptSessionManagementFromRBC"
  Guid="697fd124-0b8d-40d6-84f7-de9806cd054f"
@@ -3139,6 +3397,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptRadioNetworkRegistrationFromRBC"
  Guid="36ea4ecb-bc50-419d-97bf-c1a897257211"
@@ -3197,6 +3459,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="110"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptMARequestParametersFromRBC"
  Guid="578da8aa-8f44-4af9-a46e-4f39786ffe8e"
@@ -3255,6 +3522,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="220"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptInhibitionOfRevocableTSRsFromRBC"
  Guid="bfa9596e-6f4d-4fdf-94c2-3d904a5a66c0"
@@ -3313,6 +3585,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="330"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptRouteSuitabilityDataFromRBC"
  Guid="a6c7cd48-4f17-4b06-8c1d-3237bd606809"
@@ -3371,6 +3648,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="440"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptTemporarySpeedRestrictionFromRBC"
  Guid="61bd033c-1962-41e2-aa3a-c9519b8f0408"
@@ -3429,6 +3711,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="550"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptTemporarySpeedRestrictionRevocationFromRBC"
  Guid="2fb25410-66a2-4ea6-8bcd-deb451e790cb"
@@ -3487,6 +3774,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="660"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptLinkingFromRBC"
  Guid="c14bde5e-bc79-443f-8419-32bc47e86b4d"
@@ -3545,6 +3837,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="770"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptMovementAuthorityFromRBC"
  Guid="e612318a-54f4-4734-8201-4e5efa1436d7"
@@ -3603,6 +3900,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="880"
+ Y="360"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptNationalValuesFromRBC"
  Guid="4a39fc72-523a-484a-a403-087ca2411c7d"
@@ -3661,6 +3963,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptAxleLoadSpeedProfileFromRBC"
  Guid="3a4e93e9-fb73-4fd1-994a-518bf9bb79ab"
@@ -3719,6 +4025,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="110"
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptLevelTransitionOrderFromRBC"
  Guid="9bf9946f-4ea4-4a32-9a49-99d5edfe8836"
@@ -3777,6 +4088,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="220"
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptGradientProfileFromRBC"
  Guid="0c6ab87f-1b5b-42ed-9a80-ca42bd254001"
@@ -3835,6 +4151,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="330"
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptInternationalSSPFromRBC"
  Guid="c75d9ac1-59f6-4f75-8aa5-8386c52c9aa7"
@@ -3893,6 +4214,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="440"
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptAdhesionFactorFromRBC"
  Guid="2272083e-06e0-4827-a6fa-8ef754815e25"
@@ -3951,6 +4277,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="550"
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptAcknowledgementOfTrainDataFromRBC"
  Guid="96c9ba72-ec94-40cc-b0b1-001ea9d4954f"
@@ -4009,6 +4340,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="660"
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptSHRefusedFromRBC"
  Guid="46ed4a00-498a-49d8-9e51-e2eca8267e2a"
@@ -4067,6 +4403,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="770"
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptRevocationOfEmergencyStopFromRBC"
  Guid="790035db-a7f9-440d-a642-d14d4dc30b61"
@@ -4125,6 +4466,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="880"
+ Y="420"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptRBCTransitionOrderFromRBC"
  Guid="21430cb2-a352-46db-84d5-4d597a77f14a"
@@ -4183,6 +4529,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ Y="480"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptAssignmentOfCoOrdinateSystemFromRBC"
  Guid="f5009625-019d-4773-8687-035ea39e2645"
@@ -4241,6 +4591,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="110"
+ Y="480"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptFixedTextInformationFromRBC"
  Guid="beeaa7c9-4e32-442f-8237-b861f1747ac9"
@@ -4299,6 +4654,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="220"
+ Y="480"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptPlainTextInformationFromRBC"
  Guid="a3e44e9a-b5fa-498e-a1c3-a6a63153789f"
@@ -4357,6 +4717,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="330"
+ Y="480"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptGeographicalPositionFromRBC"
  Guid="f8f4bc4e-a878-433f-bce4-c3a8be5e312d"
@@ -4415,6 +4780,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="440"
+ Y="480"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptTrackConditionsExcludingBigMetalMassesFromRBC"
  Guid="6c43c818-430d-47be-a42f-7c201b24c086"
@@ -4473,6 +4843,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="550"
+ Y="480"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptConditionalEmergencyStopFromRBC"
  Guid="92f9d0fe-b845-4bd5-b51a-d5b80ec98700"
@@ -4531,6 +4906,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="660"
+ Y="480"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptTracksideConstituentSystemVersionFromRBC"
  Guid="08c6733e-2b9e-4be0-8f82-4e86f7169d4b"
@@ -4589,6 +4969,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="770"
+ Y="480"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptSHAuthorisedFromRBC"
  Guid="15a6a84f-3b38-45cb-9702-b58bc0669230"
@@ -4647,6 +5032,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="880"
+ Y="480"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptUnconditionalEmergencyStopFromRBC"
  Guid="c1aca92f-9a42-4e05-932a-f7973eb2e99e"
@@ -4705,6 +5095,10 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ Y="540"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptRecognitionOfExitFromTRIPModeFromRBC"
  Guid="9a8c9b67-eb2c-4e8b-a609-9ff385fc9f8f"
@@ -4763,6 +5157,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="110"
+ Y="540"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptCoOperativeShorteningOfMAFromRBC"
  Guid="32d4617e-555d-460a-8266-4dff634446ef"
@@ -4821,6 +5220,11 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="220"
+ Y="540"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptAcknowledgementOfSessionTerminationFromRBC"
  Guid="290f472a-ab8f-460a-8049-e3fb0be529a6"

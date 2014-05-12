@@ -24,6 +24,7 @@ namespace GUI.Converters
     using System.Windows.Forms.Design;
     using DataDictionary;
     using System.Windows.Forms;
+    using GUI.EditorView;
 
     /// <summary>
     /// TODO: Update summary.
@@ -33,53 +34,6 @@ namespace GUI.Converters
         public override UITypeEditorEditStyle GetEditStyle(ITypeDescriptorContext context)
         {
             return UITypeEditorEditStyle.Modal;
-        }
-
-        /// <summary>
-        /// Sets the string value into the right property
-        /// </summary>
-        /// <param name="instance"></param>
-        /// <param name="value"></param>
-        private class TextChangeHandler : EditorForm.HandleTextChange
-        {
-            /// <summary>
-            /// Constructor
-            /// </summary>
-            /// <param name="instance"></param>
-            public TextChangeHandler(ModelElement instance)
-                : base(instance)
-            {
-            }
-
-            /// <summary>
-            /// The way text is retrieved from the instance
-            /// </summary>
-            /// <returns></returns>
-            public override string GetText()
-            {
-                string retVal = "";
-                DataDictionary.Types.ITypedElement typedElement = Instance as DataDictionary.Types.ITypedElement;
-
-                if (typedElement != null)
-                {
-                    retVal = typedElement.TypeName;
-                }
-                return retVal;
-            }
-
-            /// <summary>
-            /// The way text is set back in the instance
-            /// </summary>
-            /// <returns></returns>
-            public override void SetText(string text)
-            {
-                DataDictionary.Types.ITypedElement typedElement = Instance as DataDictionary.Types.ITypedElement;
-
-                if (typedElement != null)
-                {
-                    typedElement.TypeName = text;
-                }
-            }
         }
 
         /// <summary>
@@ -105,10 +59,10 @@ namespace GUI.Converters
                 DataDictionary.Types.ITypedElement typedElement = value as DataDictionary.Types.ITypedElement;
                 if (typedElement != null)
                 {
-                    EditorForm form = new EditorForm();
+                    EditorView.Window form = new EditorView.Window();
                     form.AutoComplete = true;
                     form.ConsiderOnlyTypes = true;
-                    TextChangeHandler handler = new TextChangeHandler(typedElement as ModelElement);
+                    TypeTextChangeHandler handler = new TypeTextChangeHandler(typedElement as ModelElement);
                     form.setChangeHandler(handler);
                     GUIUtils.MDIWindow.AddChildWindow(form, WeifenLuo.WinFormsUI.Docking.DockAreas.Float);
                 }

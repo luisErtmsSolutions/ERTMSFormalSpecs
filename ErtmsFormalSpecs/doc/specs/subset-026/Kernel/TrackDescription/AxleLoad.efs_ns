@@ -10,6 +10,7 @@
 </NameSpaces>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  Name="AxleLoadProfile"
  Guid="7669fef7-c011-4007-bc1d-fc27e4e7bdfb"
@@ -73,6 +74,7 @@
 >
 <Comment>The collection of axle load speed restrictions.</Comment>
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  Name="AxleLoadValue"
  Guid="fa42ca0f-788f-48d1-b567-ecbeaaf5b60b"
@@ -113,6 +115,7 @@
  Guid="01d1e964-8eba-4426-a3e5-c2526a36e145"
 >
 </ReqRef></StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="AxleLoad"
@@ -232,6 +235,7 @@
 <Functions>
 <Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="SpeedRestrictions"
  Guid="ac5c9711-135a-4889-a8a9-19764bedb0f0"
@@ -287,6 +291,7 @@ INITIAL_VALUE BaseTypes.MaxSpeedFunction) (Distance)</Expression>
 </Case></Cases>
 </Function><Function
  Type="AxleLoad"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CreateAxleLoad"
@@ -348,6 +353,7 @@ INITIAL_VALUE BaseTypes.MaxSpeedFunction) (Distance)</Expression>
 </Case></Cases>
 </Function><Function
  Type="AxleLoadValue"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CreateAxleLoadValue"
@@ -379,6 +385,7 @@ INITIAL_VALUE BaseTypes.MaxSpeedFunction) (Distance)</Expression>
 </Case></Cases>
 </Function><Function
  Type="AxleLoad"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CreateFirstAxleLoad"
@@ -425,6 +432,7 @@ INITIAL_VALUE BaseTypes.MaxSpeedFunction) (Distance)</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="AbsoluteDistance"
@@ -461,6 +469,7 @@ USING
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="AxleLoadSpeedRestriction"
  Guid="9e74a7a7-7107-4423-a5d2-1e3d5bdb9d6b"
@@ -528,6 +537,7 @@ USING
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Length"
+ Default=""
  Implemented="TRUE"
  Name="AxleLoadLength"
  Guid="28c9866a-7388-4e77-86f7-c371daab904c"

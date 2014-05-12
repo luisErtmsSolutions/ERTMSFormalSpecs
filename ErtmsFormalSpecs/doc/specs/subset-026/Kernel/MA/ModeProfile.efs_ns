@@ -1,11 +1,22 @@
 <NameSpace
+ X="720"
+ Y="10"
+ Width="100"
+ Height="50"
  Name="ModeProfile"
  Guid="cb25e4ae-499f-476f-8599-0113103669f1"
 >
+<Comment></Comment>
 <NameSpaces>
 </NameSpaces>
 <Structures>
 <Structure
+ Default=""
+ X="390"
+ Y="310"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="ModeProfileStruct"
  Guid="75913f7d-934d-437f-be60-0a28d46d8587"
@@ -109,15 +120,27 @@
  TypeName="ModeProfileStruct"
  MaxSize="20"
  Default="[]"
+ X="220"
+ Y="310"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ModeProfiles"
  Guid="df0aa68f-39be-4030-b122-a8af9ee50ca1"
 >
+<Comment></Comment>
 </Collection></Collections>
 <Functions>
 <Function
  Type="Boolean"
+ Default=""
+ X="40"
+ Y="20"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="DistanceIsWithinAModeProfile"
  Guid="39b55868-566d-4ddf-abe5-fc45af1b275c"
@@ -202,6 +225,12 @@ TrainPosition.FrontEndPosition ( DistanceInterval.Min ) &lt; aModeProfile.Distan
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="150"
+ Y="20"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="ModeProfileIsApplicable"
  Guid="3f481255-8672-487c-8369-61d528f68163"
@@ -230,6 +259,12 @@ TrainPosition.FrontEndPosition ( DistanceInterval.Min ) &lt; aModeProfile.Distan
 </Case></Cases>
 </Function><Function
  Type="Default.Mode.ModeProfile"
+ Default=""
+ X="40"
+ Y="80"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="CurrentMode"
  Guid="ba4c9d24-cadc-4470-b658-69c1bdc024f9"
@@ -248,6 +283,12 @@ TrainPosition.FrontEndPosition ( DistanceInterval.Min ) &lt; aModeProfile.Distan
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="150"
+ Y="140"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="RemoveMode"
  Guid="0b4e5f8b-0a62-4620-834a-8154496cc8ac"
@@ -288,6 +329,12 @@ TrainPosition.FrontEndPosition ( DistanceInterval.Min ) &lt; aModeProfile.Distan
 </Case></Cases>
 </Function><Function
  Type="ModeProfileStruct"
+ Default=""
+ X="40"
+ Y="200"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="ProfileForInfill"
  Guid="00b092f7-ea4d-4143-b544-b7d57cb8871b"
@@ -348,6 +395,12 @@ TrainPosition.FrontEndPosition ( DistanceInterval.Min ) &lt; aModeProfile.Distan
 </Case></Cases>
 </Function><Function
  Type="Default.Mode.ModeProfile"
+ Default=""
+ X="150"
+ Y="80"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ERTMS_To_EFS_Mode"
@@ -391,6 +444,12 @@ TrainPosition.FrontEndPosition ( DistanceInterval.Min ) &lt; aModeProfile.Distan
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="260"
+ Y="20"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="AcknAreaReached"
  Guid="101ad133-d946-48a4-86ff-efa58065c439"
@@ -427,6 +486,12 @@ TrainPosition.FrontEndPosition ( DistanceInterval.Min ) &lt; aModeProfile.Distan
 </Case></Cases>
 </Function><Function
  Type="SpeedAndDistanceMonitoring.TargetSupervision.Target"
+ Default=""
+ X="260"
+ Y="80"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="EOA"
  Guid="ebdab32d-5390-43f3-a32f-0cb87bef5bbf"
@@ -446,7 +511,8 @@ TrainPosition.FrontEndPosition ( DistanceInterval.Min ) &lt; aModeProfile.Distan
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="a543c236-bbd7-4441-aa3b-7fba736f19c3"
 >
-</ReqRef><Cases>
+</ReqRef><Comment></Comment>
+<Cases>
 <Case
  Name="Mode Profile EOA available"
  Guid="35bb6df3-77eb-44a1-a069-ac7715eb8c61"
@@ -473,6 +539,12 @@ TrainPosition.FrontEndPosition ( DistanceInterval.Min ) &lt; aModeProfile.Distan
 </Case></Cases>
 </Function><Function
  Type="SpeedAndDistanceMonitoring.TargetSupervision.Target"
+ Default=""
+ X="260"
+ Y="140"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="SvL"
  Guid="105e4f55-76a4-490a-8482-3637297e2256"
@@ -521,9 +593,16 @@ TrainPosition.FrontEndPosition ( DistanceInterval.Min ) &lt; aModeProfile.Distan
 </Case></Cases>
 </Function><Function
  Type="ModeProfileStruct"
+ Default=""
+ X="40"
+ Y="140"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Name="FirstNonApplicableModeProfile"
  Guid="547b6baa-ee4d-4b17-8252-0289749bf194"
 >
+<Comment></Comment>
 <Cases>
 <Case
  Name="Value"
@@ -534,11 +613,17 @@ TrainPosition.FrontEndPosition ( DistanceInterval.Min ) &lt; aModeProfile.Distan
 </Function></Functions>
 <Procedures>
 <Procedure
+ X="570"
+ Y="20"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="InitiateDriverAck"
  Guid="12cfa8ea-ce28-4fce-8003-8fca365a9729"
 >
+<Comment></Comment>
 <Rules>
 <Rule
  Priority="Processing"
@@ -616,6 +701,11 @@ TrainPosition.FrontEndPosition ( DistanceInterval.Min ) &lt; aModeProfile.Distan
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="570"
+ Y="80"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="ModeProfileReceived"
  Guid="beb2c296-a5e1-4033-a491-317f0531dd26"
@@ -709,6 +799,11 @@ ON
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="680"
+ Y="20"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="AddNewProfile"
  Guid="ede52e42-b396-4eab-8d95-2a8c1281ddbd"
@@ -909,6 +1004,11 @@ IN
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="680"
+ Y="80"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="ClearModeProfile"
  Guid="eb6ef3c0-69da-430b-8e73-9be421757bd6"
@@ -972,6 +1072,11 @@ IN
  Type="ModeProfiles"
  DefaultValue="[]"
  VariableMode="Internal"
+ X="50"
+ Y="310"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="Profile"
  Guid="1a6aab28-6509-409b-9625-b33e588a826f"
@@ -1006,6 +1111,11 @@ IN
  Type="Default.BaseTypes.Time"
  DefaultValue="Default.BaseTypes.Time.NA"
  VariableMode="Internal"
+ X="160"
+ Y="410"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="DriverAckTimer"
  Guid="89b56ad3-12ae-4fb5-a2eb-7d680f2b3e26"
@@ -1045,6 +1155,11 @@ IN
  Type="Default.BaseTypes.Time"
  DefaultValue="5.0"
  VariableMode="Internal"
+ X="50"
+ Y="410"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="Tack"
  Guid="43415c9b-e244-4abb-aaaa-f0d95525304d"
@@ -1089,6 +1204,11 @@ IN
 <Rules>
 <Rule
  Priority="CleanUp"
+ X="570"
+ Y="200"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="Clear profile"
  Guid="861c2421-ea67-4299-abec-0d8d26269696"
@@ -1103,7 +1223,8 @@ IN
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="1c347756-616b-4ccf-a015-61883bd90610"
 >
-</ReqRef><SubRules></SubRules>
+</ReqRef><Comment></Comment>
+<SubRules></SubRules>
 <Conditions>
 <RuleCondition
  Name="Clear profile"
@@ -1119,6 +1240,11 @@ IN
 </RuleCondition></Conditions>
 </Rule><Rule
  Priority="Processing"
+ X="680"
+ Y="200"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="Display driver ack"
@@ -1298,6 +1424,11 @@ IN
 </RuleCondition></Conditions>
 </Rule><Rule
  Priority="Processing"
+ X="570"
+ Y="260"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="Driver ack timeout"
@@ -1426,6 +1557,11 @@ IN
 </RuleCondition></Conditions>
 </Rule><Rule
  Priority="Processing"
+ X="680"
+ Y="260"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="Release emergency brake"
  Guid="5a4d844d-30c6-4a72-8a4f-aa79a805770b"

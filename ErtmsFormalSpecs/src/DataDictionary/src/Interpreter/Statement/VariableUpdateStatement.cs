@@ -29,7 +29,7 @@ namespace DataDictionary.Interpreter.Statement
         /// <summary>
         /// The expression expressing the value to set
         /// </summary>
-        public Expression Expression { get; private set; }
+        public Expression Expression { get; set; }
 
         /// <summary>
         /// Constructor
@@ -261,5 +261,35 @@ namespace DataDictionary.Interpreter.Statement
         {
             return VariableIdentification.ToString() + " <- " + Expression.ToString();
         }
+
+        /// <summary>
+        /// Provides a real short description of this statement
+        /// </summary>
+        /// <returns></returns>
+        public override string ShortShortDescription()
+        {
+            string retVal = "";
+
+            if (VariableIdentification.ToString().Trim() == "THIS")
+            {
+                retVal = Expression.ToString();
+            }
+            else
+            {
+                retVal = VariableIdentification.Name;
+            }
+
+            return retVal;
+        }
+
+        /// <summary>
+        /// Provides the main model elemnt affected by this statement
+        /// </summary>
+        /// <returns></returns>
+        public override ModelElement AffectedElement()
+        {
+            return VariableIdentification.Ref as ModelElement;
+        }
+
     }
 }

@@ -27,11 +27,6 @@ namespace GUI.TranslationRules
             get { return propertyGrid; }
         }
 
-        public override RichTextBox MessagesTextBox
-        {
-            get { return messageRichTextBox.TextBox; }
-        }
-
         public override EditorTextBox RequirementsTextBox
         {
             get { return sourceTextBox; }
@@ -60,7 +55,6 @@ namespace GUI.TranslationRules
         {
             InitializeComponent();
 
-            messageRichTextBox.AutoComplete = false;
             sourceTextBox.AutoComplete = false;
             explainTextBox.AutoComplete = false;
 

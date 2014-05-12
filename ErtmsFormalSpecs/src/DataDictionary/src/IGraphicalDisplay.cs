@@ -46,14 +46,24 @@ namespace DataDictionary
         int Height { get; set; }
 
         /// <summary>
+        /// The Guid of the graphical display
+        /// </summary>
+        string Guid { get; }
+
+        /// <summary>
         /// The name to be displayed
         /// </summary>
         string GraphicalName { get; }
 
         /// <summary>
-        /// Indicates that the element is hiddent
+        /// Indicates that the element is hidden
         /// </summary>
         bool Hidden { get; set; }
+
+        /// <summary>
+        /// Indicates that the element is pinned
+        /// </summary>
+        bool Pinned { get; set; }
     }
 
     /// <summary>
@@ -93,6 +103,5 @@ namespace DataDictionary
         /// The model element which is referenced by this arrow
         /// </summary>
         ModelElement ReferencedModel { get; }
-
     }
 }

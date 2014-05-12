@@ -205,7 +205,7 @@ namespace GUI.TestRunnerView
             Window window = BaseForm as Window;
             if (window != null)
             {
-                window.tabControl1.SelectedTab = window.timeLineTabPage;
+                window.tabControl1.SelectedTab = window.testExecutionTabPage;
             }
         }
         #endregion

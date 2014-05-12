@@ -379,12 +379,19 @@ namespace DataDictionary.Tests.Runner
         };
 
         /// <summary>
+        /// The current priority
+        /// </summary>
+        public Generated.acceptor.RulePriority? CurrentPriority { get; private set; }
+
+        /// <summary>
         /// Activates the rules in the dictionary until stabilisation
         /// </summary>
         public void Cycle()
         {
             try
             {
+                CurrentPriority = null;
+
                 if (LogEvents)
                 {
                     Log.Info("New cycle");
@@ -399,6 +406,7 @@ namespace DataDictionary.Tests.Runner
                 {
                     innerExecuteOnePriority(priority);
                 }
+                CurrentPriority = null;
                 // Clears the cache of functions
                 FunctionCacheCleaner.ClearCaches();
 
@@ -409,7 +417,7 @@ namespace DataDictionary.Tests.Runner
                         switch (log.Level)
                         {
                             case Utils.ElementLog.LevelEnum.Error:
-                                ModelInterpretationFailure modelInterpretationFailure = new ModelInterpretationFailure(log, pair.Key as Utils.INamable);
+                                ModelInterpretationFailure modelInterpretationFailure = new ModelInterpretationFailure(log, pair.Key as Utils.INamable, null);
                                 EventTimeLine.AddModelEvent(modelInterpretationFailure, this);
                                 break;
 
@@ -437,6 +445,7 @@ namespace DataDictionary.Tests.Runner
         /// <param name="priority"></param>
         private void innerExecuteOnePriority(Generated.acceptor.RulePriority priority)
         {
+            CurrentPriority = priority;
             if (LogEvents)
             {
                 Log.Info("Priority=" + priority);
@@ -454,7 +463,7 @@ namespace DataDictionary.Tests.Runner
                 }
             }
 
-            ApplyActivations(activations);
+            ApplyActivations(activations, priority);
             CheckExpectationsState(priority);
         }
         /// <summary>
@@ -633,7 +642,7 @@ namespace DataDictionary.Tests.Runner
         /// Applies the selected actions and update the system state
         /// </summary>
         /// <param name="updates"></param>
-        public void ApplyActivations(HashSet<Activation> activations)
+        public void ApplyActivations(HashSet<Activation> activations, Generated.acceptor.RulePriority priority)
         {
             foreach (Activation activation in activations)
             {
@@ -644,7 +653,7 @@ namespace DataDictionary.Tests.Runner
                 if (activation.RuleCondition.Actions.Count > 0)
                 {
                     // Register the fact that a rule has been triggered
-                    Events.RuleFired ruleFired = new Events.RuleFired(activation.RuleCondition);
+                    Events.RuleFired ruleFired = new Events.RuleFired(activation.RuleCondition, priority);
                     EventTimeLine.AddModelEvent(ruleFired, this);
 
                     // Registers all model updates due to this rule triggering
@@ -652,7 +661,7 @@ namespace DataDictionary.Tests.Runner
                     {
                         if (action.Statement != null)
                         {
-                            Events.VariableUpdate variableUpdate = new Events.VariableUpdate(action, activation.Instance);
+                            Events.VariableUpdate variableUpdate = new Events.VariableUpdate(action, activation.Instance, priority);
                             EventTimeLine.AddModelEvent(variableUpdate, this);
                             ruleFired.AddVariableUpdate(variableUpdate);
                         }
@@ -678,7 +687,7 @@ namespace DataDictionary.Tests.Runner
                 // No setup can occur when some expectations are still active
                 if (ActiveBlockingExpectations().Count == 0)
                 {
-                    EventTimeLine.AddModelEvent(new SubStepActivated(subStep), this);
+                    EventTimeLine.AddModelEvent(new SubStepActivated(subStep, CurrentPriority), this);
                 }
             }
             finally
@@ -733,12 +742,12 @@ namespace DataDictionary.Tests.Runner
                         case Generated.acceptor.ExpectationKind.aInstantaneous:
                         case Generated.acceptor.ExpectationKind.defaultExpectationKind:
                             // Instantaneous expectation who raised its deadling
-                            EventTimeLine.AddModelEvent(new FailedExpectation(expect), this);
+                            EventTimeLine.AddModelEvent(new FailedExpectation(expect, CurrentPriority), this);
                             break;
 
                         case Generated.acceptor.ExpectationKind.aContinuous:
                             // Continuous expectation who raised its deadline
-                            EventTimeLine.AddModelEvent(new ExpectationReached(expect), this);
+                            EventTimeLine.AddModelEvent(new ExpectationReached(expect, CurrentPriority), this);
                             break;
                     }
                 }
@@ -755,7 +764,7 @@ namespace DataDictionary.Tests.Runner
                                     if (getBoolValue(expectation, expectation.Expression))
                                     {
                                         // An instantaneous expectation who reached its satisfactory condition
-                                        EventTimeLine.AddModelEvent(new ExpectationReached(expect), this);
+                                        EventTimeLine.AddModelEvent(new ExpectationReached(expect, priority), this);
                                     }
                                     break;
 
@@ -765,14 +774,14 @@ namespace DataDictionary.Tests.Runner
                                         if (!getBoolValue(expectation, expectation.ConditionTree))
                                         {
                                             // An continuous expectation who reached its satisfactory condition
-                                            EventTimeLine.AddModelEvent(new ExpectationReached(expect), this);
+                                            EventTimeLine.AddModelEvent(new ExpectationReached(expect, priority), this);
                                         }
                                         else
                                         {
                                             if (!getBoolValue(expectation, expectation.Expression))
                                             {
                                                 // A continuous expectation who reached a case where it is not satisfied
-                                                EventTimeLine.AddModelEvent(new FailedExpectation(expect), this);
+                                                EventTimeLine.AddModelEvent(new FailedExpectation(expect, priority), this);
                                             }
                                         }
                                     }
@@ -781,7 +790,7 @@ namespace DataDictionary.Tests.Runner
                                         if (!getBoolValue(expectation, expectation.Expression))
                                         {
                                             // A continuous expectation who reached a case where it is not satisfied
-                                            EventTimeLine.AddModelEvent(new FailedExpectation(expect), this);
+                                            EventTimeLine.AddModelEvent(new FailedExpectation(expect, priority), this);
                                         }
                                     }
                                     break;

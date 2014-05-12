@@ -1,11 +1,13 @@
 <NameSpace
- X="20"
- Y="900"
- Width="1600"
+ X="1100"
+ Y="540"
+ Width="100"
  Height="50"
+ Pinned="TRUE"
  Name="MA"
  Guid="0f25952e-aa3a-4ee6-ba2c-ecc98c278777"
 >
+<Comment></Comment>
 <NameSpaces>
 <NameSpaceRef
  Name="ModeProfile"
@@ -14,6 +16,11 @@
 </NameSpaceRef></NameSpaces>
 <Structures>
 <Structure
+ Default=""
+ X="320"
+ Y="340"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Verified="TRUE"
  Name="MovementAuthority"
@@ -176,6 +183,11 @@
 >
 </ReqRef><Comment>The Location of the ReferenceBG</Comment>
 </StructureElement></Structure><Structure
+ Default=""
+ X="620"
+ Y="340"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Section"
  Guid="fffdbc4e-3bd3-4ff3-ba88-a499ce5b40d6"
@@ -237,6 +249,11 @@
 >
 </ReqRef><Comment>Represents the section time-out (if no time-out is available for this section, this field is EMPTY).</Comment>
 </StructureElement></Structure><Structure
+ Default=""
+ X="620"
+ Y="470"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Verified="TRUE"
  Name="SectionTimeOut"
@@ -292,6 +309,11 @@
 >
 </ReqRef><Comment>Represents the distance from beginning of section to section timer stop location (if there is a time-out associated to this section).</Comment>
 </StructureElement></Structure><Structure
+ Default=""
+ X="320"
+ Y="470"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="EndSection"
  Guid="a413947b-e66e-4566-b7e6-c0cf63e5a079"
@@ -433,6 +455,11 @@
 >
 </ReqRef><Comment>Location beyond the danger point that can be reached by the front end of the train without a risk for a hazardous situation.</Comment>
 </StructureElement></Structure><Structure
+ Default=""
+ X="250"
+ Y="560"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Verified="TRUE"
  Name="DangerPoint"
@@ -484,6 +511,11 @@
 >
 </ReqRef><Comment>The release speed related to danger point.</Comment>
 </StructureElement></Structure><Structure
+ Default=""
+ X="400"
+ Y="560"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Verified="TRUE"
  Name="Overlap"
@@ -565,6 +597,11 @@
 >
 </ReqRef><Comment>The validity time of the overlap.</Comment>
 </StructureElement></Structure><Structure
+ Default=""
+ X="200"
+ Y="650"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="MaShorteningHandler"
  Guid="cb017d60-1896-46d2-84be-837577197514"
@@ -608,6 +645,10 @@ Location stores the previous End of Movement Authority location.</Comment>
  TypeName="Section"
  MaxSize="6"
  Default="[]"
+ X="480"
+ Y="340"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Verified="TRUE"
  Name="Sections"
@@ -632,6 +673,10 @@ Location stores the previous End of Movement Authority location.</Comment>
 </Collection><Collection
  TypeName="Kernel.SpeedAndDistanceMonitoring.TargetSupervision.Target"
  Default="[EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY]"
+ X="170"
+ Y="470"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="TargetsCol"
@@ -642,6 +687,12 @@ Location stores the previous End of Movement Authority location.</Comment>
 <Functions>
 <Function
  Type="SpeedAndDistanceMonitoring.TargetSupervision.Target"
+ Default=""
+ X="30"
+ Y="10"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Verified="TRUE"
  Name="EndOfMovementAuthority"
@@ -718,6 +769,12 @@ INITIAL_VALUE CreateTarget (
 </Case></Cases>
 </Function><Function
  Type="Section"
+ Default=""
+ X="140"
+ Y="10"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CreateEFSSection"
@@ -800,6 +857,12 @@ INITIAL_VALUE CreateTarget (
 </Case></Cases>
 </Function><Function
  Type="Messages.PACKET.TRACK_TO_TRAIN.LEVEL_1_MOVEMENT_AUTHORITY.SubStructure1"
+ Default=""
+ X="250"
+ Y="10"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ConvertSectionLvl2or3_to_SectionLvl1"
@@ -838,6 +901,12 @@ INITIAL_VALUE CreateTarget (
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="30"
+ Y="70"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Verified="TRUE"
  NeedsRequirement="FALSE"
@@ -863,6 +932,12 @@ INITIAL_VALUE CreateTarget (
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
+ X="140"
+ Y="70"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Verified="TRUE"
  NeedsRequirement="FALSE"
@@ -888,6 +963,12 @@ INITIAL_VALUE CreateTarget (
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Length"
+ Default=""
+ X="250"
+ Y="70"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CurrentSectionLength"
@@ -918,6 +999,12 @@ INITIAL_VALUE CreateTarget (
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="30"
+ Y="130"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="SignallingRelatedSpeedRestrictions"
  Guid="d6a64001-c3fe-44e8-9434-132f86949851"
@@ -968,6 +1055,12 @@ INITIAL_VALUE CreateTarget (
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="140"
+ Y="130"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="EOASpeedRestriction"
  Guid="74fa2842-40d4-4d71-8890-4cdb2e72bb65"
@@ -1032,6 +1125,12 @@ INITIAL_VALUE CreateTarget (
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="250"
+ Y="130"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="EOADefined"
@@ -1048,6 +1147,11 @@ INITIAL_VALUE CreateTarget (
 </Function><Function
  Type="Default.BaseTypes.Speed"
  Cacheable="TRUE"
+ Default=""
+ X="30"
+ Y="250"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SpeedRestrictions"
  Guid="e2bd1235-36f0-49b6-aad4-b5149860a234"
@@ -1114,6 +1218,11 @@ INITIAL_VALUE CreateTarget (
 </Function><Function
  Type="Default.BaseTypes.Speed"
  Cacheable="TRUE"
+ Default=""
+ X="140"
+ Y="250"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SvLSpeedRestriction"
  Guid="87cdee38-75a8-40f8-af9d-e60740c6fcbf"
@@ -1165,6 +1274,11 @@ INITIAL_VALUE CreateTarget (
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
+ X="470"
+ Y="130"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CreateReleaseSpeed"
  Guid="ce1ae19d-f94e-447b-ab55-405ef7ed72a6"
@@ -1224,6 +1338,11 @@ INITIAL_VALUE CreateTarget (
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="30"
+ Y="190"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="IsSvL"
  Guid="9ea94bed-895b-412f-8fe7-07424bf7ce80"
@@ -1287,6 +1406,11 @@ INITIAL_VALUE CreateTarget (
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="140"
+ Y="190"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="IsEOA"
  Guid="69cecb0a-ba7e-4b67-976e-e176498c9471"
@@ -1322,6 +1446,11 @@ INITIAL_VALUE CreateTarget (
 </Case></Cases>
 </Function><Function
  Type="SpeedAndDistanceMonitoring.TargetSupervision.Target"
+ Default=""
+ X="360"
+ Y="190"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SvL"
  Guid="fca588eb-ce86-4b0e-9bb9-3862a86d1b7d"
@@ -1359,6 +1488,12 @@ INITIAL_VALUE CreateTarget (
 </Case></Cases>
 </Function><Function
  Type="Section"
+ Default=""
+ X="360"
+ Y="10"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="ConsiderSectionForInfill"
  Guid="77c23221-fd4d-40bd-9d27-49cf6601b20f"
@@ -1417,6 +1552,11 @@ INITIAL_VALUE CreateTarget (
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Length"
+ Default=""
+ X="360"
+ Y="70"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AbsoluteDistance"
  Guid="9d38e360-bd00-4e60-a515-b33be10fff5f"
@@ -1447,6 +1587,11 @@ USING
 </Case></Cases>
 </Function><Function
  Type="Messages.PACKET.TRACK_TO_TRAIN.LEVEL_1_MOVEMENT_AUTHORITY.Message"
+ Default=""
+ X="360"
+ Y="130"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ConvertMALvl2or3_to_MALvl1"
@@ -1505,6 +1650,11 @@ USING
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="470"
+ Y="250"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="FullTrackDescriptionAvailable"
  Guid="3f902f3d-ba04-401b-8cb7-6dec20472418"
@@ -1571,6 +1721,11 @@ Default.BaseTypes.LengthToDistance(
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="470"
+ Y="70"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AcceptMA"
  Guid="2b06bc8f-a6b6-4fbe-ab3f-3b81193ce0d7"
@@ -1633,6 +1788,11 @@ Default.BaseTypes.LengthToDistance(
 </Case></Cases>
 </Function><Function
  Type="Kernel.SpeedAndDistanceMonitoring.TargetSupervision.Target"
+ Default=""
+ X="470"
+ Y="10"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CreateTarget"
@@ -1670,6 +1830,11 @@ Default.BaseTypes.LengthToDistance(
 </Case></Cases>
 </Function><Function
  Type="SpeedAndDistanceMonitoring.TargetSupervision.Target"
+ Default=""
+ X="360"
+ Y="250"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ClosestTarget"
@@ -1706,6 +1871,11 @@ Default.BaseTypes.LengthToDistance(
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="580"
+ Y="10"
+ Width="100"
+ Height="50"
  Name="ShortenedMAIsAccepted"
  Guid="1891bebe-22be-4c1a-89f9-80a427758759"
 >
@@ -1724,6 +1894,11 @@ Default.BaseTypes.LengthToDistance(
 </Case></Cases>
 </Function><Function
  Type="Section"
+ Default=""
+ X="580"
+ Y="70"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TimedOutSection"
  Guid="70aaa7f6-aa1e-4ba7-aa37-bad5f5a8d065"
@@ -1792,6 +1967,11 @@ Available(MA.EndSection.TimeOut)
 </Case></Cases>
 </Function><Function
  Type="BaseTypes.Distance"
+ Default=""
+ X="470"
+ Y="190"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SectionStartLocation"
  Guid="ee87661a-2b01-46a0-9be2-7aac8b6724c0"
@@ -1840,6 +2020,11 @@ BaseTypes.LengthToDistance
 </Case></Cases>
 </Function><Function
  Type="BaseTypes.Distance"
+ Default=""
+ X="250"
+ Y="250"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TimeOutSectionStart"
  Guid="c7fbc559-012d-40ae-8cb8-38a8bc564e2b"
@@ -1859,6 +2044,11 @@ BaseTypes.LengthToDistance
 </Case></Cases>
 </Function><Function
  Type="BaseTypes.Distance"
+ Default=""
+ X="250"
+ Y="190"
+ Width="100"
+ Height="50"
  NeedsRequirement="FALSE"
  Name="EndOfMA"
  Guid="f5b47b4a-7787-4424-924d-9691547252f3"
@@ -1885,6 +2075,10 @@ BaseTypes.LengthToDistance
 </Function></Functions>
 <Procedures>
 <Procedure
+ X="850"
+ Y="210"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="MALvl2or3Received"
@@ -1942,6 +2136,10 @@ BaseTypes.LengthToDistance
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="740"
+ Y="210"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="MALvl1Received"
@@ -2071,6 +2269,10 @@ SectionTimerStart &lt;- CurrentBGTimeOfPassage</Action><Action
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="740"
+ Y="270"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="UpdateMA"
@@ -2780,6 +2982,10 @@ In this case, the EOA should be moved to the train&apos;s current position with 
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="850"
+ Y="270"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="UpdateSectionsForInfill"
  Guid="25c8f1ca-83e1-4f0d-a2db-7fff0e0f0bb3"
@@ -2883,6 +3089,10 @@ IN MA.Sections</Action></Actions>
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="740"
+ Y="330"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="ExtendSections"
  Guid="29055212-109d-4980-9bb9-baf42f12e148"
@@ -2933,6 +3143,10 @@ IN
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="850"
+ Y="330"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="RepositioningInformationReceived"
  Guid="d28c0d00-54dc-4001-998e-ebb221ab6792"
@@ -3006,6 +3220,10 @@ IN
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="740"
+ Y="390"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="HandleEOAs"
  Guid="079a7605-b119-4881-8fe0-ab1a2a44fac6"
@@ -3422,6 +3640,10 @@ IN EOAs</Action></Actions>
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="850"
+ Y="390"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="HandleSvLs"
  Guid="44193527-6144-4bde-b7b0-f826e9baf559"
@@ -3774,6 +3996,10 @@ SvL().Location &lt; ShorteningHandler.Location</PreCondition></PreConditions>
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="850"
+ Y="150"
+ Width="100"
+ Height="50"
  NeedsRequirement="FALSE"
  Name="InitializeElementsForMA"
  Guid="308f7a88-e9cd-4e48-bbc1-66b9b6ccc0a1"
@@ -3839,6 +4065,10 @@ SvL().Location &lt; ShorteningHandler.Location</PreCondition></PreConditions>
  Type="MovementAuthority"
  DefaultValue="EMPTY"
  VariableMode="Internal"
+ X="160"
+ Y="340"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="MA"
  Guid="3b49e60e-534c-48a7-af15-a4a583b52078"
@@ -3863,6 +4093,10 @@ SvL().Location &lt; ShorteningHandler.Location</PreCondition></PreConditions>
  Type="Default.BaseTypes.Speed"
  DefaultValue="Default.BaseTypes.Speed.MaxSpeed"
  VariableMode="Internal"
+ X="740"
+ Y="510"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SignallingRelatedSpeedRestriction"
  Guid="59169bbb-dab1-434c-825e-21145fe95855"
@@ -3895,6 +4129,10 @@ SvL().Location &lt; ShorteningHandler.Location</PreCondition></PreConditions>
  Type="MA.MaShorteningHandler"
  DefaultValue="EMPTY"
  VariableMode="Internal"
+ X="20"
+ Y="650"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="ShorteningHandler"
  Guid="4a84e04c-5296-4803-9519-1233bcea12c0"
@@ -3912,7 +4150,12 @@ SvL().Location &lt; ShorteningHandler.Location</PreCondition></PreConditions>
 </ReqRef><Comment>Allows to verify if the MA was shortened (possibly regardless of SvL location).</Comment>
 </Variable><Variable
  Type="Kernel.MA.TargetsCol"
+ DefaultValue=""
  VariableMode="Internal"
+ X="20"
+ Y="500"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SvLs"
@@ -3921,7 +4164,12 @@ SvL().Location &lt; ShorteningHandler.Location</PreCondition></PreConditions>
 <Comment>This is a collection holding all the locations designated as supervision limit according to different external inputs</Comment>
 </Variable><Variable
  Type="Kernel.MA.TargetsCol"
+ DefaultValue=""
  VariableMode="Internal"
+ X="20"
+ Y="440"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="EOAs"
@@ -3932,6 +4180,10 @@ SvL().Location &lt; ShorteningHandler.Location</PreCondition></PreConditions>
  Type="BaseTypes.Time"
  DefaultValue="0.0"
  VariableMode="Internal"
+ X="740"
+ Y="620"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SectionTimerStart"
  Guid="eadabd71-0e7f-4597-8d44-9574de6f8a1d"
@@ -3966,6 +4218,10 @@ SvL().Location &lt; ShorteningHandler.Location</PreCondition></PreConditions>
  Type="SectionTimeOut"
  DefaultValue=""
  VariableMode="Internal"
+ X="560"
+ Y="580"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="EndSectionTimerStart"
  Guid="bd5eb6a3-7ab7-4a25-9014-f553a218a7b8"
@@ -3991,6 +4247,10 @@ Note that the &quot;TimeOut&quot; here is not the End Section time-out value, bu
  Type="Default.BaseTypes.Time"
  DefaultValue="0.0"
  VariableMode="Internal"
+ X="860"
+ Y="620"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CurrentBGTimeOfPassage"
  Guid="394ee49b-da65-4088-9728-14bd7678bec1"
@@ -4010,6 +4270,10 @@ Note that the &quot;TimeOut&quot; here is not the End Section time-out value, bu
  Type="Boolean"
  DefaultValue="False"
  VariableMode="Internal"
+ X="860"
+ Y="510"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="MAIsAccepted"
  Guid="e2e5ee29-3d1d-4597-abaa-7dc7252ecc33"
@@ -4024,6 +4288,10 @@ Note that the &quot;TimeOut&quot; here is not the End Section time-out value, bu
 <Rules>
 <Rule
  Priority="Processing"
+ X="860"
+ Y="10"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="Start End Section Timer"
  Guid="96dde597-2950-4ce8-87b6-5472d73371df"

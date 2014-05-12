@@ -26,6 +26,37 @@ namespace DataDictionary.Interpreter
     public class Visitor
     {
         /// <summary>
+        /// Visits a tree node
+        /// </summary>
+        /// <param name="interpreterTreeNode"></param>
+        protected virtual void visitInterpreterTreeNode(InterpreterTreeNode interpreterTreeNode)
+        {
+            Designator designator = interpreterTreeNode as Designator;
+            if (designator != null)
+            {
+                VisitDesignator(designator);
+            }
+
+            Term term = interpreterTreeNode as Term;
+            if (term != null)
+            {
+                VisitTerm(term);
+            }
+
+            Expression expression = interpreterTreeNode as Expression;
+            if (expression != null)
+            {
+                VisitExpression(expression);
+            }
+
+            Statement.Statement statement = interpreterTreeNode as Statement.Statement;
+            if (statement != null)
+            {
+                VisitStatement(statement);
+            }
+        }
+
+        /// <summary>
         /// Visits a designator
         /// </summary>
         /// <param name="?"></param>

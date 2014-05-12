@@ -1,16 +1,24 @@
 <NameSpace
- X="150"
- Y="230"
+ X="160"
+ Y="600"
  Width="100"
  Height="50"
  Hidden="TRUE"
+ Pinned="TRUE"
  Name="LevelTransition"
  Guid="c7686458-322b-4861-9f8c-de43b74bb2c3"
 >
+<Comment></Comment>
 <NameSpaces>
 </NameSpaces>
 <Structures>
 <Structure
+ Default=""
+ X="450"
+ Y="380"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="LevelTransition"
  Guid="d5dd0ecb-bbb2-49c8-a2cf-cfc1498e4d2d"
@@ -63,6 +71,12 @@
 >
 </ReqRef><Comment></Comment>
 </StructureElement></Structure><Structure
+ Default=""
+ X="260"
+ Y="290"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="LevelTransitionOrder"
  Guid="4941448b-3df6-4eae-8321-c4ea9331b27c"
@@ -124,6 +138,11 @@
  TypeName="LevelTransition"
  MaxSize="20"
  Default="[]"
+ X="450"
+ Y="290"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="LTs"
@@ -134,10 +153,17 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="1da9d143-d07f-490c-98a3-ed1e9d19f02e"
 >
-</ReqRef></Collection></Collections>
+</ReqRef><Comment></Comment>
+</Collection></Collections>
 <Functions>
 <Function
  Type="Default.Level"
+ Default=""
+ X="750"
+ Y="120"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="ERTMS_to_EFS_Level"
  Guid="cd232b1d-a061-442b-bb87-7659f2506c34"
@@ -147,7 +173,8 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="deda796a-0385-4be7-90e2-3d0b343d6564"
 >
-</ReqRef><Parameters>
+</ReqRef><Comment></Comment>
+<Parameters>
 <Parameter
  Type="Messages.M_LEVELTR"
  Name="LevelT"
@@ -203,6 +230,12 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
+ X="750"
+ Y="60"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="AvailableForUse"
  Guid="53cf121e-1419-433c-a39b-5d3a6ac9e7f4"
@@ -261,6 +294,11 @@
 </Function></Functions>
 <Procedures>
 <Procedure
+ X="40"
+ Y="60"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="AddNewLTO"
  Guid="17b81d46-93b1-4f1e-acad-9a5a64af63cf"
@@ -362,6 +400,11 @@ IN  LevelTransitionOrder.LevelAndLength</Action></Actions>
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="40"
+ Y="120"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="LTOReceived"
  Guid="304f3b87-4b8b-42a3-8c9b-56d23ffbd040"
@@ -490,6 +533,11 @@ Packet.Sequence1</Action></Actions>
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="150"
+ Y="60"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="CLTOReceived"
  Guid="592255a0-2935-48b2-b02c-da2ba5d0b49b"
@@ -499,7 +547,8 @@ Packet.Sequence1</Action></Actions>
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="338336d3-0344-4b2f-8380-68db927b7096"
 >
-</ReqRef><Parameters>
+</ReqRef><Comment></Comment>
+<Parameters>
 <Parameter
  Type="Messages.PACKET.TRACK_TO_TRAIN.CONDITIONAL_LEVEL_TRANSITION_ORDER.Message"
  Name="Packet"
@@ -606,6 +655,11 @@ Packet.Sequence1</Action></Actions>
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="150"
+ Y="120"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  NeedsRequirement="FALSE"
  Name="ProcessLTOSpecific"
  Guid="20ba453f-bef9-40d7-82e1-57155f75b2b6"
@@ -649,6 +703,11 @@ Packet.Sequence1</Action></Actions>
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="260"
+ Y="60"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  NeedsRequirement="FALSE"
  Name="ProcessLTOGeneric"
  Guid="9f0e907e-219e-4923-a617-2a61a1063133"
@@ -787,6 +846,11 @@ Packet.Sequence1</Action></Actions>
  Type="LevelTransitionOrder"
  DefaultValue="EMPTY"
  VariableMode="Internal"
+ X="50"
+ Y="290"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="LevelTransitionOrder"
  Guid="1090a9f6-edf2-4b09-8c7a-3bd882af71eb"
@@ -812,6 +876,11 @@ Packet.Sequence1</Action></Actions>
  Type="Kernel.LevelTransition.LevelTransition"
  DefaultValue=""
  VariableMode="Internal"
+ X="260"
+ Y="380"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="LTOtoProcess"
  Guid="c4da5415-191f-483c-880e-1c2e86e52dea"
@@ -826,6 +895,11 @@ Packet.Sequence1</Action></Actions>
 <Rules>
 <Rule
  Priority="Processing"
+ X="490"
+ Y="60"
+ Width="100"
+ Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="ExecuteLevelTransitionOrder"
  Guid="2d1413d6-1677-4d3a-9fd6-3e25c3ab814f"

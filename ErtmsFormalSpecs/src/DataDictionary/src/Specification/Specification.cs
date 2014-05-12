@@ -190,7 +190,7 @@ namespace DataDictionary.Specification
 
                     foreach (Chapter chapter in Chapters)
                     {
-                        if (id.StartsWith(chapter.getId()) || !create)
+                        if (id.StartsWith(chapter.getId()))
                         {
                             tmp = chapter.FindParagraph(id, create);
                             if (tmp != null)

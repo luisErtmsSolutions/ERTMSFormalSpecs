@@ -1,9 +1,10 @@
 <NameSpace
- X="840"
- Y="330"
- Width="200"
- Height="300"
+ X="1100"
+ Y="600"
+ Width="100"
+ Height="50"
  Hidden="TRUE"
+ Pinned="TRUE"
  Name="TrackDescription"
  Guid="658d23a1-3f73-45fd-ad99-b674992cc0bb"
 >

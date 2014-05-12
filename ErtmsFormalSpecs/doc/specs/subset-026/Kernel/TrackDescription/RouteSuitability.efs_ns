@@ -10,6 +10,7 @@
 </NameSpaces>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="RouteSuitabilityInformation"
@@ -60,6 +61,7 @@
 >
 <Comment>List of route suitability items.</Comment>
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="RouteSuitabilityItem"
@@ -200,6 +202,7 @@
 <Functions>
 <Function
  Type="RouteSuitability.RouteSuitabilityItem"
+ Default=""
  Implemented="TRUE"
  Name="CreateRouteSuitabilityItem"
  Guid="0e992176-c20e-4b2b-9ebc-f1466bacf9e3"
@@ -259,6 +262,7 @@
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  Name="IsUnsuitable"
  Guid="c7deead7-d55a-45db-96a6-766ccd730dc2"
@@ -342,6 +346,7 @@ NOT THERE_IS_IN
 </Case></Cases>
 </Function><Function
  Type="SpeedAndDistanceMonitoring.TargetSupervision.Target"
+ Default=""
  Implemented="TRUE"
  Name="EOA"
  Guid="dc03df9c-9b6f-45b0-ba1e-4e006afb39c5"
@@ -401,6 +406,7 @@ THERE_IS_IN RouteSuitabilityProfile.Items | IsUnsuitable ( X )</PreCondition></P
 </Case></Cases>
 </Function><Function
  Type="SpeedAndDistanceMonitoring.TargetSupervision.Target"
+ Default=""
  Implemented="TRUE"
  Name="SvL"
  Guid="961d0614-6b17-450f-aba5-c86627fb1425"
@@ -455,6 +461,7 @@ THERE_IS_IN RouteSuitabilityProfile.Items | IsUnsuitable ( X )</PreCondition></P
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  Verified="TRUE"
  NeedsRequirement="FALSE"

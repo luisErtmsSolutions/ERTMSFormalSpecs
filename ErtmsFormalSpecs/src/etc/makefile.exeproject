@@ -4,7 +4,7 @@
 all: bin/$(PROJECT).exe
 
 bin/$(PROJECT).exe :  
-	@banner $(PROJECT)
+	-@banner $(PROJECT)
 	@make clean
 	@-mkdir bin
 	@$(BUILD)

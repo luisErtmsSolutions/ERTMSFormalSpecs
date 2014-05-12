@@ -1,8 +1,9 @@
 <NameSpace
- X="20"
- Y="250"
+ X="570"
+ Y="220"
  Width="100"
  Height="50"
+ Pinned="TRUE"
  Name="TIU"
  Guid="ebde6713-ca52-4c13-949d-6735073795ef"
 >
@@ -91,6 +92,7 @@
 </Enum></Enumerations>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  Name="BrakeStatusStruct"
  Guid="f05f9d2e-d556-402f-a0c7-7535c7472d91"
@@ -148,6 +150,7 @@
 >
 <Comment>Indicates if the status of electro pneumatic brake is active.</Comment>
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  Name="CabStruct"
  Guid="0805e9a4-1a0e-4cb6-9640-6560cdcb831e"
@@ -264,6 +267,7 @@
 >
 </ReqRef><Comment>Indicates the status of virtual cab A, if the current cab is single and contains only one desk.</Comment>
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  Name="TrainIntegrityStruct"
  Guid="2c7a8cb2-30a0-4c5a-8b3d-a28cffb11256"

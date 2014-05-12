@@ -6,6 +6,7 @@
 </NameSpaces>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  Name="Message"
  Guid="4295461c-7b3a-4570-b8d7-2d65194a0d1b"
@@ -74,6 +75,7 @@
  Guid="21150d8c-e313-42a9-bbf9-d2e6aa7b7456"
 >
 </ReqRef></StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  Name="SubStructure1"
  Guid="38644167-72ce-4c54-bdc5-c50a36658273"

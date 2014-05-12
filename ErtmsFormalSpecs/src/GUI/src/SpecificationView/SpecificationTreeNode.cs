@@ -162,9 +162,6 @@ namespace GUI.SpecificationView
             Window window = BaseForm as Window;
             if (window != null)
             {
-                window.specBrowserTextView.Text = Item.Name;
-                window.specBrowserTextView.Enabled = false;
-
                 GUIUtils.MDIWindow.SetCoverageStatus(Item);
             }
         }

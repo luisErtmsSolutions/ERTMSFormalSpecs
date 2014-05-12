@@ -27,8 +27,8 @@ namespace DataDictionary.Tests.Runner.Events
         /// Constructor
         /// </summary>
         /// <param name="id"></param>
-        public ModelInterpretationFailure(Utils.ElementLog log, Utils.INamable instance)
-            : base(log.Log, instance)
+        public ModelInterpretationFailure(Utils.ElementLog log, Utils.INamable instance, Generated.acceptor.RulePriority? priority)
+            : base(log.Log, instance, priority)
         {
             Log = log;
         }

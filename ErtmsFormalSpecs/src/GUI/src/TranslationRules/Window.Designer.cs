@@ -43,6 +43,7 @@ namespace GUI.TranslationRules
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Window));
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -53,24 +54,17 @@ namespace GUI.TranslationRules
             this.nextInfoToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.translationTreeView = new GUI.TranslationRules.TranslationTreeView();
-            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.propertyGrid = new GUI.MyPropertyGrid();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.sourceTextBox = new GUI.EditorTextBox();
             this.explainTextBox = new GUI.ExplainTextBox();
             this.expressionEditorTextBox = new GUI.EditorTextBox();
-            this.messageGroupBox = new System.Windows.Forms.GroupBox();
-            this.messageRichTextBox = new GUI.EditorTextBox();
             this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
-            this.splitContainer4.Panel1.SuspendLayout();
-            this.splitContainer4.Panel2.SuspendLayout();
-            this.splitContainer4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -79,7 +73,6 @@ namespace GUI.TranslationRules
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
-            this.messageGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip2
@@ -156,7 +149,7 @@ namespace GUI.TranslationRules
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.splitContainer4);
+            this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Size = new System.Drawing.Size(926, 548);
             this.splitContainer1.SplitterDistance = 306;
             this.splitContainer1.SplitterWidth = 3;
@@ -177,26 +170,6 @@ namespace GUI.TranslationRules
             this.translationTreeView.Size = new System.Drawing.Size(306, 548);
             this.translationTreeView.TabIndex = 1;
             // 
-            // splitContainer4
-            // 
-            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer4.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer4.Margin = new System.Windows.Forms.Padding(2);
-            this.splitContainer4.Name = "splitContainer4";
-            this.splitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer4.Panel1
-            // 
-            this.splitContainer4.Panel1.Controls.Add(this.splitContainer2);
-            // 
-            // splitContainer4.Panel2
-            // 
-            this.splitContainer4.Panel2.Controls.Add(this.messageGroupBox);
-            this.splitContainer4.Size = new System.Drawing.Size(617, 548);
-            this.splitContainer4.SplitterDistance = 460;
-            this.splitContainer4.SplitterWidth = 3;
-            this.splitContainer4.TabIndex = 1;
-            // 
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -211,8 +184,8 @@ namespace GUI.TranslationRules
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer2.Size = new System.Drawing.Size(617, 460);
-            this.splitContainer2.SplitterDistance = 182;
+            this.splitContainer2.Size = new System.Drawing.Size(617, 548);
+            this.splitContainer2.SplitterDistance = 216;
             this.splitContainer2.TabIndex = 1;
             // 
             // propertyGrid
@@ -223,7 +196,7 @@ namespace GUI.TranslationRules
             this.propertyGrid.Margin = new System.Windows.Forms.Padding(2);
             this.propertyGrid.Name = "propertyGrid";
             this.propertyGrid.PropertySort = System.Windows.Forms.PropertySort.Categorized;
-            this.propertyGrid.Size = new System.Drawing.Size(617, 182);
+            this.propertyGrid.Size = new System.Drawing.Size(617, 216);
             this.propertyGrid.TabIndex = 0;
             // 
             // splitContainer3
@@ -240,7 +213,7 @@ namespace GUI.TranslationRules
             // 
             this.splitContainer3.Panel2.Controls.Add(this.explainTextBox);
             this.splitContainer3.Panel2.Controls.Add(this.expressionEditorTextBox);
-            this.splitContainer3.Size = new System.Drawing.Size(617, 274);
+            this.splitContainer3.Size = new System.Drawing.Size(617, 328);
             this.splitContainer3.SplitterDistance = 300;
             this.splitContainer3.TabIndex = 0;
             // 
@@ -251,13 +224,11 @@ namespace GUI.TranslationRules
             this.sourceTextBox.ConsiderOnlyTypes = false;
             this.sourceTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sourceTextBox.Instance = null;
-            this.sourceTextBox.Lines = new string[] {
-        ""};
             this.sourceTextBox.Location = new System.Drawing.Point(0, 0);
             this.sourceTextBox.Name = "sourceTextBox";
             this.sourceTextBox.ReadOnly = false;
             this.sourceTextBox.Rtf = resources.GetString("sourceTextBox.Rtf");
-            this.sourceTextBox.Size = new System.Drawing.Size(300, 274);
+            this.sourceTextBox.Size = new System.Drawing.Size(300, 328);
             this.sourceTextBox.TabIndex = 0;
             // 
             // explainTextBox
@@ -267,13 +238,11 @@ namespace GUI.TranslationRules
             this.explainTextBox.ConsiderOnlyTypes = false;
             this.explainTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.explainTextBox.Instance = null;
-            this.explainTextBox.Lines = new string[] {
-        ""};
             this.explainTextBox.Location = new System.Drawing.Point(0, 0);
             this.explainTextBox.Name = "explainTextBox";
             this.explainTextBox.ReadOnly = false;
             this.explainTextBox.Rtf = resources.GetString("explainTextBox.Rtf");
-            this.explainTextBox.Size = new System.Drawing.Size(313, 274);
+            this.explainTextBox.Size = new System.Drawing.Size(313, 328);
             this.explainTextBox.TabIndex = 1;
             // 
             // expressionEditorTextBox
@@ -283,41 +252,13 @@ namespace GUI.TranslationRules
             this.expressionEditorTextBox.ConsiderOnlyTypes = false;
             this.expressionEditorTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.expressionEditorTextBox.Instance = null;
-            this.expressionEditorTextBox.Lines = new string[] {
-        ""};
             this.expressionEditorTextBox.Location = new System.Drawing.Point(0, 0);
-            this.expressionEditorTextBox.Name = "translationCodeTextBox";
+            this.expressionEditorTextBox.Name = "expressionEditorTextBox";
             this.expressionEditorTextBox.ReadOnly = false;
             this.expressionEditorTextBox.Rtf = resources.GetString("expressionEditorTextBox.Rtf");
-            this.expressionEditorTextBox.Size = new System.Drawing.Size(313, 274);
+            this.expressionEditorTextBox.Size = new System.Drawing.Size(313, 328);
             this.expressionEditorTextBox.TabIndex = 0;
             this.expressionEditorTextBox.Visible = false;
-            // 
-            // messageGroupBox
-            // 
-            this.messageGroupBox.Controls.Add(this.messageRichTextBox);
-            this.messageGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.messageGroupBox.Location = new System.Drawing.Point(0, 0);
-            this.messageGroupBox.Name = "messageGroupBox";
-            this.messageGroupBox.Size = new System.Drawing.Size(617, 85);
-            this.messageGroupBox.TabIndex = 0;
-            this.messageGroupBox.TabStop = false;
-            this.messageGroupBox.Text = "Messages";
-            // 
-            // messageRichTextBox
-            // 
-            this.messageRichTextBox.AutoComplete = true;
-            this.messageRichTextBox.ConsiderOnlyTypes = false;
-            this.messageRichTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.messageRichTextBox.Instance = null;
-            this.messageRichTextBox.Lines = new string[] {
-        ""};
-            this.messageRichTextBox.Location = new System.Drawing.Point(3, 16);
-            this.messageRichTextBox.Name = "messageRichTextBox";
-            this.messageRichTextBox.ReadOnly = false;
-            this.messageRichTextBox.Rtf = resources.GetString("messageRichTextBox.Rtf");
-            this.messageRichTextBox.Size = new System.Drawing.Size(611, 66);
-            this.messageRichTextBox.TabIndex = 4;
             // 
             // Window
             // 
@@ -338,10 +279,6 @@ namespace GUI.TranslationRules
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.splitContainer4.Panel1.ResumeLayout(false);
-            this.splitContainer4.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
-            this.splitContainer4.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
@@ -350,7 +287,6 @@ namespace GUI.TranslationRules
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
-            this.messageGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,17 +300,14 @@ namespace GUI.TranslationRules
         private TranslationTreeView translationTreeView;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.SplitContainer splitContainer4;
         private MyPropertyGrid propertyGrid;
         private System.Windows.Forms.ToolStripButton nextErrortoolStripButton;
         private System.Windows.Forms.ToolStripButton nextWarningToolStripButton;
         private System.Windows.Forms.ToolStripButton nextInfoToolStripButton;
-        private EditorTextBox messageRichTextBox;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private EditorTextBox sourceTextBox;
         private EditorTextBox expressionEditorTextBox;
-        private System.Windows.Forms.GroupBox messageGroupBox;
         private ExplainTextBox explainTextBox;
 
     }

@@ -10,6 +10,7 @@
 </NameSpaces>
 <Structures>
 <Structure
+ Default=""
  Implemented="TRUE"
  Name="StaticSpeedRestriction"
  Guid="cb90d3f3-a659-44e2-90dc-850a8fa9cf8c"
@@ -92,6 +93,7 @@
  Guid="2edb5adf-a12c-4bf7-86e9-cfe64fda040a"
 >
 </StructureElement></Structure><Structure
+ Default=""
  Implemented="TRUE"
  Name="SSPCategory"
  Guid="38e0f6db-7b3b-48d9-9975-5a3794f18d2d"
@@ -207,6 +209,7 @@
 <Functions>
 <Function
  Type="Default.BaseTypes.Length"
+ Default=""
  Implemented="TRUE"
  Name="SSPLength"
  Guid="1d1987db-72f2-4a65-8392-ba68f79d7e76"
@@ -247,6 +250,7 @@
 </Case></Cases>
 </Function><Function
  Type="Messages.NC_CDDIFF"
+ Default=""
  Implemented="TRUE"
  Name="SelectCantDeficiencyCategory"
  Guid="9ba5fb81-4abf-450f-a3df-e9c182a2325b"
@@ -288,6 +292,7 @@ INITIAL_VALUE
 </Case></Cases>
 </Function><Function
  Type="Messages.NC_CDTRAIN"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="MaxCategory"
@@ -342,6 +347,7 @@ INITIAL_VALUE
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="CantDeficiencySpeedRestriction"
  Guid="ccb070e1-5c53-44fe-8e42-5b82c8e91f57"
@@ -377,6 +383,7 @@ INITIAL_VALUE
 </Case></Cases>
 </Function><Function
  Type="StaticSpeedRestriction"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CreateFirstSSP"
@@ -440,6 +447,7 @@ INITIAL_VALUE
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="AbsoluteDistance"
@@ -476,6 +484,7 @@ USING
 </Case></Cases>
 </Function><Function
  Type="SSPCategory"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CreateSSPCategory"
@@ -519,6 +528,7 @@ USING
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="SpeedRestrictions"
  Guid="01c090d3-dbc4-4806-a8f6-03ca3dd16197"
@@ -559,6 +569,7 @@ INITIAL_VALUE BaseTypes.MaxSpeedFunction) (Distance)</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="ComputeStaticSpeedRestriction"
  Guid="8959058c-12eb-4e66-8f02-ae33b355cdb1"
@@ -624,6 +635,7 @@ INITIAL_VALUE BaseTypes.MaxSpeedFunction) (Distance)</Expression>
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Distance"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="SSPEnd"
@@ -670,6 +682,7 @@ INITIAL_VALUE
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="SSPSpeed"
  Guid="e35705fa-d350-4ac8-a3e5-39fc13b64e89"
@@ -710,6 +723,7 @@ INITIAL_VALUE
 </Case></Cases>
 </Function><Function
  Type="Boolean"
+ Default=""
  Implemented="TRUE"
  Name="FindOSC"
  Guid="eaaba9ec-7584-494a-94d1-b127c98fd320"
@@ -741,6 +755,7 @@ INITIAL_VALUE
 </Case></Cases>
 </Function><Function
  Type="Default.BaseTypes.Speed"
+ Default=""
  Implemented="TRUE"
  Name="OtherSpecificSpeedRestriction"
  Guid="24b20a21-860c-4983-a904-dbbfa4c2b517"
@@ -777,6 +792,7 @@ INITIAL_VALUE
 </Case></Cases>
 </Function><Function
  Type="TrainData.TrainCategoryEnum"
+ Default=""
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ERTMSCategory_To_EFSCategory"

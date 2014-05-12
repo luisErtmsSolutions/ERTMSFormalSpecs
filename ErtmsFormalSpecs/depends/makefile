@@ -14,6 +14,7 @@ DEPENDANCIES+=$(DIR_EXEC)/Microsoft.Office.Interop.Excel.dll
 DEPENDANCIES+=$(DIR_EXEC)/LibGit2Sharp.dll
 DEPENDANCIES+=$(DIR_EXEC)/ICSharpCode.SharpZipLib.dll
 DEPENDANCIES+=$(DIR_EXEC)/WeifenLuo.WinFormsUI.Docking.dll
+DEPENDANCIES+=$(DIR_EXEC)/ObjectListView.dll
 DEPENDANCIES+=InnoInstaller5
 
 all: $(DIR_EXEC) $(DEPENDANCIES)
@@ -74,6 +75,9 @@ $(DIR_EXEC)/WeifenLuo.WinFormsUI.Docking.dll: DockPanel_2_9_0.zip
 	@unzip -u -o -q -d DockPanel_2_9_0 $<
 	@echo "---- Copying WeifenLuo.WinFormsUI.Docking.dll "
 	@cp DockPanel_2_9_0/WeifenLuo.WinFormsUI.Docking.dll ../bin
+
+$(DIR_EXEC)/ObjectListView.dll: ObjectListView.dll
+	@cp ObjectListView.dll ../bin
 
 InnoInstaller5: InnoInstaller5.zip
 	@echo "---- Unzipping $< "
