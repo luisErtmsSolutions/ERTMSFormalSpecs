@@ -204,6 +204,14 @@ namespace GUI.IPCInterface
                     return new Values.StructureValue(record);
                 }
             }
+            // Handles the 'empty' value
+            {
+                DataDictionary.Values.EmptyValue emptyValue = value as DataDictionary.Values.EmptyValue;
+                if (emptyValue != null)
+                {
+                    return null;
+                }
+            }
 
             throw new FaultException<EFSServiceFault>(new EFSServiceFault("Cannot convert value " + value.ToString()));
         }
