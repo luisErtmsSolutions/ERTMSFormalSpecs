@@ -390,7 +390,9 @@ namespace DataDictionary.Variables
                 }
                 return theValue;
             }
-            set { theValue = value; }
+            set {
+                theValue = value;
+            }
         }
 
         /// <summary>

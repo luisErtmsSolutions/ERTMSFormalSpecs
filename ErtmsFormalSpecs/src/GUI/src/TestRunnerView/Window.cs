@@ -227,7 +227,13 @@ namespace GUI.TestRunnerView
                         {
                             subSequenceSelectorComboBox.Text = "";
                         }
-                        EFSSystem.Runner = null;
+
+                        if (EFSSystem.Runner.SubSequence != null)
+                        {
+                            // Only resets the runner if it is related to a test sequence
+                            // TODO : Make sure this is right
+                            EFSSystem.Runner = null;
+                        }
                     }
 
                     if (EFSSystem.Runner != null && EFSSystem.Runner.SubSequence != null)
