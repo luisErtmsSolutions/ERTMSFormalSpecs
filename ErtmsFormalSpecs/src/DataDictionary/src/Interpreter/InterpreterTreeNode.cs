@@ -99,6 +99,18 @@ namespace DataDictionary.Interpreter
         }
 
         /// <summary>
+        /// Adds an error message to the root element and explains it
+        /// </summary>
+        /// <param name="message"></param>
+        public virtual void AddErrorAndExplain(string message, InterpretationContext context)
+        {
+            if (RootLog != null)
+            {
+                RootLog.AddError(message);
+            }
+        }
+
+        /// <summary>
         /// Adds an error message to the root element
         /// </summary>
         /// <param name="message"></param>

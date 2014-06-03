@@ -16,6 +16,7 @@
 
 using System.Text;
 using System.Collections.Generic;
+using DataDictionary.Interpreter;
 namespace DataDictionary
 {
     public abstract class ModelElement : Generated.BaseModelElement
@@ -62,6 +63,22 @@ namespace DataDictionary
                 }
             }
         }
+
+        /// <summary>
+        /// Adds an error and explains it
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="explanation"></param>
+        public void AddErrorAndExplain(string message, ExplanationPart explanation)
+        {
+            AddError(message);
+            Explain = explanation;
+        }
+
+        /// <summary>
+        /// The last explanation part for this model element
+        /// </summary>
+        public ExplanationPart Explain { get; private set; }
 
         /// <summary>
         /// Indicates that no logging should occur

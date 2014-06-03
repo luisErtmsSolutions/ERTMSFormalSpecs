@@ -225,6 +225,44 @@ namespace GUI.IPCInterface
             throw new FaultException<EFSServiceFault>(new EFSServiceFault("Cannot convert value " + value.ToString()));
         }
 
+        private class SyntheticVariableUpdateAction : DataDictionary.Rules.Action
+        {
+            /// <summary>
+            /// The variable identification that is modified by this variable update action
+            /// </summary>
+            public DataDictionary.Variables.IVariable Variable { get; private set; }
+
+            /// <summary>
+            /// The value that is assigned to this variable
+            /// </summary>
+            public DataDictionary.Values.IValue Value { get; private set; }
+
+            /// <summary>
+            /// Constructor
+            /// </summary>
+            /// <param name="variable"></param>
+            /// <param name="value"></param>
+            public SyntheticVariableUpdateAction(DataDictionary.Variables.IVariable variable, DataDictionary.Values.IValue value)
+            {
+                Variable = variable;
+                Value = value;
+            }
+
+            public override string ExpressionText
+            {
+                get
+                {
+                    return Variable.FullName + " <- " + Value.FullName;
+                }
+            }
+
+            public override void GetChanges(DataDictionary.Interpreter.InterpretationContext context, DataDictionary.Rules.ChangeList changes, DataDictionary.Interpreter.ExplanationPart explanation, bool apply, Runner runner)
+            {
+                DataDictionary.Rules.Change change = new DataDictionary.Rules.Change(Variable, Variable.Value, Value);
+                changes.Add(change, apply, runner);
+            }
+        }
+
         /// <summary>
         /// Sets the value of a specific variable
         /// </summary>
@@ -236,7 +274,9 @@ namespace GUI.IPCInterface
 
             if (variable != null)
             {
-                variable.Value = value.convertBack(variable.Type);
+                SyntheticVariableUpdateAction action = new SyntheticVariableUpdateAction(variable, value.convertBack(variable.Type));
+                DataDictionary.Tests.Runner.Events.VariableUpdate variableUpdate = new DataDictionary.Tests.Runner.Events.VariableUpdate(action, null, null);
+                Runner.EventTimeLine.AddModelEvent(variableUpdate, Runner);
             }
             else
             {

@@ -41,8 +41,10 @@ namespace GUI.RequirementSetDiagram
         /// <summary>
         /// Initializes the start menu
         /// </summary>
-        public void InitializeStartMenu()
+        public override void InitializeStartMenu()
         {
+            base.InitializeStartMenu();
+
             addRequirementSetMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             addDependanceMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             selectParagraphsMenuItem = new System.Windows.Forms.ToolStripMenuItem();

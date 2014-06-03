@@ -36,7 +36,7 @@ namespace GUI.ModelDiagram
             : base(model)
         {
             BoxMode = BoxModeEnum.RoundedCorners;
-            NORMAL_COLOR = Color.LightBlue;
+            NORMAL_COLOR = Color.BlanchedAlmond;
 
             MouseClick += new MouseEventHandler(HandleMouseClick);
         }

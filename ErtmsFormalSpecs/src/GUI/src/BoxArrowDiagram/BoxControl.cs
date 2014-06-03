@@ -168,7 +168,7 @@ namespace GUI.BoxArrowDiagram
         /// Draws the box within the box-arrow panel
         /// </summary>
         /// <param name="e"></param>
-        public virtual void PaintInBoxArrowPanel(PaintEventArgs e)
+        public virtual void PaintInBoxArrowPanel(Graphics g)
         {
             // Select the right pen, according to the model
             Pen pen;
@@ -192,13 +192,13 @@ namespace GUI.BoxArrowDiagram
             switch (BoxMode)
             {
                 case BoxModeEnum.Rectangle3D:
-                    e.Graphics.DrawRectangle(pen, Location.X, Location.Y, Width, Height);
+                    g.DrawRectangle(pen, Location.X, Location.Y, Width, Height);
                     break;
 
                 case BoxModeEnum.Rectangle:
                     {
                         Brush innerBrush = new SolidBrush(NORMAL_COLOR);
-                        e.Graphics.FillRectangle(innerBrush, Location.X, Location.Y, Width, Height);
+                        g.FillRectangle(innerBrush, Location.X, Location.Y, Width, Height);
                         break;
                     }
 
@@ -216,31 +216,31 @@ namespace GUI.BoxArrowDiagram
                         };
 
                         Brush innerBrush = new SolidBrush(NORMAL_COLOR);
-                        e.Graphics.FillRectangle(innerBrush, new Rectangle(points[0], new Size(points[4].X - points[0].X, points[4].Y - points[0].Y)));
-                        e.Graphics.FillRectangle(innerBrush, new Rectangle(points[7], new Size(points[3].X - points[7].X, points[3].Y - points[7].Y)));
+                        g.FillRectangle(innerBrush, new Rectangle(points[0], new Size(points[4].X - points[0].X, points[4].Y - points[0].Y)));
+                        g.FillRectangle(innerBrush, new Rectangle(points[7], new Size(points[3].X - points[7].X, points[3].Y - points[7].Y)));
 
-                        e.Graphics.DrawLine(pen, points[0], points[1]);
-                        e.Graphics.DrawLine(pen, points[2], points[3]);
-                        e.Graphics.DrawLine(pen, points[4], points[5]);
-                        e.Graphics.DrawLine(pen, points[6], points[7]);
+                        g.DrawLine(pen, points[0], points[1]);
+                        g.DrawLine(pen, points[2], points[3]);
+                        g.DrawLine(pen, points[4], points[5]);
+                        g.DrawLine(pen, points[6], points[7]);
 
                         Size rectangleSize = new Size(2 * ROUND_SIZE, 2 * ROUND_SIZE);
                         Rectangle rectangle;
                         rectangle = new Rectangle(new Point(points[0].X - ROUND_SIZE, points[0].Y), rectangleSize);
-                        e.Graphics.FillPie(innerBrush, rectangle, 180.0f, 90.0f);
-                        e.Graphics.DrawArc(pen, rectangle, 180.0f, 90.0f);
+                        g.FillPie(innerBrush, rectangle, 180.0f, 90.0f);
+                        g.DrawArc(pen, rectangle, 180.0f, 90.0f);
 
                         rectangle = new Rectangle(new Point(points[2].X - 2 * ROUND_SIZE, points[2].Y - ROUND_SIZE), rectangleSize);
-                        e.Graphics.FillPie(innerBrush, rectangle, 270.0f, 90.0f);
-                        e.Graphics.DrawArc(pen, rectangle, 270.0f, 90.0f);
+                        g.FillPie(innerBrush, rectangle, 270.0f, 90.0f);
+                        g.DrawArc(pen, rectangle, 270.0f, 90.0f);
 
                         rectangle = new Rectangle(new Point(points[4].X - ROUND_SIZE, points[4].Y - 2 * ROUND_SIZE), rectangleSize);
-                        e.Graphics.FillPie(innerBrush, rectangle, 0.0f, 90.0f);
-                        e.Graphics.DrawArc(pen, rectangle, 0.0f, 90.0f);
+                        g.FillPie(innerBrush, rectangle, 0.0f, 90.0f);
+                        g.DrawArc(pen, rectangle, 0.0f, 90.0f);
 
                         rectangle = new Rectangle(new Point(points[6].X, points[6].Y - ROUND_SIZE), rectangleSize);
-                        e.Graphics.FillPie(innerBrush, rectangle, 90.0f, 90.0f);
-                        e.Graphics.DrawArc(pen, rectangle, 90.0f, 90.0f);
+                        g.FillPie(innerBrush, rectangle, 90.0f, 90.0f);
+                        g.DrawArc(pen, rectangle, 90.0f, 90.0f);
                         break;
                     }
             }
@@ -255,7 +255,7 @@ namespace GUI.BoxArrowDiagram
             {
                 image = Panel.Images.Images[BoxArrowPanel<BoxModel, ArrowModel>.UnPinnedImageIndex];
             }
-            e.Graphics.DrawImage(image, Location.X + Width - 16, Location.Y, 16, 16);
+            g.DrawImage(image, Location.X + Width - 16, Location.Y, 16, 16);
         }
 
         /// <summary>

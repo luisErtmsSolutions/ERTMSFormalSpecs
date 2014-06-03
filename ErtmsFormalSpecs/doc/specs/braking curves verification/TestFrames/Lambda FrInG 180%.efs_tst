@@ -124,7 +124,7 @@
 <Actions>
 <Action
  Guid="0ff27ff1-f0e5-4b16-9ef5-9b94e9d90e1c"
->Kernel.TrackDescription.TrackConditions.TCProfile &lt;- EMPTY</Action><Action
+>Kernel.TrackDescription.TrackConditions.General.TCProfile &lt;- []</Action><Action
  Guid="8fad98c7-163c-4de0-a4a9-2668a17dc9a6"
 >Kernel.MA.MA &lt;- Kernel.MA.MovementAuthority
 {

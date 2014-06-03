@@ -34,7 +34,7 @@ namespace GUI.ModelDiagram
         public TypeModelControl(DataDictionary.Types.Type model)
             : base(model)
         {
-            NORMAL_COLOR = Color.LightGreen;
+            NORMAL_COLOR = Color.LightSteelBlue;
             MouseClick += new MouseEventHandler(HandleMouseClick);
         }
 

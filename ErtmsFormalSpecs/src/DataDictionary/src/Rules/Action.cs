@@ -244,7 +244,7 @@ namespace DataDictionary.Rules
         /// <param name="apply">Indicates that the changes should be applied immediately</param>
         /// <param name="runner"></param>
         /// <returns>The list to fill with the changes</param>
-        public void GetChanges(Interpreter.InterpretationContext context, ChangeList changes, Interpreter.ExplanationPart explanation, bool apply, Tests.Runner.Runner runner)
+        public virtual void GetChanges(Interpreter.InterpretationContext context, ChangeList changes, Interpreter.ExplanationPart explanation, bool apply, Tests.Runner.Runner runner)
         {
             long start = System.Environment.TickCount;
 

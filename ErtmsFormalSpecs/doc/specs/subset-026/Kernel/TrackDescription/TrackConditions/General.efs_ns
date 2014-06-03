@@ -1,12 +1,17 @@
 <NameSpace
+ Width="100"
+ Height="50"
  Name="General"
  Guid="001c183d-5aef-4e1a-8af5-a5486825cba9"
 >
+<Comment></Comment>
 <NameSpaces>
 </NameSpaces>
 <Structures>
 <Structure
  Default=""
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TrackCondition"
  Guid="9551ddbd-7e41-4f3e-9604-48e640b42f6f"
@@ -173,6 +178,9 @@
 </ReqRef><Comment>The eddy current brake should be disabled for the emergency brake</Comment>
 </StructureElement></Structure><Structure
  Default=""
+ X="110"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TrackConditionInformation"
  Guid="b131c7c4-48fb-4898-b13b-188aab27e08c"
@@ -222,6 +230,9 @@
  TypeName="General.TrackConditionInformation"
  MaxSize="20"
  Default="[]"
+ Y="60"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TrackConditions"
  Guid="a62e502d-64a2-445d-a8f7-47bda4192457"
@@ -242,6 +253,9 @@
 <Function
  Type="Default.BaseTypes.Distance"
  Default=""
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="EndSectionDistance"
  Guid="ab2ac694-c9e0-4902-892f-50aa0730adfe"
@@ -306,6 +320,10 @@
 </Function><Function
  Type="TrackConditionInformation"
  Default=""
+ X="110"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="HandleTCPwhenEnteringGivenMode1"
  Guid="35f10299-f5ff-4c0d-b4f8-f78b962452bf"
@@ -352,6 +370,10 @@
 </Function><Function
  Type="TrackConditionInformation"
  Default=""
+ X="220"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="HandleTCPwhenEnteringGivenMode2"
  Guid="0483f942-5889-47b6-9389-754a7f066adf"
@@ -398,6 +420,10 @@
 </Function><Function
  Type="Boolean"
  Default=""
+ X="330"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="IsInsideRadioHole"
  Guid="0c0fb865-3ccc-4d90-b7ca-cbd61d842b50"
@@ -424,6 +450,10 @@
 </Function><Function
  Type="TrackCondition"
  Default=""
+ X="440"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CombineConditions"
@@ -467,6 +497,10 @@
 </Function><Function
  Type="TrackCondition"
  Default=""
+ X="550"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="CurrentConditions"
  Guid="fb96e527-60c0-4a0c-a1a9-051dc1c5cc85"
@@ -535,6 +569,10 @@ When the train passes over a profile point, it doesn&apos;t know if that point m
 </Function><Function
  Type="TrackCondition"
  Default=""
+ X="660"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="ProfileAtDistance"
  Guid="439dae37-429f-4e83-b249-e8a4f50717b5"
@@ -575,6 +613,10 @@ When the train passes over a profile point, it doesn&apos;t know if that point m
 </Function><Function
  Type="Default.BaseTypes.Distance"
  Default=""
+ X="770"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="ProfileStartLocation"
@@ -603,6 +645,10 @@ When the train passes over a profile point, it doesn&apos;t know if that point m
 </Function><Function
  Type="Default.BaseTypes.Distance"
  Default=""
+ X="880"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="NewInfoStartLocation"
  Guid="32f17759-b4e6-455a-8cde-2ee070d684c2"
@@ -645,6 +691,9 @@ When the train passes over a profile point, it doesn&apos;t know if that point m
 </Function><Function
  Type="TrackConditionInformation"
  Default=""
+ Y="240"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="MakeTCProfilePoint"
@@ -852,6 +901,10 @@ The use of profile points and the functions in this namespace can be found in Er
 </Function><Function
  Type="TrackConditionInformation"
  Default=""
+ X="110"
+ Y="240"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="UpdatedTCProfile"
@@ -918,6 +971,9 @@ The use of profile points and the functions in this namespace can be found in Er
 </Function></Functions>
 <Procedures>
 <Procedure
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="AddSectionToProfile"
  Guid="b009a873-079a-439e-88d4-ce0131898a9c"
@@ -1112,6 +1168,10 @@ TCType == Messages.M_TRACKCOND.Tunnel_stopping_area__Initial_state__no_tunnel_st
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="110"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="HandleNewTrackCondition"
@@ -1251,6 +1311,10 @@ ON
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="220"
+ Y="300"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TrackConditionReceived"
  Guid="ffe9ac21-3e40-46fe-9612-29a0ab5ff84f"
@@ -1353,6 +1417,9 @@ IN
  Type="TrackConditions"
  DefaultValue=""
  VariableMode="Internal"
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TCProfile"
  Guid="cccc0a77-8fa1-4a0d-a42d-ef124c77a533"

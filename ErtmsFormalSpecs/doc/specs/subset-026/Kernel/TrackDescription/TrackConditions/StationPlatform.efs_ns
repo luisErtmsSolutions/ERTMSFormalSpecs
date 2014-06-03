@@ -1,4 +1,7 @@
 <NameSpace
+ X="440"
+ Width="100"
+ Height="50"
  Name="StationPlatform"
  Guid="a90a673e-e6a2-4fc8-a9a7-562c10302c00"
 >

@@ -473,7 +473,7 @@ namespace GUI.BoxArrowDiagram
         /// Draws the arrow within the box-arrow panel
         /// </summary>
         /// <param name="e"></param>
-        public void PaintInBoxArrowPanel(PaintEventArgs e)
+        public void PaintInBoxArrowPanel(Graphics g)
         {
             if (Visible)
             {
@@ -512,7 +512,7 @@ namespace GUI.BoxArrowDiagram
                 }
 
                 // Draw the arrow
-                e.Graphics.DrawLine(pen, start, target);
+                g.DrawLine(pen, start, target);
 
                 // Draw the arrow tip
                 switch (ArrowFill)
@@ -522,13 +522,13 @@ namespace GUI.BoxArrowDiagram
                         {
                             int x = target.X - (int)(Math.Cos(angle + ARROW_ANGLE) * ARROW_LENGTH);
                             int y = target.Y - (int)(Math.Sin(angle + ARROW_ANGLE) * ARROW_LENGTH);
-                            e.Graphics.DrawLine(pen, target, new Point(x, y));
+                            g.DrawLine(pen, target, new Point(x, y));
                         }
                         if (ArrowMode == ArrowModeEnum.Full)
                         {
                             int x = target.X - (int)(Math.Cos(angle - ARROW_ANGLE) * ARROW_LENGTH);
                             int y = target.Y - (int)(Math.Sin(angle - ARROW_ANGLE) * ARROW_LENGTH);
-                            e.Graphics.DrawLine(pen, target, new Point(x, y));
+                            g.DrawLine(pen, target, new Point(x, y));
                         }
                         break;
 
@@ -543,7 +543,7 @@ namespace GUI.BoxArrowDiagram
                             int y2 = target.Y - (int)(Math.Sin(angle + ARROW_ANGLE) * ARROW_LENGTH);
 
                             Point[] points = new Point[] { target, new Point(x1, y1), new Point(x2, y2) };
-                            e.Graphics.FillPolygon(brush, points);
+                            g.FillPolygon(brush, points);
                         }
                         if (ArrowMode == ArrowModeEnum.Full)
                         {
@@ -551,7 +551,7 @@ namespace GUI.BoxArrowDiagram
                             int y2 = target.Y - (int)(Math.Sin(angle - ARROW_ANGLE) * ARROW_LENGTH);
 
                             Point[] points = new Point[] { target, new Point(x1, y1), new Point(x2, y2) };
-                            e.Graphics.FillPolygon(brush, points);
+                            g.FillPolygon(brush, points);
                         }
                         break;
 
@@ -562,10 +562,10 @@ namespace GUI.BoxArrowDiagram
                     Font boldFont = new Font(Font, FontStyle.Bold);
                     string targetStateName = getTargetName();
 
-                    SizeF size = e.Graphics.MeasureString(targetStateName, boldFont);
+                    SizeF size = g.MeasureString(targetStateName, boldFont);
                     int x = target.X - (int)(size.Width / 2);
                     int y = target.Y + 10;
-                    e.Graphics.DrawString(targetStateName, boldFont, EXTERNAL_BOX_PEN.Brush, new Point(x, y));
+                    g.DrawString(targetStateName, boldFont, EXTERNAL_BOX_PEN.Brush, new Point(x, y));
                 }
             }
         }

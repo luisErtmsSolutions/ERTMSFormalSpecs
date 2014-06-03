@@ -4,7 +4,7 @@ using System.IO;
 using System.Collections;
 using System;
 
-/// <remarks>XMLBooster-generated code (Version 2.22.4.0)
+/// <remarks>XMLBooster-generated code (Version 2.22.9.0)
 /// This code is generated automatically. It is not meant
 /// to be maintained or even read. As it is generated, 
 /// it does not follow any coding standard. Please refrain
@@ -512,7 +512,7 @@ NotifyControllers(aLock);
 public void appendRequirements(System.Collections.IList coll)
   {
   __setDirty(true);
-  allRequirements().AddRange(coll);
+  allRequirements().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -520,7 +520,7 @@ NotifyControllers(null);
 public void appendRequirements(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allRequirements().AddRange(coll);
+  allRequirements().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -1335,7 +1335,7 @@ NotifyControllers(aLock);
 public void appendSpecifications(System.Collections.IList coll)
   {
   __setDirty(true);
-  allSpecifications().AddRange(coll);
+  allSpecifications().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -1343,7 +1343,7 @@ NotifyControllers(null);
 public void appendSpecifications(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allSpecifications().AddRange(coll);
+  allSpecifications().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -1496,7 +1496,7 @@ NotifyControllers(aLock);
 public void appendRequirementSets(System.Collections.IList coll)
   {
   __setDirty(true);
-  allRequirementSets().AddRange(coll);
+  allRequirementSets().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -1504,7 +1504,7 @@ NotifyControllers(null);
 public void appendRequirementSets(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allRequirementSets().AddRange(coll);
+  allRequirementSets().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -1657,7 +1657,7 @@ NotifyControllers(aLock);
 public void appendRuleDisablings(System.Collections.IList coll)
   {
   __setDirty(true);
-  allRuleDisablings().AddRange(coll);
+  allRuleDisablings().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -1665,7 +1665,7 @@ NotifyControllers(null);
 public void appendRuleDisablings(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allRuleDisablings().AddRange(coll);
+  allRuleDisablings().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -1818,7 +1818,7 @@ NotifyControllers(aLock);
 public void appendNameSpaces(System.Collections.IList coll)
   {
   __setDirty(true);
-  allNameSpaces().AddRange(coll);
+  allNameSpaces().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -1826,7 +1826,7 @@ NotifyControllers(null);
 public void appendNameSpaces(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allNameSpaces().AddRange(coll);
+  allNameSpaces().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -1979,7 +1979,7 @@ NotifyControllers(aLock);
 public void appendNameSpaceRefs(System.Collections.IList coll)
   {
   __setDirty(true);
-  allNameSpaceRefs().AddRange(coll);
+  allNameSpaceRefs().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -1987,7 +1987,7 @@ NotifyControllers(null);
 public void appendNameSpaceRefs(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allNameSpaceRefs().AddRange(coll);
+  allNameSpaceRefs().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -2140,7 +2140,7 @@ NotifyControllers(aLock);
 public void appendTests(System.Collections.IList coll)
   {
   __setDirty(true);
-  allTests().AddRange(coll);
+  allTests().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -2148,7 +2148,7 @@ NotifyControllers(null);
 public void appendTests(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allTests().AddRange(coll);
+  allTests().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -2301,7 +2301,7 @@ NotifyControllers(aLock);
 public void appendTestRefs(System.Collections.IList coll)
   {
   __setDirty(true);
-  allTestRefs().AddRange(coll);
+  allTestRefs().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -2309,7 +2309,7 @@ NotifyControllers(null);
 public void appendTestRefs(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allTestRefs().AddRange(coll);
+  allTestRefs().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -3683,7 +3683,7 @@ NotifyControllers(aLock);
 public void appendNameSpaces(System.Collections.IList coll)
   {
   __setDirty(true);
-  allNameSpaces().AddRange(coll);
+  allNameSpaces().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -3691,7 +3691,7 @@ NotifyControllers(null);
 public void appendNameSpaces(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allNameSpaces().AddRange(coll);
+  allNameSpaces().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -3844,7 +3844,7 @@ NotifyControllers(aLock);
 public void appendNameSpaceRefs(System.Collections.IList coll)
   {
   __setDirty(true);
-  allNameSpaceRefs().AddRange(coll);
+  allNameSpaceRefs().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -3852,7 +3852,7 @@ NotifyControllers(null);
 public void appendNameSpaceRefs(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allNameSpaceRefs().AddRange(coll);
+  allNameSpaceRefs().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -4005,7 +4005,7 @@ NotifyControllers(aLock);
 public void appendRanges(System.Collections.IList coll)
   {
   __setDirty(true);
-  allRanges().AddRange(coll);
+  allRanges().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -4013,7 +4013,7 @@ NotifyControllers(null);
 public void appendRanges(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allRanges().AddRange(coll);
+  allRanges().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -4166,7 +4166,7 @@ NotifyControllers(aLock);
 public void appendEnumerations(System.Collections.IList coll)
   {
   __setDirty(true);
-  allEnumerations().AddRange(coll);
+  allEnumerations().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -4174,7 +4174,7 @@ NotifyControllers(null);
 public void appendEnumerations(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allEnumerations().AddRange(coll);
+  allEnumerations().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -4327,7 +4327,7 @@ NotifyControllers(aLock);
 public void appendStructures(System.Collections.IList coll)
   {
   __setDirty(true);
-  allStructures().AddRange(coll);
+  allStructures().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -4335,7 +4335,7 @@ NotifyControllers(null);
 public void appendStructures(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allStructures().AddRange(coll);
+  allStructures().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -4488,7 +4488,7 @@ NotifyControllers(aLock);
 public void appendCollections(System.Collections.IList coll)
   {
   __setDirty(true);
-  allCollections().AddRange(coll);
+  allCollections().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -4496,7 +4496,7 @@ NotifyControllers(null);
 public void appendCollections(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allCollections().AddRange(coll);
+  allCollections().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -4649,7 +4649,7 @@ NotifyControllers(aLock);
 public void appendStateMachines(System.Collections.IList coll)
   {
   __setDirty(true);
-  allStateMachines().AddRange(coll);
+  allStateMachines().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -4657,7 +4657,7 @@ NotifyControllers(null);
 public void appendStateMachines(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allStateMachines().AddRange(coll);
+  allStateMachines().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -4810,7 +4810,7 @@ NotifyControllers(aLock);
 public void appendFunctions(System.Collections.IList coll)
   {
   __setDirty(true);
-  allFunctions().AddRange(coll);
+  allFunctions().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -4818,7 +4818,7 @@ NotifyControllers(null);
 public void appendFunctions(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allFunctions().AddRange(coll);
+  allFunctions().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -4971,7 +4971,7 @@ NotifyControllers(aLock);
 public void appendProcedures(System.Collections.IList coll)
   {
   __setDirty(true);
-  allProcedures().AddRange(coll);
+  allProcedures().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -4979,7 +4979,7 @@ NotifyControllers(null);
 public void appendProcedures(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allProcedures().AddRange(coll);
+  allProcedures().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -5132,7 +5132,7 @@ NotifyControllers(aLock);
 public void appendVariables(System.Collections.IList coll)
   {
   __setDirty(true);
-  allVariables().AddRange(coll);
+  allVariables().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -5140,7 +5140,7 @@ NotifyControllers(null);
 public void appendVariables(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allVariables().AddRange(coll);
+  allVariables().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -5293,7 +5293,7 @@ NotifyControllers(aLock);
 public void appendRules(System.Collections.IList coll)
   {
   __setDirty(true);
-  allRules().AddRange(coll);
+  allRules().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -5301,7 +5301,7 @@ NotifyControllers(null);
 public void appendRules(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allRules().AddRange(coll);
+  allRules().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -7613,7 +7613,7 @@ NotifyControllers(aLock);
 public void appendValues(System.Collections.IList coll)
   {
   __setDirty(true);
-  allValues().AddRange(coll);
+  allValues().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -7621,7 +7621,7 @@ NotifyControllers(null);
 public void appendValues(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allValues().AddRange(coll);
+  allValues().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -7774,7 +7774,7 @@ NotifyControllers(aLock);
 public void appendSubEnums(System.Collections.IList coll)
   {
   __setDirty(true);
-  allSubEnums().AddRange(coll);
+  allSubEnums().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -7782,7 +7782,7 @@ NotifyControllers(null);
 public void appendSubEnums(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allSubEnums().AddRange(coll);
+  allSubEnums().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -8918,7 +8918,7 @@ NotifyControllers(aLock);
 public void appendSpecialValues(System.Collections.IList coll)
   {
   __setDirty(true);
-  allSpecialValues().AddRange(coll);
+  allSpecialValues().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -8926,7 +8926,7 @@ NotifyControllers(null);
 public void appendSpecialValues(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allSpecialValues().AddRange(coll);
+  allSpecialValues().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -9866,7 +9866,7 @@ NotifyControllers(aLock);
 public void appendElements(System.Collections.IList coll)
   {
   __setDirty(true);
-  allElements().AddRange(coll);
+  allElements().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -9874,7 +9874,7 @@ NotifyControllers(null);
 public void appendElements(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allElements().AddRange(coll);
+  allElements().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -10027,7 +10027,7 @@ NotifyControllers(aLock);
 public void appendProcedures(System.Collections.IList coll)
   {
   __setDirty(true);
-  allProcedures().AddRange(coll);
+  allProcedures().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -10035,7 +10035,7 @@ NotifyControllers(null);
 public void appendProcedures(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allProcedures().AddRange(coll);
+  allProcedures().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -10188,7 +10188,7 @@ NotifyControllers(aLock);
 public void appendStateMachines(System.Collections.IList coll)
   {
   __setDirty(true);
-  allStateMachines().AddRange(coll);
+  allStateMachines().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -10196,7 +10196,7 @@ NotifyControllers(null);
 public void appendStateMachines(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allStateMachines().AddRange(coll);
+  allStateMachines().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -10349,7 +10349,7 @@ NotifyControllers(aLock);
 public void appendRules(System.Collections.IList coll)
   {
   __setDirty(true);
-  allRules().AddRange(coll);
+  allRules().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -10357,7 +10357,7 @@ NotifyControllers(null);
 public void appendRules(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allRules().AddRange(coll);
+  allRules().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -12438,7 +12438,7 @@ NotifyControllers(aLock);
 public void appendParameters(System.Collections.IList coll)
   {
   __setDirty(true);
-  allParameters().AddRange(coll);
+  allParameters().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -12446,7 +12446,7 @@ NotifyControllers(null);
 public void appendParameters(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allParameters().AddRange(coll);
+  allParameters().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -12599,7 +12599,7 @@ NotifyControllers(aLock);
 public void appendCases(System.Collections.IList coll)
   {
   __setDirty(true);
-  allCases().AddRange(coll);
+  allCases().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -12607,7 +12607,7 @@ NotifyControllers(null);
 public void appendCases(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allCases().AddRange(coll);
+  allCases().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -13802,7 +13802,7 @@ NotifyControllers(aLock);
 public void appendPreConditions(System.Collections.IList coll)
   {
   __setDirty(true);
-  allPreConditions().AddRange(coll);
+  allPreConditions().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -13810,7 +13810,7 @@ NotifyControllers(null);
 public void appendPreConditions(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allPreConditions().AddRange(coll);
+  allPreConditions().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -14352,7 +14352,7 @@ NotifyControllers(aLock);
 public void appendRules(System.Collections.IList coll)
   {
   __setDirty(true);
-  allRules().AddRange(coll);
+  allRules().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -14360,7 +14360,7 @@ NotifyControllers(null);
 public void appendRules(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allRules().AddRange(coll);
+  allRules().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -14513,7 +14513,7 @@ NotifyControllers(aLock);
 public void appendParameters(System.Collections.IList coll)
   {
   __setDirty(true);
-  allParameters().AddRange(coll);
+  allParameters().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -14521,7 +14521,7 @@ NotifyControllers(null);
 public void appendParameters(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allParameters().AddRange(coll);
+  allParameters().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -15442,7 +15442,7 @@ NotifyControllers(aLock);
 public void appendStates(System.Collections.IList coll)
   {
   __setDirty(true);
-  allStates().AddRange(coll);
+  allStates().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -15450,7 +15450,7 @@ NotifyControllers(null);
 public void appendStates(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allStates().AddRange(coll);
+  allStates().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -15603,7 +15603,7 @@ NotifyControllers(aLock);
 public void appendRules(System.Collections.IList coll)
   {
   __setDirty(true);
-  allRules().AddRange(coll);
+  allRules().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -15611,7 +15611,7 @@ NotifyControllers(null);
 public void appendRules(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allRules().AddRange(coll);
+  allRules().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -17148,7 +17148,7 @@ NotifyControllers(aLock);
 public void appendSubVariables(System.Collections.IList coll)
   {
   __setDirty(true);
-  allSubVariables().AddRange(coll);
+  allSubVariables().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -17156,7 +17156,7 @@ NotifyControllers(null);
 public void appendSubVariables(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allSubVariables().AddRange(coll);
+  allSubVariables().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -18131,7 +18131,7 @@ NotifyControllers(aLock);
 public void appendConditions(System.Collections.IList coll)
   {
   __setDirty(true);
-  allConditions().AddRange(coll);
+  allConditions().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -18139,7 +18139,7 @@ NotifyControllers(null);
 public void appendConditions(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allConditions().AddRange(coll);
+  allConditions().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -19052,7 +19052,7 @@ NotifyControllers(aLock);
 public void appendPreConditions(System.Collections.IList coll)
   {
   __setDirty(true);
-  allPreConditions().AddRange(coll);
+  allPreConditions().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -19060,7 +19060,7 @@ NotifyControllers(null);
 public void appendPreConditions(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allPreConditions().AddRange(coll);
+  allPreConditions().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -19213,7 +19213,7 @@ NotifyControllers(aLock);
 public void appendActions(System.Collections.IList coll)
   {
   __setDirty(true);
-  allActions().AddRange(coll);
+  allActions().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -19221,7 +19221,7 @@ NotifyControllers(null);
 public void appendActions(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allActions().AddRange(coll);
+  allActions().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -19374,7 +19374,7 @@ NotifyControllers(aLock);
 public void appendSubRules(System.Collections.IList coll)
   {
   __setDirty(true);
-  allSubRules().AddRange(coll);
+  allSubRules().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -19382,7 +19382,7 @@ NotifyControllers(null);
 public void appendSubRules(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allSubRules().AddRange(coll);
+  allSubRules().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -20754,7 +20754,7 @@ NotifyControllers(aLock);
 public void appendSubSequences(System.Collections.IList coll)
   {
   __setDirty(true);
-  allSubSequences().AddRange(coll);
+  allSubSequences().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -20762,7 +20762,7 @@ NotifyControllers(null);
 public void appendSubSequences(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allSubSequences().AddRange(coll);
+  allSubSequences().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -21390,7 +21390,7 @@ NotifyControllers(aLock);
 public void appendTestCases(System.Collections.IList coll)
   {
   __setDirty(true);
-  allTestCases().AddRange(coll);
+  allTestCases().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -21398,7 +21398,7 @@ NotifyControllers(null);
 public void appendTestCases(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allTestCases().AddRange(coll);
+  allTestCases().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -22280,7 +22280,7 @@ NotifyControllers(aLock);
 public void appendSteps(System.Collections.IList coll)
   {
   __setDirty(true);
-  allSteps().AddRange(coll);
+  allSteps().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -22288,7 +22288,7 @@ NotifyControllers(null);
 public void appendSteps(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allSteps().AddRange(coll);
+  allSteps().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -23203,7 +23203,7 @@ NotifyControllers(aLock);
 public void appendSubSteps(System.Collections.IList coll)
   {
   __setDirty(true);
-  allSubSteps().AddRange(coll);
+  allSubSteps().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -23211,7 +23211,7 @@ NotifyControllers(null);
 public void appendSubSteps(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allSubSteps().AddRange(coll);
+  allSubSteps().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -23364,7 +23364,7 @@ NotifyControllers(aLock);
 public void appendMessages(System.Collections.IList coll)
   {
   __setDirty(true);
-  allMessages().AddRange(coll);
+  allMessages().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -23372,7 +23372,7 @@ NotifyControllers(null);
 public void appendMessages(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allMessages().AddRange(coll);
+  allMessages().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -24370,7 +24370,7 @@ NotifyControllers(aLock);
 public void appendActions(System.Collections.IList coll)
   {
   __setDirty(true);
-  allActions().AddRange(coll);
+  allActions().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -24378,7 +24378,7 @@ NotifyControllers(null);
 public void appendActions(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allActions().AddRange(coll);
+  allActions().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -24531,7 +24531,7 @@ NotifyControllers(aLock);
 public void appendExpectations(System.Collections.IList coll)
   {
   __setDirty(true);
-  allExpectations().AddRange(coll);
+  allExpectations().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -24539,7 +24539,7 @@ NotifyControllers(null);
 public void appendExpectations(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allExpectations().AddRange(coll);
+  allExpectations().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -25727,7 +25727,7 @@ NotifyControllers(aLock);
 public void appendFields(System.Collections.IList coll)
   {
   __setDirty(true);
-  allFields().AddRange(coll);
+  allFields().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -25735,7 +25735,7 @@ NotifyControllers(null);
 public void appendFields(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allFields().AddRange(coll);
+  allFields().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -25888,7 +25888,7 @@ NotifyControllers(aLock);
 public void appendPackets(System.Collections.IList coll)
   {
   __setDirty(true);
-  allPackets().AddRange(coll);
+  allPackets().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -25896,7 +25896,7 @@ NotifyControllers(null);
 public void appendPackets(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allPackets().AddRange(coll);
+  allPackets().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -26471,7 +26471,7 @@ NotifyControllers(aLock);
 public void appendFields(System.Collections.IList coll)
   {
   __setDirty(true);
-  allFields().AddRange(coll);
+  allFields().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -26479,7 +26479,7 @@ NotifyControllers(null);
 public void appendFields(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allFields().AddRange(coll);
+  allFields().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -27229,7 +27229,7 @@ NotifyControllers(aLock);
 public void appendFolders(System.Collections.IList coll)
   {
   __setDirty(true);
-  allFolders().AddRange(coll);
+  allFolders().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -27237,7 +27237,7 @@ NotifyControllers(null);
 public void appendFolders(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allFolders().AddRange(coll);
+  allFolders().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -27390,7 +27390,7 @@ NotifyControllers(aLock);
 public void appendTranslations(System.Collections.IList coll)
   {
   __setDirty(true);
-  allTranslations().AddRange(coll);
+  allTranslations().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -27398,7 +27398,7 @@ NotifyControllers(null);
 public void appendTranslations(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allTranslations().AddRange(coll);
+  allTranslations().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -27886,7 +27886,7 @@ NotifyControllers(aLock);
 public void appendFolders(System.Collections.IList coll)
   {
   __setDirty(true);
-  allFolders().AddRange(coll);
+  allFolders().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -27894,7 +27894,7 @@ NotifyControllers(null);
 public void appendFolders(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allFolders().AddRange(coll);
+  allFolders().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -28047,7 +28047,7 @@ NotifyControllers(aLock);
 public void appendTranslations(System.Collections.IList coll)
   {
   __setDirty(true);
-  allTranslations().AddRange(coll);
+  allTranslations().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -28055,7 +28055,7 @@ NotifyControllers(null);
 public void appendTranslations(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allTranslations().AddRange(coll);
+  allTranslations().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -28544,7 +28544,7 @@ NotifyControllers(aLock);
 public void appendSourceTexts(System.Collections.IList coll)
   {
   __setDirty(true);
-  allSourceTexts().AddRange(coll);
+  allSourceTexts().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -28552,7 +28552,7 @@ NotifyControllers(null);
 public void appendSourceTexts(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allSourceTexts().AddRange(coll);
+  allSourceTexts().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -28716,7 +28716,7 @@ NotifyControllers(aLock);
 public void appendSubSteps(System.Collections.IList coll)
   {
   __setDirty(true);
-  allSubSteps().AddRange(coll);
+  allSubSteps().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -28724,7 +28724,7 @@ NotifyControllers(null);
 public void appendSubSteps(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allSubSteps().AddRange(coll);
+  allSubSteps().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -29520,7 +29520,7 @@ NotifyControllers(aLock);
 public void appendFolders(System.Collections.IList coll)
   {
   __setDirty(true);
-  allFolders().AddRange(coll);
+  allFolders().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -29528,7 +29528,7 @@ NotifyControllers(null);
 public void appendFolders(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allFolders().AddRange(coll);
+  allFolders().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -29681,7 +29681,7 @@ NotifyControllers(aLock);
 public void appendShortcuts(System.Collections.IList coll)
   {
   __setDirty(true);
-  allShortcuts().AddRange(coll);
+  allShortcuts().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -29689,7 +29689,7 @@ NotifyControllers(null);
 public void appendShortcuts(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allShortcuts().AddRange(coll);
+  allShortcuts().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -30177,7 +30177,7 @@ NotifyControllers(aLock);
 public void appendFolders(System.Collections.IList coll)
   {
   __setDirty(true);
-  allFolders().AddRange(coll);
+  allFolders().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -30185,7 +30185,7 @@ NotifyControllers(null);
 public void appendFolders(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allFolders().AddRange(coll);
+  allFolders().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -30338,7 +30338,7 @@ NotifyControllers(aLock);
 public void appendShortcuts(System.Collections.IList coll)
   {
   __setDirty(true);
-  allShortcuts().AddRange(coll);
+  allShortcuts().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -30346,7 +30346,7 @@ NotifyControllers(null);
 public void appendShortcuts(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allShortcuts().AddRange(coll);
+  allShortcuts().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -31107,7 +31107,7 @@ NotifyControllers(aLock);
 public void appendDependancies(System.Collections.IList coll)
   {
   __setDirty(true);
-  allDependancies().AddRange(coll);
+  allDependancies().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -31115,7 +31115,7 @@ NotifyControllers(null);
 public void appendDependancies(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allDependancies().AddRange(coll);
+  allDependancies().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -31268,7 +31268,7 @@ NotifyControllers(aLock);
 public void appendSubSets(System.Collections.IList coll)
   {
   __setDirty(true);
-  allSubSets().AddRange(coll);
+  allSubSets().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -31276,7 +31276,7 @@ NotifyControllers(null);
 public void appendSubSets(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allSubSets().AddRange(coll);
+  allSubSets().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -32436,7 +32436,7 @@ NotifyControllers(aLock);
 public void appendChapters(System.Collections.IList coll)
   {
   __setDirty(true);
-  allChapters().AddRange(coll);
+  allChapters().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -32444,7 +32444,7 @@ NotifyControllers(null);
 public void appendChapters(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allChapters().AddRange(coll);
+  allChapters().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -32597,7 +32597,7 @@ NotifyControllers(aLock);
 public void appendChapterRefs(System.Collections.IList coll)
   {
   __setDirty(true);
-  allChapterRefs().AddRange(coll);
+  allChapterRefs().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -32605,7 +32605,7 @@ NotifyControllers(null);
 public void appendChapterRefs(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allChapterRefs().AddRange(coll);
+  allChapterRefs().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -33277,7 +33277,7 @@ NotifyControllers(aLock);
 public void appendParagraphs(System.Collections.IList coll)
   {
   __setDirty(true);
-  allParagraphs().AddRange(coll);
+  allParagraphs().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -33285,7 +33285,7 @@ NotifyControllers(null);
 public void appendParagraphs(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allParagraphs().AddRange(coll);
+  allParagraphs().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -33438,7 +33438,7 @@ NotifyControllers(aLock);
 public void appendTypeSpecs(System.Collections.IList coll)
   {
   __setDirty(true);
-  allTypeSpecs().AddRange(coll);
+  allTypeSpecs().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -33446,7 +33446,7 @@ NotifyControllers(null);
 public void appendTypeSpecs(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allTypeSpecs().AddRange(coll);
+  allTypeSpecs().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -34016,7 +34016,7 @@ NotifyControllers(aLock);
 public void appendTypeSpecs(System.Collections.IList coll)
   {
   __setDirty(true);
-  allTypeSpecs().AddRange(coll);
+  allTypeSpecs().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -34024,7 +34024,7 @@ NotifyControllers(null);
 public void appendTypeSpecs(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allTypeSpecs().AddRange(coll);
+  allTypeSpecs().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -34238,7 +34238,7 @@ NotifyControllers(aLock);
 public void appendParagraphs(System.Collections.IList coll)
   {
   __setDirty(true);
-  allParagraphs().AddRange(coll);
+  allParagraphs().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -34246,7 +34246,7 @@ NotifyControllers(null);
 public void appendParagraphs(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allParagraphs().AddRange(coll);
+  allParagraphs().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -34471,7 +34471,7 @@ NotifyControllers(aLock);
 public void appendRequirementSets(System.Collections.IList coll)
   {
   __setDirty(true);
-  allRequirementSets().AddRange(coll);
+  allRequirementSets().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -34479,7 +34479,7 @@ NotifyControllers(null);
 public void appendRequirementSets(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allRequirementSets().AddRange(coll);
+  allRequirementSets().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -36035,7 +36035,7 @@ NotifyControllers(aLock);
 public void appendMsgVariables(System.Collections.IList coll)
   {
   __setDirty(true);
-  allMsgVariables().AddRange(coll);
+  allMsgVariables().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -36043,7 +36043,7 @@ NotifyControllers(null);
 public void appendMsgVariables(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allMsgVariables().AddRange(coll);
+  allMsgVariables().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -36514,7 +36514,7 @@ NotifyControllers(aLock);
 public void appendMsgVariables(System.Collections.IList coll)
   {
   __setDirty(true);
-  allMsgVariables().AddRange(coll);
+  allMsgVariables().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -36522,7 +36522,7 @@ NotifyControllers(null);
 public void appendMsgVariables(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allMsgVariables().AddRange(coll);
+  allMsgVariables().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -38051,7 +38051,7 @@ NotifyControllers(aLock);
 public void appendSpecial_or_reserved_values(System.Collections.IList coll)
   {
   __setDirty(true);
-  allSpecial_or_reserved_values().AddRange(coll);
+  allSpecial_or_reserved_values().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(null);
   }
@@ -38059,7 +38059,7 @@ NotifyControllers(null);
 public void appendSpecial_or_reserved_values(System.Collections.IList coll,Lock aLock)
   {
   __setDirty(true);
-  allSpecial_or_reserved_values().AddRange(coll);
+  allSpecial_or_reserved_values().XmlBAddRange(coll);
   acceptor.connectSons (this, coll);
 NotifyControllers(aLock);
   }
@@ -47230,8 +47230,6 @@ return res;
   public static void unParsePcData (TextWriter pw, bool flag)
     {
       if (flag)
-// TrueString is: TRUE
-// FalseString is: FALSE
         pw.Write ("TRUE");
        else
         pw.Write("FALSE");

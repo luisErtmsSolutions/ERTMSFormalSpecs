@@ -579,7 +579,6 @@ namespace GUI.TestRunnerView.TimeLineControl
             {
                 ModelElement.BeSilent = true;
 
-
                 Expect expect = evt as Expect;
                 if (expect != null)
                 {
@@ -597,6 +596,14 @@ namespace GUI.TestRunnerView.TimeLineControl
                             retVal = new EventDisplayAttributes(Color.Red, new Pen(Color.DarkRed), name, ErrorImageIndex, GetImageIndex(expect.Expectation), -1);
                             break;
                     }
+                }
+
+                ModelInterpretationFailure modelInterpretationFailure = evt as ModelInterpretationFailure;
+                if (modelInterpretationFailure != null)
+                {
+                    string name = GUIUtils.AdjustForDisplay(graphics, modelInterpretationFailure.Message, EVENT_SIZE.Width - 4, BOTTOM_FONT);
+
+                    retVal = new EventDisplayAttributes(Color.Red, new Pen(Color.DarkRed), name, ErrorImageIndex, GetImageIndex(modelInterpretationFailure.Instance as ModelElement), -1);
                 }
 
                 RuleFired ruleFired = evt as RuleFired;
@@ -642,8 +649,8 @@ namespace GUI.TestRunnerView.TimeLineControl
                     }
                     name = GUIUtils.AdjustForDisplay(graphics, ShortName(name), EVENT_SIZE.Width - 4, BOTTOM_FONT);
 
-                    TestCase testCase = Utils.EnclosingFinder<TestCase>.find(variableUpdate.Action);
-                    if (testCase != null)
+                    DataDictionary.Types.NameSpace nameSpace = Utils.EnclosingFinder<DataDictionary.Types.NameSpace>.find(variableUpdate.Action);
+                    if (nameSpace == null)
                     {
                         retVal = new EventDisplayAttributes(Color.LightGray, new Pen(Color.Black), name, -1, rightIcon, rightModifier);
                     }

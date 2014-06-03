@@ -32,6 +32,45 @@ namespace GUI.ModelDiagram
     /// </summary>
     public class ModelDiagramPanel : BoxArrowPanel<IGraphicalDisplay, ModelArrow>
     {
+        private System.Windows.Forms.ToolStripMenuItem addRangeMenuItem;
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public ModelDiagramPanel()
+            : base()
+        {
+        }
+
+        /// <summary>
+        /// Adds the menu items related to this model element
+        /// </summary>
+        public override void InitializeStartMenu()
+        {
+            if ((NameSpace != null))
+            {
+                // 
+                // Add range
+                // 
+                addRangeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+                addRangeMenuItem.Text = "Add range";
+                addRangeMenuItem.Click += new System.EventHandler(addRangeMenuItem_Click);
+            }
+        }
+
+        /// <summary>
+        /// Adds a new range
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void addRangeMenuItem_Click(object sender, EventArgs e)
+        {
+            Range range = (Range)DataDictionary.Generated.acceptor.getFactory().createRange();
+            range.Name = "Range";
+            NameSpace.appendRanges(range);
+            RefreshControl();
+        }
+
         /// <summary>
         /// The namespace for which this panel is built
         /// </summary>

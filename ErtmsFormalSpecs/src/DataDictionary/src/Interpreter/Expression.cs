@@ -692,6 +692,22 @@ namespace DataDictionary.Interpreter
         }
 
         /// <summary>
+        /// Adds an error message to the root element and explains it
+        /// </summary>
+        /// <param name="message"></param>
+        public override void AddErrorAndExplain(string message, InterpretationContext context)
+        {
+            if (!explain)
+            {
+                if (RootLog != null)
+                {
+                    RootLog.AddErrorAndExplain(message, Explain(context));
+                }
+            }
+        }
+
+
+        /// <summary>
         /// Provides the variable referenced by this expression, if any
         /// </summary>
         /// <param name="context">The context on which the variable must be found</param>

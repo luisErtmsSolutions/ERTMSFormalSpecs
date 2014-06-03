@@ -1,4 +1,7 @@
 <NameSpace
+ X="330"
+ Width="100"
+ Height="50"
  Name="CurrentConsumption"
  Guid="d946f545-9a01-46a6-a499-0f1763c1411c"
 >

@@ -19,6 +19,7 @@ namespace GUI.ModelDiagram
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
+    using System.Drawing;
     using DataDictionary;
     using DataDictionary.Rules;
     using System.Windows.Forms;
@@ -34,6 +35,8 @@ namespace GUI.ModelDiagram
         public RuleModelControl(Rule model)
             : base(model)
         {
+            BoxMode = BoxModeEnum.RoundedCorners;
+            NORMAL_COLOR = Color.LightBlue;
             MouseClick += new MouseEventHandler(HandleMouseClick);
         }
 

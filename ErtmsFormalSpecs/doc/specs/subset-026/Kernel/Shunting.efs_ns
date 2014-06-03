@@ -14,9 +14,11 @@
 <Function
  Type="BaliseGroup"
  Default=""
- Y="60"
+ X="30"
+ Y="170"
  Width="100"
  Height="50"
+ Pinned="TRUE"
  Implemented="TRUE"
  Name="CreateBaliseGroup"
  Guid="b60ca2dd-c517-4980-a91f-52a4b52bc424"
@@ -48,7 +50,8 @@
 </Function></Functions>
 <Procedures>
 <Procedure
- Y="120"
+ X="190"
+ Y="170"
  Width="100"
  Height="50"
  Implemented="TRUE"

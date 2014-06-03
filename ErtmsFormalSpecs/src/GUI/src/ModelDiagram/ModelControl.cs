@@ -35,6 +35,13 @@ namespace GUI.ModelDiagram
         {
             Model = model;
             BoxMode = BoxModeEnum.Rectangle;
+
+            MouseUp += new System.Windows.Forms.MouseEventHandler(ModelControl_MouseUp);
+        }
+
+        void ModelControl_MouseUp(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+
         }
 
         /// <summary>
@@ -48,11 +55,10 @@ namespace GUI.ModelDiagram
         /// </summary>
         public abstract string ModelName { get; }
 
-        public override void PaintInBoxArrowPanel(System.Windows.Forms.PaintEventArgs e)
+        public override void PaintInBoxArrowPanel(Graphics graphics)
         {
-            base.PaintInBoxArrowPanel(e);
+            base.PaintInBoxArrowPanel(graphics);
 
-            Graphics graphics = e.Graphics;
             Font bold = new Font(Font, FontStyle.Bold);
 
             string typeName = GUIUtils.AdjustForDisplay(graphics, ModelName, Width - 4, bold);

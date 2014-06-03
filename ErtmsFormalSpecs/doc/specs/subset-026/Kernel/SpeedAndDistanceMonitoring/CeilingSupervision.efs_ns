@@ -115,6 +115,7 @@
  Name="Always"
  Guid="46ab034c-51f8-4828-950e-823da37a4bd7"
 >
+<Comment></Comment>
 <Expression>( dV_warning_max - dV_warning_min ) / ( V_warning_max - V_warning_min )</Expression>
 </Case></Cases>
 </Function><Function

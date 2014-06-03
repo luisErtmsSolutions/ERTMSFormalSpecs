@@ -418,6 +418,11 @@ namespace DataDictionary.Tests.Runner
                         {
                             case Utils.ElementLog.LevelEnum.Error:
                                 ModelInterpretationFailure modelInterpretationFailure = new ModelInterpretationFailure(log, pair.Key as Utils.INamable, null);
+                                ModelElement modelElement = pair.Key as ModelElement;
+                                if (modelElement != null)
+                                {
+                                    modelInterpretationFailure.Explanation = modelElement.Explain;
+                                }
                                 EventTimeLine.AddModelEvent(modelInterpretationFailure, this);
                                 break;
 

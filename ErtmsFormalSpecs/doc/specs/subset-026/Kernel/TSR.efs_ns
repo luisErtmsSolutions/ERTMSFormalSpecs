@@ -12,6 +12,10 @@
 <Structures>
 <Structure
  Default=""
+ X="350"
+ Y="10"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TemporarySpeedRestriction"
  Guid="0750c483-234a-40dc-ad60-7476fe9389a6"
@@ -144,6 +148,10 @@
  TypeName="TemporarySpeedRestriction"
  MaxSize="30"
  Default="[]"
+ X="180"
+ Y="10"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TemporarySpeedRestrictions"
  Guid="63974d27-672e-4fb3-a039-1a4744c7805b"
@@ -164,6 +172,10 @@
 <Function
  Type="Default.BaseTypes.Length"
  Default=""
+ X="20"
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TSRLength"
  Guid="e1f7e134-d7fc-432e-a021-fead8af82896"
@@ -205,6 +217,10 @@
 </Function><Function
  Type="Default.BaseTypes.Speed"
  Default=""
+ X="130"
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="TSRSpeedRestriction"
@@ -244,6 +260,10 @@
 </Function><Function
  Type="Default.BaseTypes.Speed"
  Default=""
+ X="130"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="SpeedRestrictions"
  Guid="3aa45245-3edf-4e8e-81b4-37889a104200"
@@ -295,6 +315,10 @@ INITIAL_VALUE BaseTypes.MaxSpeedFunction) (Distance)</Expression>
 </Function><Function
  Type="Boolean"
  Default=""
+ X="20"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="CurrentTargetDueToTSR"
@@ -316,6 +340,10 @@ INITIAL_VALUE BaseTypes.MaxSpeedFunction) (Distance)</Expression>
 </Function></Functions>
 <Procedures>
 <Procedure
+ X="390"
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TemporarySpeedRestrictionRevocationReceived"
  Guid="e6b0c4a8-febd-45d7-907d-29b33b7057ea"
@@ -367,6 +395,10 @@ INITIAL_VALUE BaseTypes.MaxSpeedFunction) (Distance)</Expression>
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
+ X="390"
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TemporarySpeedRestrictionsReceived"
  Guid="057ee8b6-8311-46e7-9483-29c14adc26c5"
@@ -495,6 +527,10 @@ IN TSRs</Action></Actions>
  Type="TemporarySpeedRestrictions"
  DefaultValue=""
  VariableMode="Internal"
+ X="20"
+ Y="10"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="TSRs"
  Guid="366fea33-392b-4a4f-bab2-2fa0a7ea3e96"
@@ -519,6 +555,10 @@ IN TSRs</Action></Actions>
 <Rules>
 <Rule
  Priority="CleanUp"
+ X="20"
+ Y="270"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="RevokeTSR"
  Guid="4341d3f8-e3a8-4c10-8526-83870ab6daec"

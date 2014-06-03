@@ -111,6 +111,14 @@ namespace GUI.TestRunnerView.TimeLineControl
                     GUIUtils.MDIWindow.AddChildWindow(explainTextBox);
                 }
             }
+
+            ModelInterpretationFailure modelInterpretationFailure = evt as ModelInterpretationFailure;
+            if (modelInterpretationFailure != null)
+            {
+                ExplainBox explainTextBox = new ExplainBox();
+                explainTextBox.setExplanation(modelInterpretationFailure.Explanation);
+                GUIUtils.MDIWindow.AddChildWindow(explainTextBox);
+            }
         }
 
         /// <summary>

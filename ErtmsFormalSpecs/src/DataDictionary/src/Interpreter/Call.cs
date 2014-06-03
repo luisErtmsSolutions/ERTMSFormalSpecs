@@ -377,7 +377,7 @@ namespace DataDictionary.Interpreter
                         retVal = function.Evaluate(context, parameterValues);
                         if (retVal == null)
                         {
-                            AddError("Call " + function.Name + " ( " + ParameterValues(parameterValues) + " ) returned nothing");
+                            AddErrorAndExplain("Call " + function.Name + " ( " + ParameterValues(parameterValues) + " ) returned nothing", context);
                         }
                     }
                     else if (parameters.Count == 1) // graph

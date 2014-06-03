@@ -32,6 +32,9 @@
 <Enumerations>
 <Enum
  Default="ConditionType.Conditions"
+ Y="60"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="ConditionType"
  Guid="4fdffda5-083b-4121-aac5-6672a6d82bdd"
@@ -94,6 +97,9 @@
 <Function
  Type="Boolean"
  Default=""
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  Name="ConditionExitsApplicability"
  Guid="873d51f3-eb83-48d8-a167-fd16e60ade7c"
@@ -169,6 +175,10 @@
 </Function><Function
  Type="Default.BaseTypes.Distance"
  Default=""
+ X="110"
+ Y="120"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="BrakingConditionLength"
@@ -204,6 +214,9 @@ b) a different combination of enabled braking systems</Comment>
 </Function></Functions>
 <Procedures>
 <Procedure
+ Y="180"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="TCMonitor"
@@ -346,6 +359,9 @@ b) a different combination of enabled braking systems</Comment>
 <Rules>
 <Rule
  Priority="Processing"
+ Y="240"
+ Width="100"
+ Height="50"
  Implemented="TRUE"
  NeedsRequirement="FALSE"
  Name="TrackConditionsMonitor"

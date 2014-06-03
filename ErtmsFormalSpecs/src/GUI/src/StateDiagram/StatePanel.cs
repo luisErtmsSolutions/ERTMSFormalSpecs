@@ -37,8 +37,10 @@ namespace GUI.StateDiagram
         /// <summary>
         /// Initializes the start menu
         /// </summary>
-        public void InitializeStartMenu()
+        public override void InitializeStartMenu()
         {
+            base.InitializeStartMenu();
+
             addStateMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             addTransitionMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();

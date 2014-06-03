@@ -109,11 +109,19 @@ namespace EFSDriver
         {
             if (Propagate)
             {
-                IntValue value = EFS.GetVariableValue(variableNameTextBox.Text) as IntValue;
-                if (value != null)
+                Value val = EFS.GetVariableValue(variableNameTextBox.Text);
+                IntValue intValue = val as IntValue;
+                if (intValue != null)
                 {
-                    value.Image = variableValueTextBox.Text;
-                    EFS.SetVariableValue(variableNameTextBox.Text, value);
+                    intValue.Image = variableValueTextBox.Text;
+                    EFS.SetVariableValue(variableNameTextBox.Text, intValue);
+                }
+
+                DoubleValue doubleValue = val as DoubleValue;
+                if (doubleValue != null)
+                {
+                    doubleValue.Image = variableValueTextBox.Text;
+                    EFS.SetVariableValue(variableNameTextBox.Text, doubleValue);
                 }
             }
         }

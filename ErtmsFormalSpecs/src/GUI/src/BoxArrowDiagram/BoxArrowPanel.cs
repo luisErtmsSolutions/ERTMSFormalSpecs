@@ -34,7 +34,10 @@ namespace GUI.BoxArrowDiagram
         private System.Windows.Forms.ToolStripMenuItem refreshMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reDisplayMenuItem;
 
-        private void InitializeStartMenu()
+        /// <summary>
+        /// Initializes the context menu items
+        /// </summary>
+        public virtual void InitializeStartMenu()
         {
             // 
             // Refresh
@@ -53,9 +56,11 @@ namespace GUI.BoxArrowDiagram
             reDisplayMenuItem.Text = "Redisplay items";
             reDisplayMenuItem.Click += new System.EventHandler(reDisplayMenuItem_Click);
 
+            contextMenu.Items.Clear();
             contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
                 reDisplayMenuItem, 
-                refreshMenuItem});
+                refreshMenuItem
+            });
         }
 
         /// <summary>
@@ -104,6 +109,8 @@ namespace GUI.BoxArrowDiagram
             Images = new ImageList();
             Images.Images.Add(GUI.Properties.Resources.pin);
             Images.Images.Add(GUI.Properties.Resources.unpin);
+
+            Paint += new PaintEventHandler(BoxArrowPanel_Paint);
         }
 
         /// <summary>
@@ -854,21 +861,18 @@ namespace GUI.BoxArrowDiagram
             return retVal;
         }
 
-        protected override void OnPaint(PaintEventArgs e)
+        private void BoxArrowPanel_Paint(object sender, PaintEventArgs e)
         {
-            base.OnPaint(e);
-
-            SuspendLayout();
+            Graphics g = e.Graphics;
             foreach (BoxControl<BoxModel, ArrowModel> control in boxes.Values)
             {
-                control.PaintInBoxArrowPanel(e);
+                control.PaintInBoxArrowPanel(g);
             }
 
             foreach (ArrowControl<BoxModel, ArrowModel> control in arrows.Values)
             {
-                control.PaintInBoxArrowPanel(e);
+                control.PaintInBoxArrowPanel(g);
             }
-            ResumeLayout(true);
         }
 
         public void ControlHasMoved()

@@ -13,8 +13,8 @@
 <Function
  Type="Boolean"
  Default=""
- X="50"
- Y="230"
+ X="30"
+ Y="20"
  Width="100"
  Height="50"
  Name="SituationA"
@@ -25,13 +25,14 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="0e3bd7fe-ec61-4b1c-aef9-0a0912d4f7d3"
 >
-</ReqRef><Cases>
+</ReqRef><Comment></Comment>
+<Cases>
 </Cases>
 </Function><Function
  Type="Boolean"
  Default=""
- X="80"
- Y="130"
+ X="30"
+ Y="80"
  Width="100"
  Height="50"
  Implemented="TRUE"
@@ -53,8 +54,8 @@
 </Function><Function
  Type="Boolean"
  Default=""
- X="170"
- Y="90"
+ X="140"
+ Y="20"
  Width="100"
  Height="50"
  Implemented="TRUE"
@@ -77,8 +78,8 @@
 </Function><Function
  Type="Boolean"
  Default=""
- X="270"
- Y="60"
+ X="140"
+ Y="80"
  Width="100"
  Height="50"
  Name="SituationD"
@@ -89,13 +90,14 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="4abf47b8-fc6d-4f53-9979-92d2fe0904ea"
 >
-</ReqRef><Cases>
+</ReqRef><Comment></Comment>
+<Cases>
 </Cases>
 </Function><Function
  Type="Boolean"
  Default=""
- X="380"
- Y="110"
+ X="250"
+ Y="20"
  Width="100"
  Height="50"
  Implemented="TRUE"
@@ -123,8 +125,8 @@
 </Function><Function
  Type="Boolean"
  Default=""
- X="310"
- Y="210"
+ X="250"
+ Y="80"
  Width="100"
  Height="50"
  Name="SituationF"
@@ -135,13 +137,14 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="533ca604-d837-4e29-bbd6-76e3352cd1da"
 >
-</ReqRef><Cases>
+</ReqRef><Comment></Comment>
+<Cases>
 </Cases>
 </Function><Function
  Type="Boolean"
  Default=""
- X="220"
- Y="310"
+ X="360"
+ Y="20"
  Width="100"
  Height="50"
  Name="SituationG"
@@ -157,8 +160,8 @@
 </Function><Function
  Type="Boolean"
  Default=""
- X="430"
- Y="330"
+ X="360"
+ Y="80"
  Width="100"
  Height="50"
  Name="SituationH"
@@ -174,8 +177,8 @@
 </Function><Function
  Type="Boolean"
  Default=""
- X="450"
- Y="220"
+ X="470"
+ Y="20"
  Width="100"
  Height="50"
  Name="SituationI"
@@ -191,8 +194,8 @@
 </Function><Function
  Type="Boolean"
  Default=""
- X="50"
- Y="320"
+ X="470"
+ Y="80"
  Width="100"
  Height="50"
  Name="SituationJ"
@@ -208,8 +211,8 @@
 </Function><Function
  Type="Boolean"
  Default=""
- X="100"
- Y="420"
+ X="580"
+ Y="20"
  Width="100"
  Height="50"
  Implemented="TRUE"
@@ -221,7 +224,8 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="74405626-92a2-413d-878c-7687dc393ae0"
 >
-</ReqRef><Cases>
+</ReqRef><Comment></Comment>
+<Cases>
 <Case
  Name="Value"
  Guid="51f08011-394d-4a16-bbbb-bca13af3e500"
@@ -231,8 +235,8 @@
 </Function><Function
  Type="Boolean"
  Default=""
- X="190"
- Y="470"
+ X="580"
+ Y="80"
  Width="100"
  Height="50"
  Name="SituationL"
@@ -248,8 +252,8 @@
 </Function><Function
  Type="Boolean"
  Default=""
- X="290"
- Y="470"
+ X="690"
+ Y="20"
  Width="100"
  Height="50"
  Name="SituationM"
@@ -265,8 +269,8 @@
 </Function><Function
  Type="Boolean"
  Default=""
- X="380"
- Y="420"
+ X="690"
+ Y="80"
  Width="100"
  Height="50"
  Name="SituationN"
@@ -285,8 +289,8 @@
  Type="Boolean"
  DefaultValue="Boolean.False"
  VariableMode="Internal"
- X="590"
- Y="600"
+ X="250"
+ Y="190"
  Width="100"
  Height="50"
  Implemented="TRUE"
@@ -303,8 +307,8 @@
  Type="Boolean"
  DefaultValue="Boolean.False"
  VariableMode="Internal"
- X="630"
- Y="470"
+ X="30"
+ Y="190"
  Width="100"
  Height="50"
  Implemented="TRUE"
@@ -321,8 +325,8 @@
  Type="Boolean"
  DefaultValue="Boolean.False"
  VariableMode="Internal"
- X="760"
- Y="460"
+ X="140"
+ Y="190"
  Width="100"
  Height="50"
  Implemented="TRUE"
@@ -339,8 +343,8 @@
  Type="Boolean"
  DefaultValue="False"
  VariableMode="Internal"
- X="700"
- Y="670"
+ X="470"
+ Y="190"
  Width="100"
  Height="50"
  Implemented="TRUE"
@@ -367,8 +371,8 @@
  Type="Boolean"
  DefaultValue="False"
  VariableMode="Internal"
- X="810"
- Y="590"
+ X="360"
+ Y="190"
  Width="100"
  Height="50"
  Implemented="TRUE"
@@ -390,8 +394,8 @@
 <Rules>
 <Rule
  Priority="Processing"
- X="600"
- Y="20"
+ X="30"
+ Y="350"
  Width="100"
  Height="50"
  NeedsRequirement="FALSE"
@@ -560,8 +564,8 @@
 </RuleCondition></Conditions>
 </Rule><Rule
  Priority="CleanUp"
- X="700"
- Y="20"
+ X="140"
+ Y="350"
  Width="100"
  Height="50"
  Implemented="TRUE"
