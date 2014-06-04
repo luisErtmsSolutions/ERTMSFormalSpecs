@@ -35,11 +35,16 @@ namespace DataDictionary
         /// </summary>
         public List<DataDictionary.Dictionary> Dictionaries { get; private set; }
 
-        public Tests.Runner.Runner __runner;
+        private Tests.Runner.Runner __runner = null;
         /// <summary>
         /// The runner currently set for the system
         /// </summary>
-        public Tests.Runner.Runner Runner { get { return __runner; } set { __runner = value; } }
+        public Tests.Runner.Runner Runner { 
+            get { return __runner; } 
+            set {
+                __runner = value;
+            }
+        }
 
         /// <summary>
         /// Indicates wheter the model should be recompiled (after a change or a load)

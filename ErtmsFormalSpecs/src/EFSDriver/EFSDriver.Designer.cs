@@ -28,22 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cycleButton = new System.Windows.Forms.Button();
             this.variableNameLabel = new System.Windows.Forms.Label();
             this.variableNameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.variableValueTextBox = new System.Windows.Forms.TextBox();
+            this.cycleCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
-            // 
-            // cycleButton
-            // 
-            this.cycleButton.Location = new System.Drawing.Point(216, 287);
-            this.cycleButton.Name = "cycleButton";
-            this.cycleButton.Size = new System.Drawing.Size(106, 55);
-            this.cycleButton.TabIndex = 0;
-            this.cycleButton.Text = "Cycle";
-            this.cycleButton.UseVisualStyleBackColor = true;
-            this.cycleButton.Click += new System.EventHandler(this.cycleButton_Click);
             // 
             // variableNameLabel
             // 
@@ -60,7 +50,6 @@
             this.variableNameTextBox.Name = "variableNameTextBox";
             this.variableNameTextBox.Size = new System.Drawing.Size(339, 20);
             this.variableNameTextBox.TabIndex = 2;
-            this.variableNameTextBox.TextChanged += new System.EventHandler(this.variableNameTextBox_TextChanged);
             // 
             // label1
             // 
@@ -79,16 +68,26 @@
             this.variableValueTextBox.TabIndex = 4;
             this.variableValueTextBox.TextChanged += new System.EventHandler(this.variableValueTextBox_TextChanged);
             // 
+            // cycleCheckBox
+            // 
+            this.cycleCheckBox.AutoSize = true;
+            this.cycleCheckBox.Location = new System.Drawing.Point(421, 65);
+            this.cycleCheckBox.Name = "cycleCheckBox";
+            this.cycleCheckBox.Size = new System.Drawing.Size(52, 17);
+            this.cycleCheckBox.TabIndex = 5;
+            this.cycleCheckBox.Text = "Cycle";
+            this.cycleCheckBox.UseVisualStyleBackColor = true;
+            // 
             // EFSDriver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(485, 354);
+            this.ClientSize = new System.Drawing.Size(485, 101);
+            this.Controls.Add(this.cycleCheckBox);
             this.Controls.Add(this.variableValueTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.variableNameTextBox);
             this.Controls.Add(this.variableNameLabel);
-            this.Controls.Add(this.cycleButton);
             this.Name = "EFSDriver";
             this.Text = "EFSDriver";
             this.ResumeLayout(false);
@@ -98,11 +97,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button cycleButton;
         private System.Windows.Forms.Label variableNameLabel;
         private System.Windows.Forms.TextBox variableNameTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox variableValueTextBox;
+        private System.Windows.Forms.CheckBox cycleCheckBox;
     }
 }
 

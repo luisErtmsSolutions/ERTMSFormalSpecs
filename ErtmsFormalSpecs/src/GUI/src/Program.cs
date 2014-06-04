@@ -21,10 +21,10 @@ using System.ServiceModel;
 using System.ServiceModel.Description;
 using GUI.IPCInterface;
 using DataDictionary;
+using System.Threading;
 
 namespace ERTMSFormalSpecs
 {
-
     public static class ErtmsFormalSpecGui
     {
         /// <summary>
@@ -33,49 +33,19 @@ namespace ERTMSFormalSpecs
         private static ServiceHost host = null;
 
         /// <summary>
-        /// The service hosting IPC communication
-        /// </summary>
-        public static EFSService EFSService { get; set; }
-
-        /// <summary>
         /// Hosts the EFS IPC service
         /// </summary>
         /// <returns>The hosting service</returns>
         private static void HostEFSService()
         {
-            EFSService = new EFSService();
-
-            Uri baseAddress = new Uri("http://localhost:5352/EFSService/");
-            host = new ServiceHost(EFSService, baseAddress);
+            host = new ServiceHost(EFSService.INSTANCE);
             try
             {
-                // Setup the endpoint
-                var endPointWithoutSSL = new BasicHttpBinding()
-                {
-                    MaxBufferSize = int.MaxValue,
-                    MaxReceivedMessageSize = int.MaxValue,
-                    MaxBufferPoolSize = int.MaxValue,
-                };
-
-                endPointWithoutSSL.ReaderQuotas.MaxStringContentLength = int.MaxValue;
-                endPointWithoutSSL.ReaderQuotas.MaxNameTableCharCount = int.MaxValue;
-                endPointWithoutSSL.ReaderQuotas.MaxDepth = int.MaxValue;
-                endPointWithoutSSL.ReaderQuotas.MaxBytesPerRead = int.MaxValue;
-                endPointWithoutSSL.ReaderQuotas.MaxArrayLength = int.MaxValue;
-
-                host.AddServiceEndpoint(typeof(IEFSService), endPointWithoutSSL, "EFSService");
-
-                // Enable metadata exchange.
-                ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
-                smb.HttpGetEnabled = true;
-                host.Description.Behaviors.Add(smb);
-
-                // Start the service.
                 host.Open();
             }
-            catch (CommunicationException ce)
+            catch (CommunicationException exception)
             {
-                Console.WriteLine("An exception occurred: {0}", ce.Message);
+                Console.WriteLine("An exception occurred: {0}", exception.Message);
                 host.Abort();
             }
         }
@@ -96,6 +66,7 @@ namespace ERTMSFormalSpecs
         /// The main entry point for the application.
         /// </summary>
         static readonly log4net.ILog Log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         [STAThread]
         static void Main(string[] args)
         {
@@ -119,7 +90,15 @@ namespace ERTMSFormalSpecs
                 }
 
                 GUI.MainWindow window = new GUI.MainWindow();
-                HostEFSService();
+
+                {
+                    // TRICKY SECTION
+                    // This thread is mandatory otherwise WCF does not create a new thread to handle the service requests. 
+                    // Since the call to Cycle is blocking, creating such threads is mandatory
+                    Thread thread = new Thread((ThreadStart)HostEFSService);
+                    thread.Start();
+                }
+
                 Application.Run(window);
                 CloseEFSService();
             }

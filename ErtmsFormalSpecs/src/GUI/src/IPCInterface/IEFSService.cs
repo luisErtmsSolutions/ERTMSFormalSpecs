@@ -25,7 +25,7 @@ namespace GUI.IPCInterface
     /// <summary>
     /// The cycle priority to execute
     /// </summary>
-    public enum Priority { Verification, UpdateInternal, Process, UpdateOutput, CleanUp };
+    public enum Step { Verification, UpdateInternal, Process, UpdateOutput, CleanUp };
 
     /// <summary>
     /// A fault occured while executing a service function
@@ -71,40 +71,24 @@ namespace GUI.IPCInterface
     public interface IEFSService
     {
         /// <summary>
-        /// Indicates that the explain view should be updated according to the scenario execution
-        /// </summary>        
-        bool Explain
-        {
-            [OperationContract]
-            set;
-        }
+        /// Connects to the service using the default parameters
+        /// </summary>
+        /// <returns>The client identifier</returns>
+        [OperationContract]
+        [FaultContractAttribute(typeof(EFSServiceFault))]
+        int ConnectUsingDefaultValues();
 
         /// <summary>
-        /// Indicates that the events should be logged
+        /// Connects to the service 
         /// </summary>
-        bool LogEvents
-        {
-            [OperationContract]
-            set;
-        }
-
-        /// <summary>
-        /// The duration (in ms) of an execution cycle
-        /// </summary>
-        int CycleDuration
-        {
-            [OperationContract]
-            set;
-        }
-
-        /// <summary>
-        /// The number of events that should be kept in memory
-        /// </summary>
-        int KeepEventCount
-        {
-            [OperationContract]
-            set;
-        }
+        /// <param name="explain">Indicates that the explain view should be updated according to the scenario execution</param>
+        /// <param name="logEvents">Indicates that the events should be logged</param>
+        /// <param name="cycleDuration">The duration (in ms) of an execution cycle</param>
+        /// <param name="keepEventCount">The number of events that should be kept in memory</param>
+        /// <returns>The client identifier</returns>
+        [OperationContract]
+        [FaultContractAttribute(typeof(EFSServiceFault))]
+        int Connect(bool explain, bool logEvents, int cycleDuration, int keepEventCount);
 
         /// <summary>
         /// Provides the value of a specific variable
@@ -112,8 +96,15 @@ namespace GUI.IPCInterface
         /// <param name="variableName"></param>
         /// <returns></returns>
         [OperationContract]
-        [FaultContractAttribute(typeof(EFSServiceFault))]
         Values.Value GetVariableValue(string variableName);
+
+        /// <summary>
+        /// Provides the value of an expression
+        /// </summary>
+        /// <param name="expression"></param>
+        /// <returns></returns>
+        [OperationContract]
+        Values.Value GetExpressionValue(string expression);
 
         /// <summary>
         /// Sets the value of a specific variable
@@ -127,10 +118,11 @@ namespace GUI.IPCInterface
         /// <summary>
         /// Activates the execution of a single cycle, as the given priority level
         /// </summary>
-        /// <param name="priority"></param>
+        /// <param name="clientId">The id of the client</param>
+        /// <param name="step">The cycle step to execute</param>
         [OperationContract]
         [FaultContractAttribute(typeof(EFSServiceFault))]
-        void Cycle(Priority priority);
+        void Cycle(int clientId, Step step);
 
         /// <summary>
         /// Restarts the engine with default values

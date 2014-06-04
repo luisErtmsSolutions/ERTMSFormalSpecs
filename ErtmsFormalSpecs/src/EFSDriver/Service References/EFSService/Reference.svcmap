@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d0054a14-845b-44f5-a103-95572406853d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="400a86b5-ea3b-4e67-8331-f40a7ef0811d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -8,9 +8,7 @@
     <GenerateInternalTypes>false</GenerateInternalTypes>
     <GenerateMessageContracts>false</GenerateMessageContracts>
     <NamespaceMappings />
-    <CollectionMappings>
-      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
-    </CollectionMappings>
+    <CollectionMappings />
     <GenerateSerializableTypes>true</GenerateSerializableTypes>
     <Serializer>Auto</Serializer>
     <UseSerializerForFaults>true</UseSerializerForFaults>
@@ -20,16 +18,15 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:5352/EFSService/" Protocol="http" SourceId="1" />
+    <MetadataSource Address="net.tcp://localhost:8001/EFSService/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="70cf0321-d6d7-45a9-b779-8e067b7fc5c5" SourceId="1" SourceUrl="http://localhost:5352/EFSService/?disco" />
-    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="fd18bbef-b99b-43e7-9e99-64032475f11b" SourceId="1" SourceUrl="http://localhost:5352/EFSService/?xsd=xsd1" />
-    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="05a21d62-4705-4827-aacb-1900c9d06ece" SourceId="1" SourceUrl="http://localhost:5352/EFSService/?xsd=xsd2" />
-    <MetadataFile FileName="EFSService.wsdl" MetadataType="Wsdl" ID="2b3ce14f-5a5b-4795-880c-c13c27236455" SourceId="1" SourceUrl="http://localhost:5352/EFSService/?wsdl" />
-    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="181717ad-8abc-4a85-ab57-8dff0b6f494b" SourceId="1" SourceUrl="http://localhost:5352/EFSService/?xsd=xsd0" />
-    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="be780685-03bc-41dc-944e-97d8a7b942b2" SourceId="1" SourceUrl="http://localhost:5352/EFSService/?xsd=xsd3" />
-    <MetadataFile FileName="item4.xsd" MetadataType="Schema" ID="f78589f9-c08d-41a1-9c1c-a076a8c211b5" SourceId="1" SourceUrl="http://localhost:5352/EFSService/?xsd=xsd4" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="39a94579-9b4e-40a3-b6f7-8dfc6fb0e930" SourceId="1" SourceUrl="net.tcp://localhost:8001/EFSService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="36a3e2a1-dc2c-4ea4-b105-c35a94b62a9d" SourceId="1" SourceUrl="net.tcp://localhost:8001/EFSService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="f2341306-a901-4adc-b5b1-5dfd5c6e1b9b" SourceId="1" SourceUrl="net.tcp://localhost:8001/EFSService/mex" />
+    <MetadataFile FileName="GUI.IPCInterface.xsd" MetadataType="Schema" ID="3e5244ef-32c4-4307-94a7-33e098239499" SourceId="1" SourceUrl="net.tcp://localhost:8001/EFSService/mex" />
+    <MetadataFile FileName="GUI.IPCInterface.Values.xsd" MetadataType="Schema" ID="f0ddfb82-ce0a-49df-b8e6-cbf1c36db87f" SourceId="1" SourceUrl="net.tcp://localhost:8001/EFSService/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="7412e8e4-6fd7-475f-a61e-ee0de272a812" SourceId="1" SourceUrl="net.tcp://localhost:8001/EFSService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

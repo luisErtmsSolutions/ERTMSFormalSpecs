@@ -160,6 +160,7 @@ namespace GUI.TestRunnerView.TimeLineControl
         {
             base.UpdatePanelSize();
             ScrollControlIntoView(AutoScrollEnabler);
+            VerticalScroll.Value = 0;
         }
     }
 }

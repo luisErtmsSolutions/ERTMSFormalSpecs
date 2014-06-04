@@ -48,6 +48,11 @@ namespace GUI.TestRunnerView.TimeLineControl
         /// </summary>
         protected Label AutoScrollEnabler { get; set; }
 
+        /// <summary>
+        /// Label used to define the size of the panel
+        /// </summary>
+        protected Label AutoPanelSize { get; set; }
+
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
@@ -62,6 +67,12 @@ namespace GUI.TestRunnerView.TimeLineControl
             AutoScrollEnabler.Parent = this;
             AutoScrollEnabler.Location = new Point(0, 0);
             AutoScrollEnabler.Visible = true;
+
+            AutoPanelSize = new Label();
+            AutoPanelSize.Text = "";
+            AutoPanelSize.Parent = this;
+            AutoPanelSize.Location = new Point(0, 0);
+            AutoPanelSize.Visible = true;
         }
 
         /// <summary>
@@ -485,11 +496,17 @@ namespace GUI.TestRunnerView.TimeLineControl
         protected virtual void UpdatePanelSize()
         {
             Point bottomRightPosition = PositionHandler.BottomRightPosition;
-            Point locationWithoutScroll = new Point(
+            Point location = new Point(
                 bottomRightPosition.X - HorizontalScroll.Value,
                 bottomRightPosition.Y - VerticalScroll.Value
             );
-            AutoScrollEnabler.Location = locationWithoutScroll;
+            AutoPanelSize.Location = location;
+
+            location = new Point(
+                location.X,
+                0
+            );
+            AutoScrollEnabler.Location = location;
         }
 
         protected override void OnPaint(PaintEventArgs pe)

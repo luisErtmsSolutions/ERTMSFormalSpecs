@@ -111,6 +111,13 @@ namespace GUI
         }
 
         /// <summary>
+        /// Performs the initialization of the task
+        /// </summary>
+        public virtual void Initialize(T instance)
+        {
+        }
+
+        /// <summary>
         /// Handles the synchronization
         /// </summary>
         public abstract void HandleSynchronization(T instance);
@@ -123,6 +130,7 @@ namespace GUI
         {
             T instance = (T)obj;
 
+            Initialize(instance);
             while (Synchronize)
             {
                 Thread.Sleep(CycleTime);

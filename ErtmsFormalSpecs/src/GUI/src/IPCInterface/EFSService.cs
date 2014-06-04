@@ -23,42 +23,346 @@ namespace GUI.IPCInterface
     using DataDictionary;
     using System.ServiceModel;
     using System.Windows.Forms;
+    using System.Threading;
 
-    [ServiceBehavior(
-        ConcurrencyMode = ConcurrencyMode.Single,
-        InstanceContextMode = InstanceContextMode.Single,
-        IncludeExceptionDetailInFaults = true)]
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, ConcurrencyMode = ConcurrencyMode.Multiple)]
     public class EFSService : IEFSService
     {
         /// <summary>
         /// Indicates that the explain view should be updated according to the scenario execution
         /// </summary>
-        public bool Explain { get; set; }
+        public bool Explain { get; private set; }
 
         /// <summary>
         /// Indicates that the events should be logged
         /// </summary>
-        public bool LogEvents { get; set; }
+        public bool LogEvents { get; private set; }
 
         /// <summary>
         /// The duration (in ms) of an execution cycle
         /// </summary>
-        public int CycleDuration { get; set; }
+        public int CycleDuration { get; private set; }
 
         /// <summary>
         /// The number of events that should be kept in memory
         /// </summary>
-        public int KeepEventCount { get; set; }
+        public int KeepEventCount { get; private set; }
+
+        /// <summary>
+        /// Resource protection
+        /// </summary>
+        private Dictionary<Step, Mutex> StepAccess { get; set; }
+
+        /// <summary>
+        /// Keeps track of each connection status
+        /// </summary>
+        private class ConnectionStatus
+        {
+            /// <summary>
+            /// Indicates that the connection is still active
+            /// </summary>
+            public bool Active { get; set; }
+
+            /// <summary>
+            /// The step for which the client is waiting
+            /// </summary>
+            public Step ExpectedStep { get; set; }
+
+            /// <summary>
+            /// The last time a cycle request has been performed
+            /// </summary>
+            public DateTime LastCycleRequest { get; set; }
+
+            /// <summary>
+            /// The last time a cycle activity has been resumed
+            /// </summary>
+            public DateTime LastCycleResume { get; set; }
+
+            /// <summary>
+            /// Constructor
+            /// </summary>
+            public ConnectionStatus()
+            {
+                Active = true;
+                LastCycleRequest = DateTime.MinValue;
+                LastCycleResume = DateTime.MinValue;
+            }
+        }
+
+        /// <summary>
+        /// The list of connection statuses
+        /// </summary>
+        private List<ConnectionStatus> Connections { get; set; }
+
+        /// <summary>
+        /// The last step being executed
+        /// </summary>
+        private Step LastStep { get; set; }
+
+        /// <summary>
+        /// Provides the next step to execute
+        /// </summary>
+        /// <param name="current"></param>
+        /// <returns></returns>
+        private Step NextStep(Step current)
+        {
+            Step retVal = Step.CleanUp;
+
+            switch (current)
+            {
+                case Step.CleanUp: retVal = Step.Verification; break;
+                case Step.Verification: retVal = Step.UpdateInternal; break;
+                case Step.UpdateInternal: retVal = Step.Process; break;
+                case Step.Process: retVal = Step.UpdateOutput; break;
+                case Step.UpdateOutput: retVal = Step.CleanUp; break;
+            }
+
+            return retVal;
+        }
+
+        /// <summary>
+        /// The thread which is used to launch the runner
+        /// </summary>
+        private LaunchRunner LaunchRunnerSynchronizer { get; set; }
 
         /// <summary>
         /// Constructor
         /// </summary>
         public EFSService()
         {
+            Connections = new List<ConnectionStatus>();
             Explain = true;
             LogEvents = false;
             CycleDuration = 100;
             KeepEventCount = 10000;
+
+            LastStep = Step.CleanUp;
+
+            StepAccess = new Dictionary<Step, Mutex>();
+            LaunchRunnerSynchronizer = new LaunchRunner(this, 10);
+        }
+
+        /// <summary>
+        /// Adds a client for this server
+        /// </summary>
+        /// <returns>The client id</returns>
+        private int AddClient()
+        {
+            int retVal = Connections.Count;
+
+            Connections.Add(new ConnectionStatus());
+
+            return retVal;
+        }
+
+        /// <summary>
+        /// Connects to the service 
+        /// </summary>
+        /// <returns>The client identifier</returns>
+        public int ConnectUsingDefaultValues()
+        {
+            return AddClient();
+        }
+
+        /// <summary>
+        /// Connects to the service 
+        /// </summary>
+        /// <param name="explain">Indicates that the explain view should be updated according to the scenario execution</param>
+        /// <param name="logEvents">Indicates that the events should be logged</param>
+        /// <param name="cycleDuration">The duration (in ms) of an execution cycle</param>
+        /// <param name="keepEventCount">The number of events that should be kept in memory</param>
+        public int Connect(bool explain, bool logEvents, int cycleDuration, int keepEventCount)
+        {
+            int clientId = AddClient();
+
+            Explain = explain;
+            LogEvents = logEvents;
+            CycleDuration = cycleDuration;
+            KeepEventCount = keepEventCount;
+
+            return clientId;
+        }
+
+        /// <summary>
+        /// Ensures that the client id is valid
+        /// </summary>
+        /// <param name="clientId"></param>
+        private void checkClient(int clientId)
+        {
+            if (clientId >= Connections.Count)
+            {
+                throw new FaultException<EFSServiceFault>(new EFSServiceFault("Invalid client id " + clientId));
+            }
+            else
+            {
+                if (!Connections[clientId].Active)
+                {
+                    throw new FaultException<EFSServiceFault>(new EFSServiceFault("Client connection has been closed by server"));
+                }
+            }
+        }
+
+        /// <summary>
+        /// Checks that a cycle can be launched, that is each client has voted for his next step
+        /// </summary>
+        /// <param name="step"></param>
+        /// <returns></returns>
+        private bool checkLaunch()
+        {
+            bool retVal = false;
+
+            // Checks that there are active connections
+            foreach (ConnectionStatus status in Connections)
+            {
+                retVal = retVal || status.Active;
+            }
+
+            if (retVal)
+            {
+                // Checks that all active connection have selected their next step
+                foreach (ConnectionStatus status in Connections)
+                {
+                    if (status.Active)
+                    {
+                        retVal = retVal && (status.LastCycleRequest > status.LastCycleResume);
+                    }
+                }
+            }
+
+            return retVal;
+        }
+
+        /// <summary>
+        /// Indicates if there is a client pending for a specific step
+        /// </summary>
+        /// <param name="step"></param>
+        /// <returns></returns>
+        private bool pendingClients(Step step)
+        {
+            bool retVal = false;
+
+            // Checks that there are active connections
+            foreach (ConnectionStatus status in Connections)
+            {
+                if (status.ExpectedStep == step && status.LastCycleRequest > status.LastCycleResume)
+                {
+                    retVal = true;
+                    break;
+                }
+            }
+
+            return retVal;
+        }
+
+        /// <summary>
+        /// 1s between each client decisions
+        /// </summary>
+        private static TimeSpan MAX_DELTA = new TimeSpan(0, 0, 60, 0, 0);
+
+        /// <summary>
+        /// Performs a single cycle
+        /// </summary>
+        public void Cycle()
+        {
+            try
+            {
+                DateTime now = DateTime.Now;
+
+                // Close inactive connections
+                foreach (ConnectionStatus status in Connections)
+                {
+                    TimeSpan delta = now - status.LastCycleRequest;
+                    if (false && delta > MAX_DELTA)
+                    {
+                        status.Active = false;
+                    }
+                }
+
+                // Launches the runner when all active client have selected their next step
+                while (checkLaunch())
+                {
+                    LastStep = NextStep(LastStep);
+                    Runner.ExecuteOnePriority(convertStep2Priority(LastStep));
+                    if (LastStep == Step.CleanUp)
+                    {
+                        GUIUtils.MDIWindow.Invoke((MethodInvoker)delegate { GUIUtils.MDIWindow.RefreshAfterStep(); });
+                    }
+
+                    while (pendingClients(LastStep))
+                    {
+                        // Let the processes waiting for the end of this step run
+                        StepAccess[LastStep].ReleaseMutex();
+
+                        // Let the other processes wake up
+                        Thread.Sleep(1);
+
+                        // Wait until all processes for this step have executed their work
+                        StepAccess[LastStep].WaitOne();
+                    }
+                }
+            }
+            catch ( Exception )
+            {
+                System.Diagnostics.Debugger.Break();
+            }
+        }
+
+        /// <summary>
+        /// Continuously launch the runner when all client have selected their next stop step
+        /// </summary>
+        private class LaunchRunner : GenericSynchronizationHandler<EFSService>
+        {
+            /// <summary>
+            /// Constructor
+            /// </summary>
+            /// <param name="service"></param>
+            /// <param name="cycleTime"></param>
+            public LaunchRunner(EFSService service, int cycleTime)
+                : base(service, cycleTime)
+            {
+            }
+
+            /// <summary>
+            /// Initialize the task 
+            /// </summary>
+            /// <param name="instance"></param>
+            public override void Initialize(EFSService instance)
+            {
+                // Allocates all critical section
+                instance.StepAccess[Step.CleanUp] = new Mutex(true, "CleanUp");
+                instance.StepAccess[Step.Verification] = new Mutex(true, "Verification");
+                instance.StepAccess[Step.UpdateInternal] = new Mutex(true, "UpdateInternal");
+                instance.StepAccess[Step.Process] = new Mutex(true, "Process");
+                instance.StepAccess[Step.UpdateOutput] = new Mutex(true, "UpdateOutput");
+            }
+
+            /// <summary>
+            /// Actually performes the synchronization, that is launch the runner when all client are ready
+            /// </summary>
+            /// <param name="instance"></param>
+            public override void HandleSynchronization(EFSService instance)
+            {
+                instance.Cycle();
+            }
+        }
+
+        /// <summary>
+        /// Activates the execution of a single cycle, as the given priority level
+        /// </summary>
+        /// <param name="clientId">The id of the client</param>
+        /// <param name="step">The cycle step to execute</param>
+        public void Cycle(int clientId, Step step)
+        {
+            checkClient(clientId);
+
+            Connections[clientId].LastCycleRequest = DateTime.Now;
+            Connections[clientId].LastCycleResume = DateTime.MinValue;
+            Connections[clientId].ExpectedStep = step;
+
+            StepAccess[step].WaitOne();
+
+            Connections[clientId].LastCycleResume = DateTime.Now;
+            StepAccess[step].ReleaseMutex();
         }
 
         /// <summary>
@@ -79,7 +383,7 @@ namespace GUI.IPCInterface
                 EFSSystem efsSystem = EFSSystem.INSTANCE;
                 if (efsSystem.Runner == null)
                 {
-                    Restart();
+                    EFSSystem.INSTANCE.Runner = new Runner(Explain, LogEvents, CycleDuration, KeepEventCount);
                 }
 
                 return efsSystem.Runner;
@@ -103,6 +407,28 @@ namespace GUI.IPCInterface
             else
             {
                 throw new FaultException<EFSServiceFault>(new EFSServiceFault("Cannot find variable " + variableName));
+            }
+
+            return retVal;
+        }
+
+        /// <summary>
+        /// Provides the value of an expression
+        /// </summary>
+        /// <param name="expression"></param>
+        /// <returns></returns>
+        public Values.Value GetExpressionValue(string expression)
+        {
+            Values.Value retVal = null;
+
+            DataDictionary.Interpreter.Expression expressionTree = EFSSystem.INSTANCE.Parser.Expression(null, expression);
+            if (expressionTree != null)
+            {
+                retVal = convertOut(expressionTree.GetValue(new DataDictionary.Interpreter.InterpretationContext()));
+            }
+            else
+            {
+                throw new FaultException<EFSServiceFault>(new EFSServiceFault("Cannot evaluate expression " + expression));
             }
 
             return retVal;
@@ -285,51 +611,89 @@ namespace GUI.IPCInterface
         }
 
         /// <summary>
-        /// Activates the execution of a single cycle, as the given priority level
+        /// Converts an interface priority to a Runner priority
         /// </summary>
         /// <param name="priority"></param>
-        public void Cycle(Priority priority)
+        private DataDictionary.Generated.acceptor.RulePriority convertStep2Priority(Step priority)
         {
-            Runner.ExecuteOnePriority(convertPriority(priority));
+            DataDictionary.Generated.acceptor.RulePriority retVal = DataDictionary.Generated.acceptor.RulePriority.defaultRulePriority;
 
-            if (priority == Priority.CleanUp)
+            switch (priority)
             {
-                GUIUtils.MDIWindow.Invoke((MethodInvoker)delegate { GUIUtils.MDIWindow.RefreshAfterStep(); });
+                case Step.Verification:
+                    retVal = DataDictionary.Generated.acceptor.RulePriority.aVerification;
+                    break;
+
+                case Step.UpdateInternal:
+                    retVal = DataDictionary.Generated.acceptor.RulePriority.aUpdateINTERNAL;
+                    break;
+
+                case Step.Process:
+                    retVal = DataDictionary.Generated.acceptor.RulePriority.aProcessing;
+                    break;
+
+                case Step.UpdateOutput:
+                    retVal = DataDictionary.Generated.acceptor.RulePriority.aUpdateOUT;
+                    break;
+
+                case Step.CleanUp:
+                    retVal = DataDictionary.Generated.acceptor.RulePriority.aCleanUp;
+                    break;
             }
+
+            return retVal;
         }
 
         /// <summary>
         /// Converts an interface priority to a Runner priority
         /// </summary>
         /// <param name="priority"></param>
-        private DataDictionary.Generated.acceptor.RulePriority convertPriority(Priority priority)
+        private Step convertPriority2Step(DataDictionary.Generated.acceptor.RulePriority priority)
         {
-            DataDictionary.Generated.acceptor.RulePriority retVal = DataDictionary.Generated.acceptor.RulePriority.defaultRulePriority;
+            Step retVal = Step.Process;
 
             switch (priority)
             {
-                case Priority.Verification:
-                    retVal = DataDictionary.Generated.acceptor.RulePriority.aVerification;
+                case DataDictionary.Generated.acceptor.RulePriority.aUpdateINTERNAL:
+                    retVal = Step.UpdateInternal;
                     break;
 
-                case Priority.UpdateInternal:
-                    retVal = DataDictionary.Generated.acceptor.RulePriority.aUpdateINTERNAL;
+                case DataDictionary.Generated.acceptor.RulePriority.aVerification:
+                    retVal = Step.Verification;
                     break;
 
-                case Priority.Process:
-                    retVal = DataDictionary.Generated.acceptor.RulePriority.aProcessing;
+                case DataDictionary.Generated.acceptor.RulePriority.aProcessing:
+                    retVal = Step.Process;
                     break;
 
-                case Priority.UpdateOutput:
-                    retVal = DataDictionary.Generated.acceptor.RulePriority.aUpdateOUT;
+                case DataDictionary.Generated.acceptor.RulePriority.aUpdateOUT:
+                    retVal = Step.UpdateOutput;
                     break;
 
-                case Priority.CleanUp:
-                    retVal = DataDictionary.Generated.acceptor.RulePriority.aCleanUp;
+                case DataDictionary.Generated.acceptor.RulePriority.aCleanUp:
+                    retVal = Step.CleanUp;
                     break;
             }
 
             return retVal;
+        }
+
+        private static EFSService __instance = null;
+
+        /// <summary>
+        /// The service instance
+        /// </summary>
+        public static EFSService INSTANCE
+        {
+            get
+            {
+                if (__instance == null)
+                {
+                    __instance = new EFSService();
+                }
+
+                return __instance;
+            }
         }
     }
 }

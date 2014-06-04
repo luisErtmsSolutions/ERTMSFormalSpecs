@@ -228,11 +228,12 @@ namespace GUI.TestRunnerView
                             subSequenceSelectorComboBox.Text = "";
                         }
 
-                        if (EFSSystem.Runner.SubSequence != null)
+                        if (EFSSystem.Runner != null && EFSSystem.Runner.SubSequence != null)
                         {
                             // Only resets the runner if it is related to a test sequence
                             // TODO : Make sure this is right
                             EFSSystem.Runner = null;
+                        }
                         }
                     }
 
@@ -310,7 +311,7 @@ namespace GUI.TestRunnerView
                 }
                 else
                 {
-                    EFSSystem.Runner = ERTMSFormalSpecs.ErtmsFormalSpecGui.EFSService.Runner;
+                    EFSSystem.Runner = GUI.IPCInterface.EFSService.INSTANCE.Runner;
                 }
             }
         }

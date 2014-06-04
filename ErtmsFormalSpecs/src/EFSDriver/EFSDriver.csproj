@@ -80,7 +80,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -90,20 +92,23 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Service References\EFSService\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\EFSService\EFSDriver.EFSService.Value.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\EFSService\EFSService.wsdl" />
-    <None Include="Service References\EFSService\item.xsd">
+    <None Include="Service References\EFSService\GUI.IPCInterface.Values.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EFSService\item1.xsd">
+    <None Include="Service References\EFSService\GUI.IPCInterface.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EFSService\item2.xsd">
+    <None Include="Service References\EFSService\service.wsdl" />
+    <None Include="Service References\EFSService\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EFSService\item3.xsd">
+    <None Include="Service References\EFSService\service1.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -114,18 +119,12 @@
     <WCFMetadataStorage Include="Service References\EFSService\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\EFSService\item.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\EFSService\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\EFSService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\EFSService\item4.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\EFSService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GUI.IPCInterface.Values" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GUI.IPCInterface.Values" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="Value">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="Value" nillable="true" type="tns:Value" />
+  <xs:complexType name="IntValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Value">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Image" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IntValue" nillable="true" type="tns:IntValue" />
+  <xs:complexType name="StructureValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Value">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Value" nillable="true" type="q1:ArrayOfKeyValueOfstringValue6FXpsyap" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StructureValue" nillable="true" type="tns:StructureValue" />
+  <xs:complexType name="BoolValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Value">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Value" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BoolValue" nillable="true" type="tns:BoolValue" />
+  <xs:complexType name="DoubleValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Value">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Image" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DoubleValue" nillable="true" type="tns:DoubleValue" />
+  <xs:complexType name="StringValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Value">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StringValue" nillable="true" type="tns:StringValue" />
+  <xs:complexType name="StateValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Value">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StateValue" nillable="true" type="tns:StateValue" />
+  <xs:complexType name="EnumValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Value">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EnumValue" nillable="true" type="tns:EnumValue" />
+  <xs:complexType name="ListValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Value">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Value" nillable="true" type="tns:ArrayOfValue" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ListValue" nillable="true" type="tns:ListValue" />
+  <xs:complexType name="ArrayOfValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Value" nillable="true" type="tns:Value" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfValue" nillable="true" type="tns:ArrayOfValue" />
+</xs:schema>

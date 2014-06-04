@@ -150,6 +150,25 @@ namespace DataDictionary.Tests.Runner
         protected FunctionGraphCache FunctionCacheCleaner { get; set; }
 
         /// <summary>
+        /// Event when the execution is terminated
+        /// </summary>
+        /// <param name="priority"></param>
+        public delegate void CycleExecutionTerminatedDelegate(Runner runner, DataDictionary.Generated.acceptor.RulePriority priority);
+        public static event CycleExecutionTerminatedDelegate CycleExecutionTerminated;
+
+        /// <summary>
+        /// Launches the event CycleExecutionTerminated
+        /// </summary>
+        /// <param name="priority"></param>
+        public virtual void OnCycleExecutionTerminated(DataDictionary.Generated.acceptor.RulePriority priority)
+        {
+            if (CycleExecutionTerminated != null)
+            {
+                CycleExecutionTerminated(this, priority);
+            }
+        }
+
+        /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="subSequence"></param>
@@ -470,7 +489,11 @@ namespace DataDictionary.Tests.Runner
 
             ApplyActivations(activations, priority);
             CheckExpectationsState(priority);
+
+            // Indicates that the execution of this cycle priority is complete
+            OnCycleExecutionTerminated(priority);
         }
+
         /// <summary>
         /// Executes the interpretation machine for one priority
         /// </summary>
