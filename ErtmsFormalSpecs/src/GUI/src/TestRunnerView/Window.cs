@@ -234,7 +234,6 @@ namespace GUI.TestRunnerView
                             // TODO : Make sure this is right
                             EFSSystem.Runner = null;
                         }
-                        }
                     }
 
                     if (EFSSystem.Runner != null && EFSSystem.Runner.SubSequence != null)
