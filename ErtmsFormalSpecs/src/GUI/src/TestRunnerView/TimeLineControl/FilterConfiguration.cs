@@ -79,9 +79,13 @@ namespace GUI.TestRunnerView.TimeLineControl
             retVal = retVal && (!(evt is Expect) || Expect);
             retVal = retVal && (!(evt is RuleFired) || RuleFired);
 
-            // Checks the variable update
+            // Ignore the following internal events
+            retVal = retVal && (!(evt is ExpectationStateChange));
+            retVal = retVal && (!(evt is SubStepActivated));
+
             if (retVal)
             {
+                // Checks the variable update
                 VariableUpdate variableUpdate = evt as VariableUpdate;
                 if (variableUpdate != null)
                 {
@@ -107,14 +111,13 @@ namespace GUI.TestRunnerView.TimeLineControl
                         retVal = false;
                     }
                 }
-            }
-
-            // Check event namespace
-            if (retVal)
-            {
-                if (evt.NameSpace != null)
+                else
                 {
-                    retVal = NameSpaces.Contains(evt.NameSpace);
+                    // Check event namespace
+                    if (evt.NameSpace != null)
+                    {
+                        retVal = NameSpaces.Contains(evt.NameSpace);
+                    }
                 }
             }
 
@@ -124,10 +127,6 @@ namespace GUI.TestRunnerView.TimeLineControl
                 Regex regularExpression = new Regex(RegExp);
                 retVal = retVal || regularExpression.IsMatch(evt.Message);
             }
-
-            // Ignore those internal events
-            retVal = retVal && (!(evt is ExpectationStateChange));
-            retVal = retVal && (!(evt is SubStepActivated));
 
             return retVal;
         }

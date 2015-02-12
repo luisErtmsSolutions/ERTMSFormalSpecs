@@ -163,6 +163,8 @@
 </EnumValue></Values>
 </Enum><Enum
  Default="BrakeType.Service"
+ X="620"
+ Y="350"
  Width="100"
  Height="50"
  Implemented="TRUE"
@@ -3423,7 +3425,7 @@ ON Kernel.ServiceBrakeCommands</Action></Actions>
 <Comment>Indicates that the request should be displayed to the driver</Comment>
 </StructureElement></Structure><Structure
  Default=""
- X="590"
+ X="620"
  Y="190"
  Width="100"
  Height="50"
@@ -3498,7 +3500,8 @@ ON Kernel.ServiceBrakeCommands</Action></Actions>
 >
 </StructureElement></Structure><Structure
  Default=""
- Y="60"
+ X="620"
+ Y="270"
  Width="100"
  Height="50"
  Implemented="TRUE"
@@ -3565,7 +3568,8 @@ ON Kernel.ServiceBrakeCommands</Action></Actions>
 </Collection><Collection
  TypeName="BrakeStruct"
  Default="[]"
- Y="120"
+ X="470"
+ Y="270"
  Width="100"
  Height="50"
  Implemented="TRUE"

@@ -5443,7 +5443,7 @@ After a defined number of repetitions (see appendix to chapter 3, List of Fixed 
  version="3.0.0"
  Name=""
  Guid="457f3383-e72b-4844-a105-b9018a3f1236"
->In specific degraded situations (for example in the case of a failed signal, failed track circuit, failed point..), railways allow a train to pass its EoA.<RequirementSets>
+>In specific degraded situations (for example in the case of a failed signal, failed track circuit, failed point...), railways allow a train to pass its EoA.<RequirementSets>
 <RequirementSetReference
  RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
  Guid="fefe9237-a45f-4472-a62c-c8d903e7bed7"
@@ -5503,11 +5503,12 @@ After a defined number of repetitions (see appendix to chapter 3, List of Fixed 
 </RequirementSetReference></RequirementSets>
 </Paragraph><Paragraph
  id="5.8.1.4"
- type="REQUIREMENT"
+ type="NOTE"
  scope="FLAGS"
  bl=""
  name=""
- status="NA"
+ reviewed="TRUE"
+ status="NotImplementable"
  version="3.0.0"
  Name=""
  Guid="8f57c601-fcd0-488f-b220-e0f80cd2ab33"
@@ -5572,7 +5573,7 @@ After a defined number of repetitions (see appendix to chapter 3, List of Fixed 
  bl=""
  name=""
  reviewed="TRUE"
- status="NA"
+ status="Implemented"
  version="3.0.0"
  Name=""
  Guid="0882a887-8e70-4391-9d2b-97be7cebd091"
@@ -5594,29 +5595,131 @@ After a defined number of repetitions (see appendix to chapter 3, List of Fixed 
  Name=""
  Guid="d9c0f0d3-a763-4e52-9eaf-658c6992d368"
 ><Comment>Specified by the paragraph 5.8.3.6</Comment>
-In addition the procedure allows to avoid a train trip when passing a balise group:
-	a) transmitting &quot;stop in SR mode&quot;
-	b) not contained in the list of expected balises in SR mode
-	c) transmitting &quot;stop in SH mode&quot;
-	d) not contained in the list of expected balises in SH mode&quot;
-	e) Intentionally deleted<RequirementSets>
+In addition the procedure allows to avoid a train trip when passing a balise group:<Sub>
+<Paragraph
+ id="5.8.1.7.a"
+ type="NOTE"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="NotImplementable"
+ version="3.0.0"
+ Name=""
+ Guid="07b94b60-93e0-40b6-b87f-d0a82cbdca91"
+>transmitting &quot;stop in SR mode&quot;<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="b1156f47-46e4-405e-8b5a-b1c62c372542"
+>
+</RequirementSetReference><RequirementSetReference
+ RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
+ Guid="ff095daa-a667-4338-a4c8-1a61e0e43d80"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph><Paragraph
+ id="5.8.1.7.b"
+ type="NOTE"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="NotImplementable"
+ version="3.0.0"
+ Name=""
+ Guid="726155ff-c7fa-437c-94d3-70cef289091c"
+>not contained in the list of expected balises in SR mode<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="53c4647e-7231-44ee-a2fd-d9375bc68a3c"
+>
+</RequirementSetReference><RequirementSetReference
+ RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
+ Guid="03baaf61-8421-47bd-9ec1-0ede079e4837"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph><Paragraph
+ id="5.8.1.7.c"
+ type="NOTE"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="NotImplementable"
+ version="3.0.0"
+ Name=""
+ Guid="4f04352a-27f7-4b16-ad94-a9d4589f9662"
+>transmitting &quot;stop in SH mode&quot;<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="4001b702-345d-4804-86b0-06667760fea0"
+>
+</RequirementSetReference><RequirementSetReference
+ RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
+ Guid="9e5c251d-345c-4ca5-95d4-96cf21f10833"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph><Paragraph
+ id="5.8.1.7.d"
+ type="NOTE"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="NotImplementable"
+ version="3.0.0"
+ Name=""
+ Guid="67af7b87-11a1-4ba7-9aed-725842957d85"
+>not contained in the list of expected balises in SH mode&quot;<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="76b3617e-af47-47e3-964c-26d8df105339"
+>
+</RequirementSetReference><RequirementSetReference
+ RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
+ Guid="baa4453b-96f6-4427-8be4-9ade71644219"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph><Paragraph
+ id="5.8.1.7.e"
+ type="DELETED"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="NotImplementable"
+ version="3.0.0"
+ Name=""
+ Guid="431eaa53-2aa5-4d23-9962-754f92927ca9"
+>Intentionally deleted<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="7368711d-a7b9-4e09-aa4e-906b64c8a85e"
+>
+</RequirementSetReference><RequirementSetReference
+ RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
+ Guid="149a5b81-091e-4354-b1cc-3c5c33592f12"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph></Sub>
+<RequirementSets>
 <RequirementSetReference
  RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
  Guid="76dab546-33ce-4ee1-9b24-853a80ffecb9"
 >
 </RequirementSetReference><RequirementSetReference
  RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
- Guid="16447495-3479-43fd-816b-2afd830a9d31"
+ Guid="feba90da-85b9-4f60-ac23-137d2296dfd7"
 >
 </RequirementSetReference></RequirementSets>
 </Paragraph><Paragraph
  id="5.8.1.8"
- type="REQUIREMENT"
+ type="NOTE"
  scope="FLAGS"
  bl=""
  name=""
  reviewed="TRUE"
- status="NA"
+ status="NotImplementable"
  version="3.0.0"
  Name=""
  Guid="00d3e85a-feb8-433c-9919-e480c5a076ab"
@@ -5659,7 +5762,8 @@ In addition the procedure allows to avoid a train trip when passing a balise gro
  scope="FLAGS"
  bl="3.2.0"
  name=""
- status="NA"
+ reviewed="TRUE"
+ status="Implemented"
  version="3.0.0"
  Name=""
  Guid="d49a941c-d8b5-4e50-b2ec-1b316ac95380"
@@ -5668,17 +5772,63 @@ In addition the procedure allows to avoid a train trip when passing a balise gro
  SpecId="7976a642-eab5-431b-a656-44fc19d26d62"
  Guid="41e7e97d-abe4-48e4-b192-aa9e77b429f8"
 >
-</ReqRef>The ERTMS/ETCS on-board equipment shall allow the driver to select &quot;Override&quot; (i.e. the &quot;Override&quot; button becomes available) only when:
-	a) The train speed is under or equal to the speed limit for triggering the &quot;override&quot; function (national value) AND
-	b) The current mode is Full Supervision, Limited Supervision, On Sight, Staff Responsible, Shunting, Unfitted, Post Trip, Stand By (in level 2/3 only) or SN (National System) AND
-	c) Validated Train Data is available (except when already in Shunting mode).<RequirementSets>
+</ReqRef>The ERTMS/ETCS on-board equipment shall allow the driver to select &quot;Override&quot; (i.e. the &quot;Override&quot; button becomes available) only when:<Sub>
+<Paragraph
+ id="5.8.2.1.a"
+ type="REQUIREMENT"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="Implemented"
+ version="3.0.0"
+ Name=""
+ Guid="eacc4d2f-2afc-4984-8b90-39c8df55a09c"
+>The train speed is under or equal to the speed limit for triggering the &quot;override&quot; function (national value) AND<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="4b8c7067-e739-4413-9dd4-7718dcf67759"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph><Paragraph
+ id="5.8.2.1.b"
+ type="REQUIREMENT"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="Implemented"
+ version="3.0.0"
+ Name=""
+ Guid="efea06c4-e975-4824-a134-e96d2951823a"
+>The current mode is Full Supervision, Limited Supervision, On Sight, Staff Responsible, Shunting, Unfitted, Post Trip, Stand By (in level 2/3 only) or SN (National System) AND<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="4ad8e90a-5764-4f18-b72b-e80ca1f4f020"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph><Paragraph
+ id="5.8.2.1.c"
+ type="REQUIREMENT"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="Implemented"
+ version="3.0.0"
+ Name=""
+ Guid="05727841-f740-43e0-b45d-53ac5d5b8d94"
+>Validated Train Data is available (except when already in Shunting mode).<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="7a13d48c-1ba4-4cec-8e0d-4f94c53e1926"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph></Sub>
+<RequirementSets>
 <RequirementSetReference
  RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
  Guid="72f61604-efb7-4479-9cb2-d9ae6cb6c72e"
->
-</RequirementSetReference><RequirementSetReference
- RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
- Guid="8ea3f819-f3f0-424b-b5ff-c8248a1e3b78"
 >
 </RequirementSetReference></RequirementSets>
 </Paragraph><Paragraph
@@ -5702,10 +5852,6 @@ In addition the procedure allows to avoid a train trip when passing a balise gro
  RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
  Guid="7aa951c3-e971-4989-9423-1fde3a77a9ad"
 >
-</RequirementSetReference><RequirementSetReference
- RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
- Guid="fda369a0-b90d-4cf9-bc73-45c2e7af8394"
->
 </RequirementSetReference></RequirementSets>
 </Paragraph><Paragraph
  id="5.8.2.3"
@@ -5713,7 +5859,8 @@ In addition the procedure allows to avoid a train trip when passing a balise gro
  scope="FLAGS"
  bl=""
  name=""
- status="NA"
+ reviewed="TRUE"
+ status="Implemented"
  version="3.0.0"
  Name=""
  Guid="b6c74cc9-fab4-4443-8044-94744d509710"
@@ -5732,20 +5879,12 @@ In addition the procedure allows to avoid a train trip when passing a balise gro
  RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
  Guid="ccd90736-73bc-483d-bab8-0bad23ed7fca"
 >
-</RequirementSetReference><RequirementSetReference
- RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
- Guid="eee3025f-c77b-4a2c-b904-46ed8e0c2fc1"
->
 </RequirementSetReference></RequirementSets>
 </Paragraph></Sub>
 <RequirementSets>
 <RequirementSetReference
  RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
  Guid="bf005725-2c7e-4bfe-9d11-1f5789fa05f0"
->
-</RequirementSetReference><RequirementSetReference
- RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
- Guid="cdecb178-dbae-40a4-9918-19aecfb9db30"
 >
 </RequirementSetReference></RequirementSets>
 </Paragraph><Paragraph
@@ -5766,21 +5905,71 @@ In addition the procedure allows to avoid a train trip when passing a balise gro
  scope="FLAGS"
  bl="3.2.0"
  name=""
- status="NA"
+ reviewed="TRUE"
+ status="Implemented"
  version="3.0.0"
  Name=""
  Guid="b735f776-78bc-4533-ae37-e969165c04c0"
->The mode shall change as follows:
-	a) If the current mode is Full Supervision, Limited Supervision, On Sight, Stand-By or Post Trip, the mode shall immediately switch to the Staff Responsible (SR) mode (if the mode is already SR it remains unchanged)
-	b) If the current mode is Shunting the mode shall remain unchanged
-	c) If the current mode is Unfitted (level 0 area) or SN (level NTC area) the mode shall only change to Staff Responsible when the level changes to 1,2 or 3 (refer to SRS chapter 4, transitions between modes)<Sub>
+>The mode shall change as follows:<Sub>
 <Paragraph
+ id="5.8.3.1.a"
+ type="REQUIREMENT"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="Implemented"
+ version="3.0.0"
+ Name=""
+ Guid="6cb79caf-9664-41f0-8a62-909fbaf148e0"
+>If the current mode is Full Supervision, Limited Supervision, On Sight, Stand-By or Post Trip, the mode shall immediately switch to the Staff Responsible (SR) mode (if the mode is already SR it remains unchanged)<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="6e59a114-1cac-4936-9c57-ef64967cd05a"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph><Paragraph
+ id="5.8.3.1.b"
+ type="REQUIREMENT"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="NotImplementable"
+ version="3.0.0"
+ Name=""
+ Guid="d0f2374c-749b-4fbb-9d15-8d758e11d01c"
+>If the current mode is Shunting the mode shall remain unchanged<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="84846fe5-0553-4000-af25-9a8c3ae01e03"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph><Paragraph
+ id="5.8.3.1.c"
+ type="REQUIREMENT"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="Implemented"
+ version="3.0.0"
+ Name=""
+ Guid="c8b3f989-1504-46c0-84e3-3b54fdc4e132"
+>If the current mode is Unfitted (level 0 area) or SN (level NTC area) the mode shall only change to Staff Responsible when the level changes to 1,2 or 3 (refer to SRS chapter 4, transitions between modes)<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="2699aa61-47be-43e3-aa23-6430a109d95c"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph><Paragraph
  id="5.8.3.1.1"
  type="REQUIREMENT"
  scope="FLAGS"
  bl=""
  name=""
- status="NA"
+ reviewed="TRUE"
+ status="Implemented"
  version="3.0.0"
  Name=""
  Guid="c176c2fd-8220-4c07-85eb-a6e9249944c8"
@@ -5789,19 +5978,15 @@ In addition the procedure allows to avoid a train trip when passing a balise gro
  RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
  Guid="62682fc1-2a2a-48b2-82c5-30fe2235179e"
 >
-</RequirementSetReference><RequirementSetReference
- RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
- Guid="1f02e94e-06b6-4059-bc95-6ce5c4070fb6"
->
 </RequirementSetReference></RequirementSets>
 </Paragraph><Paragraph
  id="5.8.3.1.2"
- type="REQUIREMENT"
+ type="NOTE"
  scope="FLAGS"
  bl=""
  name=""
  reviewed="TRUE"
- status="NA"
+ status="NotImplementable"
  version="3.0.0"
  Name=""
  Guid="b5348bb2-ed11-48b7-89f4-8e3118fd396a"
@@ -5810,10 +5995,6 @@ In addition the procedure allows to avoid a train trip when passing a balise gro
  RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
  Guid="dae5753a-49a2-4e33-98cf-0623f7c60044"
 >
-</RequirementSetReference><RequirementSetReference
- RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
- Guid="f418e9a6-fd3d-43ad-81d9-7b39c36bcd4a"
->
 </RequirementSetReference></RequirementSets>
 </Paragraph><Paragraph
  id="5.8.3.1.3"
@@ -5821,13 +6002,52 @@ In addition the procedure allows to avoid a train trip when passing a balise gro
  scope="FLAGS"
  bl=""
  name=""
- status="NA"
+ reviewed="TRUE"
+ status="Implemented"
  version="3.0.0"
  Name=""
  Guid="353d33b3-3a7a-4759-8b9b-62204429d75a"
->The former EoA shall be deleted if:
-	a) the train reads the information &quot;stop in SR mode&quot; from a balise group OR
-	b) SR mode is left.<RequirementSets>
+>The former EoA shall be deleted if:<Sub>
+<Paragraph
+ id="5.8.3.1.3.a"
+ type="REQUIREMENT"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="Implemented"
+ version="3.0.0"
+ Name=""
+ Guid="1503ba8c-af0d-46c6-b258-a866be408e80"
+>the train reads the information &quot;stop in SR mode&quot; from a balise group OR<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="acdc174d-3ff9-47e5-b2fb-f44863e37446"
+>
+</RequirementSetReference><RequirementSetReference
+ RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
+ Guid="634d18f3-7c99-4119-813f-f4a8eb825c1b"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph><Paragraph
+ id="5.8.3.1.3.b"
+ type="REQUIREMENT"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="Implemented"
+ version="3.0.0"
+ Name=""
+ Guid="3cd20802-0d33-4118-a4aa-0df579f9f5c9"
+>SR mode is left.<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="c8f819a6-6b47-4f23-9a58-d128dff1befa"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph></Sub>
+<RequirementSets>
 <RequirementSetReference
  RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
  Guid="7137fe0c-f768-4c11-958b-fca07cf69742"
@@ -5897,7 +6117,7 @@ In addition the procedure allows to avoid a train trip when passing a balise gro
  bl=""
  name=""
  reviewed="TRUE"
- status="NA"
+ status="Implemented"
  version="3.0.0"
  Name=""
  Guid="f9493d17-4616-4ea8-b1c6-66d4c67d37c7"
@@ -5906,10 +6126,6 @@ In addition the procedure allows to avoid a train trip when passing a balise gro
  RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
  Guid="c72858d3-29f0-4a8d-a530-ce9717daeda3"
 >
-</RequirementSetReference><RequirementSetReference
- RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
- Guid="ff6e331c-2b9a-4d1a-8476-f631b26ae808"
->
 </RequirementSetReference></RequirementSets>
 </Paragraph><Paragraph
  id="5.8.3.5"
@@ -5917,7 +6133,8 @@ In addition the procedure allows to avoid a train trip when passing a balise gro
  scope="FLAGS"
  bl=""
  name=""
- status="NA"
+ reviewed="TRUE"
+ status="Implemented"
  version="3.0.0"
  Name=""
  Guid="6a40406a-77fa-40f4-a719-22600646d460"
@@ -5936,10 +6153,6 @@ In addition the procedure allows to avoid a train trip when passing a balise gro
  RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
  Guid="39a52f66-af60-40bd-bd3d-1cbad7c2cd21"
 >
-</RequirementSetReference><RequirementSetReference
- RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
- Guid="4c706465-fac6-4da8-92c1-c9419b567027"
->
 </RequirementSetReference></RequirementSets>
 </Paragraph><Paragraph
  id="5.8.3.6"
@@ -5947,18 +6160,22 @@ In addition the procedure allows to avoid a train trip when passing a balise gro
  scope="FLAGS"
  bl=""
  name=""
- status="NA"
+ reviewed="TRUE"
+ status="Implemented"
  version="3.0.0"
+ infoRequired="TRUE"
  Name=""
  Guid="3419ac3c-8b3b-4465-8ba8-a0628cc3c11b"
->The train trip shall be inhibited (suppression of the transition to the Trip mode), and only in level 0, 1, 2, 3, the MRSP shall include the Override function related Speed Restriction (see 3.11.10) as long as the Override function is active.<RequirementSets>
+><ReqRef
+ Id="a4e2bd0e-5e3f-43c4-ae8d-7de81347dfed"
+ SpecId="1725280b-f696-4860-94cc-d85f62c35214"
+ Guid="97d856c3-639a-4fc2-af55-b92f8cd98a4f"
+>
+</ReqRef><Comment>Does this trip inhibition exclude mode transitions 20, 39 and 65?</Comment>
+The train trip shall be inhibited (suppression of the transition to the Trip mode), and only in level 0, 1, 2, 3, the MRSP shall include the Override function related Speed Restriction (see 3.11.10) as long as the Override function is active.<RequirementSets>
 <RequirementSetReference
  RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
  Guid="8b2a73bb-6561-4d4a-8d89-2c1263dede9b"
->
-</RequirementSetReference><RequirementSetReference
- RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
- Guid="8b672217-ee84-42aa-837b-0c33fe0e4c75"
 >
 </RequirementSetReference></RequirementSets>
 </Paragraph><Paragraph
@@ -5967,7 +6184,8 @@ In addition the procedure allows to avoid a train trip when passing a balise gro
  scope="FLAGS"
  bl=""
  name=""
- status="NA"
+ reviewed="TRUE"
+ status="Implemented"
  version="3.0.0"
  Name=""
  Guid="6bfffc4c-98dc-4742-aa70-9301ecbe28b5"
@@ -5981,10 +6199,6 @@ In addition the procedure allows to avoid a train trip when passing a balise gro
  RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
  Guid="9a2460b4-b50f-4dad-8e36-ec3f8c9e7793"
 >
-</RequirementSetReference><RequirementSetReference
- RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
- Guid="ed2816e8-b568-4212-8e7b-afaeaf566603"
->
 </RequirementSetReference></RequirementSets>
 </Paragraph><Paragraph
  id="5.8.3.8"
@@ -5992,6 +6206,7 @@ In addition the procedure allows to avoid a train trip when passing a balise gro
  scope="FLAGS"
  bl=""
  name=""
+ reviewed="TRUE"
  status="NA"
  version="3.0.0"
  Name=""
@@ -6012,7 +6227,8 @@ In addition the procedure allows to avoid a train trip when passing a balise gro
  scope="FLAGS"
  bl="3.2.0"
  name=""
- status="NA"
+ reviewed="TRUE"
+ status="Implemented"
  version="3.0.0"
  Name=""
  Guid="2e017c9a-dfbb-4e5e-845b-7cb9c2043788"
@@ -6020,10 +6236,6 @@ In addition the procedure allows to avoid a train trip when passing a balise gro
 <RequirementSetReference
  RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
  Guid="a805cc1a-7090-4393-b61f-d1e983a2ebb5"
->
-</RequirementSetReference><RequirementSetReference
- RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
- Guid="39f1c525-fdfe-46fe-825c-9618c5bf15ba"
 >
 </RequirementSetReference></RequirementSets>
 </Paragraph></Sub>
@@ -6055,7 +6267,8 @@ In addition the procedure allows to avoid a train trip when passing a balise gro
  scope="FLAGS"
  bl="3.2.0"
  name=""
- status="NA"
+ reviewed="TRUE"
+ status="Implemented"
  version="3.0.0"
  Name=""
  Guid="772e0087-dcb8-45bf-a888-56863cd592af"
@@ -6064,24 +6277,184 @@ In addition the procedure allows to avoid a train trip when passing a balise gro
  SpecId="7976a642-eab5-431b-a656-44fc19d26d62"
  Guid="ba9c9b94-671f-4b70-88db-ccac968634c8"
 >
-</ReqRef>The Override procedure shall end when at least one of the following conditions is fulfilled:
-	a) The &quot;max. time for train trip suppression when Override function is triggered&quot; (national value) elapses after Override has been selected, OR
-	b) The train has run more than the &quot;distance for train trip suppression when Override function is triggered&quot; (national value) after Override has been selected, OR
-	c) The former EoA has been passed with the min safe antenna position (calculated by subtracting distance between active EUROBALISE antenna and the front end of the train from the min safe front end position), OR
-	d) The train passes a balise group giving &quot;stop in SR&quot; or &quot;stop in SH&quot; information, OR
-	e) The train passes a balise group giving proceed information (i.e., MA with no signalling related speed restriction of value zero)
-	f) In level 2,3, an MA is received from the RBC
-	g) The train passes a balise group not in the list of expected balises in SR mode or the list of expected balises in SH mode
-	h) The train overpasses the SR distance supervised before overriding with its estimated front end
-	i) The ERTMS/ETCS on-board equipment switches to TR, LS, OS or SH mode.<Sub>
+</ReqRef>The Override procedure shall end when at least one of the following conditions is fulfilled:<Sub>
 <Paragraph
+ id="5.8.4.1.a"
+ type="REQUIREMENT"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="Implemented"
+ version="3.0.0"
+ Name=""
+ Guid="8cf2cb63-f4b5-47e6-8f30-09f773417468"
+>The &quot;max. time for train trip suppression when Override function is triggered&quot; (national value) elapses after Override has been selected, OR<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="0e8c9a8f-cb4c-4c25-b38b-db3fcd50fadb"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph><Paragraph
+ id="5.8.4.1.b"
+ type="REQUIREMENT"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="Implemented"
+ version="3.0.0"
+ Name=""
+ Guid="53125a9b-26fb-4d1d-bc8f-0e7ab8e929ee"
+>The train has run more than the &quot;distance for train trip suppression when Override function is triggered&quot; (national value) after Override has been selected, OR<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="36622eda-7363-4b53-b4fa-3644e9a5c87f"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph><Paragraph
+ id="5.8.4.1.c"
+ type="REQUIREMENT"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="Implemented"
+ version="3.0.0"
+ Name=""
+ Guid="89900100-9bcf-431a-af98-adc2b2350eea"
+>The former EoA has been passed with the min safe antenna position (calculated by subtracting distance between active EUROBALISE antenna and the front end of the train from the min safe front end position), OR<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="347cf151-5130-4eeb-aad0-8fa68ece760d"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph><Paragraph
+ id="5.8.4.1.d"
+ type="REQUIREMENT"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="Implemented"
+ version="3.0.0"
+ Name=""
+ Guid="d932cea7-ce9f-4909-afff-2c36046cea2a"
+>The train passes a balise group giving &quot;stop in SR&quot; or &quot;stop in SH&quot; information, OR<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="f2e4f23e-e0fa-4341-b597-de4a77b0abe0"
+>
+</RequirementSetReference><RequirementSetReference
+ RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
+ Guid="5b3e8c29-617a-4643-8be8-0d330382b9c9"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph><Paragraph
+ id="5.8.4.1.e"
+ type="REQUIREMENT"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="Implemented"
+ version="3.0.0"
+ Name=""
+ Guid="26a62de7-212e-49df-b2c4-e9ad9a16303c"
+>The train passes a balise group giving proceed information (i.e., MA with no signalling related speed restriction of value zero)<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="03d9a18e-9c33-48b7-aa5c-8fc0eb41e77b"
+>
+</RequirementSetReference><RequirementSetReference
+ RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
+ Guid="8c27e107-2dad-4a56-abb2-42e30b1db9ce"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph><Paragraph
+ id="5.8.4.1.f"
+ type="REQUIREMENT"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="Implemented"
+ version="3.0.0"
+ Name=""
+ Guid="6d584b1c-04b7-424f-9087-e95a0cf7c65d"
+>In level 2,3, an MA is received from the RBC<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="9638b5af-3dda-40be-b2a6-0fdcfc6c200c"
+>
+</RequirementSetReference><RequirementSetReference
+ RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
+ Guid="520e7ffe-8eaf-4489-811c-178a4617910b"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph><Paragraph
+ id="5.8.4.1.g"
+ type="REQUIREMENT"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="Implemented"
+ version="3.0.0"
+ Name=""
+ Guid="f8000cfa-0807-4266-8df9-c687e29b4770"
+>The train passes a balise group not in the list of expected balises in SR mode or the list of expected balises in SH mode<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="10548a8a-cd69-4386-849d-29e944ddcc72"
+>
+</RequirementSetReference><RequirementSetReference
+ RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
+ Guid="12dc4996-9b62-4db7-8faa-e6288067497f"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph><Paragraph
+ id="5.8.4.1.h"
+ type="REQUIREMENT"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="Implemented"
+ version="3.0.0"
+ Name=""
+ Guid="2ef118e4-847b-423d-9ca2-dbddfc439fbb"
+>The train overpasses the SR distance supervised before overriding with its estimated front end<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="57f1e1f9-1e3b-4893-9903-593c84b102ca"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph><Paragraph
+ id="5.8.4.1.i"
+ type="REQUIREMENT"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="Implemented"
+ version="3.0.0"
+ Name=""
+ Guid="bfa19147-2761-42df-ba10-9c9270fb2bb5"
+>The ERTMS/ETCS on-board equipment switches to TR, LS, OS or SH mode.<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="73977340-d9f3-470f-91db-9d501d8d8c72"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph><Paragraph
  id="5.8.4.1.1"
  type="REQUIREMENT"
  scope="FLAGS"
  bl=""
  name=""
  reviewed="TRUE"
- status="NA"
+ status="Implemented"
  version="3.0.0"
  Name=""
  Guid="c9c7c7f3-3d1c-42b1-b80c-061de2d83f8e"
@@ -6089,10 +6462,6 @@ In addition the procedure allows to avoid a train trip when passing a balise gro
 <RequirementSetReference
  RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
  Guid="3921a0b6-029e-4d43-8e24-51fa52540c77"
->
-</RequirementSetReference><RequirementSetReference
- RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
- Guid="f8a8642f-fc2c-4ac8-99c4-5061e5cf1aec"
 >
 </RequirementSetReference></RequirementSets>
 </Paragraph></Sub>

@@ -1484,6 +1484,28 @@ This information is not stored anywhere, we have added a field to the train data
  Guid="194f51c0-c7c2-4322-ba32-5fc2c3534bea"
 >
 </RequirementSetReference></RequirementSets>
+</Paragraph><Paragraph
+ id="A1.1.15.2"
+ type="REQUIREMENT"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="NA"
+ version="3.0.0"
+ Name=""
+ Guid="a4e2bd0e-5e3f-43c4-ae8d-7de81347dfed"
+>Requirement 5.8.3.6 states that the Override function inhibits transitions to Trip mode.
+In the table of transitions (4.6), most affected transitions to Trip mode state &quot;(override is not active)&quot;, except for transition conditions 20, 39 and 65. We assume that these conditions are exempt from the inhibition (ie. that the table of transitions is more correct than the requirement in the Override procedure).<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="15d9336e-e172-42a1-a13b-5c509c89122f"
+>
+</RequirementSetReference><RequirementSetReference
+ RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
+ Guid="ef7829fd-42a5-492a-99e3-27c155a67d90"
+>
+</RequirementSetReference></RequirementSets>
 </Paragraph></Sub>
 <RequirementSets>
 <RequirementSetReference

@@ -5455,7 +5455,15 @@ Kernel.MA.ModeProfile.Profile</Action><Action
 <Actions>
 <Action
  Guid="753697a8-1fc4-4433-9d73-32f7a6e4304e"
->Kernel.HandleModeChange &lt;- Kernel.HandleModeChange.Override</Action></Actions>
+>Kernel.HandleModeChange &lt;- Kernel.HandleModeChange.Override</Action><Action
+ Guid="b483c6e6-cd43-4ddc-86c4-5767d6fe520e"
+>Kernel.Mode &lt;- Mode.SR</Action><Action
+ Guid="abede0fa-384a-492c-bdfc-1de32036b32a"
+>Kernel.OverrideSupervision &lt;- Kernel.OverrideStruct{
+    Time =&gt; 120.0,
+    Location =&gt; 500.0,
+    FormerEOA =&gt; 650.0
+}</Action></Actions>
 <Expectations>
 <Expectation
  Kind="Instantaneous"

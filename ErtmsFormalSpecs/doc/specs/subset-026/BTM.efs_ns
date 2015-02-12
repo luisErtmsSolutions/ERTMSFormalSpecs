@@ -796,6 +796,17 @@ Before(
 )</PreCondition></PreConditions>
 <Expression>True</Expression>
 </Case><Case
+ Name="Duplicated balise missed"
+ Guid="b637ca75-2fc2-4610-b628-97ee8ac7fa15"
+>
+<PreConditions>
+<PreCondition
+ Guid="490dd201-2515-4ce7-874d-e58c06cec244"
+>Message.Telegram.M_DUP not in [Messages.M_DUP.No_duplicates, Messages.M_DUP.Spare]
+  AND  
+DuplicateBalise(Message.Telegram).Missed</PreCondition></PreConditions>
+<Expression>True</Expression>
+</Case><Case
  Name="Otherwise"
  Guid="146db196-7b2e-4077-81cd-72cea6a41389"
 >

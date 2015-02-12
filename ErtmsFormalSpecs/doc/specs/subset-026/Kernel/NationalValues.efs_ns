@@ -678,6 +678,11 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="526669a6-62c9-47e0-bbd6-a26035f04866"
 >
+</ReqRef><ReqRef
+ Id="eacc4d2f-2afc-4984-8b90-39c8df55a09c"
+ SpecId="1725280b-f696-4860-94cc-d85f62c35214"
+ Guid="50d50c6c-da7e-4cef-9be3-f740c89c22da"
+>
 </ReqRef></StructureElement><StructureElement
  TypeName="Default.BaseTypes.Distance"
  Default="200.0"

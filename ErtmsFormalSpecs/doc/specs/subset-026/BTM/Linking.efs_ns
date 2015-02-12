@@ -1767,9 +1767,55 @@ Activate the service brake if a second linked BG in a row is missed.</Comment>
 <Action
  Guid="8d1a6745-9466-4063-a719-d54c187a08dc"
 >MessageRejected &lt;- 
-NOT Kernel.Shunting.BGIsExpected(CurrentBaliseGroup)</Action><Action
+NOT Kernel.Shunting.BGIsExpected(CurrentBaliseGroup)</Action></Actions>
+<SubRules>
+<Rule
+ Priority="Processing"
+ Implemented="TRUE"
+ Name="Check Override"
+ Guid="4943ad82-27d7-43c4-b277-643868333dfe"
+>
+<Comment>The actions depoend on whether the Override function is active.</Comment>
+<SubRules></SubRules>
+<Conditions>
+<RuleCondition
+ Implemented="TRUE"
+ Name="Override active"
+ Guid="6f42a3b6-0413-4061-a5fb-ab1fea4beb13"
+>
+<ReqRef
+ Id="772e0087-dcb8-45bf-a888-56863cd592af"
+ SpecId="1725280b-f696-4860-94cc-d85f62c35214"
+ Guid="6d332e7a-6bd1-4a3f-afbb-4273099d0492"
+>
+</ReqRef><ReqRef
+ Id="f8000cfa-0807-4266-8df9-c687e29b4770"
+ SpecId="1725280b-f696-4860-94cc-d85f62c35214"
+ Guid="e94c9171-3088-46d7-b3c7-d192767e41b8"
+>
+</ReqRef><Comment>If Override is active, then the only consequence on the unexpected balise is ending the Override.</Comment>
+<PreConditions>
+<PreCondition
+ Guid="4d72ed6a-34ed-4ae1-bee2-5d3eee748c56"
+>Kernel.HandleModeChange in Kernel.HandleModeChangeSM.Override</PreCondition></PreConditions>
+<Actions>
+<Action
+ Guid="a1911e56-0595-4442-9bba-9d751ab62385"
+>Kernel.HandleModeChange &lt;- Kernel.HandleModeChangeSM.NoProcedure</Action></Actions>
+</RuleCondition><RuleCondition
+ Implemented="TRUE"
+ Name="Otherwise"
+ Guid="b6c3eb5c-244e-4a41-8e01-6d3509939a7d"
+>
+<Comment>Otherwise, the the train will Trip.</Comment>
+<PreConditions>
+</PreConditions>
+<Actions>
+<Action
  Guid="834b94d2-1cc0-44a6-9de5-016da6df76c4"
 >Kernel.Shunting.UnexpectedBGPassed&lt;- NOT Kernel.Shunting.BGIsExpected(CurrentBaliseGroup)</Action></Actions>
+</RuleCondition></Conditions>
+</Rule></SubRules>
 </RuleCondition><RuleCondition
  Implemented="TRUE"
  Name="In SR mode"
@@ -1790,6 +1836,54 @@ NOT Kernel.Shunting.BGIsExpected(CurrentBaliseGroup)</Action><Action
  Guid="6cb1c474-bc67-4f05-835f-4028f0ac9989"
 >MessageRejected &lt;- 
 NOT Kernel.StaffResponsible.BGIsExpected(CurrentBaliseGroup)</Action></Actions>
+<SubRules>
+<Rule
+ Priority="Processing"
+ Implemented="TRUE"
+ Name="Check Override"
+ Guid="09461e53-fbd0-411d-bf24-e120886a608a"
+>
+<Comment>The actions depoend on whether the Override function is active.</Comment>
+<SubRules></SubRules>
+<Conditions>
+<RuleCondition
+ Implemented="TRUE"
+ Name="Override active"
+ Guid="5719c186-4073-47b5-bf4f-6e0e9d3bf64b"
+>
+<ReqRef
+ Id="772e0087-dcb8-45bf-a888-56863cd592af"
+ SpecId="1725280b-f696-4860-94cc-d85f62c35214"
+ Guid="b7d9cb74-e25e-4b10-85d1-c1b96eec0f87"
+>
+</ReqRef><ReqRef
+ Id="f8000cfa-0807-4266-8df9-c687e29b4770"
+ SpecId="1725280b-f696-4860-94cc-d85f62c35214"
+ Guid="5f3e462e-cc2e-4c47-b1fa-8d46bb271e0b"
+>
+</ReqRef><Comment>If Override is active, then the only consequence on the unexpected balise is ending the Override.</Comment>
+<PreConditions>
+<PreCondition
+ Guid="99004535-a5d7-4dad-b64c-4b6ccd0e0a0a"
+>Kernel.HandleModeChange in Kernel.HandleModeChangeSM.Override</PreCondition></PreConditions>
+<Actions>
+<Action
+ Guid="50b573f5-f985-4c63-a42e-68a3738515a0"
+>Kernel.HandleModeChange &lt;- Kernel.HandleModeChangeSM.NoProcedure</Action></Actions>
+</RuleCondition><RuleCondition
+ Implemented="TRUE"
+ Name="Otherwise"
+ Guid="52c4be68-2cd6-4ce2-b857-cea879dcfd47"
+>
+<Comment>Otherwise, the the train will Trip.</Comment>
+<PreConditions>
+</PreConditions>
+<Actions>
+<Action
+ Guid="da4003ca-f51b-4105-998f-3eb77cbdfcde"
+>Kernel.StaffResponsible.UnexpectedBGPassed&lt;- NOT Kernel.StaffResponsible.BGIsExpected(CurrentBaliseGroup)</Action></Actions>
+</RuleCondition></Conditions>
+</Rule></SubRules>
 </RuleCondition><RuleCondition
  Implemented="TRUE"
  Name="Otherwise"

@@ -3556,7 +3556,11 @@
  Kind="Instantaneous"
  DeadLine="1"
  Guid="63196aed-57f4-4f48-ae60-90f7811f8ecb"
->Kernel.TrainPosition.Position.DataState == DataState.Unknown</Expectation></Expectations>
+>Kernel.TrainPosition.Position.DataState == DataState.Unknown</Expectation><Expectation
+ Kind="Instantaneous"
+ DeadLine="1"
+ Guid="12448946-c950-4b78-8e2a-2a61d9a4ad03"
+>DMI.MasterDMI().In_OverrideRequest.InputInformation.DriverAnswered</Expectation></Expectations>
 </SubStep></SubSteps>
 </Step></Steps>
 </TestCase><TestCase

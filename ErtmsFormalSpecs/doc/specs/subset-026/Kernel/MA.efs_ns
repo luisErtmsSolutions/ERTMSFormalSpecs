@@ -1202,7 +1202,7 @@ INITIAL_VALUE CreateTarget (
 <PreCondition
  Guid="a980e397-a795-40b4-b011-0c1cb04f1c00"
 >Speed == 127</PreCondition></PreConditions>
-<Expression>BaseTypes.Speed.UseNVForReleaseSpeed</Expression>
+<Expression>BaseTypes.Speed.UseNV</Expression>
 </Case><Case
  Name="ReleaseSpeedValue"
  Guid="9b709fe8-17d7-413b-b63a-bf07d8f08c8c"
@@ -2150,6 +2150,7 @@ Default.BaseTypes.LengthToDistance ( aDistanceInterval )</PreCondition></PreCond
  Name="Handle new MA"
  Guid="6fc7171c-6986-4137-bdd6-b65a06a83d84"
 >
+<Comment>Updates the stored MA with the information from the packet.</Comment>
 <SubRules></SubRules>
 <Conditions>
 <RuleCondition
@@ -2173,6 +2174,39 @@ Default.BaseTypes.LengthToDistance ( aDistanceInterval )</PreCondition></PreCond
 )</Action><Action
  Guid="3e4d5ecc-98c0-4000-9d12-5b63e89e74c7"
 >MAIsAccepted &lt;- True</Action></Actions>
+</RuleCondition></Conditions>
+</Rule><Rule
+ Priority="Processing"
+ Implemented="TRUE"
+ Name="Exit override"
+ Guid="b017fc6d-6cf9-4e6e-8669-bcbb31cafac5"
+>
+<ReqRef
+ Id="6d584b1c-04b7-424f-9087-e95a0cf7c65d"
+ SpecId="1725280b-f696-4860-94cc-d85f62c35214"
+ Guid="a6bf2139-c3b6-4d32-8abf-3e6447513ef5"
+>
+</ReqRef><ReqRef
+ Id="772e0087-dcb8-45bf-a888-56863cd592af"
+ SpecId="1725280b-f696-4860-94cc-d85f62c35214"
+ Guid="c53d8ba1-e994-4318-9d8a-5e790e6ee731"
+>
+</ReqRef><Comment>Ends the Override function if the MA received is not a trip order (if V_MAIN != 0).</Comment>
+<SubRules></SubRules>
+<Conditions>
+<RuleCondition
+ Implemented="TRUE"
+ Name="Exit override"
+ Guid="5e50dd51-a694-490a-986d-fc58ddaba209"
+>
+<PreConditions>
+<PreCondition
+ Guid="bd46248f-d028-4d5e-95b6-25ea8c62ed58"
+>HandleModeChange in HandleModeChangeSM.Override</PreCondition></PreConditions>
+<Actions>
+<Action
+ Guid="fec4ea71-9030-4796-a90a-2d1c21a90d00"
+>EndOverride()</Action></Actions>
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure
@@ -2225,7 +2259,7 @@ Default.BaseTypes.LengthToDistance ( aDistanceInterval )</PreCondition></PreCond
  Name="Store information"
  Guid="59782eb8-89ce-4ed7-a9e4-be2e7479b21f"
 >
-<Comment>Updates the stored MA with the information from the packet</Comment>
+<Comment>Updates the stored MA with the information from the packet.</Comment>
 <SubRules></SubRules>
 <Conditions>
 <RuleCondition
@@ -2301,7 +2335,7 @@ MATimers.LOATimerStart &lt;- MATimers.CurrentBGTimeOfPassage</Action><Action
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="080ffc52-67c5-4270-857f-817ac767d00f"
 >
-</ReqRef><Comment>Initiates a train trip if the received MA orders it</Comment>
+</ReqRef><Comment>Initiates a train trip if the received MA orders it.</Comment>
 <SubRules></SubRules>
 <Conditions>
 <RuleCondition
@@ -2320,6 +2354,41 @@ MATimers.LOATimerStart &lt;- MATimers.CurrentBGTimeOfPassage</Action><Action
 <Action
  Guid="430affa2-f9d2-4aa8-9feb-f862786a55c4"
 >SpeedAndDistanceMonitoring.TrainTripped &lt;- True</Action></Actions>
+</RuleCondition></Conditions>
+</Rule><Rule
+ Priority="Processing"
+ Implemented="TRUE"
+ Name="Exit override"
+ Guid="ff43d19a-fa07-4aa5-b6aa-e05ff5f114d0"
+>
+<ReqRef
+ Id="26a62de7-212e-49df-b2c4-e9ad9a16303c"
+ SpecId="1725280b-f696-4860-94cc-d85f62c35214"
+ Guid="e40740d0-1cb6-4e94-b03f-6c72d9005ec9"
+>
+</ReqRef><ReqRef
+ Id="772e0087-dcb8-45bf-a888-56863cd592af"
+ SpecId="1725280b-f696-4860-94cc-d85f62c35214"
+ Guid="154d3390-eeb7-4179-a42a-789e2abe0f3d"
+>
+</ReqRef><Comment>Ends the Override function if the MA received is not a trip order (if V_MAIN != 0).</Comment>
+<SubRules></SubRules>
+<Conditions>
+<RuleCondition
+ Implemented="TRUE"
+ Name="Exit override"
+ Guid="04673d35-78fe-4e4b-b203-8aba00c6486f"
+>
+<PreConditions>
+<PreCondition
+ Guid="6c1d680b-de67-4a2b-b1e5-4f97fa26d8d4"
+>HandleModeChange in HandleModeChangeSM.Override</PreCondition><PreCondition
+ Guid="18ef947f-814b-4b60-9630-be17bd17273e"
+>Packet.V_MAIN != 0</PreCondition></PreConditions>
+<Actions>
+<Action
+ Guid="2b82f74d-810e-4f72-977c-0ca411d9a9bd"
+>EndOverride()</Action></Actions>
 </RuleCondition></Conditions>
 </Rule></Rules>
 </Procedure><Procedure

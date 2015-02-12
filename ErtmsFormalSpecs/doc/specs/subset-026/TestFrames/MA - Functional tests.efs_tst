@@ -369,15 +369,13 @@ BTM.Linking.Linkings</Action></Actions>
 <Comment>Same as step 4 but for LS. The train is tripped otherwise kernel changes the mode to FS (condition 32 of Table 4.6)</Comment>
 <SubSteps>
 <SubStep
- Name="SubStep1 - First balise of unlinked balise group received"
+ Name="SubStep1 - First balise of unlinked balise group received in Mode profile for LS"
  Guid="74dc0345-070d-442a-8fac-0c9969ff688a"
 >
 <Actions>
 <Action
  Guid="a2d32957-4cec-4135-a8dd-11c6278eb13d"
 >Kernel.Mode &lt;- Default.Mode.LS</Action><Action
- Guid="fa793573-b25e-4dcf-9aa6-68ecc128a38d"
->Kernel.SpeedAndDistanceMonitoring.TrainTripped &lt;- True</Action><Action
  Guid="c4f646dc-b220-4ca0-af54-2ba4318f54ca"
 >BTM.Message &lt;- Messages.EUROBALISE.Message
 {
@@ -442,7 +440,16 @@ BTM.Linking.Linkings</Action></Actions>
             }
          }
      ]
-}</Action></Actions>
+}</Action><Action
+ Guid="30d36894-8e52-4109-ba19-8e8158ec30db"
+>Kernel.MA.ModeProfile.Profile &lt;- [Kernel.MA.ModeProfile.ModeProfileStruct{
+    Distance =&gt; Kernel.TrainPosition.FrontEndPosition(DistanceInterval.Nom),
+    Mode =&gt; Default.Mode.ModeProfile.LS,
+    Speed =&gt; 90.0,
+    Length =&gt; 500.0,
+    AcknLength =&gt; 0.0,
+    SupervisionQualifier =&gt; Messages.Q_MAMODE.as_both_the_EOA_and_SvL__instead_of_the_EOA_and_SvL_given_by_the_MA
+}]</Action></Actions>
 </SubStep><SubStep
  Name="Sub-step2 - Second balise of unlinked balise group received"
  Guid="bfe8d52b-3338-4dc6-812f-1e6551e3ebf2"

@@ -378,6 +378,16 @@ SRAuthorisation.Distance &lt;= TrainPosition.FrontEndPosition ( Default.Distance
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="e8a1385c-eb2b-4802-a6bb-56933b4ceb92"
 >
+</ReqRef><ReqRef
+ Id="d932cea7-ce9f-4909-afff-2c36046cea2a"
+ SpecId="1725280b-f696-4860-94cc-d85f62c35214"
+ Guid="2efa10f3-1b18-4466-b094-b4d404011635"
+>
+</ReqRef><ReqRef
+ Id="772e0087-dcb8-45bf-a888-56863cd592af"
+ SpecId="1725280b-f696-4860-94cc-d85f62c35214"
+ Guid="250c696b-ac8a-4198-bb31-4311ad622817"
+>
 </ReqRef><Comment>Handles reception of a packet &quot;Stop if in SR mode&quot;.</Comment>
 <Parameters>
 <Parameter
@@ -397,9 +407,34 @@ SRAuthorisation.Distance &lt;= TrainPosition.FrontEndPosition ( Default.Distance
 <Conditions>
 <RuleCondition
  Implemented="TRUE"
+ Name="Override active"
+ Guid="89a474df-0208-4696-8fdb-0b46115c5b24"
+>
+<ReqRef
+ Id="353d33b3-3a7a-4759-8b9b-62204429d75a"
+ SpecId="1725280b-f696-4860-94cc-d85f62c35214"
+ Guid="1c852c64-1b7c-4809-99ea-d6fea9bcd656"
+>
+</ReqRef><ReqRef
+ Id="1503ba8c-af0d-46c6-b258-a866be408e80"
+ SpecId="1725280b-f696-4860-94cc-d85f62c35214"
+ Guid="8146747c-a2b6-414c-9128-aa9edb39338a"
+>
+</ReqRef><Comment>If the Override function is active, the train does not stop but Override is ended.</Comment>
+<PreConditions>
+<PreCondition
+ Guid="c6ccbc54-4698-42e2-84cf-735584fc7270"
+>HandleModeChange in HandleModeChangeSM.Override</PreCondition></PreConditions>
+<Actions>
+<Action
+ Guid="cfba8bf9-5231-4e99-acf5-5b104f9d1dde"
+>EndOverride()</Action></Actions>
+</RuleCondition><RuleCondition
+ Implemented="TRUE"
  Name="Handle packet"
  Guid="77e9d509-9333-4cfa-9903-271166cb80be"
 >
+<Comment>Handle the packet otherwise.</Comment>
 <PreConditions>
 <PreCondition
  Guid="1af23fe5-a5a6-41f8-824b-5238b8ff70f8"
@@ -467,7 +502,8 @@ SRAuthorisation.Distance &lt;= TrainPosition.FrontEndPosition ( Default.Distance
  Type="Boolean"
  DefaultValue="False"
  VariableMode="Internal"
- X="550"
+ X="430"
+ Y="100"
  Width="100"
  Height="50"
  Implemented="TRUE"
@@ -555,6 +591,96 @@ SRAuthorisation.Distance &lt;= TrainPosition.FrontEndPosition ( Default.Distance
     aReason =&gt; Messages.Q_MARQSTREASON.Start_selected_by_driver,
     aPacket =&gt; EMPTY
 )</Action></Actions>
+</RuleCondition></Conditions>
+</Rule><Rule
+ Priority="Processing"
+ X="530"
+ Y="250"
+ Width="100"
+ Height="50"
+ Implemented="TRUE"
+ Name="Standstill for entry of SR speed and distance"
+ Guid="4dbe28af-93a1-4547-b8a0-82f7dc8cedc1"
+>
+<ReqRef
+ Id="a527b959-0a75-42e2-a5d7-aa805d764a9e"
+ SpecId="1725280b-f696-4860-94cc-d85f62c35214"
+ Guid="56d9d598-3e24-439d-ad48-8415359734e9"
+>
+</ReqRef><Comment>If train movement is detected while the driver is entering new SR speed and distance information, activate the brakes.</Comment>
+<SubRules></SubRules>
+<Conditions>
+<RuleCondition
+ Implemented="TRUE"
+ Name="Train movement detected"
+ Guid="37e26b65-969d-406f-8ea1-089f5643d56e"
+>
+<PreConditions>
+<PreCondition
+ Guid="2730f0b8-455b-4be6-b2c0-7875882680c5"
+>NOT Odometry.TrainIsAtStandstill()</PreCondition><PreCondition
+ Guid="0ebb6c20-ebff-423e-ae86-7373db4b82ef"
+>DMI.MasterDMI().In_SRModeSpeedLimitAndDistance.InputInformation.RequestStatus == Default.Request.Request</PreCondition></PreConditions>
+<Actions>
+<Action
+ Guid="a219ec1d-9c30-4398-b539-a56a7ed3c800"
+>TIU.ServiceBrakeCommanded &lt;- True</Action><Action
+ Guid="eec5ece7-4498-4b79-8af7-6b2f2683b723"
+>TIU.EmergencyBrakeCommanded &lt;- True</Action><Action
+ Guid="2b2f0cf0-8ffd-4ac5-b69b-67424acc856f"
+>AddSBCommand(BrakeReason.SupervisingStandstill)</Action></Actions>
+</RuleCondition></Conditions>
+</Rule><Rule
+ Priority="Processing"
+ X="420"
+ Y="250"
+ Width="100"
+ Height="50"
+ Implemented="TRUE"
+ Name="Send request to modify SR distance and speed"
+ Guid="15db337c-f79f-4ecc-a490-1ef5d01553f4"
+>
+<ReqRef
+ Id="20105d93-db9d-43da-96f4-3b3ecf09ac54"
+ SpecId="1725280b-f696-4860-94cc-d85f62c35214"
+ Guid="85763afc-d1a7-407f-ac1c-9cdd12c2f067"
+>
+</ReqRef><ReqRef
+ Id="6a40406a-77fa-40f4-a719-22600646d460"
+ SpecId="1725280b-f696-4860-94cc-d85f62c35214"
+ Guid="12559dfd-fcf4-4e38-8b12-199aacf13812"
+>
+</ReqRef><Comment>Send a request to the driver to modify the max permitted distance and the speed limit for SR mode.</Comment>
+<SubRules></SubRules>
+<Conditions>
+<RuleCondition
+ Implemented="TRUE"
+ Name="Initiate request"
+ Guid="a4777087-732f-4a93-9540-3ae1bccb98b5"
+>
+<Comment>If the train is at standstill, display entry request.</Comment>
+<PreConditions>
+<PreCondition
+ Guid="edb541f1-b1e5-47df-b3e6-8f97cf0d62a1"
+>Odometry.TrainIsAtStandstill()</PreCondition></PreConditions>
+<Actions>
+<Action
+ Guid="c2aeb6e2-d835-4907-921b-659073bb1bfd"
+>DMI.MasterDMI().In_SRModeSpeedLimitAndDistanceEntryRequest.InitiateRequest()</Action></Actions>
+</RuleCondition><RuleCondition
+ Implemented="TRUE"
+ Name="Handle driver request"
+ Guid="8d7b926b-9061-47a2-b29e-efe39f6a4b59"
+>
+<Comment>If the driver selected to enter the SR speed and distance, display the window.</Comment>
+<PreConditions>
+<PreCondition
+ Guid="61a56424-8110-4822-aac1-7817599e9d76"
+>DMI.MasterDMI().In_SRModeSpeedLimitAndDistanceEntryRequest.InputInformation.DriverAnswered</PreCondition></PreConditions>
+<Actions>
+<Action
+ Guid="1168f969-c721-4d44-a41d-330a21b954cb"
+>DMI.MasterDMI().In_SRModeSpeedLimitAndDistance.InitiateRequest()</Action></Actions>
 </RuleCondition></Conditions>
 </Rule></Rules>
 </NameSpace>

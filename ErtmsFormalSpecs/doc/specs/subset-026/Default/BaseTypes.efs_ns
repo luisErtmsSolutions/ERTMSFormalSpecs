@@ -74,7 +74,7 @@
 >
 </EnumValue><EnumValue
  Value="32771.0"
- Name="UseNVForReleaseSpeed"
+ Name="UseNV"
  Guid="512ccc5c-71f8-4179-acd0-5e5ca4a0aaa7"
 >
 </EnumValue></SpecialValues>

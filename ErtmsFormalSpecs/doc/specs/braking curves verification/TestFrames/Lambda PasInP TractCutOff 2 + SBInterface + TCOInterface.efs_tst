@@ -14,7 +14,6 @@
  Q_DLRBG=""
  RBC_ID=""
  RBCPhone=""
- Completed="TRUE"
  Name="Lambda PasInP TractCutOff2 + SBInterface + TCOInterface"
  Guid="c9240a32-1399-4a9f-ab97-66c78dfd2f9d"
 >

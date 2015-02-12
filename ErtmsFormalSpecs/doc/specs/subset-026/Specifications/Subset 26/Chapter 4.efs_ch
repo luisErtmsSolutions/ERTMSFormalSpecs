@@ -2942,10 +2942,72 @@ Used in level 0.<RequirementSets>
  version="3.0.0"
  Name=""
  Guid="19539edb-29b5-4d5c-a446-b4ebcca7c51e"
->This mode is used when the system does not know the route. For example:
-	a) After the ERTMS/ETCS on-board equipment starts-up (awakening of the train).
-	b) To pass a signal at danger / override an EOA.
-	c) After a trackside failure (for example: loss of radio contact).<RequirementSets>
+>This mode is used when the system does not know the route. For example:<Sub>
+<Paragraph
+ id="4.4.11.1.2.a"
+ type="DEFINITION"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="NotImplementable"
+ version="3.0.0"
+ Name=""
+ Guid="9a19ef88-ae65-4722-a00e-843fe5ba0f46"
+>After the ERTMS/ETCS on-board equipment starts-up (awakening of the train).<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="9d1e1a65-7046-4b75-8f63-b47cff19a668"
+>
+</RequirementSetReference><RequirementSetReference
+ RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
+ Guid="417ee98b-d61b-4b51-9aff-7b3aa9555b9c"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph><Paragraph
+ id="4.4.11.1.2.b"
+ type="DEFINITION"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="NotImplementable"
+ version="3.0.0"
+ Name=""
+ Guid="3d977988-1449-42b7-8a3b-215c34a04e13"
+>To pass a signal at danger / override an EOA.<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="25a06c4d-5e68-4e0f-aff1-f76f0a14f42f"
+>
+</RequirementSetReference><RequirementSetReference
+ RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
+ Guid="8fb559cc-ff45-494c-be1a-e4b4b5ba7038"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph><Paragraph
+ id="4.4.11.1.2.3"
+ type="DEFINITION"
+ scope="FLAGS"
+ bl=""
+ name=""
+ reviewed="TRUE"
+ status="NotImplementable"
+ version="3.0.0"
+ Name=""
+ Guid="d09a1d01-181d-401c-8307-80117f53014d"
+>After a trackside failure (for example: loss of radio contact).<RequirementSets>
+<RequirementSetReference
+ RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
+ Guid="9692b903-cfb7-42d2-ba90-2244ccc9ef80"
+>
+</RequirementSetReference><RequirementSetReference
+ RefId="478e8dc6-a574-4bd9-85e7-ed844cbb2e2e"
+ Guid="fad0394c-d3dc-4ac5-879b-38e993bd8449"
+>
+</RequirementSetReference></RequirementSets>
+</Paragraph></Sub>
+<RequirementSets>
 <RequirementSetReference
  RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
  Guid="879fe350-ecac-47ae-bd67-2f6808666784"
@@ -8552,7 +8614,7 @@ Level 1, 2, 3.<RequirementSets>
  version="3.0.0"
  Name=""
  Guid="367acb62-7870-4387-9a8f-345d0059c752"
->Override (Trip inhibition)4; 5.8; SH, LS, UN, SN<RequirementSets>
+>Override (Trip inhibition)4; 5.8; SH, SR, UN, SN<RequirementSets>
 <RequirementSetReference
  RefId="b2515c38-1e5c-4be6-9107-9fb08c2038ed"
  Guid="4e2701cf-e1ee-4f3b-9025-eb89a28e0f97"
@@ -11723,7 +11785,7 @@ Level 1, 2, 3.<RequirementSets>
  bl=""
  name=""
  reviewed="TRUE"
- status="NA"
+ status="Implemented"
  version="3.0.0"
  Name=""
  Guid="76ef1b92-ab15-437d-b8b0-8c5507716ff8"
@@ -12051,7 +12113,7 @@ Level 1, 2, 3.<RequirementSets>
  bl="3.2.0"
  name=""
  reviewed="TRUE"
- status="NA"
+ status="Implemented"
  version="3.0.0"
  Name=""
  Guid="105c2ac3-690d-4d9f-805f-76ae298a3ab7"
@@ -12138,7 +12200,7 @@ AND (a National Trip Procedure is active) see {8} here under<RequirementSets>
  bl=""
  name=""
  reviewed="TRUE"
- status="NA"
+ status="Implemented"
  version="3.0.0"
  Name=""
  Guid="7f0cccdd-1753-4525-bda2-f82e896b7ce0"
@@ -12155,7 +12217,7 @@ AND (a National Trip Procedure is active) see {8} here under<RequirementSets>
  bl=""
  name=""
  reviewed="TRUE"
- status="NA"
+ status="Implemented"
  version="3.0.0"
  Name=""
  Guid="a6eff8c5-d19c-4737-a020-b05ede4aae83"
@@ -12172,7 +12234,7 @@ AND (a National Trip Procedure is active) see {8} here under<RequirementSets>
  bl=""
  name=""
  reviewed="TRUE"
- status="NA"
+ status="Implemented"
  version="3.0.0"
  Name=""
  Guid="1b1e4f52-5960-48a7-a975-0702583492bc"
@@ -12189,7 +12251,7 @@ AND (a National Trip Procedure is active) see {8} here under<RequirementSets>
  bl=""
  name=""
  reviewed="TRUE"
- status="NA"
+ status="Implemented"
  version="3.0.0"
  Name=""
  Guid="22898522-d4be-403b-909d-f6935f3055ab"
@@ -12547,7 +12609,7 @@ AND (a National Trip Procedure is active) see {8} here under<RequirementSets>
  bl=""
  name=""
  reviewed="TRUE"
- status="NA"
+ status="Implemented"
  version="3.0.0"
  Name=""
  Guid="99059192-8421-48c9-893d-5ceb5c3770ac"

@@ -615,6 +615,37 @@ TrainPosition.FrontEndPosition ( DistanceInterval.Min ) &lt; aModeProfile.Distan
 >
 <Expression>FIRST X IN Profile | NOT DistanceIsWithinAModeProfile ( X ) AND (X.Mode != Mode)</Expression>
 </Case></Cases>
+</Function><Function
+ Type="BaseTypes.Speed"
+ Cacheable="TRUE"
+ Default=""
+ Name="GetSpeedResolution"
+ Guid="5ae2e65d-dd28-4c75-84a9-fae6d4e17967"
+>
+<Comment>Converts the speed received in a Mode Profile packet to EFS speed, accounting for the special value.</Comment>
+<Parameters>
+<Parameter
+ Type="MessageTypes.Speed"
+ Name="V_MAMODE"
+ Guid="b0e5bacb-91e5-4022-ab6f-46a554c924cc"
+>
+</Parameter></Parameters>
+<Cases>
+<Case
+ Name="Use national value"
+ Guid="00749932-d5a6-4498-88c3-2c4715fdd3be"
+>
+<PreConditions>
+<PreCondition
+ Guid="a04008ce-5107-483b-87cc-1c1834d883a1"
+>V_MAMODE == 127</PreCondition></PreConditions>
+<Expression>Default.BaseTypes.Speed.UseNV</Expression>
+</Case><Case
+ Name="Otherwise"
+ Guid="28661417-d59f-4103-a432-5018b5349e6a"
+>
+<Expression>MessageTypes.SpeedResolution ( speed =&gt; V_MAMODE, resolution =&gt; 5.0 )</Expression>
+</Case></Cases>
 </Function></Functions>
 <Procedures>
 <Procedure
@@ -1006,7 +1037,7 @@ IN
         Distance =&gt; MessageTypes.QScaleDistance ( distance =&gt; D_MAMODE, scale =&gt; Q_SCALE ) + BTM.Linking.DistanceToBaliseGroup ( Kernel.Infill.Data.NID_BG ),
         Length =&gt; MessageTypes.QScaleLength ( length =&gt; L_MAMODE, scale =&gt; Q_SCALE ),
         Mode =&gt; ERTMS_To_EFS_Mode ( M_MAMODE ),
-        Speed =&gt; MessageTypes.SpeedResolution ( speed =&gt; V_MAMODE, resolution =&gt; 5.0 ),
+        Speed =&gt; GetSpeedResolution(V_MAMODE),
         SupervisionQualifier =&gt; Q_MAMODE
     }
 IN
@@ -1059,7 +1090,7 @@ IN
         Distance =&gt; MessageTypes.QScaleDistance ( distance =&gt; D_MAMODE, scale =&gt; Q_SCALE ),
         Length =&gt; MessageTypes.QScaleLength ( length =&gt; L_MAMODE, scale =&gt; Q_SCALE ),
         Mode =&gt; ERTMS_To_EFS_Mode ( M_MAMODE ),
-        Speed =&gt; MessageTypes.SpeedResolution ( speed =&gt; V_MAMODE, resolution =&gt; 5.0 ),
+        Speed =&gt; GetSpeedResolution(V_MAMODE),
         SupervisionQualifier =&gt; Q_MAMODE
     }
 IN

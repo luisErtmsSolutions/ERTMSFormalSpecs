@@ -103,8 +103,8 @@
 <PreConditions>
 <PreCondition
  Guid="7d59cd76-9a12-419a-95f2-b17b859a7e4f"
->( FIRST X IN MA.ModeProfile.Profile | X.Mode == Mode.ModeProfile.LS ) != EMPTY</PreCondition></PreConditions>
-<Expression>( FIRST X IN MA.ModeProfile.Profile | X.Mode == Mode.ModeProfile.LS ).Speed</Expression>
+>THERE_IS X IN MA.ModeProfile.Profile | X.Mode == Mode.ModeProfile.LS AND X.Speed != BaseTypes.Speed.UseNV</PreCondition></PreConditions>
+<Expression>( FIRST X IN MA.ModeProfile.Profile | X.Mode == Mode.ModeProfile.LS  AND X.Speed != BaseTypes.Speed.UseNV).Speed</Expression>
 </Case><Case
  Name="NationalValue"
  Guid="8106234f-7971-481a-ab16-9b4285da9def"
@@ -162,8 +162,8 @@
 <PreConditions>
 <PreCondition
  Guid="d7e584ef-18a8-49bc-842f-8697192e0102"
->( FIRST X IN MA.ModeProfile.Profile | X.Mode == Mode.ModeProfile.OS ) != EMPTY</PreCondition></PreConditions>
-<Expression>( FIRST X IN MA.ModeProfile.Profile | X.Mode == Mode.ModeProfile.OS ).Speed</Expression>
+>THERE_IS X IN MA.ModeProfile.Profile | X.Mode == Mode.ModeProfile.OS AND X.Speed != BaseTypes.Speed.UseNV</PreCondition></PreConditions>
+<Expression>( FIRST X IN MA.ModeProfile.Profile | X.Mode == Mode.ModeProfile.OS  AND X.Speed != BaseTypes.Speed.UseNV).Speed</Expression>
 </Case><Case
  Name="NationalValue"
  Guid="67eaca14-3282-4c8f-ba2c-54ef5bc3ad29"
@@ -361,7 +361,7 @@
 <PreConditions>
 <PreCondition
  Guid="9f36d84a-4eb4-492b-8448-f96e50571dcf"
->( FIRST X IN MA.ModeProfile.Profile | X.Mode == Mode.ModeProfile.SH ) != EMPTY</PreCondition></PreConditions>
+>THERE_IS X IN MA.ModeProfile.Profile | X.Mode == Mode.ModeProfile.SH AND X.Speed != BaseTypes.Speed.UseNV</PreCondition></PreConditions>
 <Expression>( FIRST X IN MA.ModeProfile.Profile | X.Mode == Mode.ModeProfile.SH ).Speed</Expression>
 </Case><Case
  Name="NationalValue"

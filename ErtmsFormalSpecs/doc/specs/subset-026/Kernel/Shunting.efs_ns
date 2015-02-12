@@ -203,6 +203,16 @@
  SpecId="1725280b-f696-4860-94cc-d85f62c35214"
  Guid="4adc5a85-a282-481b-be78-b249b954b4c9"
 >
+</ReqRef><ReqRef
+ Id="772e0087-dcb8-45bf-a888-56863cd592af"
+ SpecId="1725280b-f696-4860-94cc-d85f62c35214"
+ Guid="8699b3e1-129e-47ae-aa70-2f4bb65eaab2"
+>
+</ReqRef><ReqRef
+ Id="d932cea7-ce9f-4909-afff-2c36046cea2a"
+ SpecId="1725280b-f696-4860-94cc-d85f62c35214"
+ Guid="cde50368-88d5-48e5-a2ad-4f81f24ad78e"
+>
 </ReqRef><Comment>Handles reception of the packet DANGER FOR SHUNTING.</Comment>
 <Parameters>
 <Parameter
@@ -222,9 +232,24 @@
 <Conditions>
 <RuleCondition
  Implemented="TRUE"
+ Name="Override active"
+ Guid="1857fd33-3da2-40b2-ad13-85a503098a0f"
+>
+<Comment>If the Override function is active, the train does not stop but Override is ended.</Comment>
+<PreConditions>
+<PreCondition
+ Guid="4d39a90f-c81a-4f51-a5b1-20e9d9c1f07c"
+>HandleModeChange in HandleModeChangeSM.Override</PreCondition></PreConditions>
+<Actions>
+<Action
+ Guid="a1b65b7d-2e90-4c38-be22-aa1bed1d3a6e"
+>EndOverride()</Action></Actions>
+</RuleCondition><RuleCondition
+ Implemented="TRUE"
  Name="Stop if required"
  Guid="e688dd05-2d56-4068-897e-9f93c0fa08f1"
 >
+<Comment>Handle the packet otherwise.</Comment>
 <PreConditions>
 <PreCondition
  Guid="8da76a80-09a8-4469-8549-ff75099c9d6b"

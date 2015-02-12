@@ -359,8 +359,8 @@
 <Action
  Guid="c5c1f486-8516-49c9-87c4-dc9252ca1522"
 >REMOVE ALL DateAndTime.T1LaterThanT2(
-    T1 =&gt; X.ValidUntil,
-    T2 =&gt; DateAndTime.Now()
+    T1 =&gt; DateAndTime.Now(),
+    T2 =&gt; X.ValidUntil
 ) IN VirtualBaliseCovers</Action></Actions>
 </RuleCondition></Conditions>
 </Rule></Rules>

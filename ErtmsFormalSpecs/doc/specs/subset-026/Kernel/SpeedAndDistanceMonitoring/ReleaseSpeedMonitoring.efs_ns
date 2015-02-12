@@ -463,7 +463,7 @@ INITIAL_VALUE
 <PreConditions>
 <PreCondition
  Guid="a57188f2-6ae9-4e5f-8e9e-95878dfeab23"
->Vrel == BaseTypes.Speed.UseNVForReleaseSpeed</PreCondition></PreConditions>
+>Vrel == BaseTypes.Speed.UseNV</PreCondition></PreConditions>
 <Expression>NationalValues.ReleaseSpeed()</Expression>
 </Case><Case
  Name="FixedValue"
@@ -645,7 +645,7 @@ INITIAL_VALUE
  Guid="8d371a70-ef2e-4e1b-8637-313df835dbd9"
 >ReleaseSpeedMonitoring.ReleaseSpeed &lt;- 
 ReleaseSpeedMonitoring.ReleaseSpeedValue(
-    Vrel=&gt;Default.BaseTypes.Speed.UseNVForReleaseSpeed
+    Vrel=&gt;Default.BaseTypes.Speed.UseNV
 )</Action></Actions>
 </RuleCondition><RuleCondition
  Implemented="TRUE"
